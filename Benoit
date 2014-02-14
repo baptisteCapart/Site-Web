@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	        <link rel="stylesheet" href="style.css" />
+	<title>Tune in Town</title>
+</head>
+<body>
+
+	<div id="blocpage">
+
+		<header>
+				<div id="banniere">
+					<ul>
+						<li id = "logo"><img src="D:\ISEP\APPinfo/logo.png" alt="" class="logo"</li>
+						<li id = "fond"><img src="banniere.jpg" alt="" class="banniere"></li>
+						
+					</ul>
+				</div>
+				<div id="logger">
+						<ul>
+							<li>Pseudo</li>
+							<li>Mot de passe</li>
+						</ul>
+				</div>
+			
+		</header>
+
+		<div id="page">
+
+			<div id="menu_deroulant">
+				<ul>
+					<li><a href="#">Accueil</a></li>
+					<li class= "espace">|</li>
+					<li><a href="#">Mon Tune in Town</a> </li>
+					<li class= "espace">|</li>
+					<li><a href="#">Goupes</a></li>
+					<li class= "espace">|</li>
+					<li><a href="#">Salles</a></li>
+					<li class= "espace">|</li>
+					<li><a href="#">Concerts</a></li>
+					<li class= "espace">|</li>
+					<li><a href="#">Forum</a></li>
+				</ul>
+			</div>
+
+			<section>
+				<div id="NEWS">
+					<div id="dernieres_news">
+						<div id="description_news">Dernières News</div>
+					</div>
+					<div id="liste_news">
+						<ul>
+							<li><a href="#">Nouveau concert</a></li>
+							<li><a href="#">Nouvelle salles ouverte !</a></li>
+							<li><a href="#">Photos du dernier concert de bidule</a></li>
+							<li><a href="#">Truc jouera dans le bar O'Beer</a></li>
+							<li><a href="#">Votre amis Charles est allé à un concert</a></li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<section>
+				<div id="espace_membre">Espace Membre</div>
+				
+				<div id="titre1">News de mes groupes</div>
+				
+				
+				
+				<div id="titre2">News de mes salles</div>
+				
+			</section>
+
+			<footer>
+
+				
+
+				<ul>
+					<li><a href="#">Aide</a></li>
+					<li class= "espace">|</li>
+					<li><a href="#">Nous contacter</a></li>
+				</ul>
+			</footer>
+		</div>
+
+	</div>
+</body>
+</html>
