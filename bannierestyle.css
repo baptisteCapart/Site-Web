@@ -40,14 +40,16 @@ a
 nav
 {
 	display: inline-block;
+	margin-left: 3px;
 	text-align: right;
 	width : 70%;
 	font-weight: bold;
 	position : relative;
 	right : -450px;
 	top : 32px;
-	//margin-bottom: 3px;
-	
+	padding: 4px;
+	padding-left: 6px;
+	padding-right: 6px;
 }
 
 nav ul
@@ -66,8 +68,7 @@ nav li
 
 nav a:hover
 {
-	padding: 4px;
-	padding-bottom: 3px;
+	padding-bottom: 7px;
 }
 
 #compte a:hover
