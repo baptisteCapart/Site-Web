@@ -67,7 +67,7 @@ nav li
 nav a:hover
 {
 	padding: 4px;
-	padding-bottom: 0px;
+	padding-bottom: 3px;
 }
 
 #compte a:hover
