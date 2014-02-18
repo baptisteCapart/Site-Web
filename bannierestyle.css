@@ -1,0 +1,123 @@
+header
+{
+	background-color: #373F40;
+	height: 30%;
+	margin : none;
+}
+
+#logo
+{
+	position : relative;
+	top : 88px;
+	left : 2%;
+	display: inline-block;
+}
+
+.login
+{
+	color: white;
+}
+
+.form
+{
+	display: inline-block;
+	position: absolute;
+	top: 5px;
+	right: 20px;
+	padding-top: 10px;
+}
+.sign_in a
+{
+	text-decoration: underline;
+	color : white;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+nav
+{
+	display: inline-block;
+	text-align: right;
+	width : 70%;
+	font-weight: bold;
+	position : relative;
+	right : -450px;
+	top : 34px;
+	//margin-bottom: 3px;
+	
+}
+
+nav ul
+{
+	list-style-type: none;
+	padding-right: 5%;
+
+}
+
+nav li 
+{
+	padding : 15px;
+	display: inline-block;
+	font-family: calibri ;
+}
+
+nav a:hover
+{
+	padding: 4px;
+	padding-bottom: 0px;
+}
+
+#compte a:hover
+{
+	background-color: #7FFF00;
+	color : black;
+}
+
+#artistes a:hover
+{
+	background-color: #FFFF00;
+	color : black;
+}
+
+#salles a:hover
+{
+	background-color: #A42424;
+	color : black;
+}
+
+#concerts a:hover
+{
+	background-color: #318CE7;
+	color : black;
+}
+
+#forum a:hover
+{
+	background-color: #ED841B;
+	color : black;
+}
+
+#compte a
+{
+	color : #7FFF00;
+}
+#artistes a
+{
+	color : #FFFF00;
+}
+#salles a
+{
+	color : #A42424;
+}
+#concerts a
+{
+	color : #318CE7;
+}
+#forum a
+{
+	color : #ED841B;
+}
+
