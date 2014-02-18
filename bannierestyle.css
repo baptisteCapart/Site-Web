@@ -2,14 +2,15 @@ header
 {
 	background-color: #373F40;
 	height: 30%;
+	width: 100%;
 	margin : none;
 }
 
 #logo
 {
 	position : relative;
-	top : 88px;
-	left : 2%;
+	top: 63px;
+	left: 1%;
 	display: inline-block;
 }
 
@@ -45,8 +46,8 @@ nav
 	width : 70%;
 	font-weight: bold;
 	position : relative;
-	right : -450px;
-	top : 32px;
+	right : -410px;
+	top : 20px;
 	padding: 4px;
 	padding-left: 6px;
 	padding-right: 6px;
@@ -55,13 +56,13 @@ nav
 nav ul
 {
 	list-style-type: none;
-	padding-right: 5%;
 
 }
 
 nav li 
 {
-	padding : 15px;
+	margin-left : 15px;
+	margin-right : 15px;
 	display: inline-block;
 	font-family: calibri ;
 }
