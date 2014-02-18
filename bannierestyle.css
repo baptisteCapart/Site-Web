@@ -1,0 +1,22 @@
+.header
+{
+	background-color: gray;
+}
+
+.img
+{
+	position: absolute;
+	left: 2%;
+}
+
+.login
+{
+	color: red;
+}
+
+.form
+{
+	position: absolute;
+	top: 5px;
+	right: 7px;
+}
