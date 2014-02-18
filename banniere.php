@@ -19,16 +19,16 @@
 			</form>
 			<nav id="menu">
 				<ul>
-					<li id = "search">
-						<form class ="recherche" method="post" action="research.php">
-						<input type="text" name="recherche" value="rechercher"/>
-						</form>
-					</li>
 					<li id = "compte"><a href="#">Mon Compte</a></li>
 					<li id = "artistes"><a href="#">Artistes</a></li>
 					<li id = "salles"><a href="#">Salles</a></li>
 					<li id = "concerts"><a href="#">Concerts</a></li>
 					<li id = "forum"><a href="#">Forum</a></li>
+					<li id = "search">
+						<form class ="recherche" method="post" action="research.php">
+							<input type="text" name="recherche" value="rechercher"/>
+						</form>
+					</li>
 					
 				</ul>
 			</nav>
