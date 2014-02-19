@@ -9,6 +9,7 @@
 	<body>
 		<header class="header">
 			<div id="logo"><a href="home"><img src="logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
+			<div><strong class="slogan">The beat goes around !</strong></div>
 			<form class ="form" method="post" action="sign_in.php">
 				<span class="login">Pseudo : </span>
 				<input type="text" name="pseudo" value=""/>
