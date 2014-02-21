@@ -27,7 +27,7 @@
 					<li id = "forum"><a href="#">Forum</a></li>
 					<li id = "search">
 						<form class ="recherche" method="post" action="research.php">
-							<input type="text" name="recherche" value="rechercher"/>
+							<input type="text" name="recherche" value="Rechercher"/>
 						</form>
 					</li>
 					

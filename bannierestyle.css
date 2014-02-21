@@ -46,7 +46,7 @@ nav
 	width : 70%;
 	font-weight: bold;
 	position : relative;
-	right : -410px;
+	right : -400px;
 	top : 20px;
 	padding: 4px;
 	padding-left: 6px;
@@ -61,8 +61,8 @@ nav ul
 
 nav li 
 {
-	margin-left : 15px;
-	margin-right : 15px;
+	margin-left : 10px;
+	margin-right : 10px;
 	display: inline-block;
 	font-family: calibri ;
 }
