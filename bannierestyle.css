@@ -9,7 +9,7 @@ header
 #logo
 {
 	position : relative;
-	top: 63px;
+	top: 20px;
 	left: 1%;
 	display: inline-block;
 }
@@ -123,10 +123,12 @@ nav a:hover
 	color : #ED841B;
 }
 
-.slogan
+.TIT
 {
 	position: absolute;
-	font-size: 3em;
-	top: 60px;
-	left: 220px;
+	font-family: Gabriola;
+	font-weight: bold;
+	font-size: 4em;
+	top: 90px;
+	left: 40px;
 }
