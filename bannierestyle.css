@@ -1,7 +1,7 @@
 header
 {
 	background-color: #333333;
-	height: 30%;
+	max-height: 150px;
 	width: 100%;
 	margin : none;
 }
@@ -9,8 +9,8 @@ header
 #logo
 {
 	position : relative;
-	top: 145px;
-	left: 1%;
+	top: 15px;
+	left: 2%;
 	display: inline-block;
 }
 
@@ -45,7 +45,7 @@ nav
 	font-weight: bold;
 	position : relative;
 	right : -750px;
-	top : 12px;
+	top : -107px;
 	font-family: calibri ;
 }
 
@@ -167,8 +167,8 @@ nav ul li ul li a:hover
 	font-family: Gabriola;
 	font-weight: bold;
 	font-size: 2em;
-	top: 125px;
-	left: 15px;
+	top: 0px;
+	left: 10px;
 }
 
 .slogan
@@ -177,7 +177,7 @@ nav ul li ul li a:hover
 	font-family: calibri;
 	font-weight: bold;
 	font-size: 3em;
-	top: -80px;
+	top: -100px;
 	left: 200px;
 	padding: 0;
 	margin: 0;
