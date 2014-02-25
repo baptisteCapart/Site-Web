@@ -1,6 +1,6 @@
 header
 {
-	background-color: #373F40;
+	background-color: #333333;
 	height: 30%;
 	width: 100%;
 	margin : none;
@@ -9,7 +9,7 @@ header
 #logo
 {
 	position : relative;
-	top: 20px;
+	top: 145px;
 	left: 1%;
 	display: inline-block;
 }
@@ -42,40 +42,92 @@ nav
 {
 	display: inline-block;
 	margin-left: 3px;
-	text-align: right;
-	width : 70%;
 	font-weight: bold;
 	position : relative;
-	right : -400px;
-	top : 20px;
-	padding: 4px;
-	padding-left: 6px;
-	padding-right: 6px;
-}
-
-nav ul
-{
-	list-style-type: none;
-
-}
-
-nav li 
-{
-	margin-left : 10px;
-	margin-right : 10px;
-	display: inline-block;
+	right : -750px;
+	top : 12px;
 	font-family: calibri ;
 }
 
-nav a:hover
+
+#menu ul
 {
-	padding-bottom: 4px;
+ 	 margin:0;
+	 padding:0;
+	 list-style-type:none;
+	 text-align:center;
+}
+	 
+#menu li 
+{
+	 display: inline-block;
+	 margin:0;
+	 padding:10px;
+}
+#menu li a 
+{
+	text-decoration:none;
+	padding: 5px 5px 2px 5px;
+}
+
+#menu ul ul 
+{
+	 display:none;
+}
+
+#menu ul li:hover ul
+{
+	 display:block;
+ }
+
+#menu li:hover ul li 
+{
+	 display:block;
+	 text-align: left;
+}
+
+#menu li ul 
+{
+	 position:absolute;
+}
+
+
+ul.menu1 li
+{
+	color : black;
+	background-color: none;
+}
+
+#compte a
+{
+	color : #7FFF00;
+}
+
+#artistes a
+{
+	color : #FFFF00;
+}
+#salles a
+{
+	color : #A42424;
+}
+#concerts a
+{
+	color : #318CE7;
+}
+#forum a
+{
+	color : #ED841B;
 }
 
 #compte a:hover
 {
 	background-color: #7FFF00;
 	color : black;
+}
+#menu li ul li a:hover
+{
+	background-color: transparent;
 }
 
 #artistes a:hover
@@ -102,33 +154,33 @@ nav a:hover
 	color : black;
 }
 
-#compte a
+nav ul li ul li a:hover
 {
-	color : #7FFF00;
+	background-color: none;
 }
-#artistes a
-{
-	color : #FFFF00;
-}
-#salles a
-{
-	color : #A42424;
-}
-#concerts a
-{
-	color : #318CE7;
-}
-#forum a
-{
-	color : #ED841B;
-}
+
+
 
 .TIT
 {
-	position: absolute;
+	position: relative;
 	font-family: Gabriola;
 	font-weight: bold;
 	font-size: 2em;
-	top: 120px;
+	top: 125px;
 	left: 15px;
 }
+
+.slogan
+{
+	position: relative;
+	font-family: calibri;
+	font-weight: bold;
+	font-size: 3em;
+	top: -80px;
+	left: 200px;
+	padding: 0;
+	margin: 0;
+	color : #7FFF00;
+}
+
