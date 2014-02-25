@@ -7,6 +7,6 @@
 	</head>
 
 	<body>
-		<?php include ?>
+		<?php include ('banniere.php');  ?>
 	</body>
 </html>

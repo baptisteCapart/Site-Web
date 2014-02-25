@@ -5,6 +5,10 @@ header
 	width: 100%;
 	margin : none;
 }
+body
+{
+	margin : 0;
+}
 
 #logo
 {
@@ -67,7 +71,7 @@ nav
 #menu li a 
 {
 	text-decoration:none;
-	padding: 5px 5px 2px 5px;
+	padding: 5px 5px 6px 5px;
 }
 
 #menu ul ul 
