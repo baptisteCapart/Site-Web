@@ -2,11 +2,12 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>Notre super bannière !</title>
+		<title>Tune in Town</title>
 		<link rel="stylesheet" href="bannierestyle.css"/>
 	</head>
 	
-	<body>
+	<body> 
+		<div id="global">
 		<header class="header">
 			<div id="logo"><a href="home"><img src="logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
 			<div><strong class="TIT">Tune In Town</strong></div>
@@ -58,5 +59,6 @@
 				</ul>
 			</nav>
 		</header>
+		</div>
 	</body>
 </html>
