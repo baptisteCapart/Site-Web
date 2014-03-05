@@ -129,7 +129,7 @@ ul.menu1 li
 #compte a:hover
 {
 	background-color: #7FFF00;
-	color : black;
+	color : white;
 }
 #menu li ul li a:hover
 {
@@ -139,25 +139,25 @@ ul.menu1 li
 #artistes a:hover
 {
 	background-color: #FFFF00;
-	color : black;
+	color : white;
 }
 
 #salles a:hover
 {
 	background-color: #A42424;
-	color : black;
+	color : white;
 }
 
 #concerts a:hover
 {
 	background-color: #318CE7;
-	color : black;
+	color : white;
 }
 
 #forum a:hover
 {
 	background-color: #ED841B;
-	color : black;
+	color : white;
 }
 
 nav ul li ul li a:hover
@@ -187,6 +187,6 @@ nav ul li ul li a:hover
 	left: 200px;
 	padding: 0;
 	margin: 0;
-	color : #7FFF00;
+	color : #3BF0F6;
 }
 
