@@ -92,6 +92,13 @@ nav
 	 text-align: left;
 }
 
+#menu li ul li :hover
+{
+	 color :white;
+}
+
+
+
 #menu li ul 
 {
 	 position:absolute;
@@ -129,7 +136,7 @@ ul.menu1 li
 #compte a:hover
 {
 	background-color: #7FFF00;
-	color : white;
+	color : black;
 }
 #menu li ul li a:hover
 {
@@ -139,25 +146,25 @@ ul.menu1 li
 #artistes a:hover
 {
 	background-color: #FFFF00;
-	color : white;
+	color : black;
 }
 
 #salles a:hover
 {
 	background-color: #A42424;
-	color : white;
+	color : black;
 }
 
 #concerts a:hover
 {
 	background-color: #318CE7;
-	color : white;
+	color : black;
 }
 
 #forum a:hover
 {
 	background-color: #ED841B;
-	color : white;
+	color : black;
 }
 
 nav ul li ul li a:hover
