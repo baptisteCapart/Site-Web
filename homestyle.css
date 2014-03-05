@@ -91,3 +91,10 @@ ul
 {
 	background-color: rgb(60,60,200);
 }
+
+#proche_vous, #groupe, #salle
+{
+	margin-bottom: -16px;
+	border-bottom: 20px black;
+	padding-top: 60px;
+}
