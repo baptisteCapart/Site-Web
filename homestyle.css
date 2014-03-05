@@ -1,0 +1,83 @@
+body
+{
+	width: 100%
+}
+
+
+
+#news
+{
+	background-image: url(concert.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 600px;
+	margin-top: -16px;
+}
+
+#liste_news 
+{
+	background-color: rgba(150,200,170,0.4);
+	width: 30%;
+	height: 100%;	
+}
+
+ul 
+{
+	list-style: none;
+}
+
+#liste_news a 
+{
+	text-decoration: none;
+	color : black;
+}
+
+#liste_news li 
+{
+	padding: 15px;
+	font-family: arial;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+#notifs
+{
+	width: 100%;
+	font-family: calibri;
+	text-align: center;
+}
+
+#proche_vous
+{
+	background-color: rgb(200,60,60);
+}
+
+#titre1, #titre2, #titre3
+{
+	font-size: 3.5em;
+	font-weight: bold;
+}
+
+#proche_vous a, #groupe a, #salle a
+{
+	text-decoration: none;
+	color : black;
+}
+
+#proche_vous li , #groupe li, #salle li
+{
+	padding: 10px;
+	font-size: 2em;
+}
+
+#groupe
+{
+	background-color: rgb(60,200,60);
+}
+
+#salle
+{
+	background-color: rgb(60,60,200);
+}
