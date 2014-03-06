@@ -204,3 +204,18 @@ footer
 	width: 100%;
 	margin : none;
 }
+
+.like
+{
+	font-family: calibri;
+	font-weight: bold;
+	color : white;
+}
+
+.help
+{
+	font-family: calibri;
+	font-weight: bold;
+	color : white;
+	list-style-type:none;
+}
