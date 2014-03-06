@@ -94,7 +94,7 @@ nav
 
 #menu li ul li :hover
 {
-	 color :white;
+	 color :black;
 }
 
 
@@ -172,6 +172,24 @@ nav ul li ul li a:hover
 	background-color: none;
 }
 
+#compte .menu1 li a:hover
+{
+	background-color:#7FFF00;
+}
+
+#artistes .menu2 li a:hover
+{
+	background-color: #FFFF00;
+}
+#salles .menu3 li a:hover
+{
+	background-color: #A42424;
+}
+#concerts .menu4 li a:hover
+{
+	background-color: #318CE7;
+}
+
 
 
 .TIT
@@ -200,32 +218,26 @@ nav ul li ul li a:hover
 footer
 {
 	background-color: #333333;
-	max-height: 150px;
+	max-height: 100px;
 	width: 100%;
-	margin : none;
+	text-align: center;
 }
 
-.like
+#like
 {
-	display: inline-block;
-	position: absolute;
-	top: 2%;
-	left: 5%;
 	font-family: calibri;
-	font-size: 150%;
+	font-size: 130%;
 	font-weight: bold;
 	color : white;
-	margin: 1.5%;
 }
 
-.help
+#help
 {
 	display: inline-block;
 	position: relative;
-	left: 70%;
 }
 
-.help li
+#help li
 {
 	font-family: calibri;
 	font-weight: bold;
@@ -233,4 +245,12 @@ footer
 	list-style-type:none;
 	margin-bottom: 5px;
 	margin-top: 5px;
+	display: inline-block;
+	padding: 10px;
+}
+
+footer a 
+{
+	color : white;
+	text-decoration: underline;
 }
