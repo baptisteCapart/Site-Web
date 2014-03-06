@@ -197,3 +197,10 @@ nav ul li ul li a:hover
 	color : #3BF0F6;
 }
 
+footer
+{
+	background-color: #333333;
+	max-height: 150px;
+	width: 100%;
+	margin : none;
+}

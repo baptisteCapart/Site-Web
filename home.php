@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8"/>
 		<title>Tune In Town</title>
-		<rel type="styleshet" href="" />
+		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
 		<link rel="stylesheet" href="homestyle.css"/>
 	</head>
