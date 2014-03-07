@@ -2,6 +2,10 @@
 	<div id="logo"><a href="home"><img src="logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
 	<div><strong class="TIT">Tune In Town</strong></div>
 	<div><strong class="slogan">The beat goes around !</strong></div>			
+	<?php 
+	$loggé = true;
+	if($loggé == false){
+?>
 	<form class ="form" method="post" action="sign_in.php">
 		<span class="login">Pseudo : </span>
 		<input type="text" name="pseudo" value=""/>
@@ -10,6 +14,12 @@
 		<input type="submit" value="Log in"/>
 		<span class="sign_in"><a href ="formulaire d'inscription">Inscription</a></span>
 	</form>
+<?
+	}
+	else {
+		echo 'pseudo_membre';
+	}
+	?>
 	<nav id="menu">
 		<ul>
 			<li id = "compte"><a href="#">Compte</a>
