@@ -221,23 +221,29 @@ nav ul li ul li a:hover
 footer
 {
 	background-color: #333333;
-	max-height: 100px;
+
+	height: 30%%;
 	width: 100%;
 	text-align: center;
 }
 
 #like
 {
+
 	font-family: calibri;
 	font-size: 130%;
 	font-weight: bold;
 	color : white;
+
 }
 
 #help
 {
 	display: inline-block;
 	position: relative;
+
+	left: 10%;
+	top: 6%;
 }
 
 #help li
@@ -256,4 +262,6 @@ footer a
 {
 	color : white;
 	text-decoration: underline;
+	margin-bottom: 1%;
+	margin-top: 1%;
 }
