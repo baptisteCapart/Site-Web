@@ -46,13 +46,16 @@ a
 
 nav
 {
+	width: 60%;
+	min-width: 50px;
 	display: inline-block;
 	margin-left: 3px;
 	font-weight: bold;
 	position : relative;
-	right : -750px;
-	top : -107px;
+	right : -40%;
+	top : -100px;
 	font-family: calibri ;
+	font-size: 1.3em;
 }
 
 
@@ -68,7 +71,7 @@ nav
 {
 	 display: inline-block;
 	 margin:0;
-	 padding:10px;
+	 padding:15px;
 }
 #menu li a 
 {
@@ -94,7 +97,7 @@ nav
 
 #menu li ul li :hover
 {
-	 color :white;
+	 color :black;
 }
 
 
@@ -113,16 +116,16 @@ ul.menu1 li
 
 #compte a
 {
-	color : #7FFF00;
+	color : #69D15D;
 }
 
 #artistes a
 {
-	color : #FFFF00;
+	color : #D4D451;
 }
 #salles a
 {
-	color : #A42424;
+	color : #D42626;
 }
 #concerts a
 {
@@ -130,12 +133,12 @@ ul.menu1 li
 }
 #forum a
 {
-	color : #ED841B;
+	color : #CB8932;
 }
 
 #compte a:hover
 {
-	background-color: #7FFF00;
+	background-color: #69D15D;
 	color : black;
 }
 #menu li ul li a:hover
@@ -145,13 +148,13 @@ ul.menu1 li
 
 #artistes a:hover
 {
-	background-color: #FFFF00;
+	background-color: #D4D451;
 	color : black;
 }
 
 #salles a:hover
 {
-	background-color: #A42424;
+	background-color: #D42626;
 	color : black;
 }
 
@@ -172,6 +175,24 @@ nav ul li ul li a:hover
 	background-color: none;
 }
 
+#compte .menu1 li a:hover
+{
+	background-color:#69D15D;
+}
+
+#artistes .menu2 li a:hover
+{
+	background-color: #D4D451;
+}
+#salles .menu3 li a:hover
+{
+	background-color: #D42626;
+}
+#concerts .menu4 li a:hover
+{
+	background-color: #318CE7;
+}
+
 
 
 .TIT
@@ -189,7 +210,7 @@ nav ul li ul li a:hover
 	position: relative;
 	font-family: calibri;
 	font-weight: bold;
-	font-size: 3em;
+	font-size: 2.2em;
 	top: -100px;
 	left: 200px;
 	padding: 0;
@@ -200,38 +221,47 @@ nav ul li ul li a:hover
 footer
 {
 	background-color: #333333;
+
 	height: 30%%;
 	width: 100%;
-	margin : none;
+	text-align: center;
 }
 
-.like
+#like
 {
-	display: inline-block;
-	position: relative;
-	left: 5%;
+
 	font-family: calibri;
-	font-size: 150%;
+	font-size: 130%;
 	font-weight: bold;
 	color : white;
-	margin-top: 3%;
-	margin-bottom: 3%;
+
 }
 
-.help
+#help
 {
 	display: inline-block;
 	position: relative;
+
 	left: 10%;
 	top: 6%;
 }
 
-.help li
+#help li
 {
 	font-family: calibri;
 	font-weight: bold;
 	color : white;
 	list-style-type:none;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	display: inline-block;
+	padding: 10px;
+}
+
+footer a 
+{
+	color : white;
+	text-decoration: underline;
 	margin-bottom: 1%;
 	margin-top: 1%;
 }
