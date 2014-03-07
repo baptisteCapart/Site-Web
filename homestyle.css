@@ -56,7 +56,7 @@ ul
 
 #proche_vous
 {
-	background-color: rgb(200,60,60);
+	background-color: #B75D5D;
 }
 
 #titre1, #titre2, #titre3
@@ -84,12 +84,12 @@ ul
 
 #groupe
 {
-	background-color: rgb(60,200,60);
+	background-color: #98E3A2;
 }
 
 #salle
 {
-	background-color: rgb(60,60,200);
+	background-color: #8A94C4;
 }
 
 #proche_vous, #groupe, #salle
