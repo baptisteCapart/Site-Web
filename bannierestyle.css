@@ -114,16 +114,17 @@ ul.menu1 li
 
 #compte a
 {
-	color : #7FFF00;
+	color : #69D15D;
+	/*color : #7FFF00;*/
 }
 
 #artistes a
 {
-	color : #FFFF00;
+	color : #D4D451;
 }
 #salles a
 {
-	color : #A42424;
+	color : #D42626;
 }
 #concerts a
 {
@@ -131,12 +132,12 @@ ul.menu1 li
 }
 #forum a
 {
-	color : #ED841B;
+	color : #CB8932;
 }
 
 #compte a:hover
 {
-	background-color: #7FFF00;
+	background-color: #69D15D;
 	color : black;
 }
 #menu li ul li a:hover
@@ -146,13 +147,13 @@ ul.menu1 li
 
 #artistes a:hover
 {
-	background-color: #FFFF00;
+	background-color: #D4D451;
 	color : black;
 }
 
 #salles a:hover
 {
-	background-color: #A42424;
+	background-color: #D42626;
 	color : black;
 }
 
@@ -175,16 +176,16 @@ nav ul li ul li a:hover
 
 #compte .menu1 li a:hover
 {
-	background-color:#7FFF00;
+	background-color:#69D15D;
 }
 
 #artistes .menu2 li a:hover
 {
-	background-color: #FFFF00;
+	background-color: #D4D451;
 }
 #salles .menu3 li a:hover
 {
-	background-color: #A42424;
+	background-color: #D42626;
 }
 #concerts .menu4 li a:hover
 {
