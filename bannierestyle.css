@@ -50,9 +50,10 @@ nav
 	margin-left: 3px;
 	font-weight: bold;
 	position : relative;
-	right : -750px;
-	top : -107px;
+	right : -600px;
+	top : -100px;
 	font-family: calibri ;
+	font-size: 1.3em;
 }
 
 
@@ -68,7 +69,7 @@ nav
 {
 	 display: inline-block;
 	 margin:0;
-	 padding:10px;
+	 padding:15px;
 }
 #menu li a 
 {
@@ -207,7 +208,7 @@ nav ul li ul li a:hover
 	position: relative;
 	font-family: calibri;
 	font-weight: bold;
-	font-size: 3em;
+	font-size: 2.2em;
 	top: -100px;
 	left: 200px;
 	padding: 0;
