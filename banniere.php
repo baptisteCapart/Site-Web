@@ -3,7 +3,7 @@
 	<div><strong class="TIT">Tune In Town</strong></div>
 	<div><strong class="slogan">The beat goes around !</strong></div>			
 	<?php 
-	$loggé = true;
+	$loggé = false;
 	if($loggé == false){
 ?>
 	<form class ="form" method="post" action="sign_in.php">
@@ -14,7 +14,7 @@
 		<input type="submit" value="Log in"/>
 		<span class="sign_in"><a href ="formulaire d'inscription">Inscription</a></span>
 	</form>
-<?
+<?php
 	}
 	else {
 		echo 'pseudo_membre';
