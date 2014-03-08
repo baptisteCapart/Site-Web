@@ -1,16 +1,13 @@
 header
 {
 	background-color: #333333;
-	max-height: 150px;
+	height: 25%;
+	max-height: 200px;
+	min-height: 120px;
 	width: 100%;
+	
 	margin : none;
 }
-body
-{
-	margin : 0;
-	width: 100%;
-}
-
 
 #logo
 {
@@ -46,16 +43,16 @@ a
 
 nav
 {
-	width: 60%;
+	font-family: calibri;
+	font-size: 1.3em;
+	width: 100%;
 	min-width: 50px;
 	display: inline-block;
 	margin-left: 3px;
 	font-weight: bold;
-	position : relative;
-	right : -40%;
-	top : -100px;
-	font-family: calibri ;
-	font-size: 1.3em;
+	position : absolute;
+	top : 18.5%;
+	right: -20%
 }
 
 
@@ -76,7 +73,7 @@ nav
 #menu li a 
 {
 	text-decoration:none;
-	padding: 5px 5px 6px 5px;
+	padding: 5px 5px 1px 5px;
 }
 
 #menu ul ul 
@@ -221,8 +218,8 @@ nav ul li ul li a:hover
 footer
 {
 	background-color: #333333;
-
-	height: 30%%;
+	height: 10%;
+	min-height: 100px;
 	width: 100%;
 	text-align: center;
 }

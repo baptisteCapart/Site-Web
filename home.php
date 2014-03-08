@@ -9,16 +9,14 @@
 	</head>
 
 	<body>
-		<div id="banniere">
 		<?php include("banniere.php"); ?>
-		</div>
 		<div id="news">
 				<div id="liste_news">
 					<ul>
 						<li></li>
 						<li></li>
 						<li><a href="#"> Baptiste à la Cigale !</a></li>
-						<li><a href="#"> Dj Vincent : nouel inscrit</a></li>
+						<li><a href="#"> Dj Vincent : nouvel inscrit</a></li>
 						<li><a href="#"> Le trombinoscope : une nouvelle salle débarque</a></li>
 						<li><a href="#"> Popol dépasse les 1000 abonnés !</a></li>
 						<li><a href="#"> News 5</a></li>
