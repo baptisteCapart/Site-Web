@@ -27,11 +27,12 @@
 
 		<div id="notifs">
 			<div id="proche_vous"> 
+				<a href=​"#presse" class=​"fleche">​</a>​
 				<div id="titre1"> PROCHE DE CHEZ VOUS ! </div>
 				<ul>
-					<li><a href="#"> Concert Soul bar O'Cean</a></li>
-					<li><a href="#"> Concert DJ Vincent Paris</a></li>
-					<li><a href="#"> Concert Hip-Hop dans votre ville</a></li>
+					<li><a href="#" class = "proche1"> Concert Soul bar O'Cean</a></li>
+					<li><a href="#" class = "proche2"> Concert DJ Vincent Paris</a></li>
+					<li><a href="#" class = "proche3"> Concert Hip-Hop dans votre ville</a></li>
 					<li><a href="#"> U2 en concert ! </a></li>
 					<li><a href="#"> Plus d'idée !!!!</a></li>
 				</ul>

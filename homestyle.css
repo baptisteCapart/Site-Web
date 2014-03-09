@@ -67,8 +67,9 @@ ul
 
 #proche_vous
 {
-	background-color: #B75D5D;
+	background-color: #FF9491;
 }
+
 
 #titre1, #titre2, #titre3
 {
@@ -105,8 +106,26 @@ ul
 
 #proche_vous, #groupe, #salle
 {
-	margin-bottom: -16px;
-	border-bottom: 20px black;
-	padding-top: 60px;
+	//padding-top: 60px;
 	padding-bottom: 20px;
+	border-bottom: 2px black;
+
+}
+
+.fleche
+{
+	background-image: url(fleche.png);
+	position: absolute;
+	bottom: 0;
+	height: 32px;
+	left: 50%;
+	margin-left: -32px;
+	width: 64px;
+}
+
+.prohe1 :focus
+{
+	background-image : url(U2.jpg);
+	
+
 }
