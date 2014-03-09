@@ -46,7 +46,7 @@ nav
 	font-family: calibri;
 	font-size: 1.3em;
 	width: 80%;
-	min-width: 60%;
+	min-width: 600px;
 	display: inline-block;
 	margin-left: 3px;
 	font-weight: bold;
@@ -272,8 +272,8 @@ footer a
 		margin-left: 3px;
 		font-weight: bold;
 		position : absolute;
-		top : 17%;
-		right: -7%; 
+		top : 19%;
+		right: -10%; 
 	}
 	#menu li 
 	{
