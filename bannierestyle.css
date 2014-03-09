@@ -235,10 +235,6 @@ footer
 #help
 {
 	display: inline-block;
-	position: relative;
-
-	left: 10%;
-	top: 6%;
 }
 
 #help li
@@ -259,6 +255,29 @@ footer a
 	text-decoration: underline;
 	margin-bottom: 1%;
 	margin-top: 1%;
+}
+
+#pseudo
+{
+	font-family: calibri;
+	font-size: 1.1em;
+	position: absolute;
+	top: 1%;
+	right: 1%;
+	padding-top: 5px;
+	list-style: none;
+	display: inline-block;
+}
+#pseudo li
+{
+		display: inline-block;
+		padding : 10px;
+}
+
+#pseudo a
+{
+	color : white;
+	text-decoration: underline;
 }
 
 @media screen and (max-width: 900px)
