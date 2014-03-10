@@ -5,16 +5,17 @@
 		<title>Page artiste</title>
 		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
-		<link rel="stylesheet" href="homestyle.css"/>
+		<link rel="stylesheet" href="pageartistestyle.css"/>
 	</head>
 
 	<body>
-		<div id="banniere">
 		<?php include("banniere.php"); ?>
-			<div id 
+			<div id = "photoartiste">
+				<div id="nomartiste">
+					Stromae
+				</div>
+			</div>
 
 		<?php include("footer.php"); ?>
-		
-
 	</body>
 </html>
