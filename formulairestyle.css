@@ -20,6 +20,13 @@ html
 	font-family: calibri;
 	font-size: 1.3em;
 	margin: 2%;
+	text-align: center;
+}
+
+#formulaire
+{
+	font-family: calibri;
+	font-weight: bold;
 }
 
 .textbox
@@ -36,5 +43,5 @@ html
 .envoyer
 {
 	font-size: 2em;
-	margin-top: 5%;
+	margin-top: 3.2%;
 }

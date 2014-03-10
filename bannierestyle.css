@@ -5,7 +5,6 @@ header
 	max-height: 200px;
 	min-height: 120px;
 	width: 100%;
-	
 	margin : none;
 }
 
@@ -45,13 +44,11 @@ nav
 {
 	font-family: calibri;
 	font-size: 1.3em;
-	//width: 80%;
-	min-width: 600px;
 	display: inline-block;
 	margin-left: 3px;
 	font-weight: bold;
 	position : absolute;
-	top : 17%;
+	top : 18%;
 	right: 0%;
 }
 
@@ -79,6 +76,7 @@ nav
 #menu ul ul 
 {
 	 display:none;
+
 }
 
 #menu ul li:hover ul
@@ -90,6 +88,7 @@ nav
 {
 	 display:block;
 	 text-align: left;
+	 background-color: rgba(100,100,100,0.5);
 }
 
 #menu li ul li :hover
@@ -169,6 +168,8 @@ nav ul li ul li a:hover
 {
 	background-color: none;
 }
+
+
 
 #compte .menu1 li a:hover
 {
@@ -280,23 +281,19 @@ footer a
 	text-decoration: underline;
 }
 
-@media screen and (max-width: 900px)
+@media screen and (max-width: 1000px)
 {
 	nav
 	{
-		font-size: 1em;
-		width: 80%;
-		min-width: 60%;
-		display: inline-block;
-		margin-left: 3px;
-		font-weight: bold;
-		position : absolute;
-		top : 19%;
-		right: -10%; 
+		font-size: 1em; 
 	}
 	#menu li 
 	{
 		padding : 5px;
+	}
+	#menu li ul li 
+	{
+		padding: 10px;
 	}
 
 	.slogan
@@ -304,5 +301,9 @@ footer a
 		font-size: 0em;
 	}
 
-
+	#menu ul 
+	{
+		padding: 0;
+	}
 }
+

@@ -1,7 +1,7 @@
 body
 {
 	height: 100%;
-	min-width: 500px;
+	min-width: 700px;
 	margin: 0;
 	padding: 0;
 }
@@ -14,13 +14,6 @@ html
 	padding: 0;
 }
 
-/*@media screen and (max-width: 500px)
-{
-	body
-	{
-		width: 500px;
-	}
-}*/
 
 div 
 {
@@ -45,8 +38,9 @@ div
 {
 	background-color: rgba(150,200,170,0.4);
 	width: 30%;
-	min-width: 300px;
+	min-width: 250px;
 	height: 100%;	
+	//min-height: 50px;
 }
 
 
@@ -68,6 +62,7 @@ ul
 	font-family: arial;
 	font-size: 1.4em;
 	font-weight: bold;
+	height: 70%;
 }
 
 @media screen and (max-width: 900px)
