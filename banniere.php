@@ -1,5 +1,5 @@
 <header class="header">
-	<div id="logo"><a href="home"><img src="logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
+	<div id="logo"><a href="home"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
 	<div><strong class="TIT">Tune In Town</strong></div>
 	<div><strong class="slogan">The beat goes around !</strong></div>	
 

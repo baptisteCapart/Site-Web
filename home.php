@@ -77,19 +77,19 @@
 						<div id="qui">Pour qui est le site ?</div>
 						<li>
 							<ul>
-								<li><img src="membre.jpg" alt="membre logo"></li>
+								<li><img src="images/membre.jpg" alt="membre logo"></li>
 								<li>Tu peux devenir simple membre, et ainsi créer la page de ton groupe de musique !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="membre.jpg" alt=""></li>
+								<li><img src="images/membre.jpg" alt=""></li>
 								<li>Tu peux aussi représenter une salle de concert et gérer ta propre page !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="monde.jpg" alt="se faire connaitre"></li>
+								<li><img src="images/monde.jpg" alt="se faire connaitre"></li>
 								<li>Dans les deux cas Tune in Town est une excellente manière de te faire connaître ou de découvrir des artistes !</li>
 							</ul>
 						</li>
@@ -100,19 +100,19 @@
 						<div id="quoi">Qu'est ce que tu y gagnes ?</div>
 						<li>
 							<ul>
-								<li><img src="follow.jpg" alt="suivre"></li>
+								<li><img src="images/follow.jpg" alt="suivre"></li>
 								<li>Tu pourras suivre tes artistes et salles préférés !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="portevoix.jpg" alt="écouter chansons"></li>
+								<li><img src="images/portevoix.jpg" alt="écouter chansons"></li>
 								<li>Tu pourras écouter les musiques mises en ligne par les artistes !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="message.jpg" alt="interagir"></li>
+								<li><img src="images/message.jpg" alt="interagir"></li>
 								<li>Tu pourras intéragir avec d'autres membres !</li>
 							</ul>
 						</li>
