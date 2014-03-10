@@ -1,7 +1,7 @@
 body
 {
 	height: 100%;
-	min-width: 100%;
+	min-width: 500px;
 	margin: 0;
 	padding: 0;
 }
@@ -13,6 +13,14 @@ html
 	margin: 0;
 	padding: 0;
 }
+
+/*@media screen and (max-width: 500px)
+{
+	body
+	{
+		width: 500px;
+	}
+}*/
 
 div 
 {
