@@ -6,11 +6,10 @@ html, body
 
 #photoartiste
 {
-	background-image: url(images/Stromae.jpg);
+	background-image: url(images/Stromae-Formidable.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 100px;
-	min-height: 500px;
+	height: 100%;
 }
 
 #nomartiste
@@ -18,11 +17,26 @@ html, body
 	position: absolute; 
 	height :10%;
 	bottom: 0;
-	font-size: 2em;
-	color : gray;
+	font-size: 3em;
+	color : #BEBEBE;
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 30%);
 	width: 100%;
-	margin-bottom: -1.5%;
-	padding-left: 4%;
-	padding-top: 1%;
+	margin-bottom: -10.9%;
+	padding-left: 2%;
+	padding-top: 1.5%;
+}
+
+#menudyna
+{
+	font-size: 2em;
+	padding-left: 2%;
+	background-color: #278ADE;
+}
+
+#biographie
+{
+	background-color: #77c9ff;
+	font-size: 1em;
+	padding-top: 0.01%;
+	padding-bottom: 0.01%;
 }
