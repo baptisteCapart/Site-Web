@@ -1,5 +1,5 @@
 <header class="header">
-	<div id="logo"><a href="home"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
+	<div id="logo"><a href="home.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
 	<div><strong class="TIT">Tune In Town</strong></div>
 	<div><strong class="slogan">The beat goes around !</strong></div>	
 
@@ -7,13 +7,13 @@
 	$loggé = true;
 	if($loggé == false){
 	?>
-		<form class ="form" method="post" action="sign_in.php">
+		<form class ="subscribe" method="post" action="formulaire.php">
 			<span class="login">Pseudo : </span>
 			<input type="text" name="pseudo" value=""/>
 			<span class="login">Password : </span>
 			<input type="password" name="mdp" value=""/>
 			<input type="submit" value="Log in"/>
-			<span class="sign_in"><a href ="formulaire d'inscription">Inscription</a></span>
+			<span class="sign_in"><a href ="formulaire.php">Inscription</a></span>
 		</form>
 	<?php
 	} else {

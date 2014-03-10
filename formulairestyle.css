@@ -1,0 +1,40 @@
+body
+{
+	height: 100%;
+	min-width: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #B7B7B7
+}
+
+html
+{
+	height: 100%;
+	min-width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+#bienvenue
+{
+	font-family: calibri;
+	font-size: 1.3em;
+	margin: 2%;
+}
+
+.textbox
+{
+	position : relative;
+	left : 10%;
+}
+
+.form2 ul
+{
+	list-style-type: none;
+}
+
+.envoyer
+{
+	font-size: 2em;
+	margin-top: 5%;
+}
