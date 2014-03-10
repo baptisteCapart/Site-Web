@@ -18,9 +18,11 @@ html, body
 	position: absolute; 
 	height :10%;
 	bottom: 0;
-	padding: 0;
 	font-size: 2em;
 	color : gray;
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 30%);
 	width: 100%;
+	margin-bottom: -1.5%;
+	padding-left: 4%;
+	padding-top: 1%;
 }
