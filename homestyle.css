@@ -18,7 +18,7 @@ html
 
 #news
 {
-	background-image: url(concert.jpg);
+	background-image: url(images/concert.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -64,7 +64,6 @@ ul
 		font-size: 1em;
 		padding: 10px;
 	}
-
 }
 
 #liste_news li a:hover
@@ -128,7 +127,7 @@ ul
 
 .fleche
 {
-	background-image: url(fleche.png);
+	background-image: url(images/fleche.png);
 	position: absolute;
 	bottom: 0;
 	height: 32px;
@@ -139,7 +138,7 @@ ul
 
 .prohe1 :hover
 {
-	background-image : url(U2.jpg);
+	background-image : url(images/U2.jpg);
 
 
 }
