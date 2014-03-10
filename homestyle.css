@@ -14,6 +14,11 @@ html
 	padding: 0;
 }
 
+div 
+{
+	margin: 0;
+}
+
 
 
 #news
@@ -159,6 +164,7 @@ ul
 	width: 100%;
 	font-family: calibri;
 	font-weight: bold;
+
 }
 
 #pub ul li 
@@ -171,6 +177,8 @@ ul
 #pub ul 
 {
 	margin-bottom: 50px;
+	padding: 0;
+
 }
 
 #pub ul li ul li 
@@ -201,8 +209,7 @@ ul
 #qui, #quoi
 {
 	font-size: 1.3em;
-	margin-bottom: 30px;
-	border-bottom: solid;
+	border-bottom: 2px solid black;
 }
 
 
