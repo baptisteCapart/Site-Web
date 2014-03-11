@@ -1,5 +1,5 @@
-//<?php header("Content-Type: text/css; charset=UTF-8"); ?>
-//<?php include('RandColor.php'); ?>
+/*<?php header("Content-Type: text/css; charset=UTF-8"); ?>
+<?php include('RandColor.php'); ?>*/
 
 body
 {
@@ -164,7 +164,7 @@ ul
 	width: 100%;
 	height: 7%;
 	background-color: #EA9B44;
-	//background-color:<?php print $coul_bg=coul_aleat(); ?>;
+	/*background-color:<?php print $coul_bg=coul_aleat(); ?>;*/
 	
 }
 #pub
