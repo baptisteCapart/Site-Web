@@ -4,16 +4,16 @@
 	<div><strong class="slogan">The beat goes around !</strong></div>	
 
 	<?php 
-	$loggé = true;
+	$loggé = false;
 	if($loggé == false){
 	?>
-		<form class ="subscribe" method="post" action="formulaire.php">
+		<form class ="form" method="post" action="formulaire.php">
 			<span class="login">Pseudo : </span>
 			<input type="text" name="pseudo" value=""/>
 			<span class="login">Password : </span>
 			<input type="password" name="mdp" value=""/>
 			<input type="submit" value="Log in"/>
-			<span class="sign_in"><a href ="formulaire.php">Inscription</a></span>
+			<span class="sign_in"><a href ="formulaire.php" target="_blank">Inscription</a></span>
 		</form>
 	<?php
 	} else {
@@ -42,7 +42,9 @@
 				<ul class = "menu2">
 					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 					<li id = "style"><a href="#">Par style</a></li>
-					<li id = "créer"><a href="#">Créer un profil artiste</a></li>
+					<?php if ($loggé == true) { ?>
+						<li id = "créer"><a href="#">Créer un profil artiste</a></li>
+					<?php } ?>
 				</ul>
 			</li>	
 			<li id = "salles"><a href="#">Salles</a>

@@ -31,7 +31,6 @@
 				</div>
 		</div>
 		<?php  
-		$loggé = false;
 		if($loggé == true){
 		?>
 		<div id="notifs">
