@@ -83,13 +83,13 @@
 						<li>
 							<ul>
 								<li><img src="images/membre.jpg" alt="membre logo"></li>
-								<li>Tu peux devenir simple membre, et ainsi créer la page de ton groupe de musique !</li>
+								<li>N'importe quelle personne qui aime la musique !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="images/membre.jpg" alt=""></li>
-								<li>Tu peux aussi représenter une salle de concert et gérer ta propre page !</li>
+								<li><img src="images/groupesalle.jpg" alt=""></li>
+								<li>En t'inscrivant tu pourras représenter une salle de concert ou un groupe de musique et gérer ta propre page !</li>
 							</ul>
 						</li>
 						<li>

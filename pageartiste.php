@@ -10,6 +10,7 @@
 
 	<body>
 		<?php include("banniere.php"); ?>
+
 			<div id = "photoartiste">
 				<div id="nomartiste">
 					Stromae
@@ -17,28 +18,14 @@
 			</div>
 			<div id="menudyna">
 				<ul>
-					<li>
-						<ul>
-							<li><a href="pageartiste.php">Présentation</a></li>
-							<li><div id="biographie"> bb</div></li>
-						</ul>
-					</li>
-
-					<li><a href="#">Concerts</a>	
-						<div id="listeconcert"></div>
-					</li>	
-					<li><a href="#">Extraits</a>
-						<div id="musiques"></div>
-					</li>	
-					<li><a href="#">Avis</a>
-						<div id="avis"></div>
-					</li>	
-					<li><a href="#">Photos</a>
-						<div id="photos"></div>
-					</li>	
-				</ul>
-				
+					<li class = "onglet1"><a href="pageartiste.php">Présentation</a></li>
+					<li class = "onglet2"><a href="#">Concerts</a></li>	
+					<li class = "onglet3"><a href="#">Extraits</a></li>	
+					<li class = "onglet4"><a href="#">Avis</a></li>	
+					<li class = "onglet5"><a href="#">Photos</a></li>	
+				</ul>				
 			</div>
+			<div id="contenu"></div>
 		<?php include("footer.php"); ?>
 	</body>
 </html>

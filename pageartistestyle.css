@@ -7,15 +7,14 @@ html, body
 	padding: 0;
 }
 
-
 #photoartiste
 {
+	position: relative;
 	background-image: url(images/Stromae-Formidable.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 70%;
+	height: 80%;
 	width: 100%;
-	margin: auto;
 
 }	
 
@@ -28,15 +27,17 @@ html, body
 	color : #BEBEBE;
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
 	width: 100%;
-	margin-bottom: 3%;
 	padding-top: 1.5%;
+	padding-bottom: 1.5%;
 }
 
 #menudyna
 {
 	font-size: 2em;
-	padding-left: 1%;
 	background-color: #5196E1;
+	margin: 0;
+	padding: 0;
+	margin: -2.3%;
 }
 
 #menudyna ul 
@@ -49,47 +50,21 @@ html, body
 	display: inline-block;
 	padding: 0.5%;
 	border-right: 1px solid white;
-
-}
-
-#menu ul ul
-{
-	 display:none;
-
-}
-
-#menu ul li:hover ul
-{
-	 display:block;
- }
-
- #menu li:hover ul li 
-{
-	 display:block;
-	 text-align: left;
-	 background-color: rgba(100,100,100,0.5);
-}
-
-#menudyna li  a:hover div
-{
-	display: block;
 }
 
 
-#menudyna a, .barre
+#menudyna a 
 {
 	color : white;
 }
 
-#menudyna a:hover
+#menudyna li:hover
 {
 	background-color: #1632B4;
 }
 
-#biographie
+#contenu
 {
-	background-color: #77c9ff;
-	font-size: 1em;
-	padding: 1%;
-	height: 70%;
+	background-color: #46D1E1;
+	height : 50%;
 }

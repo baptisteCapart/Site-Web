@@ -6,7 +6,6 @@ header
 	min-height: 120px;
 	width: 100%;
 	margin : none;
-	border: solid 2px blue;
 }
 
 #logo
@@ -51,7 +50,6 @@ nav
 	position : absolute;
 	top : 18%;
 	right: 0%;
-	border: 2px solid green;
 	//width: auto;
 	min-width: 700px;
 }
@@ -71,9 +69,6 @@ nav
 	 display: inline-block;
 	 margin:0;
 	 padding:15px;
-	 	border: 2px solid green;
-
-
 }
 #menu li a 
 {
@@ -179,21 +174,20 @@ nav ul li ul li a:hover
 }
 
 
-
-#compte .menu1 li a:hover
+#compte .menu1 li:hover
 {
 	background-color:#69D15D;
 }
 
-#artistes .menu2 li a:hover
+#artistes .menu2 li:hover
 {
 	background-color: #D4D451;
 }
-#salles .menu3 li a:hover
+#salles .menu3 li:hover
 {
 	background-color: #D42626;
 }
-#concerts .menu4 li a:hover
+#concerts .menu4 li:hover
 {
 	background-color: #318CE7;
 }
