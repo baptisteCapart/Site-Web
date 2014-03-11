@@ -5,11 +5,12 @@
 		<title>Page membre</title>
 		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
-		<link rel="stylesheet" href="pageartistestyle.css"/>
+		<link rel="stylesheet" href="pageMembrestyle.css"/>
 	</head>
 	<body>
 		<?php include("banniere.php"); ?>
-		<div id= "photoMembre">
+		<div id= "photomembre">
+
 		</div>
 
 
