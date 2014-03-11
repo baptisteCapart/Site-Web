@@ -23,6 +23,12 @@
 						<li><a href="#"> La salle Pleyel restaurée : les prochains évènements ...</a></li>
 					</ul>
 				</div>
+				<div id="flechegauche">
+					<a href="newsprecedente"><img src="images/flechegauche.png" alt="news précédente"></a>
+				</div>
+				<div id="flechedroite">
+					<a href="newssuivante"><img src="images/flechedroite.png" alt="news suivante"></a>
+				</div>
 		</div>
 		<?php  
 		$loggé = false;

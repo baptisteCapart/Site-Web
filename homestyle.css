@@ -214,7 +214,20 @@ ul
 	font-size: 1.3em;
 	border-bottom: 2px solid black;
 }
-
+#flechegauche
+{
+	position : relative;
+	top: -275px;
+	left: 35%;
+	display: inline-block;
+}
+#flechedroite
+{
+	position : relative;
+	top: -275px;
+	left: 90%;
+	display: inline-block;
+}
 
 
 
