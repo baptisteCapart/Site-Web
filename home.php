@@ -5,7 +5,7 @@
 		<title>Tune In Town</title>
 		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
-		<link rel="stylesheet" href="homestyle.css"/>
+		<link rel="stylesheet" href="homestyle.css" />
 	</head>
 
 	<body>
