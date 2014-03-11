@@ -28,16 +28,53 @@ html, body
 	color : #BEBEBE;
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
 	width: 100%;
-margin-bottom: 3%;
+	margin-bottom: 3%;
 	padding-top: 1.5%;
 }
 
 #menudyna
 {
 	font-size: 2em;
-	padding-left: 2%;
+	padding-left: 1%;
 	background-color: #5196E1;
 }
+
+#menudyna ul 
+{
+	list-style: none;
+}
+
+#menudyna li 
+{
+	display: inline-block;
+	padding: 0.5%;
+	border-right: 1px solid white;
+
+}
+
+#menu ul ul
+{
+	 display:none;
+
+}
+
+#menu ul li:hover ul
+{
+	 display:block;
+ }
+
+ #menu li:hover ul li 
+{
+	 display:block;
+	 text-align: left;
+	 background-color: rgba(100,100,100,0.5);
+}
+
+#menudyna li  a:hover div
+{
+	display: block;
+}
+
 
 #menudyna a, .barre
 {
