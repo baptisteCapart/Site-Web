@@ -6,6 +6,7 @@ header
 	min-height: 120px;
 	width: 100%;
 	margin : none;
+	border: solid 2px blue;
 }
 
 #logo
@@ -50,6 +51,9 @@ nav
 	position : absolute;
 	top : 18%;
 	right: 0%;
+	border: 2px solid green;
+	//width: auto;
+	min-width: 700px;
 }
 
 
@@ -59,6 +63,7 @@ nav
 	 padding:0;
 	 list-style-type:none;
 	 text-align:center;
+
 }
 	 
 #menu li 
@@ -66,6 +71,9 @@ nav
 	 display: inline-block;
 	 margin:0;
 	 padding:15px;
+	 	border: 2px solid green;
+
+
 }
 #menu li a 
 {
@@ -286,7 +294,7 @@ footer a
 {
 	nav
 	{
-		font-size: 1em; 
+		font-size: 1em;
 	}
 	#menu li 
 	{

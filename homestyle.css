@@ -4,6 +4,7 @@
 body
 {
 	height: 100%;
+	width: 100%;
 	min-width: 700px;
 	margin: 0;
 	padding: 0;
@@ -12,7 +13,7 @@ body
 html
 {
 	height: 100%;
-	min-width: 100%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 }
@@ -34,7 +35,9 @@ div
 	width: 100%;
 	height: 80%;
 	min-height: 550px;
-	margin-top: -62px;
+	margin-top: -2%;
+		border: 2px solid green;
+
 }
 
 #liste_news 
@@ -45,7 +48,6 @@ div
 	height: 100%;	
 	//min-height: 50px;
 }
-
 
 
 ul 
@@ -65,7 +67,7 @@ ul
 	font-family: arial;
 	font-size: 1.4em;
 	font-weight: bold;
-	height: 70%;
+	height: 100%;
 }
 
 @media screen and (max-width: 900px)
@@ -139,9 +141,8 @@ ul
 .fleche
 {
 	background-image: url(images/fleche.png);
-	position: absolute;
-	bottom: 0;
-	height: 32px;
+	position: relative;
+	height: 50%;
 	left: 50%;
 	margin-left: -32px;
 	width: 64px;
@@ -222,14 +223,14 @@ ul
 #flechegauche
 {
 	position : relative;
-	top: -275px;
+	top: -20%;
 	left: 35%;
 	display: inline-block;
 }
 #flechedroite
 {
-	position : relative;
-	top: -275px;
+	position : absolute;
+	top: -10%;
 	left: 90%;
 	display: inline-block;
 }
