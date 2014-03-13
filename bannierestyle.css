@@ -103,7 +103,6 @@ nav
 	 position:absolute;
 }
 
-
 ul.menu1 li
 {
 	color : black;
@@ -176,10 +175,24 @@ nav ul li ul li a:hover
 {
 	background-color:#69D15D;
 }
+
 #compte .menu1 li:hover a
 {
 	color: black;
 }
+#artistes .menu2 li:hover a
+{
+	color: black;
+}
+#salles .menu3 li:hover a
+{
+	color: black;
+}
+#concerts .menu3 li:hover a
+{
+	color: black;
+}
+
 #artistes .menu2 li:hover
 {
 	background-color: #D4D451;
@@ -311,3 +324,6 @@ footer a
 	}
 }
 
+nav {
+	z-index: 60;
+}
