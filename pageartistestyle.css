@@ -34,7 +34,7 @@ html, body
 #menudyna
 {
 	font-size: 2em;
-	background-color: #5196E1;
+	background-color: #4B93E0;
 	margin: 0;
 	padding: 0;
 	border: solid 1px green;
@@ -48,7 +48,8 @@ html, body
 #menudyna li 
 {
 	display: inline-block;
-	padding: 0.5%;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
 	border-right: 1px solid white;
 }
 
@@ -65,6 +66,6 @@ html, body
 
 #contenu
 {
-	background-color: #46D1E1;
+	background-color: #99C9F0;
 	height : 50%;
 }

@@ -23,16 +23,16 @@
 				<a href=​"#presse" class=​"fleche">​</a>​
 				<div id="titre1"> PROCHE DE CHEZ VOUS ! </div>
 				<ul>
-					<li class = "proche1"><a href="#" > Concert Soul bar O'Cean</a>
+					<li class = "proche1"><a href="#" > U2 en concert à Versailles</a>
 					<img class = "image" src="images/U2.jpg" alt="u2"></li>
-					<li class = "proche2"><a href="#" > Musique à Versailles : Marais, Charpentier, ...</a>
+					<li class = "proche2"><a href="#" > Bastian Baker, rendez vous l'Olympia</a>
 					<img class = "image" src="images/baker.jpg" alt="u2"></li>
-					<li class = "proche3"><a href="#"> Generation 80-90 : la boum</a>
+					<li class = "proche3"><a href="#"> Les Rolling Stones en tournée</a>
 					<img class = "image" src="images/rolling.jpg" alt="u2"></li>
-					<li class = "proche4"><a href="#"> American Party (Billboard Hot 100)</a>
-					<img class = "image" src="images/U2.jpg" alt="u2"></li>
+					<li class = "proche4"><a href="#"> Les Beatles : le retour</a>
+					<img class = "image" src="images/beatles.jpg" alt="u2"></li>
 					<li class = "proche5"><a href="#"> Le printemps des fleurs : Vivladi comme jamais </a>
-					<img class = "image" src="images/U2.jpg" alt="u2"></li>
+					<img class = "image" src="images/vivaldi.jpg" alt="u2"></li>
 				</ul>
 			</div>
 

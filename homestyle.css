@@ -34,7 +34,7 @@ div
 	background-position: center;
 	width: 100%;
 	height: 80%;
-	min-height: 550px;
+	min-height: 300px;
 	margin-top: -1.5%;
 }
 
@@ -64,7 +64,7 @@ ul
 #liste_news li 
 {
 	padding: 15px;
-	font-size: 1.4em;
+	font-size: 1.2em;
 	font-weight: bold;
 	height: 100%;
 }
@@ -92,14 +92,33 @@ ul
 
 #proche_vous
 {
-	background-color: #FF9491;
+	background-color: #96BEC2;
 }
 
-#proche_vous #titre1
+
+#groupe
+{
+	background-color: #FFFF80;
+}
+
+#salle
+{
+	background-color: #96BEC2;
+}
+
+#proche_vous #titre1, #titre2, #titre3
 {
 	text-align: center;
+	border-top: 1px solid #969696;
+	border-bottom: 1px solid #969696;
+	margin-right: 20%;
+	margin-left: 20%;
 }
 
+#groupe, #salle
+{
+	padding-top: 3%;
+}
 #proche_vous ul 
 {
 	position: relative;
@@ -132,12 +151,12 @@ ul
 
 #groupe
 {
-	background-color: #98E3A2;
+	background-color: #EEEEE3;
 }
 
 #salle
 {
-	background-color: #8A94C4;
+	background-color: #96BEC2;
 }
 
 #proche_vous, #groupe, #salle
@@ -148,23 +167,18 @@ ul
 
 }
 
-.fleche
-{
-	background-image: url(images/fleche.png);
-	position: relative;
-	height: 50%;
-	left: 50%;
-	margin-left: -32px;
-	width: 64px;
-}
+
 
 #proche_vous .image
 {
 	position: absolute;
 	right: 15%;
-	top : 15%;
-	height: 80%;
-	width: 15%;
+	top : 7%;
+	height: 100%;
+	width: 17%;
+	box-shadow: 0 0 12px #777 inset ;
+	border-radius: 7px;
+	border: solid 1px #999;
 }
 
 .proche1 img.image, .proche2 img.image, .proche3 img.image, .proche4 img.image, .proche5 img.image
@@ -196,12 +210,12 @@ ul
 #inscristoi
 {
 	text-align: center;
-	font-family: calibri;
+	font-family: 'Open Sans' , sans-serif;
 	font-size: 1.5em;
 	color :black;
 	width: 100%;
 	height: 7%;
-	background-color: #EA9B44;
+	background-color: #F1BD83;
 	/*background-color:<?php print $coul_bg=coul_aleat(); ?>;*/
 	
 }
@@ -222,7 +236,7 @@ ul
 
 #pub ul 
 {
-	margin-bottom: 50px;
+	margin-bottom: 20px;
 	padding: 0;
 }
 
@@ -243,14 +257,16 @@ ul
 {
 	display: block;
 	width: 350px;
-	padding-bottom: 5%;
 }
 
 
 .formulaire
 {
-	color : red;
+	border-top: 1px solid #949494;
+	color : #229587;
 	font-size: 1.6em;
+	margin-right: 10%;
+	margin-left: 10%;
 }
 
 .formulaire a 
@@ -261,9 +277,13 @@ ul
 #qui, #quoi
 {
 	font-size: 1.3em;
-	border-bottom: 2px solid black;
+	border-bottom: 1px solid #949494;
 	margin-right: 10%;
 	margin-left: 10%;
+}
+.privileges li , .typeinscrits li 
+{
+	margin-top: 3%;
 }
 
 
