@@ -4,7 +4,7 @@
 	<div><strong class="slogan">The beat goes around !</strong></div>	
 
 	<?php 
-	$loggé = true;
+	$loggé = false;
 	if($loggé == false){
 	?>
 		<form class ="form" method="post" action="formulaire.php">
