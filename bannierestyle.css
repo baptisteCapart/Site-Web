@@ -1,6 +1,6 @@
 header
 {
-	background-color: #333333;
+	background-image: url(images/darkmetal.jpg);
 	height: 25%;
 	max-height: 200px;
 	min-height: 120px;
@@ -8,11 +8,20 @@ header
 	margin : none;
 }
 
+#cadrelogo
+{
+	background-color: rgba(150,150,150,0.3);
+	height: 150%;
+	width : 13%;
+}
+
+
 #logo
 {
+
 	position : relative;
 	top: 15px;
-	left: 2%;
+	left: 13%;
 	display: inline-block;
 }
 
@@ -114,28 +123,39 @@ ul.menu1 li
 
 #compte a
 {
+	font-size: 0.75em;
+	font-family: Black Ops One;
 	color : #69D15D;
 }
 
 #artistes a
 {
+	font-size: 0.75em;
+	font-family: Black Ops One;
 	color : #D4D451;
 }
 #salles a
 {
+	font-size: 0.75em;
+	font-family: Black Ops One;
 	color : #D42626;
 }
 #concerts a
 {
+	font-size: 0.75em;
+	font-family: Black Ops One;
 	color : #318CE7;
 }
 #forum a
 {
+	font-size: 0.75em;
+	font-family: Black Ops One;
 	color : #CB8932;
 }
 
 #compte a:hover
 {
+
 	background-color: #69D15D;
 	color : black;
 }
@@ -197,24 +217,25 @@ nav ul li ul li a:hover
 .TIT
 {
 	position: relative;
-	font-family: Gabriola;
+	font-family: Codystar;
 	font-weight: bold;
-	font-size: 2em;
-	top: 0px;
-	left: 10px;
+	font-size: 1em;
+	top: 14px;
+	left: 15px;
+	color : #0505A3;
+
 }
 
 .slogan
 {
 	position: relative;
-	font-family: calibri;
-	font-weight: bold;
-	font-size: 2.2em;
-	top: -100px;
+	font-family: Codystar;
+	font-size: 3em;
+	top: -175px;
 	left: 200px;
 	padding: 0;
 	margin: 0;
-	color : #3BF0F6;
+	color : #0505A3;
 }
 
 footer
