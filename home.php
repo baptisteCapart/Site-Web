@@ -31,7 +31,7 @@
 					<img class = "image" src="images/rolling.jpg" alt="u2"></li>
 					<li class = "proche4"><a href="#"> Les Beatles : le retour</a>
 					<img class = "image" src="images/beatles.jpg" alt="u2"></li>
-					<li class = "proche5"><a href="#"> Le printemps des fleurs : Vivladi comme jamais </a>
+					<li class = "proche5"><a href="#"> Le printemps des fleurs : Vivaldi comme jamais </a>
 					<img class = "image" src="images/vivaldi.jpg" alt="u2"></li>
 				</ul>
 			</div>
