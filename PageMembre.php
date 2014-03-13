@@ -2,15 +2,17 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<title>Page membre</title>
+		<title>page membre</title>
 		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
 		<link rel="stylesheet" href="pageMembrestyle.css"/>
 	</head>
 	<body>
 		<?php include("banniere.php"); ?>
-		<div id= "photomembre">
-
+		<div id= "cover">
+			<div id= "membre">
+			<img src="images/membreexemple.jpg" width="220" height="220" alt="Photo de Gérard" />
+			</div>
 		</div>
 
 

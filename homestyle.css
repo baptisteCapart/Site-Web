@@ -86,12 +86,23 @@ ul
 {
 	width: 100%;
 	font-family: calibri;
-	text-align: center;
+	text-align: left;
 }
 
 #proche_vous
 {
 	background-color: #FF9491;
+}
+
+#proche_vous #titre1
+{
+	text-align: center;
+}
+
+#proche_vous ul 
+{
+	position: relative;
+	padding-left : 2%;
 }
 
 
@@ -146,11 +157,39 @@ ul
 	width: 64px;
 }
 
-.prohe1 :hover
+#proche_vous .image
 {
-	background-image : url(images/U2.jpg);
+	position: absolute;
+	right: 15%;
+	top : 15%;
+	height: 80%;
+	width: 15%;
+}
 
+.proche1 img.image, .proche2 img.image, .proche3 img.image, .proche4 img.image, .proche5 img.image
+{
+	display: none;
+}
 
+.proche1:hover img.image
+{
+	display: inline-block;
+}
+.proche2:hover img.image
+{
+	display: inline-block;
+}
+.proche3:hover img.image
+{
+	display: inline-block;
+}
+.proche4:hover img.image
+{
+	display: inline-block;
+}
+.proche5:hover img.image
+{
+	display: inline-block;
 }
 
 #inscristoi
@@ -178,14 +217,16 @@ ul
 {
 	list-style: none;
 	display: block;
-
 }
 
 #pub ul 
 {
 	margin-bottom: 50px;
 	padding: 0;
+}
 
+ .typeinscrits>li{
+	vertical-align: top;
 }
 
 #pub ul li ul li 

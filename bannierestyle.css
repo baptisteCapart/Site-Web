@@ -5,6 +5,7 @@ header
 	max-height: 200px;
 	min-height: 120px;
 	width: 100%;
+	min-width: 500px;
 	margin : none;
 }
 
@@ -54,15 +55,12 @@ nav
 	font-family: calibri;
 	font-size: 1.3em;
 	display: inline-block;
-	margin-left: 3px;
 	font-weight: bold;
 	position : absolute;
 	top : 18%;
-	right: 0%;
-	//width: auto;
+	width: 100%;
 	min-width: 700px;
 }
-
 
 #menu ul
 {
@@ -70,7 +68,7 @@ nav
 	 padding:0;
 	 list-style-type:none;
 	 text-align:center;
-
+	 float: right;
 }
 	 
 #menu li 
@@ -198,7 +196,10 @@ nav ul li ul li a:hover
 {
 	background-color:#69D15D;
 }
-
+#compte .menu1 li:hover a
+{
+	color: black;
+}
 #artistes .menu2 li:hover
 {
 	background-color: #D4D451;

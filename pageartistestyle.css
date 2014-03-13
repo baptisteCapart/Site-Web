@@ -27,8 +27,8 @@ html, body
 	color : #BEBEBE;
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
 	width: 100%;
-	padding-top: 1.5%;
-	padding-bottom: 1.5%;
+	vertical-align: middle;
+	display: inline-block;
 }
 
 #menudyna
