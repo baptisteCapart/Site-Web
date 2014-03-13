@@ -31,12 +31,21 @@ header
 	color: white;
 }
 
-.form
+.container .form
 {
 	float: right;
 	padding-top: 10px;
+	margin-right: 2%;
+
 }
 
+.container .form .login
+{
+	font-family: 'Open Sans' , sans-serif;
+	color: #A3A596;
+	font-size: 0.9em;
+
+}
 .container {
 	position: absolute;
 	top: 5px;
@@ -46,6 +55,10 @@ header
 {
 	text-decoration: underline;
 	color : white;
+	font-family: 'Open Sans' , sans-serif;
+	font-size: 0.9em;
+	font-weight: bold;
+
 }
 
 a
@@ -240,14 +253,14 @@ nav ul li ul li a:hover
 
 .slogan
 {
-	position: relative;
-font-family: 'Bangers', sans-serif;
+	position: absolute;
+	font-family: 'Bangers' , sans-serif;
 	font-size: 2.4em;
-	bottom: 10%;
-	left: 200px;
+	top: 10%;
+	left: 20%;
 	padding: 0;
 	margin: 0;
-	color : #167254;
+	color : #D7CBA2;
 }
 
 footer
