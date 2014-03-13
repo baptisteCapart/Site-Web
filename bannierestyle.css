@@ -5,14 +5,14 @@ header
 	max-height: 200px;
 	min-height: 120px;
 	width: 100%;
-	min-width: 500px;
+	min-width: 1000px;
 	margin : none;
 }
 
 #cadrelogo
 {
 	background-color: rgba(150,150,150,0.3);
-	height: 150%;
+	height: 100%;
 	width : 13%;
 }
 
@@ -33,11 +33,14 @@ header
 
 .form
 {
-	display: inline-block;
+	float: right;
+	padding-top: 10px;
+}
+
+.container {
 	position: absolute;
 	top: 5px;
-	right: 20px;
-	padding-top: 10px;
+	width: 100%;
 }
 .sign_in a
 {
@@ -52,7 +55,7 @@ a
 
 nav
 {
-	font-family: calibri;
+	font-family: 'Open Sans' , sans-serif;
 	font-size: 1.3em;
 	display: inline-block;
 	font-weight: bold;
@@ -121,32 +124,27 @@ ul.menu1 li
 #compte a
 {
 	font-size: 0.75em;
-	font-family: Black Ops One;
 	color : #69D15D;
 }
 
 #artistes a
 {
 	font-size: 0.75em;
-	font-family: Black Ops One;
 	color : #D4D451;
 }
 #salles a
 {
 	font-size: 0.75em;
-	font-family: Black Ops One;
 	color : #D42626;
 }
 #concerts a
 {
 	font-size: 0.75em;
-	font-family: Black Ops One;
 	color : #318CE7;
 }
 #forum a
 {
 	font-size: 0.75em;
-	font-family: Black Ops One;
 	color : #CB8932;
 }
 
@@ -208,7 +206,7 @@ nav ul li ul li a:hover
 {
 	color: black;
 }
-#concerts .menu3 li:hover a
+#concerts .menu4 li:hover a
 {
 	color: black;
 }
@@ -243,13 +241,13 @@ nav ul li ul li a:hover
 .slogan
 {
 	position: relative;
-	font-family: Codystar;
-	font-size: 3em;
-	top: -175px;
+font-family: 'Bangers', sans-serif;
+	font-size: 2.4em;
+	bottom: 10%;
 	left: 200px;
 	padding: 0;
 	margin: 0;
-	color : #0505A3;
+	color : #167254;
 }
 
 footer
@@ -296,26 +294,35 @@ footer a
 	margin-top: 1%;
 }
 
-#pseudo
+.pseudo
 {
 	font-family: calibri;
 	font-size: 1.1em;
 	position: absolute;
 	top: 1%;
-	right: 1%;
 	padding-top: 5px;
 	list-style: none;
 	display: inline-block;
+	width: 100%;
 }
-#pseudo li
+.pseudo ul
 {
-		display: inline-block;
-		padding : 10px;
+	float: right;
+
+}
+.pseudo li
+{
+	display: inline-block;
+	padding : 10px;
 }
 
-#pseudo a
+.pseudo a
 {
-	color : white;
+	color: white;
+}
+
+.pseudo a:hover
+{
 	text-decoration: underline;
 }
 
@@ -323,7 +330,7 @@ footer a
 {
 	nav
 	{
-		font-size: 1em;
+		font-size: 1.1em;
 	}
 	#menu li 
 	{

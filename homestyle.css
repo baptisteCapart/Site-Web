@@ -5,7 +5,7 @@ body
 {
 	height: 100%;
 	width: 100%;
-	min-width: 700px;
+	min-width: 1200px;
 	margin: 0;
 	padding: 0;
 }
@@ -45,6 +45,8 @@ div
 	min-width: 250px;
 	height: 100%;	
 	//min-height: 50px;
+	font-family: 'Open Sans' , sans-serif;
+
 }
 
 
@@ -62,7 +64,6 @@ ul
 #liste_news li 
 {
 	padding: 15px;
-	font-family: arial;
 	font-size: 1.4em;
 	font-weight: bold;
 	height: 100%;
@@ -225,6 +226,10 @@ ul
 	padding: 0;
 }
 
+.privileges>li{
+	vertical-align: top;
+}
+
 .typeinscrits>li{
 	vertical-align: top;
 }
@@ -257,21 +262,10 @@ ul
 {
 	font-size: 1.3em;
 	border-bottom: 2px solid black;
+	margin-right: 10%;
+	margin-left: 10%;
 }
-#flechegauche
-{
-	position : relative;
-	top: -20%;
-	left: 35%;
-	display: inline-block;
-}
-#flechedroite
-{
-	position : absolute;
-	top: -10%;
-	left: 90%;
-	display: inline-block;
-}
+
 
 
 

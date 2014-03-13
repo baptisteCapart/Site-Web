@@ -16,36 +16,33 @@
 		<form class ="form2" method="post" action="envoiformulaire.php">
 			<ul>
 				<li>
-					<div class="pseudo">Pseudo : </div>
-					<input class = "textbox" type="text" name="pseudo" value=""/>
-				</li>
-					<div class="motdepasse">Mot de passe : </div>
-					<input class = "textbox"  type="password" name="mdp" value=""/>
-				<li>
-					<div class="mail">Adresse mail : </div>
-					<input class = "textbox" type="text" name="mail" value=""/>
-				</li>
-				<li>
-					<div class="ville"> Ville : </div>
-					<input class = "textbox" type="text" name="ville" value=""/>						
-				</li>
-				<li>
-					<div class="codepostal"> Code postal : </div>
-					<input class = "textbox" type="text" name="codepostal" value=""/>
-				</li>
-				<li>
-					<div class="photoprofil"> Photo de profil : </div>				
-					<input class = "textbox" type="file" name="photo" />					
-				</li>
-				<li>
-					<div class="photocouv"> Photo de couverture : </div>				
-					<input class = "textbox" type="file" name="photo" />
-				</li>
-				<li>
+					<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value=""/></div>
 					
 				</li>
 				<li>
+					<div class="motdepasse"><span>Mot de passe : </span><input class = "textbox"  type="password" name="mdp" value=""/></div>
+				</li>	
+				<li>
+					<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="text" name="mail" value=""/></div>
+					
+				</li>
+				<li>
+					<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" value=""/></div>
+											
+				</li>
+				<li>
+					<div class="codepostal"><span>Code postal : </span><input class = "textbox" type="text" name="codepostal" value=""/></div>
+					
+				</li>
+				<li>
+					<div class="photoprofil"><span>Photo de profil : </span><input class = "textbox" type="file" name="photo" /></div>
+				</li>
+				<li>
+					<div class="photocouv"><span>Photo de couverture :</span><input class = "textbox" type="file" name="photo" /></div>					
+				</li>
+				<li>
 					<input class = "envoyer" type="submit" value="Envoyer !"/>
+				</li>
 			</ul>
 			
 			

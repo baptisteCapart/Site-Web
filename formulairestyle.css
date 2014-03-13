@@ -4,7 +4,7 @@ body
 	min-width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #B7B7B7
+	background-color: #DAD9BA;
 }
 
 html
@@ -25,14 +25,24 @@ html
 
 #formulaire
 {
-	font-family: calibri;
+	font-family: 'Open Sans' , sans-serif;
 	font-weight: bold;
+	margin-left: 20%;
+	margin-right: 20%;
 }
 
 .textbox
 {
-	position : relative;
-	left : 10%;
+	box-shadow: 0 0 9px #777 inset ;
+	border-radius: 3px;
+	border: solid 1px #999;
+}
+
+form ul li 
+{
+	border-bottom: 1px solid black;
+	padding-bottom: 2%;
+	margin-bottom: 2%;
 }
 
 .form2 ul
@@ -44,4 +54,9 @@ html
 {
 	font-size: 2em;
 	margin-top: 3.2%;
+}
+
+form ul li div span {
+	width: 25%;
+	display: inline-block;
 }
