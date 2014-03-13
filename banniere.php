@@ -1,7 +1,12 @@
 <header class="header">
-	<div id="logo"><a href="home.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
-	<div><strong class="TIT">Tune In Town</strong></div>
+<link href='http://fonts.googleapis.com/css?family=Codystar|Black+Ops+One' rel='stylesheet' type='text/css'>
+	<div id= "cadrelogo">
+		<div id="logo"><a href="home.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
+			<div><strong class="TIT">Tune In Town</strong></div>
+	</div>
+
 	<div><strong class="slogan">The beat goes around !</strong></div>	
+
 
 	<?php 
 	$loggé = false;
