@@ -7,7 +7,7 @@ html, body
 	padding: 0;
 }
 
-#photomembre
+#cover
 {
 	background-image: url(images/imageMembre.jpg);
 	background-size: cover;
@@ -16,4 +16,14 @@ html, body
 	width: 100%;
 	
 
+
 }
+#membre
+
+{
+position: absolute;
+	bottom : 8%; 
+	height :50%;
+	left: 5%;
+}
+
