@@ -23,12 +23,7 @@
 						<li><a href="#"> La salle Pleyel restaurée : les prochains évènements ...</a></li>
 					</ul>
 				</div>
-				<div id="flechegauche">
-					<a href="newsprecedente"><img src="images/flechegauche.png" alt="news précédente"></a>
-				</div>
-				<div id="flechedroite">
-					<a href="newssuivante"><img src="images/flechedroite.png" alt="news suivante"></a>
-				</div>
+				
 		</div>
 		<?php  
 		if($loggé == true){
@@ -38,11 +33,16 @@
 				<a href=​"#presse" class=​"fleche">​</a>​
 				<div id="titre1"> PROCHE DE CHEZ VOUS ! </div>
 				<ul>
-					<li><a href="#" class = "proche1"> Concert Soul bar O'Cean</a></li>
-					<li><a href="#" class = "proche2"> Musique à Versailles : Marais, Charpentier, ...</a></li>
-					<li><a href="#" class = "proche3"> Generation 80-90 : la boum</a></li>
-					<li><a href="#" class = "proche4"> American Party (Billboard Hot 100)</a></li>
-					<li><a href="#" class = "proche5"> Le printemps des fleurs : Vivladi comme jamais </a></li>
+					<li class = "proche1"><a href="#" > Concert Soul bar O'Cean</a>
+					<img class = "image" src="images/U2.jpg" alt="u2"></li>
+					<li class = "proche2"><a href="#" > Musique à Versailles : Marais, Charpentier, ...</a>
+					<img class = "image" src="images/baker.jpg" alt="u2"></li>
+					<li class = "proche3"><a href="#"> Generation 80-90 : la boum</a>
+					<img class = "image" src="images/rolling.jpg" alt="u2"></li>
+					<li class = "proche4"><a href="#"> American Party (Billboard Hot 100)</a>
+					<img class = "image" src="images/U2.jpg" alt="u2"></li>
+					<li class = "proche5"><a href="#"> Le printemps des fleurs : Vivladi comme jamais </a>
+					<img class = "image" src="images/U2.jpg" alt="u2"></li>
 				</ul>
 			</div>
 
