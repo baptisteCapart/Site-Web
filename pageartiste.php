@@ -1,5 +1,4 @@
-<?php include ('banniere.php') ?>
-<body>
+
 	<?php include("banniere.php"); ?>
 		<div id = "photoartiste">
 			<div id="nomartiste">
@@ -13,8 +12,8 @@
 				<li class = "onglet3"><a href="#">Extraits</a></li>	
 				<li class = "onglet4"><a href="#">Avis</a></li>	
 				<li class = "onglet5"><a href="#">Photos</a></li>	
-			</ul>				
+			</ul>	
+
 		</div>
 		<div id="contenu"></div>
 	<?php include("footer.php"); ?>
-</body>
