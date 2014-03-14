@@ -1,4 +1,7 @@
 
+	<head>		<link rel="stylesheet" href="pageartistestyle.css" />
+</head>
+
 	<?php include("banniere.php"); ?>
 		<div id = "photoartiste">
 			<div id="nomartiste">
@@ -7,13 +10,18 @@
 		</div>
 		<div id="menudyna">
 			<ul>
-				<li class = "onglet1"><a href="pageartiste.php">Présentation</a></li>
-				<li class = "onglet2"><a href="#">Concerts</a></li>	
-				<li class = "onglet3"><a href="#">Extraits</a></li>	
-				<li class = "onglet4"><a href="#">Avis</a></li>	
-				<li class = "onglet5"><a href="#">Photos</a></li>	
+				<li class = "onglet1"><a href="pageartiste.php">Présentation</a>
+				<div class="contenu"></div></li>
+				<li class = "onglet2"><a href="pageartiste2.php">Concerts</a>
+				<div class="contenu"></div></li>	
+				<li class = "onglet3"><a href="pageartiste3.php">Extraits</a>
+				<div class="contenu"></div></li>	
+				<li class = "onglet4"><a href="pageartiste4.php">Avis</a>
+				<div class="contenu"></div></li>	
+				<li class = "onglet5"><a href="pageartiste5.php">Photos</a>
+				<div class="contenu"></div></li>	
 			</ul>	
 
 		</div>
-		<div id="contenu"></div>
+		
 	<?php include("footer.php"); ?>

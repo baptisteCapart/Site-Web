@@ -5,17 +5,19 @@ html, body
 	font-family: calibri;
 	margin: 0;
 	padding: 0;
+	background: black;
 }
 
 #cover
 {
+	background: black;
 	background-image: url(images/imagemembre.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 70%;
 	width: 100%;
-	border:1px solid black;
-	opacity: 0.4;
+	border: 1px solid black;
+	opacity : 0.5;
 
 }
 
@@ -28,22 +30,26 @@ html, body
 {
 	position: absolute;
 	height : 50%;
-	top : 200px ;
-	font-size: 2.8em;
+	top : 140px ;
+	left : 40%;
+	font-size: 1.5em;
+	font-family: 'Original Surfer', cursive;
+
 
 
 
 }
 #image
 {
-	border-radius: 7px;
-
+	border:  8px solid gray;
+	border-radius: 300px;
+    width: 50%; 
 
 }
 
 #membre li 
 {
-	display: inline-block;
+	display: block;
 
 }
 #membre li li
