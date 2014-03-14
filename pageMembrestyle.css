@@ -21,9 +21,21 @@ html, body
 #membre
 
 {
-position: absolute;
+	position: absolute;
 	bottom : 8%; 
 	height :50%;
 	left: 5%;
 }
+
+#membre li 
+{
+		display: inline-block;
+
+}
+#membre li li
+{
+	display: block;
+	color: white;
+}
+
 
