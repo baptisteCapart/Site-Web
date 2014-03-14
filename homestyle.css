@@ -185,25 +185,32 @@ ul
 	display: none;
 }
 
+
+
 .proche1:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche2:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche3:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche4:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche5:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 
 #inscristoi
