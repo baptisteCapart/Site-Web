@@ -9,21 +9,79 @@ html, body
 
 #cover
 {
-	background-image: url(images/imageMembre.jpg);
+	background-image: url(images/imagemembre.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 70%;
 	width: 100%;
-	
+	border:1px solid black;
+	opacity: 0.4;
 
+}
 
+#donnees
+{
+	float : left;
 }
 #membre
 
 {
-position: absolute;
-	bottom : 8%; 
-	height :50%;
-	left: 5%;
+	position: absolute;
+	height : 50%;
+	top : 200px ;
+	font-size: 2.8em;
+
+
+
 }
+#image
+{
+	border-radius: 7px;
+
+
+}
+
+#membre li 
+{
+	display: inline-block;
+
+}
+#membre li li
+{
+	display: block;
+	color: white;
+}
+#menudyna
+{
+	font-size: 2em;
+	background-color: #3a4cd2
+;
+	margin: 0;
+	padding: 0;
+	border: solid 1px green;
+}
+
+#menudyna ul 
+{
+	list-style: none;
+}
+
+#menudyna li 
+{
+	display: inline-block;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	border-right: 1px solid white;
+}
+
+
+#menudyna a 
+{
+	color : white;
+}
+
+#menudyna li:hover
+{
+	background-color: #1632B4;
+
 

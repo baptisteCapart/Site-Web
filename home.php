@@ -15,7 +15,7 @@
 				</div>
 				
 		</div>
-		<?php  
+		<?php 
 		if($loggé == true){
 		?>
 		<div id="notifs">

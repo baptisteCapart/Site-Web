@@ -6,8 +6,9 @@
 		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
 		<link rel="stylesheet" href="homestyle.css" />
-		
 
+		<link rel="stylesheet" href="pageartistestyle.css" />
+		<link rel="stylesheet" href="pageMembrestyle.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Codystar|Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Iceland' rel='stylesheet' type='text/css'>
