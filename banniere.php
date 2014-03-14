@@ -34,7 +34,7 @@
 			<span class="login">Pseudo : </span>
 			<input type="text" name="pseudo" value=""/>
 			<span class="login">Password : </span>
-			<input type="pas	sword" name="mdp" value=""/>
+			<input type="password" name="mdp" value=""/>
 			<input type="submit" value="Log in"/>
 			<span class="sign_in"><a href ="formulaire.php" target="_blank">Inscription</a></span>
 		</form>
