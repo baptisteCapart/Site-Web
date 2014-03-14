@@ -40,9 +40,14 @@
 				<li>
 					<div class="photocouv"><span>Photo de couverture :</span><input class = "textbox" type="file" name="photo" /></div>					
 				</li>
+				
+				<li>
+					<div class="conditions"><input class = "textbox" type="checkbox" name="conditions" value=""/><span>J'accepte les conditions d'utilisations </span></div>
+				</li>				
 				<li>
 					<input class = "envoyer" type="submit" value="Envoyer !"/>
 				</li>
+
 			</ul>
 			
 			
