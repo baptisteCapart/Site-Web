@@ -17,12 +17,14 @@ header
 	width : 13%;
 }
 
-.barresearch
+.recherche
 {
-	box-shadow: 0 0 9px #777 inset ;
+
+	box-shadow: 0 0 900px #777 inset ; 
+	border: solid 1px #999;	
 	border-radius: 40px;
-	border: solid 1px #999;
-	height: 20px;
+	height: 30px;
+	color: white;
 }
 
 #logo

@@ -5,7 +5,7 @@ html, body
 	font-family: calibri;
 	margin: 0;
 	padding: 0;
-			background: black;
+	background: black;
 
 }
 
@@ -64,8 +64,7 @@ html, body
 #menudyna2
 {
 	font-size: 2em;
-	background-color: #3a4cd2
-;
+	background-color: #3a4cd2;
 	margin: 0;
 	padding: 0;
 	border: solid 1px green;
@@ -118,7 +117,7 @@ html, body
 
 
 }
-.contenuMembre
+.contenu
 {
 	background-color: #99C9F0;
 	height : 100%;
@@ -126,4 +125,11 @@ html, body
 	width: 100%;
 	position : absolute;
 	left: 0;
+}
+
+#parametres
+{
+border-radius: 3px;
+right: 20px;
+
 }
