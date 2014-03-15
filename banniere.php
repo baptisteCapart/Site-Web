@@ -6,9 +6,9 @@
 		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
 		<link rel="stylesheet" href="homestyle.css" />
-
 		<link rel="stylesheet" href="pageartistestyle.css" />
 		<link rel="stylesheet" href="pageMembrestyle.css">
+		<link rel="stylesheet" href="formulairestyle.css"/>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Codystar|Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Iceland' rel='stylesheet' type='text/css'>
@@ -91,7 +91,7 @@
 			<li id = "forum"><a href="#">Forum</a></li>
 			<li id = "search">
 				<form class ="recherche" method="post" action="research.php">
-					<input type="text" name="recherche" placeholder="Rechercher"/>
+					<input class = "barresearch" type="text" name="recherche" placeholder="Rechercher" size ="30"/>
 				</form>
 			</li>
 		</ul>

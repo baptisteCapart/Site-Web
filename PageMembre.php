@@ -1,6 +1,6 @@
 
 <?php include("banniere.php"); ?>
-
+<div id "bloc-page" >
 <div id= "cover">
 
 </div>
@@ -8,7 +8,7 @@
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src="images/membreexemple_opt.jpg" width="220" height="220" alt="Photo de Gérard" />
+				<img id="image" src="images/membreexp.jpg" width="220" height="220" alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
@@ -21,7 +21,7 @@
 		</li>
 	</ul>
 </div>
-<div id="menudyna">
+<div id="menudyna2">
 	<ul>
 		<li class = "onglet1"><a href="#">Groupes</a></li>
 		<li class = "onglet2"><a href="#">Concerts</a></li>	
@@ -32,6 +32,6 @@
 
 </div>
 
-
+</div>
 <?php include("footer.php"); ?>
 

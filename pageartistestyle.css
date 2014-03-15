@@ -34,9 +34,9 @@ html, body
 #menudyna
 {
 	font-size: 2em;
-	background-color: #4B93E0;
+	background-color: #87F757;
 	width : 100%;
-	display: block;
+	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
@@ -44,18 +44,12 @@ html, body
 #menudyna ul 
 {
 	list-style: none;
-	margin-top: -35px;
-
+	margin-top: -2px;
 }
 
-.onglet1 div.contenu, .onglet2 div.contenu, .onglet3 div.contenu, .onglet4 div.contenu, .onglet5 div.contenu
+.onglet1:hover .contenu
 {
-	display: none;
-}
-
-.onglet1:hover div.contenu
-{
-	display: inline-block;
+	display: block;
 	z-index: 50;
 }
 .onglet2:hover div.contenu
@@ -95,13 +89,17 @@ html, body
 	color : white;
 }
 
-#menudyna .onglet1
+#menudyna ul li:hover
 {
-	background-color: #1632B4;
+	background-color: #0BBF5C;
 }
 
 .contenu
 {
 	background-color: #99C9F0;
-	height : 50%;
+	height : 100%;
+	display: none;
+	width: 100%;
+	position : absolute;
+	left: 0;
 }
