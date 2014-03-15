@@ -21,7 +21,7 @@
 		</li>
 	</ul>
 </div>
-<div id="menudyna">
+<div id="menudyna2">
 	<ul>
 		<li class = "onglet1"><a href="#">Groupes</a></li>
 		<li class = "onglet2"><a href="#">Concerts</a></li>	

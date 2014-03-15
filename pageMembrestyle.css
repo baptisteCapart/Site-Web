@@ -57,7 +57,7 @@ html, body
 	display: block;
 	color: white;
 }
-#menudyna
+#menudyna2
 {
 	font-size: 2em;
 	background-color: #3a4cd2
@@ -67,12 +67,12 @@ html, body
 	border: solid 1px green;
 }
 
-#menudyna ul 
+#menudyna2 ul 
 {
 	list-style: none;
 }
 
-#menudyna li 
+#menudyna2 li 
 {
 	display: inline-block;
 	padding-left: 0.5%;
@@ -81,12 +81,12 @@ html, body
 }
 
 
-#menudyna a 
+#menudyna2 a 
 {
 	color : white;
 }
 
-#menudyna li:hover
+#menudyna2 li:hover
 {
 	background-color: #1632B4;
 
