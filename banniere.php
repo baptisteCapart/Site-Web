@@ -13,7 +13,7 @@
 
 		<link rel="stylesheet" href="formulairestyle.css"/>
 
-		<link href='http://fonts.googleapis.com/cs 	s?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Codystar|Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Iceland' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Condiment|Iceland' rel='stylesheet' type='text/css'>
@@ -63,7 +63,7 @@
 		<ul>
 			<li id = "compte"><a href="#">Compte</a>
 				<ul class = "menu1">
-					<li id = "profil"><a href="#">Mon compte</a></li>
+					<li id = "profil"><a href="PageMembre.php">Mon compte</a></li>
 					<li id = "groupes"><a href="#">Mes artistes</a></li>
 					<li id = "rooms"><a href="#">Mes salles</a></li>
 					<li id = "shows"><a href="#">Mes concerts</a></li>
