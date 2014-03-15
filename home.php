@@ -1,5 +1,6 @@
 
 		<?php include("banniere.php"); ?>
+		<div id="blochome">
 		<div id="news">
 				<div id="liste_news">
 					<ul>
@@ -120,6 +121,7 @@
 		<?php
 		}
 		?>
+		</div>
 
 		<?php include("footer.php"); ?>
 		
