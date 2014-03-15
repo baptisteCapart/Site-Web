@@ -16,6 +16,13 @@ header
 	width : 13%;
 }
 
+.barresearch
+{
+	box-shadow: 0 0 9px #777 inset ;
+	border-radius: 40px;
+	border: solid 1px #999;
+	height: 20px;
+}
 
 #logo
 {
@@ -25,6 +32,8 @@ header
 	left: 13%;
 	display: inline-block;
 }
+
+
 
 .login
 {

@@ -91,7 +91,7 @@
 			<li id = "forum"><a href="#">Forum</a></li>
 			<li id = "search">
 				<form class ="recherche" method="post" action="research.php">
-					<input type="text" name="recherche" placeholder="Rechercher"/>
+					<input class = "barresearch" type="text" name="recherche" placeholder="Rechercher" size ="30"/>
 				</form>
 			</li>
 		</ul>
