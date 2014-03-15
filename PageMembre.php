@@ -1,6 +1,6 @@
 
 <?php include("banniere.php"); ?>
-<div id "bloc-page" >
+
 <div id= "cover">
 
 </div>
@@ -8,7 +8,7 @@
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src="images/membreexp.jpg" width="220" height="220" alt="Photo de Gérard" />
+				<img id="image" src="images/membreexp.jpg"  alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
@@ -32,6 +32,6 @@
 
 </div>
 
-</div>
+
 <?php include("footer.php"); ?>
 
