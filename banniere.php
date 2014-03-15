@@ -6,7 +6,6 @@
 		<rel type="stylesheet" href="" />
 		<link rel="stylesheet" href="bannierestyle.css"/>
 		<link rel="stylesheet" href="homestyle.css" />
-
 		<link rel="stylesheet" href="pageartistestyle.css" />
 		<link rel="stylesheet" href="pageMembrestyle.css">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -15,8 +14,6 @@
 		<link href='http://fonts.googleapis.com/css?family=Condiment|Iceland' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Fascinate+Inline|Iceland|Germania+One' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Fascinate+Inline|Iceland|Germania+One|Bangers' rel='stylesheet' type='text/css'>
-		<link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Original+Surfer' rel='stylesheet' type='text/css'>
-
 	</head>
 
 	<body>
@@ -80,6 +77,9 @@
 				<ul class = "menu3">
 					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 					<li id = "lieu"><a href="#">Par lieu</a></li>
+					<?php if ($loggé == true) { ?>
+						<li id = "créer"><a href="formulairesalle.php">Créer un profil salle</a></li>
+					<?php } ?>					
 				</ul>
 			</li>	
 			<li id = "concerts"><a href="#">Concerts</a>
@@ -91,7 +91,7 @@
 			<li id = "forum"><a href="#">Forum</a></li>
 			<li id = "search">
 				<form class ="recherche" method="post" action="research.php">
-					<input class = "barresearch" type="text" name="recherche" placeholder="Rechercher" size ="30"/>
+					<input type="text" name="recherche" placeholder="Rechercher"/>
 				</form>
 			</li>
 		</ul>

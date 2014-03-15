@@ -97,7 +97,7 @@ html, body
 .contenu
 {
 	background-color: #99C9F0;
-	height : 100%;
+	height : 500px;
 	display: none;
 	width: 100%;
 	position : absolute;
