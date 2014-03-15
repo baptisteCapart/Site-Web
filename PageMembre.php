@@ -8,7 +8,7 @@
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src="images/membreexemple_opt.jpg" width="220" height="220" alt="Photo de Gérard" />
+				<img id="image" src="images/membreexp.jpg" width="220" height="220" alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
