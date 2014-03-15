@@ -5,13 +5,10 @@ html, body
 	font-family: calibri;
 	margin: 0;
 	padding: 0;
-}
-
-#bloc-page
-{
-		background: black;
+			background: black;
 
 }
+
 
 #cover
 {
@@ -48,7 +45,9 @@ html, body
 {
 	border:  8px solid gray;
 	border-radius: 300px;
-    width: 220px; 
+    width:220px ;
+    height:220px ;
+
 
 }
 
