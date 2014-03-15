@@ -28,7 +28,7 @@
 
 
 	<?php 
-	$loggé = true;
+	$loggé = false;
 	if($loggé == false){
 	?>
 	<div class="container">
@@ -70,7 +70,7 @@
 					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 					<li id = "style"><a href="#">Par style</a></li>
 					<?php if ($loggé == true) { ?>
-						<li id = "créer"><a href="#">Créer un profil artiste</a></li>
+						<li id = "créer"><a href="formulairegroupe.php">Créer un profil artiste</a></li>
 					<?php } ?>
 				</ul>
 			</li>	
