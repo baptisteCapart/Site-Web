@@ -76,6 +76,28 @@ html, body
 	list-style: none;
 }
 
+.ongletmembre1:hover .contenu
+{
+	display: block;
+	z-index: 50;
+}
+.ongletmembre2:hover div.contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre3:hover div.contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre4:hover div.contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+
+
 #menudyna2 li 
 {
 	display: inline-block;
@@ -95,3 +117,13 @@ html, body
 	background-color: #1632B4;
 
 
+}
+.contenu
+{
+	background-color: #99C9F0;
+	height : 100%;
+	display: none;
+	width: 100%;
+	position : absolute;
+	left: 0;
+}

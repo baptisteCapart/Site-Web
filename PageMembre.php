@@ -23,10 +23,14 @@
 </div>
 <div id="menudyna2">
 	<ul>
-		<li class = "onglet1"><a href="#">Groupes</a></li>
-		<li class = "onglet2"><a href="#">Concerts</a></li>	
-		<li class = "onglet3"><a href="#">Salles</a></li>	
-		<li class = "onglet4"><a href="#">Avis</a></li>	
+		<li class = "ongletmembre1"><a href="#">Groupes</a></br>
+				<div class="contenu">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>
+		<li class = "ongletmembre2"><a href="#">Concerts</a></br>
+				<div class="contenu">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
+		<li class = "ongletmembre3"><a href="#">Salles</a></br>
+				<div class="contenu">ccccccccccccccccccccccccccccccccc</div></li>
+		<li class = "ongletmembre4"><a href="#">Avis</a></br>
+				<div class="contenu">eeeeeeeeeeeeeeeeeeeeeeeeeee</div></li>		
 	
 	</ul>	
 
