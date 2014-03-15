@@ -10,7 +10,7 @@ html, body
 #photoartiste
 {
 	position: relative;
-	background-image: url(images/Stromae-Formidable.jpg);
+	background-image: url(images/imaginedragons.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 80%;
@@ -49,7 +49,7 @@ html, body
 
 .onglet1:hover .contenu
 {
-	display: block;
+	display: inline-block;
 	z-index: 50;
 }
 .onglet2:hover div.contenu
@@ -76,7 +76,7 @@ html, body
 
 #menudyna li 
 {
-	display: block;
+	display: inline;
 	padding-left: 0.5%;
 	padding-right: 0.5%;
 	border-right: 1px solid white;
@@ -97,9 +97,13 @@ html, body
 .contenu
 {
 	background-color: #99C9F0;
-	height : 500px;
+	height: 50px;
 	display: none;
 	width: 100%;
 	position : absolute;
 	left: 0;
+}
+
+#menudyna {
+	border : 1px solid red;
 }

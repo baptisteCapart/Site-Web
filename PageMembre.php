@@ -24,13 +24,13 @@
 <div id="menudyna2">
 	<ul>
 		<li class = "ongletmembre1"><a href="#">Groupes</a></br>
-				<div class="contenu">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>
+				<div class="contenuMembre">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>
 		<li class = "ongletmembre2"><a href="#">Concerts</a></br>
-				<div class="contenu">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
+				<div class="contenuMembre">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
 		<li class = "ongletmembre3"><a href="#">Salles</a></br>
-				<div class="contenu">ccccccccccccccccccccccccccccccccc</div></li>
+				<div class="contenuMembre">ccccccccccccccccccccccccccccccccc</div></li>
 		<li class = "ongletmembre4"><a href="#">Avis</a></br>
-				<div class="contenu">eeeeeeeeeeeeeeeeeeeeeeeeeee</div></li>		
+				<div class="contenuMembre">eeeeeeeeeeeeeeeeeeeeeeeeeee</div></li>		
 	
 	</ul>	
 

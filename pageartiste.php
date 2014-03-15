@@ -1,11 +1,10 @@
 
-	<head>		<link rel="stylesheet" href="pageartistestyle.css" />
-</head>
+
 
 	<?php include("banniere.php"); ?>
 		<div id = "photoartiste">
 			<div id="nomartiste">
-				Stromae
+				Imagine Dragons
 			</div>
 		</div>
 		<div id="menudyna">
@@ -20,7 +19,7 @@
 				<div class="contenu">ddddddddddddddddddddddddddddddddddddd</div></li>	
 				<li class = "onglet5">Photos</br>
 				<div class="contenu">eeeeeeeeeeeeeeeeeeeeeeeeeee</div></li>	
-			</ul>	
+			</ul> 	
 
 		</div>
 		
