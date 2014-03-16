@@ -74,9 +74,10 @@ html, body
 	position: absolute;
 	right: 10%;
 	display: block;
-	background-color: #E0DCBA;
-	font-size: 2em;
-	overflow: scroll;
+	background-color: #5B5B5B;
+	font-size: 1.3em;
+	overflow-x: none;
+	overflow-y: scroll;
 	height: 500px;
 	margin: 0;
 	box-shadow: 0 0 15px #111 inset ;
@@ -84,6 +85,7 @@ html, body
 	border: solid 1px #999;
 	margin-right: 1%;
 	width: 27%;
+	color: white;
 
 }
 
@@ -93,9 +95,10 @@ html, body
 	position: absolute;
 	left: 10%;
 	display: block;
-	background-color: #E0DCBA;
-	font-size: 2em;
-	overflow: scroll;
+	background-color: #5B5B5B;
+	font-size: 1.3em;
+	overflow-x: none;
+	overflow-y: scroll;
 	height: 500px;
 	margin: 0;
 	box-shadow: 0 0 15px #111 inset ;
@@ -103,6 +106,8 @@ html, body
 	border: solid 1px #999;
 	margin-left: 1%;
 	width: 27%;
+	color: white;
+
 
 }
 

@@ -5,7 +5,6 @@
 				<div id="liste_news">
 					<ul>
 						<li></li>
-						<li></li>
 						<li><a href="#"> Grand Corps Malade à la Cigale !</a></li>
 						<li><a href="#"> Dj Vincent, ou le grand retour</a></li>
 						<li><a href="#"> Le Trombinoscope : une nouvelle salle débarque</a></li>

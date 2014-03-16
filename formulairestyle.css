@@ -4,7 +4,8 @@
 	min-width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #E4E3CD;
+	background-color: #363636;
+	color: white;
 }
 
 html
@@ -31,15 +32,14 @@ html
 #formulaire
 {
 	font-family: 'Open Sans' , sans-serif;
-	font-weight: bold;
 	margin-left: 20%;
 	margin-right: 20%;
 }
 
 .textbox
 {
-	box-shadow: 0 0 9px #777 inset ;
-	border-radius: 3px;
+	box-shadow: 0 0 9px #111 inset ;
+	border-radius: 5px;
 	border: solid 1px #999;
 }
 

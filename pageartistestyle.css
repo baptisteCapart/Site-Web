@@ -97,13 +97,9 @@ html, body
 .contenu
 {
 	background-color: #99C9F0;
-	height: 50px;
+	height: 150px;
 	display: none;
 	width: 100%;
 	position : absolute;
 	left: 0;
-}
-
-#menudyna {
-	border : 1px solid red;
 }

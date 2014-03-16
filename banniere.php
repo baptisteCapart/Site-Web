@@ -10,7 +10,6 @@
 		<link rel="stylesheet" href="pageartistestyle.css" />
 		<link rel="stylesheet" href="pageconcertstyle.css" />
 		<link rel="stylesheet" href="pageMembrestyle.css">
-
 		<link rel="stylesheet" href="formulairestyle.css"/>
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -61,7 +60,7 @@
 	?>
 	<nav id="menu">
 		<ul>
-			<li id = "compte"><a href="#">Compte</a>
+			<li id = "compte"><a href="PageMembre.php">Compte</a>
 				<ul class = "menu1">
 					<li id = "profil"><a href="PageMembre.php">Mon compte</a></li>
 					<li id = "groupes"><a href="#">Mes artistes</a></li>
@@ -69,7 +68,7 @@
 					<li id = "shows"><a href="#">Mes concerts</a></li>
 				</ul>
 			</li>	
-			<li id = "artistes"><a href="#">Artistes</a>
+			<li id = "artistes"><a href="pageartiste.php">Artistes</a>
 				<ul class = "menu2">
 					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 					<li id = "style"><a href="#">Par style</a></li>
@@ -87,7 +86,7 @@
 					<?php } ?>					
 				</ul>
 			</li>	
-			<li id = "concerts"><a href="#">Concerts</a>
+			<li id = "concerts"><a href="pageconcert.php">Concerts</a>
 				<ul class = "menu4">
 					<li id = "date"><a href="#">Par date</a> </li>
 					<li id = "lieu"><a href="#">Par lieu</a></li>
@@ -96,7 +95,7 @@
 			<li id = "forum"><a href="#">Forum</a></li>
 			<li id = "search">
 				<form class ="recherche" method="post" action="research.php">
-					<input type="text" name="recherche" placeholder="Rechercher"/>
+					<input class = "barresearch" type="text" name="recherche" placeholder="   Rechercher" size = "30"/>
 				</form>
 			</li>
 		</ul>
