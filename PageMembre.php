@@ -19,7 +19,10 @@
 				<li>Avignon</li>
 			</ul>
 		</li>
+		<li><input id="parametres" type="paramètres" value="paramètres"/>
+		</li>
 	</ul>
+	
 </div>
 <div id="menudyna2">
 	<ul>
