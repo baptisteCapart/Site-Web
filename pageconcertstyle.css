@@ -13,7 +13,7 @@ html, body
 	background-image: url(images/afficheconcert.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 80%;
+	height: 500px;
 	width: 100%;
 
 }
@@ -70,15 +70,16 @@ html, body
 
 .listembr div:hover div
 {
-	//float: right;
+
 	position: absolute;
 	right: 10%;
+	top : 50px;
 	display: block;
 	background-color: #5B5B5B;
 	font-size: 1.3em;
 	overflow-x: none;
 	overflow-y: scroll;
-	height: 500px;
+	height: 350px;
 	margin: 0;
 	box-shadow: 0 0 15px #111 inset ;
 	border-radius: 10px;
@@ -86,20 +87,21 @@ html, body
 	margin-right: 1%;
 	width: 27%;
 	color: white;
+	opacity: 0.85;
 
 }
 
 .listegroupe div:hover div
 {
-	//float: right;
 	position: absolute;
 	left: 10%;
+	top : 50px;
 	display: block;
 	background-color: #5B5B5B;
 	font-size: 1.3em;
 	overflow-x: none;
 	overflow-y: scroll;
-	height: 500px;
+	height: 350px;
 	margin: 0;
 	box-shadow: 0 0 15px #111 inset ;
 	border-radius: 10px;
@@ -107,7 +109,7 @@ html, body
 	margin-left: 1%;
 	width: 27%;
 	color: white;
-
+	opacity: 0.85;
 
 }
 
@@ -120,7 +122,7 @@ html, body
 {
 	position: absolute;
 	bottom : 0; 
-	height :10%;
+	height :50px;
 	font-size: 3em;
 	color : #BEBEBE;
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
@@ -129,10 +131,11 @@ html, body
 	display: inline-block;
 }
 
+
 #menudyna3
 {
 	font-size: 2em;
-	background-color: #87F757;
+	background-color: #4996CF;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
@@ -142,7 +145,7 @@ html, body
 #menudyna3 ul 
 {
 	list-style: none;
-	//margin-top: -2px;
+	margin-top: -2px;
 }
 
 .ongletconcert1:hover .contenuconcert
@@ -177,28 +180,29 @@ html, body
 	display: inline;
 	padding-left: 0.5%;
 	padding-right: 0.5%;
-	border-right: 1px solid white;
+	border-right: 1px solid #616161;
 	float: left;
 }
 
 
 #menudyna3 a 
 {
-	color : white;
+	color : black;
 }
 
 #menudyna3 ul li:hover
 {
-	background-color: #0BBF5C;
+	background-color: black;
+	color: white;
 }
 
 .contenuconcert
 {
-	background-color: #99C9F0;
+	background-color: #494949;
+	color : white;
 	height: 150px;
 	display: none;
 	width: 100%;
 	position : absolute;
 	left: 0;
 }
-

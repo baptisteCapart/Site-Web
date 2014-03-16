@@ -19,26 +19,27 @@
 				<li>Avignon</li>
 			</ul>
 		</li>
-		<li><input id="parametres" type="paramètres" value="paramètres"/>
-		</li>
+
 	</ul>
 	
 </div>
+<div id="gerer"><input type="submit" value="paramètres"/></div>
+<div id="suivre"><input type="submit" value="Suivre"/></div>
+<div id="message"><input type="submit" value="Envoyer un message"/></div>
 <div id="menudyna2">
-	<ul>
-		<li class = "ongletmembre1"><a href="#">Groupes</a></br>
-				<div class="contenuMembre">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>
-		<li class = "ongletmembre2"><a href="#">Concerts</a></br>
-				<div class="contenuMembre">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
-		<li class = "ongletmembre3"><a href="#">Salles</a></br>
-				<div class="contenuMembre">ccccccccccccccccccccccccccccccccc</div></li>
-		<li class = "ongletmembre4"><a href="#">Avis</a></br>
-				<div class="contenuMembre">eeeeeeeeeeeeeeeeeeeeeeeeeee</div></li>		
-	
-	</ul>	
+			<ul>
+				<li class = "ongletmembre1">Artistes </br>
+				<div class="contenumembre">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>
+				<li class = "ongletmembre2">Salles</br>
+				<div class="contenumembre">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
+				<li class = "ongletmembre3">Concerts</br>
+				<div class="contenumembre">ccccccccccccccccccccccccccccccccc</div></li>	
+				<li class = "ongletmembre4">Avis</br>
+				<div class="contenumembre">ddddddddddddddddddddddddddddddddddddd</div></li>		
+			</ul> 	
 
-</div>
+		</div>
 
 
-<?php include("footer.php"); ?>
+				<?php include("footer.php"); ?>
 

@@ -28,14 +28,6 @@ header
 	height: 20px;
 }
 
-#logo
-{
-
-	position : relative;
-	top: 15px;
-	left: 13%;
-	display: inline-block;
-}
 
 
 
@@ -81,23 +73,31 @@ a
 
 nav
 {
-	font-family: 'Open Sans' , sans-serif;
+	font-family: 'Quicksand' , sans-serif;
 	font-size: 1.3em;
 	display: inline-block;
 	font-weight: bold;
 	position : absolute;
 	top : 90px;
 	width: 100%;
-	min-width: 700px;
+	min-width: 1000px;
+}
+#logo
+{
+
+	position : relative;
+	top: 40px;
+	left: 13%;
+	display: inline-block;
 }
 
 .slogan
 {
 	position: absolute;
-	font-family: 'Bangers' , sans-serif;
+	font-family: 'Quicksand' , sans-serif;
 	font-size: 2.4em;
-	top: 55px;
-	left: 20%;
+	top: 70px;
+	left: 14%;
 	padding: 0;
 	margin: 0;
 	color : #D7CBA2;
@@ -267,7 +267,7 @@ nav ul li ul li a:hover
 .TIT
 {
 	position: relative;
-	font-family: Codystar;
+	font-family: garamond;
 	font-weight: bold;
 	font-size: 1em;
 	top: 14px;
@@ -360,10 +360,7 @@ footer a
 	{
 		font-size: 1.1em;
 	}
-	#menu li 
-	{
-		padding : 5px;
-	}
+
 	#menu li ul li 
 	{
 		padding: 10px;

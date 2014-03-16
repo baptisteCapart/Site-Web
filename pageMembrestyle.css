@@ -16,7 +16,7 @@ html, body
 	background-image: url(images/imagemembre.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 70%;
+	height: 470px;
 	width: 100%;
 	border: 1px solid black;
 	opacity : 0.5;
@@ -32,7 +32,7 @@ html, body
 {
 	position: absolute;
 	height : 50%;
-	top : 140px ;
+	top : 180px ;
 	left : 40%;
 	font-size: 1.5em;
 	font-family: 'Original Surfer', cursive;
@@ -46,8 +46,44 @@ html, body
 	border:  8px solid gray;
 	border-radius: 300px;
     width:220px ;
-    height:220px ;
+    
 
+
+}
+
+#gerer
+{
+	
+	position: absolute;
+	top : 520px;
+	left : 3%;
+
+}
+
+#message
+{
+	
+	position: absolute;
+	top : 350px;
+	right : 3%;
+	
+}
+#suivre
+{
+	
+	position: absolute;
+	top : 380px;
+	right : 5%;
+	
+}
+
+
+#parametres
+{
+		width: 120%;
+		height: 50px ;
+		font-family: 'Josefin Sans' , sans-serif;
+		font-size: 2em;
 
 }
 
@@ -64,33 +100,40 @@ html, body
 #menudyna2
 {
 	font-size: 2em;
-	background-color: #3a4cd2;
+	background-color: #87F757;
+	width : 100%;
+	display: inline-block;
 	margin: 0;
 	padding: 0;
-	border: solid 1px green;
 }
 
 #menudyna2 ul 
 {
 	list-style: none;
+	margin-top: -2px;
 }
 
-.ongletmembre1:hover .contenu
-{
-	display: block;
-	z-index: 50;
-}
-.ongletmembre2:hover div.contenu
+.ongletmembre1:hover .contenumembre
 {
 	display: inline-block;
 	z-index: 50;
 }
-.ongletmembre3:hover div.contenu
+.ongletmembre2:hover div.contenumembre
 {
 	display: inline-block;
 	z-index: 50;
 }
-.ongletmembre4:hover div.contenu
+.ongletmembre3:hover div.contenumembre
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre4:hover div.contenumembre
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre5:hover div.contenumembre
 {
 	display: inline-block;
 	z-index: 50;
@@ -99,10 +142,11 @@ html, body
 
 #menudyna2 li 
 {
-	display: inline-block;
+	display: inline;
 	padding-left: 0.5%;
 	padding-right: 0.5%;
-	border-right: 1px solid white;
+	border-right: 1px solid #616161;
+	float: left;
 }
 
 
@@ -111,20 +155,22 @@ html, body
 	color : white;
 }
 
-#menudyna2 li:hover
+#menudyna2 ul li:hover
 {
-	background-color: #1632B4;
-
-
+	background-color: black;
+	color : white;
 }
-.contenu
+
+.contenumembre
 {
-	background-color: #99C9F0;
-	height : 100%;
+	background-color: #3E3E3E;
+	color : white;
+	height: 150px;
 	display: none;
 	width: 100%;
 	position : absolute;
 	left: 0;
+	font-size: 0.7em;
 }
 
 #parametres

@@ -13,6 +13,9 @@
 		<link rel="stylesheet" href="formulairestyle.css"/>
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Codystar|Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Iceland' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Condiment|Iceland' rel='stylesheet' type='text/css'>
@@ -24,10 +27,10 @@
 <header class="header">
 	<div id= "cadrelogo">
 		<div id="logo"><a href="home.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
-			<div><strong class="TIT">Tune In Town</strong></div>
+			<!-- <div><strong class="TIT">Tune In Town</strong></div> -->
 	</div>
 
-	<div><strong class="slogan">The beat goes around !</strong></div>	
+	<div><strong class="slogan">Tune In Town</strong></div>	
 
 
 	<?php 
