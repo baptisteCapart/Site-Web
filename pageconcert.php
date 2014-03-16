@@ -34,7 +34,7 @@
 				
 			</span>
 			<span class = "listembr" >
-				<div><img  class = "hoverimg" src="images/membre.jpg" alt="participants">
+				<div><img  class = "hoverimg" src="images/membre.jpg" alt="participants"> 
 					<div>
 						<ul id="liste"> <span class="membres">Ils y participent : </span>
 							<li>a</li>
