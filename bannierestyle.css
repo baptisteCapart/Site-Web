@@ -22,7 +22,7 @@ header
 .barresearch
 {
 
-	box-shadow: 0 0 900px #777 inset ; 
+	box-shadow: 0 0 900px #FFFFFF inset ; 
 	border: solid 1px #999;	
 	border-radius: 40px;
 	height: 20px;
@@ -96,8 +96,8 @@ nav
 	position: absolute;
 	font-family: 'Quicksand' , sans-serif;
 	font-size: 2.4em;
-	top: 70px;
-	left: 14%;
+	top: 95px;
+	left: 13%;
 	padding: 0;
 	margin: 0;
 	color : #D7CBA2;
