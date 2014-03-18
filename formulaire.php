@@ -6,7 +6,7 @@
 	<form class ="form2" method="post" action="formulairecontrolleur.php">
 		<ul>
 			<li>
-				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value=""/></div>
+				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value=""/> </div>
 
 			</li>
 			<li>
@@ -36,10 +36,10 @@
 
 			</li>			
 			<li>
-				<div class="photoprofil"><span>Photo de profil : </span><input class = "textbox" type="file" name="photo" /></div>
+				<div class="photoprofil"><span>Photo de profil : </span><input class = "textbox" type="file" name="photodeprofil" /></div>
 			</li>
 			<li>
-				<div class="photocouv"><span>Photo de couverture :</span><input class = "textbox" type="file" name="photo" /></div>					
+				<div class="photocouv"><span>Photo de couverture :</span><input class = "textbox" type="file" name="photodecover" /></div>					
 			</li>
 
 			<li>

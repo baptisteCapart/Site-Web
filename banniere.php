@@ -34,7 +34,7 @@
 
 
 	<?php 
-	$loggé = true;
+	$loggé = false;
 	if($loggé == false){
 	?>
 	<div class="container">
@@ -44,7 +44,7 @@
 			<span class="login">Password : </span>
 			<input type="password" name="mdp" value=""/>
 			<input type="submit" value="Log in"/>
-			<span class="sign_in"><a href ="formulaire.php" target="_blank">Inscription</a></span>
+			<span class="sign_in"><a href ="formulairecontrolleur.php" target="_blank">Inscription</a></span>
 		</form>
 	</div>
 
