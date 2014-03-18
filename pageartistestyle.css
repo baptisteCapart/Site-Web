@@ -10,10 +10,10 @@ html, body
 #photoartiste
 {
 	position: relative;
-	background-image: url(images/Stromae-Formidable.jpg);
+	background-image: url(images/imaginedragons.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 80%;
+	height: 500px;
 	width: 100%;
 
 }	
@@ -22,50 +22,87 @@ html, body
 {
 	position: absolute;
 	bottom : 0; 
-	height :10%;
+	height :50px;
 	font-size: 3em;
 	color : #BEBEBE;
     background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
 	width: 100%;
 	vertical-align: middle;
 	display: inline-block;
+	padding-bottom: 5px;
 }
 
 #menudyna
 {
 	font-size: 2em;
-	background-color: #4B93E0;
+	background-color: #F3F920;
+	width : 100%;
+	display: inline-block;
 	margin: 0;
 	padding: 0;
-	border: solid 1px green;
 }
 
 #menudyna ul 
 {
 	list-style: none;
+	margin-top: -2px;
 }
+
+.onglet1:hover .contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+.onglet2:hover div.contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+.onglet3:hover div.contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+.onglet4:hover div.contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+.onglet5:hover div.contenu
+{
+	display: inline-block;
+	z-index: 50;
+}
+
 
 #menudyna li 
 {
-	display: inline-block;
+	display: inline;
 	padding-left: 0.5%;
 	padding-right: 0.5%;
-	border-right: 1px solid white;
+	border-right: 1px solid #616161;
+	float: left;
 }
 
 
 #menudyna a 
 {
+	color : black;
+}
+
+#menudyna ul li:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.contenu
+{
+	background-color: #494949;
 	color : white;
-}
-
-#menudyna li:hover
-{
-	background-color: #1632B4;
-}
-
-#contenu
-{
-	background-color: #99C9F0;
-	height : 50%;
+	height: 550px;
+	display: none;
+	width: 100%;
+	position : absolute;
+	left: 0;
 }

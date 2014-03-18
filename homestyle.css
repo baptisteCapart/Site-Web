@@ -10,6 +10,12 @@ body
 	padding: 0;
 }
 
+#blochome
+{
+		background-color: white;
+
+}
+
 html
 {
 	height: 100%;
@@ -17,7 +23,6 @@ html
 	margin: 0;
 	padding: 0;
 }
-
 
 div 
 {
@@ -35,7 +40,7 @@ div
 	width: 100%;
 	height: 80%;
 	min-height: 300px;
-	margin-top: -1.5%;
+	margin-top: -1.2%;
 }
 
 #liste_news 
@@ -45,7 +50,7 @@ div
 	min-width: 250px;
 	height: 100%;	
 	//min-height: 50px;
-	font-family: 'Open Sans' , sans-serif;
+	font-family: 'Quicksand' , sans-serif;
 
 }
 
@@ -186,25 +191,32 @@ ul
 	display: none;
 }
 
+
+
 .proche1:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche2:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche3:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche4:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 .proche5:hover img.image
 {
 	display: inline-block;
+	z-index: 50;
 }
 
 #inscristoi
@@ -212,10 +224,10 @@ ul
 	text-align: center;
 	font-family: 'Open Sans' , sans-serif;
 	font-size: 1.5em;
-	color :black;
+	color :white;
 	width: 100%;
 	height: 7%;
-	background-color: #F1BD83;
+	background-color: #474948;
 	/*background-color:<?php print $coul_bg=coul_aleat(); ?>;*/
 	
 }

@@ -1,9 +1,9 @@
 
 		<?php include("banniere.php"); ?>
+		<div id="blochome">
 		<div id="news">
 				<div id="liste_news">
 					<ul>
-						<li></li>
 						<li></li>
 						<li><a href="#"> Grand Corps Malade à la Cigale !</a></li>
 						<li><a href="#"> Dj Vincent, ou le grand retour</a></li>
@@ -15,7 +15,7 @@
 				</div>
 				
 		</div>
-		<?php  
+		<?php 
 		if($loggé == true){
 		?>
 		<div id="notifs">
@@ -120,6 +120,7 @@
 		<?php
 		}
 		?>
+		</div>
 
 		<?php include("footer.php"); ?>
 		

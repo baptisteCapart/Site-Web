@@ -1,19 +1,26 @@
 
+
+
 	<?php include("banniere.php"); ?>
 		<div id = "photoartiste">
 			<div id="nomartiste">
-				Stromae
+				Imagine Dragons
 			</div>
 		</div>
 		<div id="menudyna">
 			<ul>
-				<li class = "onglet1"><a href="pageartiste.php">Présentation</a></li>
-				<li class = "onglet2"><a href="#">Concerts</a></li>	
-				<li class = "onglet3"><a href="#">Extraits</a></li>	
-				<li class = "onglet4"><a href="#">Avis</a></li>	
-				<li class = "onglet5"><a href="#">Photos</a></li>	
-			</ul>	
+				<li class = "onglet1">Présentation </br>
+				<div class="contenu">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>
+				<li class = "onglet2">Concerts</br>
+				<div class="contenu">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
+				<li class = "onglet3">Extraits</br>
+				<div class="contenu">ccccccccccccccccccccccccccccccccc</div></li>	
+				<li class = "onglet4">Avis</br>
+				<div class="contenu">ddddddddddddddddddddddddddddddddddddd</div></li>	
+				<li class = "onglet5">Photos</br>
+				<div class="contenu">eeeeeeeeeeeeeeeeeeeeeeeeeee</div></li>	
+			</ul> 	
 
 		</div>
-		<div id="contenu"></div>
+		
 	<?php include("footer.php"); ?>

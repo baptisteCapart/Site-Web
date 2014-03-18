@@ -1,30 +1,36 @@
 header
 {
 	background-image: url(images/darkmetal.jpg);
-	height: 25%;
+	height: 135px;
 	max-height: 200px;
 	min-height: 120px;
 	width: 100%;
 	min-width: 1000px;
 	margin : none;
+	border-bottom: 3px solid white;
 }
+
 
 #cadrelogo
 {
-	background-color: rgba(150,150,150,0.3);
-	height: 100%;
+	//background-color: rgba(150,150,150,0.3);
+	background: -webkit-linear-gradient(left,  rgba(75,75,75,0.6) 70%,rgba(0,0,0,0) 100%);
+	height: 135px;
 	width : 13%;
 }
 
 
-#logo
+.barresearch
 {
 
-	position : relative;
-	top: 15px;
-	left: 13%;
-	display: inline-block;
+	box-shadow: 0 0 900px #FFFFFF inset ; 
+	border: solid 1px #999;	
+	border-radius: 40px;
+	height: 20px;
 }
+
+
+
 
 .login
 {
@@ -68,14 +74,34 @@ a
 
 nav
 {
-	font-family: 'Open Sans' , sans-serif;
+	font-family: 'Quicksand' , sans-serif;
 	font-size: 1.3em;
 	display: inline-block;
 	font-weight: bold;
 	position : absolute;
-	top : 18%;
+	top : 90px;
 	width: 100%;
-	min-width: 700px;
+	min-width: 1000px;
+}
+#logo
+{
+
+	position : relative;
+	top: 40px;
+	left: 10%;
+	display: inline-block;
+}
+
+.slogan
+{
+	position: absolute;
+	font-family: 'Quicksand' , sans-serif;
+	font-size: 2.4em;
+	top: 95px;
+	left: 13%;
+	padding: 0;
+	margin: 0;
+	color : #D7CBA2;
 }
 
 #menu ul
@@ -242,7 +268,7 @@ nav ul li ul li a:hover
 .TIT
 {
 	position: relative;
-	font-family: Codystar;
+	font-family: garamond;
 	font-weight: bold;
 	font-size: 1em;
 	top: 14px;
@@ -251,17 +277,7 @@ nav ul li ul li a:hover
 
 }
 
-.slogan
-{
-	position: absolute;
-	font-family: 'Bangers' , sans-serif;
-	font-size: 2.4em;
-	top: 10%;
-	left: 20%;
-	padding: 0;
-	margin: 0;
-	color : #D7CBA2;
-}
+
 
 footer
 {
@@ -345,10 +361,7 @@ footer a
 	{
 		font-size: 1.1em;
 	}
-	#menu li 
-	{
-		padding : 5px;
-	}
+
 	#menu li ul li 
 	{
 		padding: 10px;

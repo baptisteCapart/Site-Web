@@ -4,10 +4,18 @@
 		<meta charset="utf-8"/>
 		<title>Tune In Town</title>
 		<rel type="stylesheet" href="" />
+		<link rel="stylesheet" href="pageMembrestyle.css">
 		<link rel="stylesheet" href="bannierestyle.css"/>
 		<link rel="stylesheet" href="homestyle.css" />
 		<link rel="stylesheet" href="pageartistestyle.css" />
+		<link rel="stylesheet" href="pageconcertstyle.css" />
+		<link rel="stylesheet" href="pageMembrestyle.css">
+		<link rel="stylesheet" href="formulairestyle.css"/>
+
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Codystar|Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans|Iceland' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Condiment|Iceland' rel='stylesheet' type='text/css'>
@@ -19,10 +27,10 @@
 <header class="header">
 	<div id= "cadrelogo">
 		<div id="logo"><a href="home.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
-			<div><strong class="TIT">Tune In Town</strong></div>
+			<!-- <div><strong class="TIT">Tune In Town</strong></div> -->
 	</div>
 
-	<div><strong class="slogan">The beat goes around !</strong></div>	
+	<div><strong class="slogan">Tune In Town</strong></div>	
 
 
 	<?php 
@@ -55,20 +63,20 @@
 	?>
 	<nav id="menu">
 		<ul>
-			<li id = "compte"><a href="#">Compte</a>
+			<li id = "compte"><a href="PageMembre.php">Compte</a>
 				<ul class = "menu1">
-					<li id = "profil"><a href="#">Mon compte</a></li>
+					<li id = "profil"><a href="PageMembre.php">Mon compte</a></li>
 					<li id = "groupes"><a href="#">Mes artistes</a></li>
 					<li id = "rooms"><a href="#">Mes salles</a></li>
 					<li id = "shows"><a href="#">Mes concerts</a></li>
 				</ul>
 			</li>	
-			<li id = "artistes"><a href="#">Artistes</a>
+			<li id = "artistes"><a href="pageartiste.php">Artistes</a>
 				<ul class = "menu2">
 					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 					<li id = "style"><a href="#">Par style</a></li>
 					<?php if ($loggé == true) { ?>
-						<li id = "créer"><a href="#">Créer un profil artiste</a></li>
+						<li id = "créer"><a href="formulairegroupe.php">Créer un profil artiste</a></li>
 					<?php } ?>
 				</ul>
 			</li>	
@@ -76,9 +84,12 @@
 				<ul class = "menu3">
 					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 					<li id = "lieu"><a href="#">Par lieu</a></li>
+					<?php if ($loggé == true) { ?>
+						<li id = "créer"><a href="formulairesalle.php">Créer un profil salle</a></li>
+					<?php } ?>					
 				</ul>
 			</li>	
-			<li id = "concerts"><a href="#">Concerts</a>
+			<li id = "concerts"><a href="pageconcert.php">Concerts</a>
 				<ul class = "menu4">
 					<li id = "date"><a href="#">Par date</a> </li>
 					<li id = "lieu"><a href="#">Par lieu</a></li>
@@ -87,7 +98,7 @@
 			<li id = "forum"><a href="#">Forum</a></li>
 			<li id = "search">
 				<form class ="recherche" method="post" action="research.php">
-					<input type="text" name="recherche" placeholder="Rechercher"/>
+					<input class = "barresearch" type="text" name="recherche" placeholder="   Rechercher" size = "30"/>
 				</form>
 			</li>
 		</ul>

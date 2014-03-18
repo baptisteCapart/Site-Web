@@ -1,10 +1,11 @@
-body
+#bloc
 {
 	height: 100%;
 	min-width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #E4E3CD;
+	background-color: #363636;
+	color: white;
 }
 
 html
@@ -23,7 +24,7 @@ html
 	text-align: center;
 	width: 70%;
 	margin: auto;
-	padding-top: 2%;
+	padding-top: 5%;
 	padding-bottom: 2%;
 	font-family: 'Open Sans' , sans-serif;
 }
@@ -31,15 +32,14 @@ html
 #formulaire
 {
 	font-family: 'Open Sans' , sans-serif;
-	font-weight: bold;
 	margin-left: 20%;
 	margin-right: 20%;
 }
 
 .textbox
 {
-	box-shadow: 0 0 9px #777 inset ;
-	border-radius: 3px;
+	box-shadow: 0 0 9px #111 inset ;
+	border-radius: 5px;
 	border: solid 1px #999;
 }
 
@@ -68,6 +68,6 @@ form ul li
 }
 
 form ul li div span {
-	width: 25%;
+	width: 50%;
 	display: inline-block;
 }

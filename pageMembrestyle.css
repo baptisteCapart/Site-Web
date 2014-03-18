@@ -5,25 +5,177 @@ html, body
 	font-family: calibri;
 	margin: 0;
 	padding: 0;
+	background: black;
+
 }
+
 
 #cover
 {
-	background-image: url(images/imageMembre.jpg);
+	background: black;
+	background-image: url(images/imagemembre.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 70%;
+	height: 470px;
 	width: 100%;
-	
+	border: 1px solid black;
+	opacity : 0.5;
 
+}
 
+#donnees
+{
+	float : left;
 }
 #membre
 
 {
-position: absolute;
-	bottom : 8%; 
-	height :50%;
-	left: 5%;
+	position: absolute;
+	height : 50%;
+	top : 180px ;
+	left : 40%;
+	font-size: 1.5em;
+	font-family: 'Original Surfer', cursive;
+
+
+
+
+}
+#image
+{
+	border:  8px solid gray;
+	border-radius: 300px;
+    width:220px ;
+    
+
+
 }
 
+#gerer
+{
+	
+	position: absolute;
+	top : 520px;
+	left : 3%;
+
+}
+
+#message
+{
+	
+	position: absolute;
+	top : 350px;
+	right : 3%;
+	
+}
+#suivre
+{
+	
+	position: absolute;
+	top : 380px;
+	right : 5%;
+	
+}
+
+
+#parametres
+{
+		width: 120%;
+		height: 50px ;
+		font-family: 'Josefin Sans' , sans-serif;
+		font-size: 2em;
+
+}
+
+#membre li 
+{
+	display: block;
+
+}
+#membre li li
+{
+	display: block;
+	color: white;
+}
+#menudyna2
+{
+	font-size: 2em;
+	background-color: #87F757;
+	width : 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#menudyna2 ul 
+{
+	list-style: none;
+	margin-top: -2px;
+}
+
+.ongletmembre1:hover .contenumembre
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre2:hover div.contenumembre
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre3:hover div.contenumembre
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre4:hover div.contenumembre
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletmembre5:hover div.contenumembre
+{
+	display: inline-block;
+	z-index: 50;
+}
+
+
+#menudyna2 li 
+{
+	display: inline;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	border-right: 1px solid #616161;
+	float: left;
+}
+
+
+#menudyna2 a 
+{
+	color : white;
+}
+
+#menudyna2 ul li:hover
+{
+	background-color: black;
+	color : white;
+}
+
+.contenumembre
+{
+	background-color: #3E3E3E;
+	color : white;
+	height: 150px;
+	display: none;
+	width: 100%;
+	position : absolute;
+	left: 0;
+	font-size: 0.7em;
+}
+
+#parametres
+{
+border-radius: 3px;
+right: 20px;
+
+}
