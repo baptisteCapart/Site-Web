@@ -71,3 +71,12 @@ form ul li div span {
 	width: 50%;
 	display: inline-block;
 }
+
+.erreur
+{
+
+	color : red;
+	position: absolute;
+	top : 0;
+	font-weight: bold;
+}
