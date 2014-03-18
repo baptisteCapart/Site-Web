@@ -13,7 +13,8 @@ header
 
 #cadrelogo
 {
-	background-color: rgba(150,150,150,0.3);
+	//background-color: rgba(150,150,150,0.3);
+	background: -webkit-linear-gradient(left,  rgba(75,75,75,0.6) 70%,rgba(0,0,0,0) 100%);
 	height: 135px;
 	width : 13%;
 }
@@ -87,7 +88,7 @@ nav
 
 	position : relative;
 	top: 40px;
-	left: 13%;
+	left: 10%;
 	display: inline-block;
 }
 
@@ -96,8 +97,8 @@ nav
 	position: absolute;
 	font-family: 'Quicksand' , sans-serif;
 	font-size: 2.4em;
-	top: 70px;
-	left: 14%;
+	top: 95px;
+	left: 13%;
 	padding: 0;
 	margin: 0;
 	color : #D7CBA2;

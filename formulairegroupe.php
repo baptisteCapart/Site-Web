@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8"/>
-		<title>Tune In Town</title>
-		<rel type="stylesheet" href="" />
-		<link rel="stylesheet" href="bannierestyle.css"/>
-		<link rel="stylesheet" href="formulairestyle.css"/>
-	</head>
 
-	<body>
 		<?php include("banniere.php"); ?>
+<div id="bloc">
 
 		<div id="bienvenue">Remplis gratuitement ce formulaire d'inscription pour créer ton groupe et ainsi bénéficier de tous les privilèges d'un groupe !</div>
 		<div id="formulaire">
@@ -42,6 +33,6 @@
 			
 		</form>
 		</div>
+		</div>
+
 		<?php include ('footer.php'); ?>
-	</body>
-</html>
