@@ -13,7 +13,7 @@
 		</li>
 		<li id="donneesmembre">
 			<ul>
-				<?<li>php $_SESSION['pseudo']</li>?>
+				<li> <?= $_SESSION['pseudo'] ?> </li>
 				<li>Femme</li>
 				<li>25/10/1990</li>
 				<li>Avignon</li>

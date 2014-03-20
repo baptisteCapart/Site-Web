@@ -90,6 +90,7 @@ nav
 	top: 40px;
 	left: 10%;
 	display: inline-block;
+	z-index: 100;
 }
 
 .slogan

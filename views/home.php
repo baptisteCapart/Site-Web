@@ -16,7 +16,7 @@
 				
 		</div>
 		<?php 
-		if($loggé == true){
+		if(isset($_SESSION['pseudo'])){
 		?>
 		<div id="notifs">
 			<div id="proche_vous"> 
