@@ -55,8 +55,8 @@ html, body
 {
 	
 	position: absolute;
-	top : 520px;
-	left : 3%;
+	top : 580px;
+	right : 3%;
 
 }
 
@@ -64,16 +64,16 @@ html, body
 {
 	
 	position: absolute;
-	top : 350px;
-	right : 3%;
+	top : 580px;
+	right : 11%;
 	
 }
 #suivre
 {
 	
 	position: absolute;
-	top : 380px;
-	right : 5%;
+	top : 580px;
+	right : 23%;
 	
 }
 
