@@ -11,6 +11,8 @@
 		<link rel="stylesheet" href="pageconcertstyle.css" />
 		<link rel="stylesheet" href="pageMembrestyle.css">
 		<link rel="stylesheet" href="formulairestyle.css"/>
+		<link rel="stylesheet" href="forumstyle.css"/>
+
 
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
