@@ -104,3 +104,6 @@
 		</ul>
 	</nav>
 </header>
+<body>
+	<div id = "dégradé"></div>
+</body>
