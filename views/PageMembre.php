@@ -8,12 +8,12 @@
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src= "$donnees["photoprofil"] . '" ?>" alt="Photo de Gérard" />
+				<img id="image" src= '"'<?= $donnees['photoprofil'] ?>'"' alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
 			<ul>
-				<li> <?= $_SESSION['pseudo'] ?> </li>
+				<li><?= $_SESSION['pseudo'] ?> </li>
 				<li><?= $donnees['sexe'] ?></li>
 				<li><?= $donnees['date_de_naissance'] ?></li>
 				<li><?= $donnees['ville'] ?></li>
