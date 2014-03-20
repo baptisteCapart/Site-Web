@@ -3,7 +3,7 @@
 <div id="bloc">
 <div id="bienvenue">Remplis gratuitement ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit !</div>
 <div id="formulaire">
-	<form class ="form2" method="post" action="formulairecontrolleur.php">
+	<form class ="form2" method="post" action="../controlleurs/formulairecontrolleur.php">
 		<ul>
 			<li>
 				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value=""/> </div>
