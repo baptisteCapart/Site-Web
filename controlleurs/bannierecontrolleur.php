@@ -10,7 +10,6 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
   include ('../models/bannieremodel.php');
   
   $donnee = verification($login);
-  echo "verification($login)";
 
   if( $donnee['mot_de_passe'] != $pwd) {
   echo '<p>Mauvais login / password. Merci de recommencer</p>';
@@ -19,13 +18,14 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
 
 
   }  else {
-    session_start();
+    //session_start();
     $_SESSION['pseudo'] = $login;
+    $_SESSION['id'] = $donnee['membre_id'];
     
     echo 'Vous etes bien loggé';
     // ici vous pouvez afficher un lien pour renvoyer
     // vers la page d'accueil de votre espace membres 
-    header ('location: ../views/PageMembre.php');
+    header ('location: ../controlleurs/PageMembrecontrolleur.php');
   } 
 
 

@@ -1,4 +1,6 @@
 
+
+
 <?php include("banniere.php"); ?>
 
 <div id= "cover">
@@ -14,9 +16,9 @@
 		<li id="donneesmembre">
 			<ul>
 				<li> <?= $_SESSION['pseudo'] ?> </li>
-				<li>Femme</li>
+				<li><?= $donnees['sexe'] ?></li>
 				<li>25/10/1990</li>
-				<li>Avignon</li>
+				<li><?= $donnees['ville'] ?></li>
 			</ul>
 		</li>
 

@@ -1,4 +1,3 @@
-<?php  session_start(); ?>
 <!DOCTYPE html>
 <html>
 
@@ -6,12 +5,12 @@
 	<meta charset="utf-8"/>
 	<title>Tune In Town</title>
 	<rel type="stylesheet" href="" />
-	<link rel="stylesheet" href="pageMembrestyle.css">
+	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/bannierestyle.css"/>
-	<link rel="stylesheet" href="homestyle.css" />
-	<link rel="stylesheet" href="pageartistestyle.css" />
-	<link rel="stylesheet" href="pageconcertstyle.css" />
-	<link rel="stylesheet" href="pageMembrestyle.css">
+	<link rel="stylesheet" href="../views/homestyle.css" />
+	<link rel="stylesheet" href="../views/pageartistestyle.css" />
+	<link rel="stylesheet" href="../views/pageconcertstyle.css" />
+	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
 
 
