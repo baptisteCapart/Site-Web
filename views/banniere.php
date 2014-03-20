@@ -1,6 +1,7 @@
 <?php  session_start(); ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8"/>
 	<title>Tune In Town</title>
@@ -12,6 +13,8 @@
 	<link rel="stylesheet" href="pageconcertstyle.css" />
 	<link rel="stylesheet" href="pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
+
+
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
@@ -103,3 +106,4 @@
 			</ul>
 		</nav>
 	</header>
+
