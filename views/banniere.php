@@ -34,17 +34,17 @@
 
 
 	<?php 
-	$loggé = true;
+	$loggé = false;
 	if($loggé == false){
 	?>
 	<div class="container">
- 		<form class="form" method="post" action="formulaire.php">
+ 		<form class="form" method="post" action="../controlleurs/bannierecontrolleur.php">
 			<span class="login">Pseudo : </span>
-			<input type="text" name="pseudo" value=""/>
+			<input type="text" name="login" value=""/>
 			<span class="login">Password : </span>
-			<input type="password" name="mdp" value=""/>
+			<input type="password" name="pwd" value=""/>
 			<input type="submit" value="Log in"/>
-			<span class="sign_in"><a href ="formulaire.php" target="_blank">Inscription</a></span>
+			<span class="sign_in"><a href ="../controlleurs/formulairecontrolleur.php" target="_blank">Inscription</a></span>
 		</form>
 	</div>
 
@@ -54,7 +54,7 @@
 	<div class="pseudo"> 
 		<ul>
 			<li><a href="#">Pseudo du membre</a></li>
-			<li><a href="#">Déconnexion</a></li>
+			<li><a href="deconnexioncontrolleur.php">Déconnexion</a></li>
 		</ul>
 	</div>	
 
