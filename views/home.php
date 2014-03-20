@@ -1,5 +1,5 @@
 
-		<?php include("banniere.php"); ?>
+		<?php include("../views/banniere.php"); ?>
 		<div id="blochome">
 		<div id="news">
 				<div id="liste_news">

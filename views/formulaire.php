@@ -21,6 +21,11 @@
 			</li>
 
 			<li>
+				<div class="mail"><span> Date de naissance: </span><input class = "textbox" type="text" name="age" value=""/></div>
+
+			</li>			
+
+			<li>
 			<div class="sexe"><span>Sexe : </span><input class = "textbox" type="text" name="sexe" value=""/></div>
 			</li>
 			<li>

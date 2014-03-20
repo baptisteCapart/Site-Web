@@ -1,6 +1,4 @@
 
-
-
 <?php include("banniere.php"); ?>
 
 <div id= "cover">
@@ -10,15 +8,17 @@
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src="images/membreexp.jpg"  alt="Photo de Gérard" />
+				<img id="image" src= "$donnees["photoprofil"] . '" ?>" alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
 			<ul>
 				<li> <?= $_SESSION['pseudo'] ?> </li>
 				<li><?= $donnees['sexe'] ?></li>
-				<li>25/10/1990</li>
+				<li><?= $donnees['date_de_naissance'] ?></li>
 				<li><?= $donnees['ville'] ?></li>
+				<li><?= $donnees['pays'] ?></li>
+				<li><?= $donnees['code_postal'] ?></li>
 			</ul>
 		</li>
 

@@ -29,8 +29,7 @@
 <body>
 	<header class="header">
 		<div id= "cadrelogo">
-			<div id="logo"><a href="home.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
-			<!-- <div><strong class="TIT">Tune In Town</strong></div> -->
+			<div id="logo"><a href="homecontrolleur.php"><img src="../views/images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
 		</div>
 
 		<div><strong class="slogan">Tune In Town</strong></div>	
@@ -49,22 +48,22 @@
 				</form>
 			</div>
 
-			<?php
+		<?php
 		} else {
 			?>
 			<div class="pseudo"> 
 				<ul>
-					<li><a href="PageMembre.php"> <?= $_SESSION['pseudo'] ?> </a></li>
+					<li><a href="PageMembrecontrolleur.php"> <?= $_SESSION['pseudo'] ?> </a></li>
 					<li><a href="../controlleurs/deconnexioncontrolleur.php">Déconnexion</a></li>
 				</ul>
 			</div>
 
-			<?php
+		<?php
 		}
 		?>
 		<nav id="menu">
 			<ul>
-				<li id = "compte"><a href="../views/PageMembre.php">Compte</a>
+				<li id = "compte"><a href="PageMembrecontrolleur.php">Compte</a>
 					<ul class = "menu1">
 						<li id = "profil"><a href="PageMembre.php">Mon compte</a></li>
 						<li id = "groupes"><a href="#">Mes artistes</a></li>
