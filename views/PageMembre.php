@@ -13,7 +13,7 @@
 		</li>
 		<li id="donneesmembre">
 			<ul>
-				<li>LilyFleur60</li>
+				<?<li>php $_SESSION['pseudo']</li>?>
 				<li>Femme</li>
 				<li>25/10/1990</li>
 				<li>Avignon</li>
@@ -41,5 +41,5 @@
 		</div>
 
 
-				<?php include("footer.php"); ?>
+<?php include("footer.php"); ?>
 
