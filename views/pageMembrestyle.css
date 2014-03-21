@@ -13,7 +13,7 @@ html, body
 #cover
 {
 	background: black;
-	background-image: url(images/imagemembre.jpg);
+	
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 470px;

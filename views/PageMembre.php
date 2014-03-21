@@ -1,14 +1,14 @@
 
 <?php include("banniere.php"); ?>
 
-<div id= "cover">
+<div id= "cover" background-image=<?='"url( \''.$donnees['photocover'].' \')"';?>>
 
 </div>
 <div id="donnees">	
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src= '"'<?= $donnees['photoprofil'] ?>'"' alt="Photo de Gérard" />
+				<img id="image" src=<?= '"'.$donnees['photoprofil'].'"' ?> alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
