@@ -22,3 +22,19 @@ function recuperer($id){
   	return $donnee;
 }
  ?>
+
+
+
+<!--  <?php 
+$bdd = new PDO('mysql:host=localhost; dbname=mydb', 'root', '') ?>
+
+$result= $bdd->query('INSERT');
+
+
+while($data = ^reponse->fetch()){
+
+}
+
+$result->closeCursor(); -->
+
+

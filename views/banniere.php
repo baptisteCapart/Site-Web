@@ -75,8 +75,8 @@
 					<ul class = "menu2">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "style"><a href="#">Par style</a></li>
-						<?php  if(!isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="formulairegroupe.php">Créer un profil artiste</a></li>
+						<?php  if(isset($_SESSION['pseudo'])) { ?>
+						<li id = "créer"><a href="../views/formulairegroupe.php">Créer un profil artiste</a></li>
 						<?php } ?>
 					</ul>
 				</li>	
@@ -84,8 +84,8 @@
 					<ul class = "menu3">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>
-						<?php if(!isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="formulairesalle.php">Créer un profil salle</a></li>
+						<?php if(isset($_SESSION['pseudo'])) { ?>
+						<li id = "créer"><a href="../views/formulairesalle.php">Créer un profil salle</a></li>
 						<?php } ?>
 					</ul>
 				</li>	

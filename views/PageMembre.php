@@ -1,9 +1,9 @@
 
 <?php include("banniere.php"); ?>
 
-<div id= "cover" background-image=<?='"url( \''.$donnees['photocover'].' \')"';?>>
-
+<div id= "cover" style="background-image:url(<?php echo $donnees['photocover']; ?>); " >
 </div>
+
 <div id="donnees">	
 	<ul id="membre">
 		<li>
