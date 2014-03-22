@@ -50,39 +50,37 @@ html, body
 
 }
 
+#gerer,#message, #suivre
+{
+	position: absolute;
+	top : 550px;
+	right : 21%;
+	box-shadow: 0 0 9px #111 inset ;
+	border-radius: 7px;
+	border: solid 1px #999;
+}
+
 #gerer
 {
-	
-	position: absolute;
-	top : 520px;
-	left : 3%;
-
+	right : 3%;
 }
 
 #message
 {
-	
-	position: absolute;
-	top : 350px;
-	right : 3%;
-	
+	right : 10%;
 }
 #suivre
 {
-	
-	position: absolute;
-	top : 380px;
-	right : 5%;
-	
+	right : 21%;
 }
 
 
 #parametres
 {
-		width: 120%;
-		height: 50px ;
-		font-family: 'Josefin Sans' , sans-serif;
-		font-size: 2em;
+	width: 120%;
+	height: 50px ;
+	font-family: 'Josefin Sans' , sans-serif;
+	font-size: 2em;
 
 }
 

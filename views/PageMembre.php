@@ -25,7 +25,7 @@
 	</ul>
 	
 </div>
-<div id="gerer"><input type="submit" value="paramètres"/></div>
+<div id="gerer" ><input type="submit" value="paramètres" /></div>
 <div id="suivre"><input type="submit" value="Suivre"/></div>
 <div id="message"><input type="submit" value="Envoyer un message"/></div>
 <div id="menudyna2">
