@@ -29,11 +29,10 @@ header
 }
 
 
-
-
-.login
+.form
 {
-	color: white;
+	color: #CACACA;
+	font-family: 'Open Sans' , sans-serif;
 }
 
 .container .form
@@ -41,18 +40,14 @@ header
 	float: right;
 	padding-top: 10px;
 	margin-right: 2%;
-		border-bottom: 1px solid #646665;
-		padding-bottom: 10px;
-
+	border-bottom: 1px solid #646665;
+	padding-bottom: 10px;
 
 }
 
 .container .form .login
 {
-	font-family: 'Open Sans' , sans-serif;
-	color: #A3A596;
 	font-size: 0.9em;
-
 }
 .container {
 	position: absolute;
@@ -64,10 +59,9 @@ header
 .sign_in a
 {
 	text-decoration: underline;
-	color : white;
-	font-family: 'Open Sans' , sans-serif;
+	color : #CACACA;
 	font-size: 0.9em;
-	font-weight: bold;
+	font-family: 'Open Sans' , sans-serif;
 
 }
 
@@ -356,7 +350,7 @@ footer a
 
 .pseudo a
 {
-	color: white;
+	color: #B9B9B9;
 }
 
 .pseudo a:hover
