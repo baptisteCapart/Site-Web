@@ -1,7 +1,7 @@
 <?php
 
 	require ('../connectbdd.php');
-	include ('../models/artistemodel.php');
+	include ('../models/membremodel.php');
 
 	$donnees = recuperer($_SESSION['id']);
 

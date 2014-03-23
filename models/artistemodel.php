@@ -7,8 +7,8 @@ function insert($nomartiste, $style ,$description, $photogroupe){
 
 
 
-function recuperer($id){
-	$sql = ("SELECT * from membre where nom ='$nomartiste'");
+function recuperer2($id){
+	$sql = ("SELECT * from artiste where nom ='$nomartiste'");
  	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
  	
   	$donnee = mysql_fetch_assoc($req);
