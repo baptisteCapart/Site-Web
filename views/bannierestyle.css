@@ -10,6 +10,13 @@ header
 	border-bottom: 3px solid grey;
 }
 
+.logg
+{
+	box-shadow: 0 0 9px #555 inset ;
+	border-radius: 3px;
+	border: solid 1px #555;
+}
+
 
 #cadrelogo
 {
@@ -35,19 +42,35 @@ header
 	font-family: 'Open Sans' , sans-serif;
 }
 
+.form .login, .form .logg, .form .sign_in
+{
+	margin-left: 15px;
+
+}
+
+
 .container .form
 {
 	float: right;
 	padding-top: 10px;
-	margin-right: 2%;
+	margin-right: 0.5%;
 	border-bottom: 1px solid #646665;
 	padding-bottom: 10px;
 
 }
 
+.boite
+{
+	box-shadow: 0 0 9px #555 inset ;
+	border-radius: 3px;
+	border: solid 1px #555;	
+	width: 70px;
+
+}
+
 .container .form .login
 {
-	font-size: 0.9em;
+	font-size: 0.8em;
 }
 .container {
 	position: absolute;
@@ -60,7 +83,7 @@ header
 {
 	text-decoration: underline;
 	color : #CACACA;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	font-family: 'Open Sans' , sans-serif;
 
 }

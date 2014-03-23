@@ -25,9 +25,15 @@
 	</ul>
 	
 </div>
-<div id="gerer" ><input type="submit" value="paramètres" /></div>
-<div id="suivre"><input type="submit" value="Suivre"/></div>
-<div id="message"><input type="submit" value="Envoyer un message"/></div>
+
+<div id="global">
+<ul id="parametres">
+	<li><input class = "bouton" type="submit" value="Paramètres" /></li>
+	<li><input class = "bouton" type="submit" value="Suivre"/></li>
+	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
+</ul>
+</div>
+
 <div id="menudyna2">
 			<ul>
 				<li class = "ongletmembre1">Artistes </br>
@@ -40,7 +46,7 @@
 				<div class="contenumembre">ddddddddddddddddddddddddddddddddddddd</div></li>		
 			</ul> 	
 
-		</div>
+</div>
 
 
 <?php include("footer.php"); ?>

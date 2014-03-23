@@ -12,6 +12,7 @@
 	<link rel="stylesheet" href="../views/pageconcertstyle.css" />
 	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
+	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
 
 
 
@@ -40,10 +41,10 @@
 			<div class="container">
 				<form class="form" method="post" action="../controlleurs/bannierecontrolleur.php">
 					<span class="login">Pseudo : </span>
-					<input type="text" name="login" value=""/>
+					<input class ="boite" type="text" name="login" value=""/>
 					<span class="login">Password : </span>
-					<input type="password" name="pwd" value=""/>
-					<input type="submit" value="Log in"/>
+					<input class ="boite" type="password" name="pwd" value=""/>
+					<input class = "logg" type="submit" value="Log in"/>
 					<span class="sign_in"><a href ="../controlleurs/formulairecontrolleur.php" target="_blank">Inscription</a></span>
 				</form>
 			</div>
@@ -74,7 +75,7 @@
 				</li>	
 				<li id = "artistes"><a href="pageartistecontrolleur.php">Artistes</a>
 					<ul class = "menu2">
-						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
+						<li id = "alpha"><a href="listeartistecontrolleur.php">Par ordre alphabétique</a> </li>
 						<li id = "style"><a href="#">Par style</a></li>
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
 						<li id = "créer"><a href="formulairegroupecontrolleur.php">Créer un profil artiste</a></li>
