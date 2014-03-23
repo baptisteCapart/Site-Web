@@ -33,7 +33,7 @@ div
 
 #news
 {
-	background-image: url(images/concert.jpg);
+	background-image: url(../controlleurs/images/concert.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -97,7 +97,7 @@ ul
 
 #proche_vous
 {
-	background-color: #96BEC2;
+	background-color: #A6A6A6;
 }
 
 
@@ -108,7 +108,7 @@ ul
 
 #salle
 {
-	background-color: #96BEC2;
+	background-color: #A6A6A6;
 }
 
 #proche_vous #titre1, #titre2, #titre3
@@ -275,15 +275,18 @@ ul
 .formulaire
 {
 	border-top: 1px solid #949494;
-	color : #229587;
+	color : #292929;
 	font-size: 1.6em;
 	margin-right: 10%;
 	margin-left: 10%;
+	padding-top: 40px;
+	padding-bottom: 40px; 
 }
 
 .formulaire a 
 {
 	text-decoration: underline;
+	color : black;
 }
 
 #qui, #quoi

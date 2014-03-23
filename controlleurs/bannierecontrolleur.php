@@ -21,7 +21,7 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
     
     echo 'Vous etes bien loggé';
 
-    header ('location: ../controlleurs/PageMembrecontrolleur.php');
+    header ('location: ../controlleurs/homecontrolleur.php');
   } 
 
 

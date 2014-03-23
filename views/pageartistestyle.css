@@ -10,7 +10,7 @@ html, body
 #photoartiste
 {
 	position: relative;
-	background-image: url(images/imaginedragons.jpg);
+	background-image: url(../controlleurs/images/imaginedragons.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 500px;

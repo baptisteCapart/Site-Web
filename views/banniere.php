@@ -29,7 +29,7 @@
 <body>
 	<header class="header">
 		<div id= "cadrelogo">
-			<div id="logo"><a href="homecontrolleur.php"><img src="../views/images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
+			<div id="logo"><a href="homecontrolleur.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
 		</div>
 
 		<div><strong class="slogan">Tune In Town</strong></div>	
@@ -50,12 +50,13 @@
 
 		<?php
 		} else {
-			?>
+			?><div class="container">
 			<div class="pseudo"> 
 				<ul>
 					<li><a href="PageMembrecontrolleur.php"> <?= $_SESSION['pseudo'] ?> </a></li>
-					<li><a href="../controlleurs/deconnexioncontrolleur.php">Déconnexion</a></li>
+					<li><a href="deconnexioncontrolleur.php">Déconnexion</a></li>
 				</ul>
+			</div>
 			</div>
 
 		<?php
@@ -65,18 +66,18 @@
 			<ul>
 				<li id = "compte"><a href="PageMembrecontrolleur.php">Compte</a>
 					<ul class = "menu1">
-						<li id = "profil"><a href="PageMembre.php">Mon compte</a></li>
+						<li id = "profil"><a href="PageMembrecontrolleur.php">Mon compte</a></li>
 						<li id = "groupes"><a href="#">Mes artistes</a></li>
 						<li id = "rooms"><a href="#">Mes salles</a></li>
 						<li id = "shows"><a href="#">Mes concerts</a></li>
 					</ul>
 				</li>	
-				<li id = "artistes"><a href="pageartiste.php">Artistes</a>
+				<li id = "artistes"><a href="pageartistecontrolleur.php">Artistes</a>
 					<ul class = "menu2">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "style"><a href="#">Par style</a></li>
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="../views/formulairegroupe.php">Créer un profil artiste</a></li>
+						<li id = "créer"><a href="formulairegroupecontrolleur.php">Créer un profil artiste</a></li>
 						<?php } ?>
 					</ul>
 				</li>	
@@ -85,11 +86,11 @@
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>
 						<?php if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="../views/formulairesalle.php">Créer un profil salle</a></li>
+						<li id = "créer"><a href="formulairesallecontrolleur.php">Créer un profil salle</a></li>
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "concerts"><a href="pageconcert.php">Concerts</a>
+				<li id = "concerts"><a href="pageconcertcontrolleur.php">Concerts</a>
 					<ul class = "menu4">
 						<li id = "date"><a href="#">Par date</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>
