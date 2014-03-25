@@ -13,6 +13,7 @@
 	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
+	<link rel="stylesheet" href="../views/forumstyle.css">
 
 
 
