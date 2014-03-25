@@ -1,7 +1,7 @@
 
 <?php include("banniere.php"); ?>
 <div id="bloc">
-<div id="bienvenue">Remplis gratuitement ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit !</div>
+<div id="bienvenue">Remplis pour 300€ ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit !</div>
 <div id="formulaire">
 	<form class ="form2" method="post" action="../controlleurs/formulairecontrolleur.php">
 		<ul>
@@ -19,6 +19,11 @@
 				<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="text" name="mail" value=""/></div>
 
 			</li>
+
+			<li>
+				<div class="mail"><span> Date de naissance: </span><input class = "textbox" type="text" name="age" value=""/></div>
+
+			</li>			
 
 			<li>
 			<div class="sexe"><span>Sexe : </span><input class = "textbox" type="text" name="sexe" value=""/></div>

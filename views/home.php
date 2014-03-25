@@ -1,5 +1,5 @@
 
-		<?php include("banniere.php"); ?>
+		<?php include("../views/banniere.php"); ?>
 		<div id="blochome">
 		<div id="news">
 				<div id="liste_news">
@@ -16,7 +16,7 @@
 				
 		</div>
 		<?php 
-		if($loggé == true){
+		if(isset($_SESSION['pseudo'])){
 		?>
 		<div id="notifs">
 			<div id="proche_vous"> 

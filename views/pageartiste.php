@@ -1,6 +1,4 @@
 
-
-
 	<?php include("banniere.php"); ?>
 		<div id = "photoartiste">
 			<div id="nomartiste">

@@ -12,13 +12,10 @@ html, body
 
 #cover
 {
-	background: black;
-	background-image: url(images/imagemembre.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 470px;
 	width: 100%;
-	border: 1px solid black;
 	opacity : 0.5;
 
 }
@@ -45,23 +42,28 @@ html, body
 {
 	border:  8px solid gray;
 	border-radius: 300px;
-    width:220px ;
-    
-
-
+    width:220px ; 
 }
 
-#gerer
+.bouton
 {
+<<<<<<< HEAD
 	
 	position: absolute;
 	top : 580px;
 	right : 3%;
 
+=======
+	box-shadow: 0 0 9px #333 inset ;
+	border-radius: 4px;
+	border: solid 1px #555;
+	font-size: 1.3em;
+>>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
 }
 
-#message
+#global
 {
+<<<<<<< HEAD
 	
 	position: absolute;
 	top : 580px;
@@ -75,17 +77,25 @@ html, body
 	top : 580px;
 	right : 23%;
 	
+=======
+	width: 100%;
+	position: absolute;
+	top : 550px;
+>>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
 }
-
 
 #parametres
 {
-		width: 120%;
-		height: 50px ;
-		font-family: 'Josefin Sans' , sans-serif;
-		font-size: 2em;
-
+	float: right;
+	padding-right: 20px;
 }
+
+#parametres li 
+{
+	display: inline-block;
+}
+
+
 
 #membre li 
 {
@@ -100,7 +110,7 @@ html, body
 #menudyna2
 {
 	font-size: 2em;
-	background-color: #87F757;
+	background-color: #35BDFF;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
@@ -110,7 +120,7 @@ html, body
 #menudyna2 ul 
 {
 	list-style: none;
-	margin-top: -2px;
+	margin-top: 0;
 }
 
 .ongletmembre1:hover .contenumembre
@@ -173,9 +183,4 @@ html, body
 	font-size: 0.7em;
 }
 
-#parametres
-{
-border-radius: 3px;
-right: 20px;
 
-}

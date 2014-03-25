@@ -10,7 +10,7 @@ html, body
 #photoartiste
 {
 	position: relative;
-	background-image: url(images/imaginedragons.jpg);
+	background-image: url(../controlleurs/images/imaginedragons.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 500px;
@@ -45,7 +45,7 @@ html, body
 #menudyna ul 
 {
 	list-style: none;
-	margin-top: -2px;
+	margin-top: 0;
 }
 
 .onglet1:hover .contenu
