@@ -30,7 +30,12 @@ require ('../connectbdd.php');
 		$mdp = sha1($mdp);
 
 		require ('../models/membremodel.php');
-		insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
+		$validation = verifpseudo($pseudo);
+		if ($validation == true){
+			insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
+		}else{
+			echo '<span class = "erreur">ce pseudo est déjà utilisé</span>';
+		}
 
 	} else {
 	echo '<span class="erreur">Les deux mots de passe que vous avez rentrés ne correspondent pas</span>';

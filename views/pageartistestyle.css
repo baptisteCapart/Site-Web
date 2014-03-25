@@ -106,3 +106,29 @@ html, body
 	position : absolute;
 	left: 0;
 }
+
+#gerer
+{
+	
+	position: absolute;
+	top : 580px;
+	right : 3%;
+
+}
+
+#message
+{
+	
+	position: absolute;
+	top : 580px;
+	right : 11%;
+	
+}
+#suivre
+{
+	
+	position: absolute;
+	top : 580px;
+	right : 23%;
+	
+}

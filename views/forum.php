@@ -11,25 +11,21 @@
 
 	<div id="sujet">
 		<ul>
-			<li classe="soussujet"> Discussion
-				<div >
+			<li class="soussujet"> Discussion
 					<ul>		
 						<li>General</li>
 						<li>Styles de musique</li>
 						<li>Salles</li>	
 					</ul>
-				</div>
 			</li>
-			<li classe="sousujet"> Promotion
-				<div >
+			<li class="sousujet"> Promotions
 					<ul>
 						<li>Artiste</li>
 						<li>Salle</li>
 						<li>Concert</li>
 					</ul>
-				</div>
 			</li>
-			<li classe="soussujet"> F.A.Q
+			<li class="soussujet"> F.A.Q
 
 			</li>
 		</ul>

@@ -6,6 +6,10 @@
 			</div>
 		</div>
 		<div id="menudyna">
+
+			<div id="gerer"><input type="submit" value="paramètres"/></div>
+			<div id="suivre"><input type="submit" value="Suivre"/></div>
+			<div id="message"><input type="submit" value="Envoyer un message"/></div>
 			<ul>
 				<li class = "onglet1">Présentation </br>
 				<div class="contenu">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>

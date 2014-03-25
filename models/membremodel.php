@@ -8,6 +8,15 @@ function verification($login){
   	return $donnee;
 }
 
+function verifpseudo($pseudo){
+	$result = mysql_query("SELECT pseudo from membre where pseudo = '$pseudo'");
+	if ($result == NULL){
+		return true;
+	}else{
+		return false;
+	}
+}
+
 function insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
 	mysql_query("INSERT INTO membre(pseudo, mot_de_passe, mail, code_postal, ville, sexe, pays, photoprofil, photocover )  VALUES ('$pseudo', '$mdp', '$mail' ,'$codepostal', '$ville' ,'$sexe', '$pays','$photodeprofil', '$photodecover')");
 }

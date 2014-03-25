@@ -10,7 +10,7 @@ html, body
 }
 
 
-#cover
+#cover2
 {
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -20,25 +20,12 @@ html, body
 
 }
 
-#donnees
+#donnees2
 {
 	float : left;
 }
-#membre
 
-{
-	position: absolute;
-	height : 50%;
-	top : 180px ;
-	left : 40%;
-	font-size: 1.5em;
-	font-family: 'Original Surfer', cursive;
-
-
-
-
-}
-#image
+#image2
 {
 	border:  8px solid gray;
 	border-radius: 300px;
@@ -61,7 +48,7 @@ html, body
 >>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
 }
 
-#global
+#global2
 {
 <<<<<<< HEAD
 	
@@ -97,17 +84,17 @@ html, body
 
 
 
-#membre li 
+#salle li 
 {
 	display: block;
 
 }
-#membre li li
+#salle li li
 {
 	display: block;
 	color: white;
 }
-#menudyna2
+#menudyna3
 {
 	font-size: 2em;
 	background-color: #35BDFF;
@@ -117,40 +104,40 @@ html, body
 	padding: 0;
 }
 
-#menudyna2 ul 
+#menudyna3 ul 
 {
 	list-style: none;
 	margin-top: 0;
 }
 
-.ongletmembre1:hover .contenumembre
+.ongletsalle1:hover .contenusalle
 {
 	display: inline-block;
 	z-index: 50;
 }
-.ongletmembre2:hover div.contenumembre
+.ongletsalle2:hover div.contenusalle
 {
 	display: inline-block;
 	z-index: 50;
 }
-.ongletmembre3:hover div.contenumembre
+.ongletsalle3:hover div.contenusalle
 {
 	display: inline-block;
 	z-index: 50;
 }
-.ongletmembre4:hover div.contenumembre
+.ongletsalle4:hover div.contenusalle
 {
 	display: inline-block;
 	z-index: 50;
 }
-.ongletmembre5:hover div.contenumembre
+.ongletsalle5:hover div.contenusalle
 {
 	display: inline-block;
 	z-index: 50;
 }
 
 
-#menudyna2 li 
+#menudyna3 li 
 {
 	display: inline;
 	padding-left: 0.5%;
@@ -160,18 +147,18 @@ html, body
 }
 
 
-#menudyna2 a 
+#menudyna3 a 
 {
 	color : white;
 }
 
-#menudyna2 ul li:hover
+#menudyna3 ul li:hover
 {
 	background-color: black;
 	color : white;
 }
 
-.contenumembre
+.contenusalle
 {
 	background-color: #3E3E3E;
 	color : white;
