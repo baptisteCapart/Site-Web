@@ -1,0 +1,31 @@
+#panel
+{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  text-align: left;
+  background-color: white;
+
+}
+#intro
+{
+	text-align: center;
+}
+#sujet
+{
+	border: 3px solid #87a6d9;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+.soussujet
+{
+
+}
+form ul li 
+{
+	border-bottom: 1px solid #868686;
+	padding-bottom: 2%;
+	margin-bottom: 2%;
+}

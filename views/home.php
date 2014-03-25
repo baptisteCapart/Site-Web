@@ -1,5 +1,5 @@
 
-		<?php include("banniere.php"); ?>
+		<?php include("../views/banniere.php"); ?>
 		<div id="blochome">
 		<div id="news">
 				<div id="liste_news">
@@ -16,7 +16,7 @@
 				
 		</div>
 		<?php 
-		if($loggé == true){
+		if(isset($_SESSION['pseudo'])){
 		?>
 		<div id="notifs">
 			<div id="proche_vous"> 
@@ -113,7 +113,7 @@
 						</li>
 					</ul>
 				</li>
-				<li class = "formulaire">Et bien plus encore ! Il suffit de t'inscrire gratuitement en remplissant <a href="formulairecontrolleur.php" target="_blank">ce formulaire</a></li>
+				<li class = "formulaire">Et bien plus encore ! Il suffit de t'inscrire gratuitement en remplissant <a href="../controlleurs/formulairecontrolleur.php" target="_blank">ce formulaire</a></li>
 			</ul>
 		</div>
 

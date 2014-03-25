@@ -4,7 +4,7 @@
 	margin: 0;
 	padding: 0;
 	background-color: #363636;
-	color: white;
+	color: #DDDDDD;
 }
 
 html
@@ -35,12 +35,20 @@ html
 	margin-right: 20%;
 }
 
-.textbox
+.textbox, .textarea
 {
 	box-shadow: 0 0 9px #111 inset ;
 	border-radius: 5px;
 	border: solid 1px #999;
 }
+.textarea
+{
+	rows : 50;
+	cols : 4;
+	height: 170px;
+	width: 40%;
+}
+
 
 form ul li 
 {

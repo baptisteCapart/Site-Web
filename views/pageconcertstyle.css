@@ -10,7 +10,7 @@ html, body
 #photoconcert
 {
 	position: relative;
-	background-image: url(images/afficheconcert.jpg);
+	background-image: url(../controlleurs/images/afficheconcert.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 500px;
@@ -136,7 +136,7 @@ html, body
 #menudyna3
 {
 	font-size: 2em;
-	background-color: #4996CF;
+	background-color: #1E71D7;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
@@ -146,7 +146,7 @@ html, body
 #menudyna3 ul 
 {
 	list-style: none;
-	margin-top: -2px;
+	margin-top: 0;
 }
 
 .ongletconcert1:hover .contenuconcert

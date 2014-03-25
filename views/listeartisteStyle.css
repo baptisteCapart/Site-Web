@@ -1,0 +1,57 @@
+#listeartiste
+{
+	font-size: 2em;
+	background-color: #F3F920;
+	width : 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#listeartiste ul 
+{
+	list-style: none;
+	margin-top: 0;
+}
+
+.paralpha:hover .contenuliste
+{
+	display: inline-block;
+	z-index: 50;
+}
+.parstyle:hover div.contenuliste
+{
+	display: inline-block;
+	z-index: 50;
+}
+#listeartiste li 
+{
+	display: inline;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	border-right: 1px solid #616161;
+	float: left;
+}
+
+
+#listeartiste a 
+{
+	color : black;
+}
+
+#listeartiste ul li:hover
+{
+	background-color: black;
+	color: white;
+}
+
+.contenuliste
+{
+	background-color: #494949;
+	color : white;
+	height: 1000px;
+	display: none;
+	width: 100%;
+	position : absolute;
+	left: 0;
+}
