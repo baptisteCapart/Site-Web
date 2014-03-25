@@ -34,7 +34,7 @@
 
 
 	<?php 
-	$loggé = false;
+	$loggé = true;
 	if($loggé == false){
 	?>
 	<div class="container">
