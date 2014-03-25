@@ -12,7 +12,8 @@
 	<link rel="stylesheet" href="../views/pageconcertstyle.css" />
 	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
-	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
+	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>
+	<link rel="stylesheet" href="../views/pagesalle.css">	
 
 
 

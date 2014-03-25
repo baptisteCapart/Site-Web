@@ -1,0 +1,173 @@
+html, body
+{
+	width: 100%;
+	height: 100%;
+	font-family: calibri;
+	margin: 0;
+	padding: 0;
+	background: black;
+
+}
+
+
+#cover2
+{
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 470px;
+	width: 100%;
+	opacity : 0.5;
+
+}
+
+#donnees2
+{
+	float : left;
+}
+
+#image2
+{
+	border:  8px solid gray;
+	border-radius: 300px;
+    width:220px ; 
+}
+
+.bouton
+{
+<<<<<<< HEAD
+	
+	position: absolute;
+	top : 580px;
+	right : 3%;
+
+=======
+	box-shadow: 0 0 9px #333 inset ;
+	border-radius: 4px;
+	border: solid 1px #555;
+	font-size: 1.3em;
+>>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
+}
+
+#global2
+{
+<<<<<<< HEAD
+	
+	position: absolute;
+	top : 580px;
+	right : 11%;
+	
+}
+#suivre
+{
+	
+	position: absolute;
+	top : 580px;
+	right : 23%;
+	
+=======
+	width: 100%;
+	position: absolute;
+	top : 550px;
+>>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
+}
+
+#parametres
+{
+	float: right;
+	padding-right: 20px;
+}
+
+#parametres li 
+{
+	display: inline-block;
+}
+
+
+
+#salle li 
+{
+	display: block;
+
+}
+#salle li li
+{
+	display: block;
+	color: white;
+}
+#menudyna3
+{
+	font-size: 2em;
+	background-color: #35BDFF;
+	width : 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#menudyna3 ul 
+{
+	list-style: none;
+	margin-top: 0;
+}
+
+.ongletsalle1:hover .contenusalle
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletsalle2:hover div.contenusalle
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletsalle3:hover div.contenusalle
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletsalle4:hover div.contenusalle
+{
+	display: inline-block;
+	z-index: 50;
+}
+.ongletsalle5:hover div.contenusalle
+{
+	display: inline-block;
+	z-index: 50;
+}
+
+
+#menudyna3 li 
+{
+	display: inline;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	border-right: 1px solid #616161;
+	float: left;
+}
+
+
+#menudyna3 a 
+{
+	color : white;
+}
+
+#menudyna3 ul li:hover
+{
+	background-color: black;
+	color : white;
+}
+
+.contenusalle
+{
+	background-color: #3E3E3E;
+	color : white;
+	height: 150px;
+	display: none;
+	width: 100%;
+	position : absolute;
+	left: 0;
+	font-size: 0.7em;
+}
+
+
