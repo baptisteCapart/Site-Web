@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Tune In Town</title>
+		<rel type="stylesheet" href="" />
+		<link rel="stylesheet" href="pageMembrestyle.css">
+		<link rel="stylesheet" href="bannierestyle.css"/>
+		<link rel="stylesheet" href="homestyle.css" />
+		<link rel="stylesheet" href="pageartistestyle.css" />
+		<link rel="stylesheet" href="pageconcertstyle.css" />
+		<link rel="stylesheet" href="pageMembrestyle.css">
+		<link rel="stylesheet" href="formulairestyle.css"/>
+
+<link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
+	</head>
+
+	<body>
+<header class="header">
+	<div id= "cadrelogo">
+		<div id="logo"><a href="home.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
+			<!-- <div><strong class="TIT">Tune In Town</strong></div> -->
+	</div>
+
+	<div><strong class="slogan">Tune In Town</strong></div>	
+
+
+	<?php 
+	$loggé = true;
+	if($loggé == false){
+	?>
+	<div class="container">
+ 		<form class="form" method="post" action="formulaire.php">
+			<span class="login">Pseudo : </span>
+			<input type="text" name="pseudo" value=""/>
+			<span class="login">Password : </span>
+			<input type="password" name="mdp" value=""/>
+			<input type="submit" value="Log in"/>
+			<span class="sign_in"><a href ="formulaire.php" target="_blank">Inscription</a></span>
+		</form>
+	</div>
+
+	<?php
+	} else {
+	?>
+	<div class="pseudo"> 
+		<ul>
+			<li><a href="#">Pseudo du membre</a></li>
+			<li><a href="#">Déconnexion</a></li>
+		</ul>
+	</div>	
+
+	<?php
+	}
+	?>
+	<nav id="menu">
+		<ul>
+			<li id = "compte"><a href="PageMembre.php">Compte</a>
+				<ul class = "menu1">
+					<li id = "profil"><a href="PageMembre.php">Mon compte</a></li>
+					<li id = "groupes"><a href="#">Mes artistes</a></li>
+					<li id = "rooms"><a href="#">Mes salles</a></li>
+					<li id = "shows"><a href="#">Mes concerts</a></li>
+				</ul>
+			</li>	
+			<li id = "artistes"><a href="pageartiste.php">Artistes</a>
+				<ul class = "menu2">
+					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
+					<li id = "style"><a href="#">Par style</a></li>
+					<?php if ($loggé == true) { ?>
+						<li id = "créer"><a href="formulairegroupe.php">Créer un profil artiste</a></li>
+					<?php } ?>
+				</ul>
+			</li>	
+			<li id = "salles"><a href="#">Salles</a>
+				<ul class = "menu3">
+					<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
+					<li id = "lieu"><a href="#">Par lieu</a></li>
+					<?php if ($loggé == true) { ?>
+						<li id = "créer"><a href="formulairesalle.php">Créer un profil salle</a></li>
+					<?php } ?>					
+				</ul>
+			</li>	
+			<li id = "concerts"><a href="pageconcert.php">Concerts</a>
+				<ul class = "menu4">
+					<li id = "date"><a href="#">Par date</a> </li>
+					<li id = "lieu"><a href="#">Par lieu</a></li>
+				</ul>
+			</li>	
+			<li id = "forum"><a href="#">Forum</a></li>
+			<li id = "search">
+				<form class ="recherche" method="post" action="research.php">
+					<input class = "barresearch" type="text" name="recherche" placeholder="   Rechercher" size = "30"/>
+				</form>
+			</li>
+		</ul>
+	</nav>
+</header>
