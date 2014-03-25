@@ -12,13 +12,10 @@
 	<link rel="stylesheet" href="../views/pageconcertstyle.css" />
 	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
-<<<<<<< HEAD
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>
 	<link rel="stylesheet" href="../views/pagesalle.css">	
-=======
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
 	<link rel="stylesheet" href="../views/forumstyle.css">
->>>>>>> d598d4f08c85ce5872fbe703f9384e72da0ea7e8
 
 
 

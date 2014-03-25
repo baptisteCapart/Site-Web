@@ -33,10 +33,6 @@ html, body
 	left : 40%;
 	font-size: 1.5em;
 	font-family: 'Original Surfer', cursive;
-
-
-
-
 }
 #image
 {
@@ -47,47 +43,24 @@ html, body
 
 .bouton
 {
-<<<<<<< HEAD
-	
-	position: absolute;
-	top : 580px;
-	right : 3%;
-
-=======
 	box-shadow: 0 0 9px #333 inset ;
 	border-radius: 4px;
 	border: solid 1px #555;
 	font-size: 1.3em;
->>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
 }
 
 #global
 {
-<<<<<<< HEAD
-	
 	position: absolute;
-	top : 580px;
-	right : 11%;
-	
-}
-#suivre
-{
-	
-	position: absolute;
-	top : 580px;
-	right : 23%;
-	
-=======
+	top : 550px;	
 	width: 100%;
-	position: absolute;
-	top : 550px;
->>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
+
+
 }
 
 #parametres
 {
 	float: right;
-	padding-right: 20px;
 }
 
 #parametres li 
