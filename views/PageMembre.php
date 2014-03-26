@@ -43,8 +43,8 @@
 				<li> <a href="../controlleurs/pageMembrecontrolleur4.php">Avis</a> </br>
 			</ul> 	
 
-		</div>
-		<div class="contenumembre"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+</div>
+<div class="contenumembre"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 
 <?php include("footer.php"); ?>
 

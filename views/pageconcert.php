@@ -79,6 +79,6 @@
 			</ul> 	
 
 </div>
-<div class="contenu"> aaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+<div class="contenuconcert"> aaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 		
 	<?php include("footer.php"); ?>
