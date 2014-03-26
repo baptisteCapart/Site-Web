@@ -59,12 +59,14 @@
 		?>
 		<nav id="menu">
 			<ul>
-				<li id = "compte"><a href="PageMembrecontrolleur.php">Compte</a>
+				<li id = "compte"><a  <?php  if(isset($_SESSION['pseudo'])) { ?> href="PageMembrecontrolleur.php"  
+					<?php }else{ ?> href="formulairecontrolleur.php" <?php } ?> >Compte</a>
 					<ul class = "menu1">
-						<li id = "profil"><a href="PageMembrecontrolleur.php">Mon compte</a></li>
-						<li id = "groupes"><a href="#">Mes artistes</a></li>
-						<li id = "rooms"><a href="#">Mes salles</a></li>
-						<li id = "shows"><a href="#">Mes concerts</a></li>
+						<?php  if(isset($_SESSION['pseudo'])) { ?>
+						<li id = "groupes"><a href="PageMembrecontrolleur.php">Mes artistes</a></li>
+						<li id = "rooms"><a href="PageMembrecontrolleur2.php">Mes salles</a></li>
+						<li id = "shows"><a href="PageMembrecontrolleur3.php">Mes concerts</a></li>
+						<?php } ?>
 					</ul>
 				</li>	
 				<li id = "artistes"><a href="pageartistecontrolleur.php">Artistes</a>

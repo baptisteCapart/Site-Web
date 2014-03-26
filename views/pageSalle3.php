@@ -24,7 +24,7 @@
 			</ul> 	
 
 </div>
-<div class="contenu"> aaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+<div class="contenusalle3"> aaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 
 
 <?php include("footer.php"); ?>

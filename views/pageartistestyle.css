@@ -66,11 +66,49 @@ html, body
 
 #menudyna ul li:hover
 {
-	background-color: #1B82A9;
+	background-color: #56A422;
+
 }
 
 
-.contenu
+.contenuartiste
+{
+	background-color: #494949;
+	color : #BFBFBF;
+	height: 550px;
+	width: 100%;
+	padding-top: 10px;
+	font-size: 1.2em;
+
+}
+
+
+.contenuartiste2
+{
+	background-color: #494949;
+	color : #BFBFBF;
+	height: 550px;
+	width: 100%;
+
+}
+
+.contenuartiste3
+{
+	background-color: #494949;
+	color : white;
+	height: 550px;
+	width: 100%;
+
+}
+.contenuartiste4
+{
+	background-color: #494949;
+	color : white;
+	height: 550px;
+	width: 100%;
+
+}
+.contenuartiste5
 {
 	background-color: #494949;
 	color : white;

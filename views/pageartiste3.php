@@ -25,6 +25,6 @@
 			</ul> 	
 
 		</div>
-		<div class="contenu">cccccccccccccccccccccccccccccc</div>
+		<div class="contenuartiste3">cccccccccccccccccccccccccccccc</div>
 		
 <?php include("footer.php"); ?>

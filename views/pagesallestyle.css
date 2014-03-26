@@ -100,7 +100,31 @@ html, body
 }
 
 
-.contenu
+.contenusalle
+{
+	background-color: #494949;
+	color : white;
+	height: 550px;
+	width: 100%;
+
+}
+.contenusalle2
+{
+	background-color: #494949;
+	color : white;
+	height: 550px;
+	width: 100%;
+
+}
+.contenusalle3
+{
+	background-color: #494949;
+	color : white;
+	height: 550px;
+	width: 100%;
+
+}
+.contenusalle4
 {
 	background-color: #494949;
 	color : white;
