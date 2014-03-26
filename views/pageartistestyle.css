@@ -47,7 +47,7 @@ html, body
 	list-style: none;
 	margin-top: 0;
 }
-
+/*
 .onglet1:hover .contenu
 {
 	display: inline-block;
@@ -73,7 +73,7 @@ html, body
 	display: inline-block;
 	z-index: 50;
 }
-
+*/
 
 #menudyna li 
 {
@@ -90,45 +90,49 @@ html, body
 	color : black;
 }
 
+/*#menudyna ul li:hover a
+{
+	color: white;
+}*/
 #menudyna ul li:hover
 {
-	background-color: black;
-	color: white;
+	background-color: #1B82A9;
 }
+
 
 .contenu
 {
 	background-color: #494949;
 	color : white;
 	height: 550px;
-	display: none;
+	//display: none;
 	width: 100%;
 	position : absolute;
 	left: 0;
 }
 
-#gerer
+.bouton2
 {
-	
+	box-shadow: 0 0 9px #333 inset ;
+	border-radius: 4px;
+	border: solid 1px #555;
+	font-size: 1.3em;
+}
+
+#global2
+{
 	position: absolute;
-	top : 580px;
-	right : 3%;
+	top : 550px;	
+	width: 100%;
 
 }
 
-#message
+#parametres2
 {
-	
-	position: absolute;
-	top : 580px;
-	right : 11%;
-	
+	float: right;
 }
-#suivre
+
+#parametres2 li 
 {
-	
-	position: absolute;
-	top : 580px;
-	right : 23%;
-	
+	display: inline-block;
 }

@@ -15,9 +15,9 @@
 
 		<div id="menudyna">
 			<ul>
-				<li class = "onglet1" style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageartistecontrolleur.php">Présentation</a> </br>
-				<div class="contenu"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div></li>
-				<li class = "onglet2"> <a href="../controlleurs/pageartistecontrolleur2.php">Concerts</a> </br>
+				<li class = "onglet1"> <a href="../controlleurs/pageartistecontrolleur.php">Présentation</a> </br>
+ 				<li class = "onglet2" style = "background-color:black"> <a style ="color:white"href="../controlleurs/pageartistecontrolleur2.php">Concerts</a> </br>
+				<div class="contenu">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
 				<li class = "onglet3"> <a href="../controlleurs/pageartistecontrolleur3.php">Extraits</a> </br>
 				<li class = "onglet4"> <a href="../controlleurs/pageartistecontrolleur4.php">Avis</a> </br>
 				<li class = "onglet5"> <a href="../controlleurs/pageartistecontrolleur5.php">Photos</a> </br>

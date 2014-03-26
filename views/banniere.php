@@ -17,17 +17,8 @@
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
 	<link rel="stylesheet" href="../views/forumstyle.css">
 
+<link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 
-
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Codystar|Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Iceland' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Condiment|Iceland' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Fascinate+Inline|Iceland|Germania+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Fascinate+Inline|Iceland|Germania+One|Bangers' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
