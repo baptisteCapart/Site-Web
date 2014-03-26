@@ -22,10 +22,10 @@
 				<li class = "onglet4"> <a href="../controlleurs/pageartistecontrolleur4.php">Avis</a> </br>
 
 				<li class = "onglet5" style ="background-color:black"> <a style ="color:white" href="../controlleurs/pageartistecontrolleur5.php">Photos</a> </br>
-				<div class="contenu">eeeeeeeeeeeeeeeeeeeeeeeeeeee</div></li>	
+				</li>	
 
 			</ul> 	
 
 		</div>
-		
+		<div class="contenu">eeeeeeeeeeeeeeeeeeeeeeeeeeee</div>
 <?php include("footer.php"); ?>

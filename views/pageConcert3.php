@@ -72,10 +72,10 @@
 </div>
 <div id="menudyna4">
 			<ul>
-				<li  style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageConcertcontrolleur.php">Présentation</a> </br>
+				<li  > <a href="../controlleurs/pageConcertcontrolleur.php">Présentation</a> </br>
 				</li>
-				<li > <a  href="../controlleurs/pageConcertcontrolleur2.php">Photos</a> </br>
-				<li> <a href="../controlleurs/pageConcertcontrolleur3.php">Avis</a> </br>
+				<li > <a href="../controlleurs/pageConcertcontrolleur2.php">Photos</a> </br>
+				<li style = "background-color : black" > <a  style = "color : white" href="../controlleurs/pageConcertcontrolleur3.php">Avis</a> </br>
 			</ul> 	
 
 </div>

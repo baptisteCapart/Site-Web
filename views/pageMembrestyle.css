@@ -90,36 +90,20 @@ html, body
 	padding: 0;
 }
 
+#menudyna2 a
+{
+	color : black;
+}
+
+#menudyna2 ul li:hover
+{
+	background-color: #2E58A7;
+}
+
 #menudyna2 ul 
 {
 	list-style: none;
 	margin-top: 0;
-}
-
-.ongletmembre1:hover .contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre2:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre3:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre4:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre5:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
 }
 
 
@@ -133,15 +117,14 @@ html, body
 }
 
 
-#menudyna2 a 
+#menudyna a 
 {
-	color : white;
+	color : black;
 }
 
-#menudyna2 ul li:hover
+#menudyna ul li:hover
 {
-	background-color: black;
-	color : white;
+	background-color: #1B82A9;
 }
 
 .contenumembre
@@ -149,7 +132,6 @@ html, body
 	background-color: #3E3E3E;
 	color : white;
 	height: 150px;
-	display: none;
 	width: 100%;
 	position : absolute;
 	left: 0;

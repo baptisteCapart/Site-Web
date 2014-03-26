@@ -5,12 +5,15 @@ html, body
 	font-family: calibri;
 	margin: 0;
 	padding: 0;
+	background: black;
+
 }
 
-#photoartiste
+
+#photosalle
 {
 	position: relative;
-	background-image: url(../controlleurs/images/imaginedragons.jpg);
+	background-image: url(../controlleurs/images/salle.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 500px;
@@ -18,7 +21,7 @@ html, body
 
 }	
 
-#nomartiste
+#nomsalle
 {
 	position: absolute;
 	bottom : 0; 
@@ -31,25 +34,52 @@ html, body
 	display: inline-block;
 	padding-bottom: 5px;
 }
+.bouton3
+{
+	box-shadow: 0 0 9px #333 inset ;
+	border-radius: 4px;
+	border: solid 1px #555;
+	font-size: 1.3em;
+}
 
-#menudyna
+#global3
+{
+	position: absolute;
+	top : 550px;	
+	width: 100%;
+
+}
+
+#parametres3
+{
+	float: right;
+}
+
+#parametres3 li 
+{
+	display: inline-block;
+}
+
+
+
+#menudyna3
 {
 	font-size: 2em;
-	background-color: #F3F920;
+	background-color: #9F0000;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
 
-#menudyna ul 
+#menudyna3 ul 
 {
 	list-style: none;
 	margin-top: 0;
 }
 
 
-#menudyna li 
+#menudyna3 li 
 {
 	display: inline;
 	padding-left: 0.5%;
@@ -59,14 +89,14 @@ html, body
 }
 
 
-#menudyna a 
+#menudyna3 a 
 {
 	color : black;
 }
 
-#menudyna ul li:hover
+#menudyna3 ul li:hover
 {
-	background-color: #1B82A9;
+	background-color: #A0CF9E;
 }
 
 
@@ -79,28 +109,4 @@ html, body
 
 }
 
-.bouton2
-{
-	box-shadow: 0 0 9px #333 inset ;
-	border-radius: 4px;
-	border: solid 1px #555;
-	font-size: 1.3em;
-}
 
-#global2
-{
-	position: absolute;
-	top : 550px;	
-	width: 100%;
-
-}
-
-#parametres2
-{
-	float: right;
-}
-
-#parametres2 li 
-{
-	display: inline-block;
-}

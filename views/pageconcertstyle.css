@@ -18,6 +18,32 @@ html, body
 
 }
 
+.bouton4
+{
+	box-shadow: 0 0 9px #333 inset ;
+	border-radius: 4px;
+	border: solid 1px #555;
+	font-size: 1.3em;
+}
+
+#global4
+{
+	position: absolute;
+	top : 550px;	
+	width: 100%;
+
+}
+
+#parametres4
+{
+	float: right;
+}
+
+#parametres4 li 
+{
+	display: inline-block;
+}
+
 .listembr, #listegroupe
 {
 	
@@ -133,50 +159,24 @@ html, body
 }
 
 
-#menudyna3
+#menudyna4
 {
 	font-size: 2em;
-	background-color: #1E71D7;
+	background-color: #7D577D;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
 
-#menudyna3 ul 
+#menudyna4 ul 
 {
 	list-style: none;
 	margin-top: 0;
 }
 
-.ongletconcert1:hover .contenuconcert
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletconcert2:hover div.contenuconcert
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletconcert3:hover div.contenuconcert
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletconcert4:hover div.contenuconcert
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletconcert5:hover div.contenuconcert
-{
-	display: inline-block;
-	z-index: 50;
-}
 
-
-#menudyna3 li 
+#menudyna4 li 
 {
 	display: inline;
 	padding-left: 0.5%;
@@ -186,24 +186,22 @@ html, body
 }
 
 
-#menudyna3 a 
+#menudyna4 a 
 {
 	color : black;
 }
 
-#menudyna3 ul li:hover
+#menudyna4 ul li:hover
 {
-	background-color: black;
-	color: white;
+	background-color: #9E2326;
 }
 
-.contenuconcert
+
+.contenu
 {
 	background-color: #494949;
 	color : white;
-	height: 150px;
-	display: none;
+	height: 550px;
 	width: 100%;
-	position : absolute;
-	left: 0;
+
 }

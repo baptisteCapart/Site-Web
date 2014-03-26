@@ -16,9 +16,9 @@
 
 <div id="menudyna3">
 			<ul>
-				<li  style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageSallecontrolleur.php">Présentation</a> </br>
+				<li > <a href="../controlleurs/pageSallecontrolleur.php">Présentation</a> </br>
 				</li>
-				<li > <a  href="../controlleurs/pageSallecontrolleur2.php">Concerts</a> </br>
+				<li style = "background-color : black" > <a style = "color : white"  href="../controlleurs/pageSallecontrolleur2.php">Concerts</a> </br>
 				<li> <a href="../controlleurs/pageSallecontrolleur3.php">Photos</a> </br>
 				<li> <a href="../controlleurs/pageSallecontrolleur4.php">Avis</a> </br>
 			</ul> 	

@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>
-	<link rel="stylesheet" href="../views/pagesalle.css">	
+	<link rel="stylesheet" href="../views/pagesallestyle.css">	
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
 	<link rel="stylesheet" href="../views/forumstyle.css">
 
@@ -76,7 +76,7 @@
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "salles"><a href="#">Salles</a>
+				<li id = "salles"><a href="pageSallecontrolleur.php">Salles</a>
 					<ul class = "menu3">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>
