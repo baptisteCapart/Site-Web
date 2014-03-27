@@ -50,11 +50,11 @@ html
 }
 
 
-form ul li 
+form ul li div
 {
 	border-bottom: 1px solid #868686;
 	padding-bottom: 2%;
-	margin-bottom: 2%;
+	margin-bottom: 0;
 }
 
 .form2 ul
