@@ -9,6 +9,7 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
   include ('../models/membremodel.php');
   
   $donnee = verification($login);
+  var_dump($donnee);
 
   if( $donnee['mot_de_passe'] != $pwd) {
   echo '<p>Mauvais login / password. Merci de recommencer</p>';
@@ -25,9 +26,9 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
   } 
 
 
-}else {
-  echo '<p>Vous avez oublié de remplir un champ.</p>';
-  exit;
+// }else {
+//   echo '<p>Vous avez oublié de remplir un champ.</p>';
+//   exit;
 }
 
 //include ('../views/home.php');
