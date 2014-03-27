@@ -33,10 +33,6 @@ html, body
 	left : 40%;
 	font-size: 1.5em;
 	font-family: 'Original Surfer', cursive;
-
-
-
-
 }
 #image
 {
@@ -47,47 +43,24 @@ html, body
 
 .bouton
 {
-<<<<<<< HEAD
-	
-	position: absolute;
-	top : 580px;
-	right : 3%;
-
-=======
 	box-shadow: 0 0 9px #333 inset ;
 	border-radius: 4px;
 	border: solid 1px #555;
 	font-size: 1.3em;
->>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
 }
 
 #global
 {
-<<<<<<< HEAD
-	
 	position: absolute;
-	top : 580px;
-	right : 11%;
-	
-}
-#suivre
-{
-	
-	position: absolute;
-	top : 580px;
-	right : 23%;
-	
-=======
+	top : 550px;	
 	width: 100%;
-	position: absolute;
-	top : 550px;
->>>>>>> e3daa4e3c1ca1034482c7a034cefa10e00192d15
+
+
 }
 
 #parametres
 {
 	float: right;
-	padding-right: 20px;
 }
 
 #parametres li 
@@ -117,36 +90,20 @@ html, body
 	padding: 0;
 }
 
+#menudyna2 a
+{
+	color : black;
+}
+
+#menudyna2 ul li:hover
+{
+	background-color: #2E58A7;
+}
+
 #menudyna2 ul 
 {
 	list-style: none;
 	margin-top: 0;
-}
-
-.ongletmembre1:hover .contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre2:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre3:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre4:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
-}
-.ongletmembre5:hover div.contenumembre
-{
-	display: inline-block;
-	z-index: 50;
 }
 
 
@@ -160,26 +117,46 @@ html, body
 }
 
 
-#menudyna2 a 
+#menudyna a 
 {
-	color : white;
+	color : black;
 }
 
-#menudyna2 ul li:hover
+#menudyna ul li:hover
 {
-	background-color: black;
-	color : white;
+	background-color: #1B82A9;
 }
 
 .contenumembre
 {
 	background-color: #3E3E3E;
 	color : white;
-	height: 150px;
-	display: none;
+	height: 450px;
 	width: 100%;
-	position : absolute;
-	left: 0;
+	font-size: 0.7em;
+}
+.contenumembre2
+{
+	background-color: #3E3E3E;
+	color : white;
+	height: 450px;
+	width: 100%;
+	font-size: 0.7em;
+}
+.contenumembre3
+{
+	background-color: #3E3E3E;
+	color : white;
+	height: 450px;
+	width: 100%;
+	font-size: 0.7em;
+}
+.contenumembre4
+{
+	background-color: #3E3E3E;
+	color : white;
+	height: 450px;
+	width: 100%;
 	font-size: 0.7em;
 }
 

@@ -12,25 +12,13 @@
 	<link rel="stylesheet" href="../views/pageconcertstyle.css" />
 	<link rel="stylesheet" href="../views/pageMembrestyle.css">
 	<link rel="stylesheet" href="../views/formulairestyle.css"/>
-<<<<<<< HEAD
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>
-	<link rel="stylesheet" href="../views/pagesalle.css">	
-=======
+	<link rel="stylesheet" href="../views/pagesallestyle.css">	
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
 	<link rel="stylesheet" href="../views/forumstyle.css">
->>>>>>> d598d4f08c85ce5872fbe703f9384e72da0ea7e8
 
+<link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 
-
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Codystar|Open+Sans' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans|Iceland' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Condiment|Iceland' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Fascinate+Inline|Iceland|Germania+One' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Fascinate+Inline|Iceland|Germania+One|Bangers' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -71,12 +59,14 @@
 		?>
 		<nav id="menu">
 			<ul>
-				<li id = "compte"><a href="PageMembrecontrolleur.php">Compte</a>
+				<li id = "compte"><a  <?php  if(isset($_SESSION['pseudo'])) { ?> href="PageMembrecontrolleur.php"  
+					<?php }else{ ?> href="formulairecontrolleur.php" <?php } ?> >Compte</a>
 					<ul class = "menu1">
-						<li id = "profil"><a href="PageMembrecontrolleur.php">Mon compte</a></li>
-						<li id = "groupes"><a href="#">Mes artistes</a></li>
-						<li id = "rooms"><a href="#">Mes salles</a></li>
-						<li id = "shows"><a href="#">Mes concerts</a></li>
+						<?php  if(isset($_SESSION['pseudo'])) { ?>
+						<li id = "groupes"><a href="PageMembrecontrolleur.php">Mes artistes</a></li>
+						<li id = "rooms"><a href="PageMembrecontrolleur2.php">Mes salles</a></li>
+						<li id = "shows"><a href="PageMembrecontrolleur3.php">Mes concerts</a></li>
+						<?php } ?>
 					</ul>
 				</li>	
 				<li id = "artistes"><a href="pageartistecontrolleur.php">Artistes</a>
@@ -88,7 +78,7 @@
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "salles"><a href="#">Salles</a>
+				<li id = "salles"><a href="pageSallecontrolleur.php">Salles</a>
 					<ul class = "menu3">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>

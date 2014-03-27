@@ -1,3 +1,8 @@
+#charte
+{
+	  text-align: right;
+}
+
 #panel
 {
   position: relative;
@@ -5,28 +10,31 @@
   margin-right: auto;
   width: 100%;
   text-align: left;
-  background-color: white;
+  background-color: #15033A;
 
 }
 #intro
 {
+	background-color: #97A8D0;
 	text-align: center;
 }
 #sujet
 {
-	border: 3px solid #87a6d9;
+	background-color: #97A8D0;
+	border: 3px solid #787BE9;
 	margin-left: 10px;
 	margin-right: 10px;
 	margin-bottom: 10px;
-	color : red;
+	color : black;
 }
 .soussujet
 {
-	color : red;
+
+	color : black;
 }
 form ul li 
 {
-	border-bottom: 1px solid #868686;
+	border-bottom: 0.5px solid #868686;
 	padding-bottom: 2%;
 	margin-bottom: 2%;
 }

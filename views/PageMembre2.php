@@ -36,15 +36,15 @@
 
 <div id="menudyna2">
 			<ul>
-				<li  style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageMembrecontrolleur.php">Artistes</a> </br>
+				<li  > <a  href="../controlleurs/pageMembrecontrolleur.php">Artistes</a> </br>
 				</li>
-				<li> <a href="../controlleurs/pageMembrecontrolleur2.php">Salles</a> </br>
+				<li style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageMembrecontrolleur2.php">Salles</a> </br>
 				<li> <a href="../controlleurs/pageMembrecontrolleur3.php">Concerts</a> </br>
 				<li> <a href="../controlleurs/pageMembrecontrolleur4.php">Avis</a> </br>
 			</ul> 	
 
-</div>
-<div class="contenumembre"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+		</div>
+		<div class="contenumembre2"> bbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div>
 
 <?php include("footer.php"); ?>
 

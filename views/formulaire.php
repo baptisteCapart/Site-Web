@@ -1,7 +1,9 @@
 
 <?php include("banniere.php"); ?>
 <div id="bloc">
-<div id="bienvenue">Remplis pour 300€ ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit !</div>
+<div id="bienvenue">Remplis pour 300€ ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit ! <br>
+Tous les champs sont obligatoires
+</div>
 <div id="formulaire">
 	<form class ="form2" method="post" action="../controlleurs/formulairecontrolleur.php">
 		<ul>
@@ -16,17 +18,21 @@
 				<div class="motdepasse2"><span>Confirmation du mot de passe : </span><input class = "textbox"  type="password" name="mdp2" value=""/></div>
 			</li>				
 			<li>
-				<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="text" name="mail" value=""/></div>
+				<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="email" name="mail" value=""/></div>
 
 			</li>
 
 			<li>
-				<div class="mail"><span> Date de naissance: </span><input class = "textbox" type="text" name="age" value=""/></div>
+				<div class="age"><span> Date de naissance: </span><input class = "textbox" type="date" name="age" value=""/></div>
 
 			</li>			
 
 			<li>
-			<div class="sexe"><span>Sexe : </span><input class = "textbox" type="text" name="sexe" value=""/></div>
+			<div class="sexe"><span>Sexe : </span><select class ="textbox" name="sexe" id="sexe">
+				<option value="H">Homme</option>
+				<option value="F">Femme</option>
+				<option value="?" selected>?</option>
+			</select></div>
 			</li>
 			<li>
 				<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" value=""/></div>
@@ -48,7 +54,7 @@
 			</li>
 
 			<li>
-				<div class="conditions"><input class = "textbox" type="checkbox" name="conditions" value=""/><span>J'accepte les conditions d'utilisations </span></div>
+				<div class="conditions"><input class = "textbox" type="checkbox" name="conditions" required value=""/><span>J'accepte les <a class = "cgu" href="#">conditions d'utilisation</a> </span></div>
 			</li>				
 			<li>
 				<input class = "envoyer" type="submit" value="Envoyer !"/>
