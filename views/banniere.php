@@ -22,9 +22,11 @@
  	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
  	<script>
-  	$(function() {
-    $( "#accordion" ).accordion();
- 	});
+$(function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
+  });
   	</script>
 
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
