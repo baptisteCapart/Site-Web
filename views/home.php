@@ -1,7 +1,7 @@
 
 		<?php include("bannierecontrolleur.php"); ?>
 		<div id="blochome">
-		<div id="news">
+		<div id="news">			
 				<div id="liste_news">
 					<ul>
 						<li></li>
@@ -13,7 +13,6 @@
 						<li><a href="#"> La salle Pleyel restaurée : les prochains évènements ...</a></li>
 					</ul>
 				</div>
-				
 		</div>
 		<?php 
 		if(isset($_SESSION['pseudo'])){

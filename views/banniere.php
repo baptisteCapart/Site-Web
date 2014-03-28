@@ -29,6 +29,12 @@ $(function() {
   });
   	</script>
 
+<script>
+$( document ).click(function() {
+  $( "#liste_news" ).effect( "slide" , "slow" );
+});
+</script>
+
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>
