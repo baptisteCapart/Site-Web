@@ -17,6 +17,16 @@
 	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
 	<link rel="stylesheet" href="../views/forumstyle.css">
 
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+ 	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css">
+ 	<script>
+  	$(function() {
+    $( "#accordion" ).accordion();
+ 	});
+  	</script>
+
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>

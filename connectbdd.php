@@ -1,6 +1,13 @@
 <?php  
-	mysql_connect("localhost", "root", "");
-	mysql_select_db("mydb");
+	// mysql_connect("localhost", "root", "");
+	// mysql_select_db("mydb");
+$bdd = new PDO('mysql:host=localhost;dbname=mydb', 'root', '');
 
-	session_start();
-?>	
+// $bdd = new mysqli("localhost", "root", "", "mydb"); 
+
+if (!isset($_SESSION)){
+session_start();
+}
+?>
+
+

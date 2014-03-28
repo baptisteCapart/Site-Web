@@ -2,7 +2,7 @@
 
 if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2']) AND !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
 {
-require ('../connectbdd.php');
+include ('../connectbdd.php');
 
 	$mdp = mysql_real_escape_string(htmlspecialchars($_POST['mdp']));
 	$mdp2 = mysql_real_escape_string(htmlspecialchars($_POST['mdp2']));
@@ -29,7 +29,7 @@ require ('../connectbdd.php');
 
 		$mdp = sha1($mdp);
 
-		require ('../models/membremodel.php');
+		include ('../models/membremodel.php');
 		$validation = verifpseudo($pseudo);
 		if ($validation == true){
 			insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
@@ -46,7 +46,9 @@ include ('../views/formulaire.php');
 
 } else {
 
+echo '<span class="erreur">Veuillez remplir tous les champs</span>';
 include('../views/formulaire.php');
+
 
 }
 ?>

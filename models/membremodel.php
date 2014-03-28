@@ -1,49 +1,50 @@
 <?php 
 
 function verification($login){
-	$sql = ("SELECT membre_id, mot_de_passe from membre where pseudo ='$login'");
- 	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
- 	
-  	$donnee = mysql_fetch_assoc($req);
+	global $bdd;
+	$sql = "SELECT membre_id, mot_de_passe from membre where pseudo ='$login'";
+	var_dump($sql);
+ 	$req = $bdd->query($sql) or die(print_r($bdd->errorInfo()));
+ 	var_dump($req);
+  	$donnee = $req->fetch();
+  	var_dump($donnee);
   	return $donnee;
 }
 
 function verifpseudo($pseudo){
-	$result = mysql_query("SELECT pseudo from membre where pseudo = '$pseudo'");
-	if ($result == NULL){
+	global $bdd;
+
+	$result = $bdd->query ("SELECT  pseudo from membre where pseudo = '$pseudo'");
+	$result2 = $result->fetch();
+	if (!$result2){
 		return true;
+
 	}else{
 		return false;
-	}
+}
+
+
 }
 
 function insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
-	mysql_query("INSERT INTO membre(pseudo, mot_de_passe, mail, code_postal, ville, sexe, pays, photoprofil, photocover )  VALUES ('$pseudo', '$mdp', '$mail' ,'$codepostal', '$ville' ,'$sexe', '$pays','$photodeprofil', '$photodecover')");
+	global $bdd;
+
+	$bdd->query("INSERT INTO membre(pseudo, mot_de_passe, mail, code_postal, ville, sexe, pays, photoprofil, photocover )  VALUES ('$pseudo', '$mdp', '$mail' ,'$codepostal', '$ville' ,'$sexe', '$pays','$photodeprofil', '$photodecover')");
 }
 
 
 
 function recuperer($id){
-	$sql = ("SELECT * from membre where membre_id ='$id'");
- 	$req = mysql_query($sql) or die('Erreur SQL !<br>'.$sql.'<br>'.mysql_error());
+	global $bdd;
+	$sql = "SELECT * from membre where membre_id ='$id'";
+ 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
  	
-  	$donnee = mysql_fetch_assoc($req);
+  	$donnee = $req-> fetch();
   	return $donnee;
 }
  ?>
 
 
 
-<!--  <?php 
-$bdd = new PDO('mysql:host=localhost; dbname=mydb', 'root', '') ?>
-
-$result= $bdd->query('INSERT');
-
-
-while($data = ^reponse->fetch()){
-
-}
-
-$result->closeCursor(); -->
 
 
