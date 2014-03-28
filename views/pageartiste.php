@@ -13,70 +13,11 @@
 </ul>
 </div>
 
-		<div id="menudyna">
-			<ul>
-				<li class = "onglet1" style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageartistecontrolleur.php">Présentation</a> </br>
-				</li>
-				<li class = "onglet2"> <a href="../controlleurs/pageartistecontrolleur2.php">Concerts</a> </br>
-				<li class = "onglet3"> <a href="../controlleurs/pageartistecontrolleur3.php">Extraits</a> </br>
-				<li class = "onglet4"> <a href="../controlleurs/pageartistecontrolleur4.php">Avis</a> </br>
-				<li class = "onglet5"> <a href="../controlleurs/pageartistecontrolleur5.php">Photos</a> </br>
-			</ul> 	
-
-		</div>
-
 		<div id="accordion">
-  <h3>Section 1</h3>
-  <div>
-    <p>
-    Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
-    ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit
-    amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut
-    odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
-    </p>
-  </div>
-  <h3>Section 2</h3>
-  <div>
-    <p>
-    Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
-    purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor
-    velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In
-    suscipit faucibus urna.
-    </p>
-  </div>
-  <h3>Section 3</h3>
-  <div>
-    <p>
-    Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
-    Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero
-    ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis
-    lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui.
-    </p>
-    <ul>
-      <li>List item one</li>
-      <li>List item two</li>
-      <li>List item three</li>
-    </ul>
-  </div>
-  <h3>Section 4</h3>
-  <div>
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-    </p>
-    <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-    </p>
-  </div>
-</div>
-
-		<div class="contenuartiste"> Imagine Dragons est un groupe
-		 de rock alternatif américain formé en 2008 à Las Vegas, dans 
-		 le Nevada
+  <h3>Présentation</h3>
+    <div id="fenetre1"> Imagine Dragons est un groupe
+     de rock alternatif américain formé en 2008 à Las Vegas, dans 
+     le Nevada
 Imagine Dragons est formé en 2008 alors que le chanteur Dan Reynolds est
  à l'université Brigham Young. Leur musique est souvent décrite comme positive 
  et inspirante. Peu de temps après, le groupe a déménagé à Las Vegas, dans le Nevada,
@@ -95,4 +36,23 @@ Lors de la 56e céremonie des Grammy Award, en janvier 2014, le groupe réalise 
 côté du rappeur Kendrick Lamar. Leur prestation, un mash-up de "Radioactive" et de "m.A.A.d. 
 City" est saluée par la critique, jugée comme étant électrifiante et certainement la meilleure
  prestation de la soirée1.</div>
+  <h3>Concerts</h3>
+  <div>
+
+  </div>
+  <h3>Extraits</h3>
+  <div>
+
+  </div>
+  <h3>Avis</h3>
+  <div>
+
+  </div>
+    <h3>Photos</h3>
+  <div>
+
+  </div>
+</div>
+
+
 <?php include("footer.php"); ?>

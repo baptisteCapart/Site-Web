@@ -1,0 +1,20 @@
+#fenetre1
+{
+	color : white;
+}
+
+h3
+{
+	color : black;
+	font-size: 2em;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,247,114,1)), color-stop(16%,rgba(249,249,77,1)), color-stop(52%,rgba(252,214,0,1)), color-stop(88%,rgba(249,249,77,1)), color-stop(94%,rgba(249,249,77,1)), color-stop(94%,rgba(249,249,77,1)), color-stop(100%,rgba(255,251,150,1)));
+	width : 100%;
+	margin-top: 0px;
+	margin-bottom: 0px;
+
+}
+
+#accordion
+{
+	background-color: #494949;
+}
