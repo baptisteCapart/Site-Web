@@ -9,6 +9,7 @@ function insert($nomartiste, $style ,$description, $photogroupe){
 
 
 function recuperer2($id){
+	global $bdd;
 	$sql = "SELECT * from artiste where nom ='$nomartiste'";
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
  	
@@ -17,11 +18,10 @@ function recuperer2($id){
 }
 
 function liste(){
-	$sql = "SELECT nom from artiste";
- 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
- 	
-  	$donnee = $req-> fetch();
-  	return $donnee;
+	global $bdd;
+ 	$req = $bdd-> query('SELECT nom FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
+ 	$tableauretour = $req;
+ 	return $tableauretour;
 }
 
  ?>
