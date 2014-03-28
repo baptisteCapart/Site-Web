@@ -19,8 +19,17 @@ function recuperer2($id){
 
 function liste(){
 	global $bdd;
- 	$req = $bdd-> query('SELECT nom FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
- 	$tableauretour = $req;
+ 	$req = $bdd-> query("SELECT nom FROM artiste ORDER BY nom") or die(print_r($bdd->errorInfo()));
+ 	$tableauretour = array();
+ 	$end = false;
+ 	while ($end == false) {
+ 		$test = $req->fetch;
+ 		if ($test == false){
+ 			$end = true;
+ 		} else {
+ 			$tableauretour[] = $test;
+ 		}
+ 	}
  	return $tableauretour;
 }
 
