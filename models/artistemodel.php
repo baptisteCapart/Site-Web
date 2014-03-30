@@ -22,8 +22,10 @@ function liste(){
 
 	global $bdd;
  	$req = $bdd-> query('SELECT nom FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
- 	$tableauretour = $req;
- 	return $tableauretour;
+
+ 	foreach ($req as $valeur ) {
+ 		echo $valeur["nom"].'<br/>';
+ 	}
 }
 
  ?>

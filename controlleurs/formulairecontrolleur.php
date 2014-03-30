@@ -34,7 +34,7 @@ include ('../connectbdd.php');
 		if ($validation == true){
 			insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
 		}else{
-			echo '<span class = "erreur">ce pseudo est déjà utilisé</span>';
+			echo '<span +class = "erreur">ce pseudo est déjà utilisé</span>';
 		}
 
 	} else {
