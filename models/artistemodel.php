@@ -26,6 +26,7 @@ function liste(){
  	foreach ($req as $valeur ) {
  		echo $valeur["nom"].'<br/>';
  	}
+
 }
 
  ?>

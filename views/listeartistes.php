@@ -5,6 +5,7 @@
 			<li class = "paralpha">Par ordre alphabétique </br>
 
 			<div class="contenuliste"><?php print_r($listegroupe = liste()) ?></div></li>
+
 			<li class = "parstyle">Par style</br>
 			<div class="contenuliste">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
 		</ul> 	
