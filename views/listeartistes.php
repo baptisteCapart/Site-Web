@@ -7,7 +7,7 @@
 			<div class="contenuliste">
 			<?php
 				foreach ($listegroupe as $group) {
-					echo $group["nom"].'<br/>';
+					echo '<a href = "pageartistecontrolleur.php?id='.$group["artiste_id"].'">'. $group["nom"].'<br/>'.' </a>';
 				}
 			?>
 			</div></li>

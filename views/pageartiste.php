@@ -2,7 +2,7 @@
 <?php include("banniere.php"); ?>
 	<div id = "photoartiste">
 		<div id="nomartiste">
-			Imagine Dragons
+			<?= $donnees["nom"] ?>
 		</div>
 	</div>
 
@@ -38,7 +38,7 @@ City" est saluée par la critique, jugée comme étant électrifiante et certain
  prestation de la soirée1.</div>
   <h3>Concerts</h3>
   <div>
-
+    <?= $donnees["description"] ?>
   </div>
   <h3>Extraits</h3>
   <div>

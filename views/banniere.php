@@ -87,9 +87,9 @@ $( document ).click(function() {
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "artistes"><a href="pageartistecontrolleur.php">Artistes</a>
+				<li id = "artistes"><a href="listeartistecontrolleur.php">Artistes</a>
 					<ul class = "menu2">
-						<li id = "alpha"><a href="listeartistecontrolleur.php">Par ordre alphabétique</a> </li>
+						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "style"><a href="#">Par style</a></li>
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
 						<li id = "créer"><a href="formulairegroupecontrolleur.php">Créer un profil artiste</a></li>

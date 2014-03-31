@@ -8,20 +8,19 @@ function insert($nomartiste, $style ,$description, $photogroupe){
 
 
 
-function recuperer2($id){
+function recuperer2(){
 
 	global $bdd;
-	$sql = "SELECT * from artiste where nom ='$nomartiste'";
+	$sql = 'SELECT * from artiste where artiste_id ='.$_GET["id"].'';
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
- 	
-  	$donnee = $req-> fetch();
+ 	$donnee = $req-> fetch();
   	return $donnee;
 }
 
 function liste(){
 
 	global $bdd;
- 	$req = $bdd-> query('SELECT nom FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
+ 	$req = $bdd-> query('SELECT artiste_id, nom FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
 	return $req;
 
 }
