@@ -4,7 +4,13 @@
 		<ul>
 			<li class = "paralpha">Par ordre alphabétique </br>
 
-			<div class="contenuliste"><?php print_r($listegroupe = liste()) ?></div></li>
+			<div class="contenuliste">
+			<?php
+				foreach ($listegroupe as $group) {
+					echo $group["nom"].'<br/>';
+				}
+			?>
+			</div></li>
 
 			<li class = "parstyle">Par style</br>
 			<div class="contenuliste">bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb</div></li>	
