@@ -1,6 +1,6 @@
 
 <?php include("banniere.php"); ?>
-	<div id = "photoartiste">
+	<div id = "photoartiste" style="background-image:url(<?php echo $donnees['photocover']; ?>); ">
 		<div id="nomartiste">
 			<?= $donnees["nom"] ?>
 		</div>

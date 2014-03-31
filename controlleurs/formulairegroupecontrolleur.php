@@ -19,6 +19,7 @@ include ('../models/artistemodel.php');
 insert($nomartiste, $style ,$description, $photogroupe);
 
 
+
 include ('../views/formulairegroupe.php');
 }else{
 include ('../views/formulairegroupe.php');
