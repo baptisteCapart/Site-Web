@@ -1,9 +1,7 @@
 header
 {
-	background-image: url(../controlleurs/images/darkmetal.jpg);
-	height: 135px;
-	max-height: 200px;
-	min-height: 120px;
+	//background-image: url(../controlleurs/images/darkmetal.jpg);
+	height: 100px;
 	width: 100%;
 	min-width: 1000px;
 	margin : none;
@@ -52,10 +50,10 @@ header
 .container .form
 {
 	float: right;
-	padding-top: 10px;
+	padding-top: 2px;
 	margin-right: 0.5%;
 	border-bottom: 1px solid #646665;
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 
 }
 
@@ -100,7 +98,7 @@ nav
 	display: inline-block;
 	font-weight: bold;
 	position : absolute;
-	top : 90px;
+	top : 55px;
 	width: 100%;
 	min-width: 1000px;
 }
@@ -108,7 +106,7 @@ nav
 {
 
 	position : relative;
-	top: 40px;
+	top: 5px;
 	left: 10%;
 	display: inline-block;
 	z-index: 100;
@@ -119,7 +117,7 @@ nav
 	position: absolute;
 	font-family: 'Quicksand' , sans-serif;
 	font-size: 2.4em;
-	top: 95px;
+	top: 55px;
 	left: 13%;
 	padding: 0;
 	margin: 0;
@@ -186,28 +184,33 @@ ul.menu1 li
 #compte a
 {
 	font-size: 0.75em;
-	color : #69D15D;
+	//color : #69D15D;
+	color : #DBDBDB;
 }
 
 #artistes a
 {
 	font-size: 0.75em;
-	color : #D4D451;
+	//color : #D4D451;
+	color : #7E7E7E;
 }
 #salles a
 {
 	font-size: 0.75em;
-	color : #D42626;
+	//color : #D42626;
+	color : #CDCDCD;
 }
 #concerts a
 {
 	font-size: 0.75em;
-	color : #318CE7;
+	//color : #318CE7;
+	color : #7A7A7A;
 }
 #forum a
 {
 	font-size: 0.75em;
-	color : #CB8932;
+	//color : #CB8932;
+	color : #CDCDCD;
 }
 
 #compte a:hover
