@@ -111,7 +111,7 @@ $( document ).click(function() {
 						<li id = "lieu"><a href="#">Par lieu</a></li>
 					</ul>
 				</li>	
-				<li id = "forum"><a href="#">Forum</a></li>
+				<li id = "forum"><a href="forumcontrolleur.php">Forum</a></li>
 				<li id = "search">
 					<form class ="recherche" method="post" action="research.php">
 						<input class = "barresearch" type="text" name="recherche" placeholder="   Rechercher" size = "30"/>
