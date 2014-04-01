@@ -39,19 +39,24 @@
 	color : black;
 }
 
-#listeartiste ul li:hover
-{
-	background-color: black;
-	color: white;
-}
-
-.contenuliste
+.listealpha
 {
 	background-color: #494949;
 	color : white;
-	height: 1000px;
-	display: none;
+	height: 100%;
 	width: 100%;
-	position : absolute;
-	left: 0;
+	display: inline-block;
+	position: absolute;
+	top: 141px;
+}
+
+.listegenre
+{
+	background-color: #494949;
+	color : white;
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 141px;
 }
