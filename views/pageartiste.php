@@ -46,7 +46,15 @@ City" est saluée par la critique, jugée comme étant électrifiante et certain
   </div>
   <h3>Avis</h3>
   <div>
-
+<h1>Votre avis sur cet artiste.</h1>
+  <h2>Note cet artiste !!</h2>
+  <div class="rating rating2"><!--
+    --><a href="#5" title="Give 5 stars">★</a><!--
+    --><a href="#4" title="Give 4 stars">★</a><!--
+    --><a href="#3" title="Give 3 stars">★</a><!--
+    --><a href="#2" title="Give 2 stars">★</a><!--
+    --><a href="#1" title="Give 1 star">★</a>
+  </div>
   </div>
     <h3>Photos</h3>
   <div>
