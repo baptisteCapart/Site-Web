@@ -8,12 +8,10 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
   include ('models/membremodel.php');
   
   $donnee = verification($login);
-  var_dump($donnee);
 
   if( $donnee['mot_de_passe'] != $pwd) {
-  echo '<p>Mauvais login / password. Merci de recommencer</p>';
-  exit;
-
+    echo '<p>Mauvais login / password. Merci de recommencer</p>';
+    exit;
 
   }  else {
     $_SESSION['pseudo'] = $login;
@@ -21,7 +19,7 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
     
     echo 'Vous etes bien loggé';
 
-    header ('location: index.php?page=homecontrolleur.php');
+    header ('location: index.php?page=homecontrolleur');
   } 
 
 
