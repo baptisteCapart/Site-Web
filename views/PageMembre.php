@@ -1,14 +1,14 @@
 
-<?php include("banniere.php"); ?>
+<?php include("views/banniere.php"); ?>
 
-<div id= "cover" style="background-image:url(<?php echo $donnees['photocover']; ?>); " >
+<div id= "cover" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); " >
 </div>
 
 <div id="donnees">	
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src=<?= '"'.$donnees['photoprofil'].'"' ?> alt="Photo de Gérard" />
+				<img id="image" src=<?= '"controlleurs/images/'.$donnees['photoprofil'].'"' ?> alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
@@ -36,15 +36,15 @@
 
 <div id="menudyna2">
 			<ul>
-				<li  style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageMembrecontrolleur.php">Artistes</a> </br>
+				<li  style = "background-color : black"> <a style = "color : white" href="index.php?page=pageMembrecontrolleur">Artistes</a> </br>
 				</li>
-				<li> <a href="../controlleurs/pageMembrecontrolleur2.php">Salles</a> </br>
-				<li> <a href="../controlleurs/pageMembrecontrolleur3.php">Concerts</a> </br>
-				<li> <a href="../controlleurs/pageMembrecontrolleur4.php">Avis</a> </br>
+				<li> <a href="index.php?page=pageMembrecontrolleur2">Salles</a> </br>
+				<li> <a href="index.php?page=pageMembrecontrolleur3">Concerts</a> </br>
+				<li> <a href="index.php?page=pageMembrecontrolleur4">Avis</a> </br>
 			</ul> 	
 
 </div>
 <div class="contenumembre"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 
-<?php include("footer.php"); ?>
+<?php include("views/footer.php"); ?>
 

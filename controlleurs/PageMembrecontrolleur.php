@@ -1,10 +1,9 @@
 <?php
 
-	require ('../connectbdd.php');
-	include ('../models/membremodel.php');
+	include ('models/membremodel.php');
 
 	$donnees = recuperer($_SESSION['id']);
 
-	include ('../views/PageMembre.php');
+	include ('views/PageMembre.php');
 
  ?>

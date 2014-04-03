@@ -1,6 +1,6 @@
 
-<?php include("banniere.php"); ?>
-	<div id = "photoartiste" style="background-image:url(<?php echo $donnees['photocover']; ?>); ">
+<?php include("views/banniere.php"); ?>
+	<div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
 		<div id="nomartiste">
 			<?= $donnees["nom"] ?>
 		</div>
@@ -63,4 +63,4 @@ City" est saluée par la critique, jugée comme étant électrifiante et certain
 </div>
 
 
-<?php include("footer.php"); ?>
+<?php include("views/footer.php"); ?>

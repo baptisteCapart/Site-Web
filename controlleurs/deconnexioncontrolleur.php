@@ -4,6 +4,6 @@
 session_start();
 unset($_SESSION);
 session_destroy();
-header ('Location: homecontrolleur.php');
+header ('Location: index.php?page=homecontrolleur');
 
 ?>

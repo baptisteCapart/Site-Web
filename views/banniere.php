@@ -5,19 +5,19 @@
 	<meta charset="utf-8"/>
 	<title>Tune In Town</title>
 	<rel type="stylesheet" href="" />
-	<link rel="stylesheet" href="../views/pageMembrestyle.css">
-	<link rel="stylesheet" href="../views/bannierestyle.css"/>
-	<link rel="stylesheet" href="../views/homestyle.css" />
-	<link rel="stylesheet" href="../views/pageartistestyle.css" />
-	<link rel="stylesheet" href="../views/pageconcertstyle.css" />
-	<link rel="stylesheet" href="../views/pageMembrestyle.css">
-	<link rel="stylesheet" href="../views/formulairestyle.css"/>
-	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>
-	<link rel="stylesheet" href="../views/pagesallestyle.css">	
-	<link rel="stylesheet" href="../views/listeartisteStyle.css"/>	
-	<link rel="stylesheet" href="../views/forumstyle.css">
+	<link rel="stylesheet" href="views/style/pageMembrestyle.css">
+	<link rel="stylesheet" href="views/style/bannierestyle.css"/>
+	<link rel="stylesheet" href="views/style/homestyle.css" />
+	<link rel="stylesheet" href="views/style/pageartistestyle.css" />
+	<link rel="stylesheet" href="views/style/pageconcertstyle.css" />
+	<link rel="stylesheet" href="views/style/pageMembrestyle.css">
+	<link rel="stylesheet" href="views/style/formulairestyle.css"/>
+	<link rel="stylesheet" href="views/style/listeartisteStyle.css"/>
+	<link rel="stylesheet" href="views/style/pagesallestyle.css">	
+	<link rel="stylesheet" href="views/style/listeartisteStyle.css"/>	
+	<link rel="stylesheet" href="views/style/forumstyle.css">
 
-	<link rel="stylesheet" href="../views/javaStyle.css">
+	<link rel="stylesheet" href="views/style/javaStyle.css">
   	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
  	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
@@ -42,7 +42,7 @@ $( document ).click(function() {
 <body>
 	<header class="header">
 		<div id= "cadrelogo">
-			<div id="logo"><a href="homecontrolleur.php"><img src="images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
+			<div id="logo"><a href="index.php?page=homecontrolleur"><img src="controlleurs/images/logo_1.2.png" alt="Tune In Town Society's logo"/></a></div>
 		</div>
 
 		<div><strong class="slogan">Tune In Town</strong></div>	
@@ -51,13 +51,13 @@ $( document ).click(function() {
 		if(!isset($_SESSION['pseudo'])){
 			?>
 			<div class="container">
-				<form class="form" method="post" action="../controlleurs/bannierecontrolleur.php">
+				<form class="form" method="post" action="index.php?page=bannierecontrolleur">
 					<span class="login">Pseudo : </span>
 					<input class ="boite" type="text" name="login" value=""/>
 					<span class="login">Password : </span>
 					<input class ="boite" type="password" name="pwd" value=""/>
 					<input class = "logg" type="submit" value="Log in"/>
-					<span class="sign_in"><a href ="../controlleurs/formulairecontrolleur.php" target="_blank">Inscription</a></span>
+					<span class="sign_in"><a href ="index.php?page=formulairecontrolleur" target="_blank">Inscription</a></span>
 				</form>
 			</div>
 
@@ -66,8 +66,8 @@ $( document ).click(function() {
 			?><div class="container">
 			<div class="pseudo"> 
 				<ul>
-					<li><a href="PageMembrecontrolleur.php"> <?= $_SESSION['pseudo'] ?> </a></li>
-					<li><a href="deconnexioncontrolleur.php">Déconnexion</a></li>
+					<li><a href="index.php?page=PageMembrecontrolleur"> <?= $_SESSION['pseudo'] ?> </a></li>
+					<li><a href="index.php?page=deconnexioncontrolleur">Déconnexion</a></li>
 				</ul>
 			</div>
 			</div>
@@ -77,8 +77,8 @@ $( document ).click(function() {
 		?>
 		<nav id="menu">
 			<ul>
-				<li id = "compte"><a  <?php  if(isset($_SESSION['pseudo'])) { ?> href="PageMembrecontrolleur.php"  
-					<?php }else{ ?> href="formulairecontrolleur.php" <?php } ?> >Compte</a>
+				<li id = "compte"><a  <?php  if(isset($_SESSION['pseudo'])) { ?> href="index.php?page=PageMembrecontrolleur"  
+					<?php }else{ ?> href="index.php?page=formulairecontrolleur" <?php } ?> >Compte</a>
 					<ul class = "menu1">
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
 						<li id = "groupes"><a href="PageMembrecontrolleur.php">Mes artistes</a></li>
@@ -87,31 +87,31 @@ $( document ).click(function() {
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "artistes"><a href="listeartistecontrolleur.php">Artistes</a>
+				<li id = "artistes"><a href="index.php?page=listeartistecontrolleur">Artistes</a>
 					<ul class = "menu2">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "style"><a href="#">Par style</a></li>
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="formulairegroupecontrolleur.php">Créer un profil artiste</a></li>
+						<li id = "créer"><a href="index.php?page=formulairegroupecontrolleur">Créer un profil artiste</a></li>
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "salles"><a href="pageSallecontrolleur.php">Salles</a>
+				<li id = "salles"><a href="index.php?page=pageSallecontrolleur">Salles</a>
 					<ul class = "menu3">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>
 						<?php if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="formulairesallecontrolleur.php">Créer un profil salle</a></li>
+						<li id = "créer"><a href="index.php?page=formulairesallecontrolleur">Créer un profil salle</a></li>
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "concerts"><a href="pageconcertcontrolleur.php">Concerts</a>
+				<li id = "concerts"><a href="index.php?page=pageconcertcontrolleur">Concerts</a>
 					<ul class = "menu4">
 						<li id = "date"><a href="#">Par date</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>
 					</ul>
 				</li>	
-				<li id = "forum"><a href="forumcontrolleur.php">Forum</a></li>
+				<li id = "forum"><a href="index.php?page=forumcontrolleur">Forum</a></li>
 				<li id = "search">
 					<form class ="recherche" method="post" action="research.php">
 						<input class = "barresearch" type="text" name="recherche" placeholder="   Rechercher" size = "30"/>

@@ -1,11 +1,11 @@
-	<?php include("banniere.php"); ?>
+	<?php include("views/banniere.php"); ?>
 		<div id = "photoconcert">
 			<div id="nomconcert">
 				Concert
 			</div>
 
 			<span class = "listegroupe" >
-				<div><img  class = "hoverimg2" src="images/groupesalle.jpg" alt="participants">
+				<div><img  class = "hoverimg2" src="controlleurs/images/groupesalle.jpg" alt="participants">
 					<div>
 						<ul id="liste2"> <span class="groupespart">Ils s'y produisent : </span>
 							<li>a</li>
@@ -34,7 +34,7 @@
 				
 			</span>
 			<span class = "listembr" >
-				<div><img  class = "hoverimg" src="images/membre.jpg" alt="participants"> 
+				<div><img  class = "hoverimg" src="controlleurs/images/membre.jpg" alt="participants"> 
 					<div>
 						<ul id="liste"> <span class="membres">Ils y participent : </span>
 							<li>a</li>

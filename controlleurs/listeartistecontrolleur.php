@@ -1,11 +1,10 @@
 <?php 
 
-require ('../connectbdd.php');
-include ('../models/artistemodel.php');
+include ('models/artistemodel.php');
 
 
 $listegroupe = liste();
 
-include ('../views/listeartistes.php');
+include ('views/listeartistes.php');
 
  ?>

@@ -1,11 +1,11 @@
 
-<?php include("banniere.php"); ?>
+<?php include("views/banniere.php"); ?>
 <div id="bloc">
 <div id="bienvenue">Remplis pour 300€ ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit ! <br>
 Tous les champs sont obligatoires
 </div>
 <div id="formulaire">
-	<form class ="form2" method="post" action="../controlleurs/formulairecontrolleur.php">
+	<form class ="form2" method="post" action="index.php?page=formulairecontrolleur">
 		<ul>
 			<li>
 				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value=""/> </div>
@@ -65,5 +65,5 @@ Tous les champs sont obligatoires
 
 	</form>
 </div>
-<?php include ('footer.php'); ?>
+<?php include ('views/footer.php'); ?>
 </div>

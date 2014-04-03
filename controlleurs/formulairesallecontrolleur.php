@@ -4,7 +4,6 @@
 if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty ($_POST['ville']) AND !empty ($_POST['adresse'])
  AND !empty ($_POST['type']) AND !empty ($_POST['capacité']) AND !empty ($_POST['photosalle'])){
 
-require ('../connectbdd.php');
 
 		$Nom_de_salle = mysql_real_escape_string(htmlspecialchars($_POST['Nom_de_salle']));
 		$code_postal = mysql_real_escape_string(htmlspecialchars($_POST['code_postal']));
@@ -18,14 +17,14 @@ require ('../connectbdd.php');
 		$photosalle = mysql_real_escape_string(htmlspecialchars($_POST['photosalle']));
 		}
 
-include ('../models/sallemodel.php');
+include ('models/sallemodel.php');
 
 insert($Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle);
 
 
 
-include ('../views/formulairesalle.php');
+include ('views/formulairesalle.php');
 }else{
-include ('../views/formulairesalle.php');
+include ('views/formulairesalle.php');
 }
  ?>

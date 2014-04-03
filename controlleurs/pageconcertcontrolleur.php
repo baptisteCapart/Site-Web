@@ -1,6 +1,5 @@
 <?php 
 
-require ('../connectbdd.php');
-include ('../views/pageconcert.php');
+include ('views/pageconcert.php');
 
  ?>

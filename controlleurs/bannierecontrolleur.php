@@ -1,12 +1,11 @@
 <?php 
 
-require ('../connectbdd.php');
 
 
 if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
   extract($_POST);
   $pwd = sha1($pwd); 
-  include ('../models/membremodel.php');
+  include ('models/membremodel.php');
   
   $donnee = verification($login);
   var_dump($donnee);
@@ -22,7 +21,7 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
     
     echo 'Vous etes bien loggé';
 
-    header ('location: ../controlleurs/homecontrolleur.php');
+    header ('location: index.php?page=homecontrolleur.php');
   } 
 
 
@@ -32,6 +31,6 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
 }
 
 //include ('../views/home.php');
-include ('../views/banniere.php');
+include ('views/banniere.php');
 
 ?>

@@ -1,5 +1,5 @@
 
-<?php include("banniere.php"); ?>
+<?php include("views/banniere.php"); ?>
 	<?php
 	if(!isset($_GET['section']))
 		{$_GET['section'] = "listealpha";}
@@ -26,7 +26,7 @@
 		>
 			<?php
 				foreach ($listegroupe as $group)
-				{echo '<a href = "pageartistecontrolleur.php?id='.$group["artiste_id"].'">'. $group["nom"].'<br/>'.' </a>';}
+				{echo '<a href = "index.php?page=pageartistecontrolleur&id='.$group["artiste_id"].'">'. $group["nom"].'<br/>'.' </a>';}
 			?>
 		</div>
 
@@ -43,4 +43,4 @@
 
 	</div>
 		
-<?php include("footer.php"); ?>
+<?php include("views/footer.php"); ?>

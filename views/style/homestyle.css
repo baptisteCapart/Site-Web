@@ -33,7 +33,7 @@ div
 
 #news
 {
-	background-image: url(../controlleurs/images/concert.jpg);
+	background-image: url(../../controlleurs/images/concert.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;

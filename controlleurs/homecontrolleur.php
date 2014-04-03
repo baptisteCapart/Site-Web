@@ -1,6 +1,6 @@
 <?php 
 
-require ('../connectbdd.php');
-include ('../views/home.php');
+include ('connectbdd.php');
+include ('views/home.php');
 
  ?>

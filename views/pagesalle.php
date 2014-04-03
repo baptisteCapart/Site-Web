@@ -1,5 +1,5 @@
 
-<?php include("banniere.php"); ?>
+<?php include("views/banniere.php"); ?>
 
 	<div id = "photosalle">
 		<div id="nomsalle">
@@ -27,5 +27,5 @@
 <div class="contenusalle"> aaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
 
 
-<?php include("footer.php"); ?>
+<?php include("views/footer.php"); ?>
 

@@ -1,5 +1,5 @@
 
-		<?php include("bannierecontrolleur.php"); ?>
+		<?php include("controlleurs/bannierecontrolleur.php"); ?>
 		<div id="blochome">
 		<div id="news">			
 				<div id="liste_news">
@@ -23,15 +23,15 @@
 				<div id="titre1"> PROCHE DE CHEZ VOUS ! </div>
 				<ul>
 					<li class = "proche1"><a href="#" > U2 en concert à Versailles</a>
-					<img class = "image" src="images/U2.jpg" alt="u2"></li>
+					<img class = "image" src="controlleurs/images/U2.jpg" alt="u2"></li>
 					<li class = "proche2"><a href="#" > Bastian Baker, rendez vous l'Olympia</a>
-					<img class = "image" src="images/baker.jpg" alt="u2"></li>
+					<img class = "image" src="controlleurs/images/baker.jpg" alt="u2"></li>
 					<li class = "proche3"><a href="#"> Les Rolling Stones en tournée</a>
-					<img class = "image" src="images/rolling.jpg" alt="u2"></li>
+					<img class = "image" src="controlleurs/images/rolling.jpg" alt="u2"></li>
 					<li class = "proche4"><a href="#"> Les Beatles : le retour</a>
-					<img class = "image" src="images/beatles.jpg" alt="u2"></li>
+					<img class = "image" src="controlleurs/images/beatles.jpg" alt="u2"></li>
 					<li class = "proche5"><a href="#"> Le printemps des fleurs : Vivaldi comme jamais </a>
-					<img class = "image" src="images/vivaldi.jpg" alt="u2"></li>
+					<img class = "image" src="controlleurs/images/vivaldi.jpg" alt="u2"></li>
 				</ul>
 			</div>
 
@@ -71,19 +71,19 @@
 						<div id="qui">Pour qui est le site ?</div>
 						<li>
 							<ul>
-								<li><img src="images/membre.jpg" alt="membre logo"></li>
+								<li><img src="controlleurs/images/membre.jpg" alt="membre logo"></li>
 								<li>N'importe quelle personne qui aime la musique !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="images/groupesalle.jpg" alt=""></li>
+								<li><img src="controlleurs/images/groupesalle.jpg" alt=""></li>
 								<li>En t'inscrivant tu pourras représenter une salle de concert ou un groupe de musique et gérer ta propre page !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="images/monde.jpg" alt="se faire connaitre"></li>
+								<li><img src="controlleurs/images/monde.jpg" alt="se faire connaitre"></li>
 								<li>Dans les deux cas Tune in Town est une excellente manière de te faire connaître ou de découvrir des artistes !</li>
 							</ul>
 						</li>
@@ -94,25 +94,25 @@
 						<div id="quoi">Qu'est ce que tu y gagnes ?</div>
 						<li>
 							<ul>
-								<li><img src="images/follow.jpg" alt="suivre"></li>
+								<li><img src="controlleurs/images/follow.jpg" alt="suivre"></li>
 								<li>Tu pourras suivre tes artistes et salles préférés !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="images/portevoix.jpg" alt="écouter chansons"></li>
+								<li><img src="controlleurs/images/portevoix.jpg" alt="écouter chansons"></li>
 								<li>Tu pourras écouter les musiques mises en ligne par les artistes !</li>
 							</ul>
 						</li>
 						<li>
 							<ul>
-								<li><img src="images/message.jpg" alt="interagir"></li>
+								<li><img src="controlleurs/images/message.jpg" alt="interagir"></li>
 								<li>Tu pourras intéragir avec d'autres membres !</li>
 							</ul>
 						</li>
 					</ul>
 				</li>
-				<li class = "formulaire">Et bien plus encore ! Il suffit de t'inscrire gratuitement en remplissant <a href="../controlleurs/formulairecontrolleur.php" target="_blank">ce formulaire</a></li>
+				<li class = "formulaire">Et bien plus encore ! Il suffit de t'inscrire gratuitement en remplissant <a href="index.php?page=formulairecontrolleur" target="_blank">ce formulaire</a></li>
 			</ul>
 		</div>
 
@@ -121,5 +121,5 @@
 		?>
 		</div>
 
-		<?php include("footer.php"); ?>
+		<?php include("views/footer.php"); ?>
 		
