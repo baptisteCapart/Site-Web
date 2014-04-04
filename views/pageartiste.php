@@ -1,63 +1,51 @@
 
-<?php include("views/banniere.php"); ?>
-	<div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
-		<div id="nomartiste">
-			<?= $donnees["nom"] ?>
-		</div>
-	</div>
-
-<div id="global2">
-<ul id="parametres2">
-	<li><input class = "bouton2" type="submit" value="Paramètres" /></li>
-	<li><input class = "bouton2" type="submit" value="Suivre"/></li>
-</ul>
-</div>
-
-		<div id="accordion">
-  <h3>Présentation</h3>
-    <div id="fenetre1"> Imagine Dragons est un groupe
-     de rock alternatif américain formé en 2008 à Las Vegas, dans 
-     le Nevada
-Imagine Dragons est formé en 2008 alors que le chanteur Dan Reynolds est
- à l'université Brigham Young. Leur musique est souvent décrite comme positive 
- et inspirante. Peu de temps après, le groupe a déménagé à Las Vegas, dans le Nevada,
-  où les membres actuels se sont joints au groupe. Le nom du groupe est une anagramme, 
-  dont les mots originaux sont connus seulement des membres du groupe.
-Dan Reynolds rencontre Wayne Sermon via un ami commun. Ils accrochent très vite et Dan 
-invite Wayne à le rejoindre à Las Vegas dont il est originaire. Wayne (originaire de l
-'Utah) vient d'obtenir son diplôme à la prestigieuse université de musique de Berklee et 
-emménage à Vegas. Il est très vite rejoint par ses deux camarades de promo Daniel Platzman
- et Ben McKee. Nos quatre garçons écument les casinos et autres bars de Vegas et sortent trois 
- EP avant d'être remarqués par le célèbre producteur de musique Alex Da Kid. En 2012, ils 
- sortent leur premier album "Night Visions" et débutent une tournée mondiale. Ils sont 
- aujourd'hui habitués aux premiers rangs des charts et remplissent des stades de plus de
-  10 000 personnes aux États-Unis.
-Lors de la 56e céremonie des Grammy Award, en janvier 2014, le groupe réalise un live au 
-côté du rappeur Kendrick Lamar. Leur prestation, un mash-up de "Radioactive" et de "m.A.A.d. 
-City" est saluée par la critique, jugée comme étant électrifiante et certainement la meilleure
- prestation de la soirée1.</div>
-  <h3>Concerts</h3>
-  <div>
-    <?= $donnees["description"] ?>
+  <?php include("views/banniere.php"); ?>
+  <div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
+  <div id="nomartiste">
+   <?= $donnees["nom"] ?>
   </div>
-  <h3>Extraits</h3>
-  <div>
+  </div>
+
+  <div id="global2">
+  <ul id="parametres2">
+   <li><input class = "bouton2" type="submit" value="Paramètres" /></li>
+   <li><input class = "bouton2" type="submit" value="Suivre"/></li>
+  </ul>
+  </div>
+
+<div id="tabs">
+
+  <ul>
+    <li><a href="#tabs-1">Présentation</a></li>
+    <li><a href="#tabs-2">Concerts</a></li>
+    <li><a href="#tabs-3">Extraits</a></li>
+    <li><a href="#tabs-4">Avis</a></li>
+    <li><a href="#tabs-5">Photos</a></li>
+  </ul>
+
+  <div id="tabs-1"><?= $donnees["description"] ?> 
+  </div>
+
+  <div id = "tabs-2">
 
   </div>
-  <h3>Avis</h3>
-  <div>
-<h1>Votre avis sur cet artiste.</h1>
-  <h2>Note cet artiste !!</h2>
-  <div class="rating rating2"><!--
-    --><a href="#5" title="Give 5 stars">★</a><!--
-    --><a href="#4" title="Give 4 stars">★</a><!--
-    --><a href="#3" title="Give 3 stars">★</a><!--
-    --><a href="#2" title="Give 2 stars">★</a><!--
+
+  <div id = "tabs-3">
+
+  </div>
+
+  <div id = "tabs-4">
+    <h1>Votre avis sur cet artiste.</h1>
+    <h2>Note cet artiste !!</h2>
+    <div class="rating rating2"><!--
+      --><a href="#5" title="Give 5 stars">★</a><!--
+      --><a href="#4" title="Give 4 stars">★</a><!--
+      --><a href="#3" title="Give 3 stars">★</a><!--
+      --><a href="#2" title="Give 2 stars">★</a><!--
     --><a href="#1" title="Give 1 star">★</a>
+    </div>
   </div>
-  </div>
-    <h3>Photos</h3>
-  <div>
+  <div id ="tabs-5">
 
   </div>
 </div>

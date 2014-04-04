@@ -23,9 +23,7 @@
 
  	<script>
 $(function() {
-    $( "#accordion" ).accordion({
-      heightStyle: "content"
-    });
+    $( "#tabs" ).tabs();
   });
   	</script>
 

@@ -3,9 +3,17 @@
 	color : white;
 }
 
-h3
+#tabs-1, #tabs-3, #tabs-2, #tabs-4, #tabs-5
 {
-	color : black;
+background-color: #494949;
+
+}
+
+#tabs
+{
+	
+
+		color : black;
 	font-size: 2em;
 	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(206,220,231,1)), color-stop(100%,rgba(89,106,114,1)));
 	//background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(71,70,91,1)), color-stop(51%,rgba(181,192,255,1)), color-stop(100%,rgba(60,63,79,1)));
@@ -13,10 +21,9 @@ h3
 	width : 100%;
 	margin-top: 5px;
 	margin-bottom: 5px;
-
 }
 
-#accordion
+#tabs ul li 
 {
-	background-color: #494949;
+	display: inline-block;
 }
