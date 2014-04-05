@@ -31,12 +31,67 @@ html, body
 	padding-bottom: 5px;
 }
 
+#menudyna
+{
+	font-size: 2em;
+	background-color: #FEF80E;
+	width : 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+}
+
+#menudyna ul 
+{
+	list-style: none;
+	margin-top: 0;
+}
 
 
+#menudyna li 
+{
+	display: inline;
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	border-right: 1px solid #616161;
+	float: left;
+}
 
 
+#menudyna a 
+{
+	color : black;
+}
+
+#menudyna ul li:hover
+{
+	background-color: #8C8C8C;
+}
+
+.active
+{
+	background-color: black;
+}
+#menudyna ul li.active a 
+{
+	color: white;
+}
 
 
+#contenu
+{
+	background-color: #494949;
+	color : white;
+	overflow: hidden;
+	width: 100%;
+
+}
+
+#contenu div
+{
+		padding: 20px;	
+
+}
 .bouton2
 {
 	box-shadow: 0 0 9px #333 inset ;
@@ -69,6 +124,7 @@ a[href*="intent"] {
 	display:inline-block;
 	margin-top: 0.4em;
 }
+
 .rating {
 	width: 226px;
 	margin: 0 auto 1em;
@@ -76,7 +132,7 @@ a[href*="intent"] {
 	overflow:hidden;
 }
 .rating a {
-	float:right;
+	//float:right;
 	color: #aaa;
 	text-decoration: none;
 	-webkit-transition: color .4s;

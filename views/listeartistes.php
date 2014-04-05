@@ -19,6 +19,7 @@
 	<div class = "contenuliste">			<?php
 				foreach ($listegroupe as $group)
 				{echo '<a href = "index.php?page=pageartistecontrolleur&id='.$group["artiste_id"].'">'. $group["nom"].'<br/>'.' </a>';}
+
 			?></div>
 <!-- 	<div class="blocs">
 		

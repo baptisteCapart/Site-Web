@@ -9,12 +9,13 @@ function insert($nomartiste, $style ,$description, $photogroupe){
 
 
 function recuperer2(){
-
+if (isset($_GET['id'])) {
 	global $bdd;
 	$sql = 'SELECT * from artiste where artiste_id ='.$_GET["id"].'';
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
  	$donnee = $req-> fetch();
   	return $donnee;
+  }
 }
 
 function liste(){
