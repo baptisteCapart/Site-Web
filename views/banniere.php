@@ -21,11 +21,6 @@
   	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
  	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 
- 	<script>
-$(function() {
-    $( "#tabs" ).tabs();
-  });
-  	</script>
 
 <script>
 $( document ).click(function() {
@@ -61,13 +56,14 @@ $( document ).click(function() {
 
 		<?php
 		} else {
-			?><div class="container">
-			<div class="pseudo"> 
-				<ul>
-					<li><a href="index.php?page=PageMembrecontrolleur"> <?= $_SESSION['pseudo'] ?> </a></li>
-					<li><a href="index.php?page=deconnexioncontrolleur">Déconnexion</a></li>
-				</ul>
-			</div>
+		?>
+			<div class="container">
+				<div class="pseudo"> 
+					<ul>
+						<li><a href="index.php?page=PageMembrecontrolleur"> <?= $_SESSION['pseudo'] ?> </a></li>
+						<li><a href="index.php?page=deconnexioncontrolleur">Déconnexion</a></li>
+					</ul>
+				</div>
 			</div>
 
 		<?php

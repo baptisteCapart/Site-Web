@@ -1,7 +1,5 @@
 <?php 
 
-
-
 if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
   extract($_POST);
   $pwd = sha1($pwd); 
@@ -28,7 +26,6 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
 //   exit;
 }
 
-//include ('../views/home.php');
 include ('views/banniere.php');
 
 ?>

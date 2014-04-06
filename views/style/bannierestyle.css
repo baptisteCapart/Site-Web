@@ -57,6 +57,40 @@ header
 
 }
 
+.pseudo
+{
+	font-family: calibri;
+	font-size: 1.1em;
+	position: absolute;
+	top: 0%;
+	padding-top: 0px;
+	list-style: none;
+	display: inline-block;
+	width: 100%;
+}
+.pseudo ul
+{
+	float: right;
+	border-bottom: 1px solid #646665;
+
+
+}
+.pseudo li
+{
+	display: inline-block;
+	padding : 10px;
+}
+
+.pseudo a
+{
+	color: #B9B9B9;
+}
+
+.pseudo a:hover
+{
+	text-decoration: underline;
+}
+
 .boite
 {
 	box-shadow: 0 0 9px #555 inset ;
@@ -350,39 +384,7 @@ footer a
 	margin-top: 1%;
 }
 
-.pseudo
-{
-	font-family: calibri;
-	font-size: 1.1em;
-	position: absolute;
-	top: 0%;
-	padding-top: 0px;
-	list-style: none;
-	display: inline-block;
-	width: 100%;
-}
-.pseudo ul
-{
-	float: right;
-	border-bottom: 1px solid #646665;
 
-
-}
-.pseudo li
-{
-	display: inline-block;
-	padding : 10px;
-}
-
-.pseudo a
-{
-	color: #B9B9B9;
-}
-
-.pseudo a:hover
-{
-	text-decoration: underline;
-}
 
 @media screen and (max-width: 1000px)
 {

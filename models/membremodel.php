@@ -3,11 +3,8 @@
 function verification($login){
 	global $bdd;
 	$sql = "SELECT membre_id, mot_de_passe from membre where pseudo ='$login'";
-	var_dump($sql);
  	$req = $bdd->query($sql) or die(print_r($bdd->errorInfo()));
- 	var_dump($req);
   	$donnee = $req->fetch();
-  	var_dump($donnee);
   	return $donnee;
 }
 
