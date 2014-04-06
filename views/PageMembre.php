@@ -34,17 +34,42 @@
 </ul>
 </div>
 
-<div id="menudyna2">
-			<ul>
-				<li  style = "background-color : black"> <a style = "color : white" href="index.php?page=pageMembrecontrolleur">Artistes</a> </br>
-				</li>
-				<li> <a href="index.php?page=pageMembrecontrolleur2">Salles</a> </br>
-				<li> <a href="index.php?page=pageMembrecontrolleur3">Concerts</a> </br>
-				<li> <a href="index.php?page=pageMembrecontrolleur4">Avis</a> </br>
-			</ul> 	
+<div id="menuMembre">
 
-</div>
-<div class="contenumembre"> aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+  <ul>
+      <li class = "<?php if($ongletMembre==1){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=1"> Artistes</a>'; ?>
+  	  </li>
 
+      <li class = "<?php if($ongletMembre==2){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=2"> Salles </a>'; ?>
+      </li>
+
+      <li class = "<?php if($ongletMembre==3){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=3"> Concerts</a>'; ?>
+  	  </li>
+
+      <li class = "<?php if($ongletMembre==4){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=4"> Avis </a>'; ?>
+      </li>      
+  </ul>
+</div> 
+
+<div id="contenuMembre">
+    <?php  if($ongletMembre==1){ ?> 
+      <div> artistes suivis par ce membre </div>
+    <?php } ?> 
+
+    <?php  if($ongletMembre==2){ ?> 
+      <div> salles suivies par ce membre </div>
+    <?php } ?>
+
+    <?php  if($ongletMembre==3){ ?> 
+      <div> concerts suivis par ce membre </div>
+    <?php } ?>
+
+    <?php  if($ongletMembre==4){ ?> 
+      <div> avis donnés par ce membre </div>
+    <?php } ?>
+    	
+</div> 
+
+		
 <?php include("views/footer.php"); ?>
 

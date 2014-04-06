@@ -14,7 +14,7 @@ html, body
 {
 	background-size: cover;
 	background-repeat: no-repeat;
-	height: 470px;
+	height: 500px;
 	width: 100%;
 	opacity : 0.5;
 
@@ -23,12 +23,13 @@ html, body
 #donnees
 {
 	float : left;
+		height : 400px;
+
 }
 #membre
 
 {
 	position: absolute;
-	height : 50%;
 	top : 180px ;
 	left : 40%;
 	font-size: 1.5em;
@@ -80,34 +81,24 @@ html, body
 	display: block;
 	color: white;
 }
-#menudyna2
+#menuMembre
 {
 	font-size: 2em;
-	background-color: #35BDFF;
+	background-color: #1CE0F0;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
 
-#menudyna2 a
-{
-	color : black;
-}
-
-#menudyna2 ul li:hover
-{
-	background-color: #2E58A7;
-}
-
-#menudyna2 ul 
+#menuMembre ul 
 {
 	list-style: none;
 	margin-top: 0;
 }
 
 
-#menudyna2 li 
+#menuMembre li 
 {
 	display: inline;
 	padding-left: 0.5%;
@@ -117,47 +108,39 @@ html, body
 }
 
 
-#menudyna a 
+#menuMembre a 
 {
 	color : black;
 }
 
-#menudyna ul li:hover
+#menuMembre ul li:hover
 {
-	background-color: #1B82A9;
+	background-color: #8C8C8C;
 }
 
-.contenumembre
+.actifMembre
 {
-	background-color: #3E3E3E;
-	color : white;
-	height: 450px;
-	width: 100%;
-	font-size: 0.7em;
+	background-color: black;
 }
-.contenumembre2
+#menuMembre ul li.actifMembre a 
 {
-	background-color: #3E3E3E;
-	color : white;
-	height: 450px;
-	width: 100%;
-	font-size: 0.7em;
+	color: white;
 }
-.contenumembre3
+
+
+#contenuMembre
 {
-	background-color: #3E3E3E;
+	background-color: #494949;
 	color : white;
-	height: 450px;
+	overflow: hidden;
 	width: 100%;
-	font-size: 0.7em;
+
 }
-.contenumembre4
+
+#contenuMembre div
 {
-	background-color: #3E3E3E;
-	color : white;
-	height: 450px;
-	width: 100%;
-	font-size: 0.7em;
+		padding: 20px;	
+
 }
 
 

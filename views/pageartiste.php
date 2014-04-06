@@ -13,7 +13,7 @@
   </ul>
   </div>
 
-<div id="menudyna">
+<div id="menuArtiste">
 
   <ul class = "page">
     <li class = "<?php if($onglet==1){ echo "active";}?>"> <?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=1"> Présentation </a>'; ?></li>
@@ -24,7 +24,7 @@
   </ul>
  </div> 
 
-<div id="contenu">
+<div id="contenuArtiste">
     <?php  if($onglet==1){ ?> 
       <div class = "descrption"> <?= $donnees["description"] ?></div>
     <?php } ?> 

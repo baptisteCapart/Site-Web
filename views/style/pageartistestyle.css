@@ -31,7 +31,7 @@ html, body
 	padding-bottom: 5px;
 }
 
-#menudyna
+#menuArtiste
 {
 	font-size: 2em;
 	background-color: #FEF80E;
@@ -41,14 +41,14 @@ html, body
 	padding: 0;
 }
 
-#menudyna ul 
+#menuArtiste ul 
 {
 	list-style: none;
 	margin-top: 0;
 }
 
 
-#menudyna li 
+#menuArtiste li 
 {
 	display: inline;
 	padding-left: 0.5%;
@@ -58,12 +58,12 @@ html, body
 }
 
 
-#menudyna a 
+#menuArtiste a 
 {
 	color : black;
 }
 
-#menudyna ul li:hover
+#menuArtiste ul li:hover
 {
 	background-color: #8C8C8C;
 }
@@ -72,13 +72,13 @@ html, body
 {
 	background-color: black;
 }
-#menudyna ul li.active a 
+#menuArtiste ul li.active a 
 {
 	color: white;
 }
 
 
-#contenu
+#contenuArtiste
 {
 	background-color: #494949;
 	color : white;
@@ -87,7 +87,7 @@ html, body
 
 }
 
-#contenu div
+#contenuArtiste div
 {
 		padding: 20px;	
 
