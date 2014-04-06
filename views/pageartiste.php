@@ -1,16 +1,16 @@
 
   <?php include("views/banniere.php"); ?>
   <div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
-  <div id="nomartiste">
-   <?= $donnees["nom"] ?>
-  </div>
+    <div id="nomartiste">
+        <?= $donnees["nom"] ?>
+    </div>
   </div>
 
   <div id="global2">
-  <ul id="parametres2">
-   <li><input class = "bouton2" type="submit" value="Paramètres" /></li>
-   <li><input class = "bouton2" type="submit" value="Suivre"/></li>
-  </ul>
+    <ul id="parametres2">
+       <li><input class = "bouton2" type="submit" value="Paramètres" /></li>
+       <li><input class = "bouton2" type="submit" value="Suivre"/></li>
+    </ul>
   </div>
 
 <div id="menuArtiste">

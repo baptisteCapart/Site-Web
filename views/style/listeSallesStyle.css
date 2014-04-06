@@ -1,4 +1,4 @@
-#listeartiste
+#listeSalle
 {
 	font-size: 2em;
 	background-color: #F3F920;
@@ -8,34 +8,31 @@
 	padding: 0;
 }
 
-#listeartiste ul 
+#listeSalle ul li 
+{
+	display: inline-block;
+}
+
+#listeSalle ul 
 {
 	list-style: none;
 	margin-top: 0;
 }
 
 
-#listeartiste li 
-{
-	display: inline;
-	padding-left: 0.5%;
-	padding-right: 0.5%;
-	border-right: 1px solid #616161;
-	float: left;
-}
 
-.critereactif
+.critereSalleactif
 {
 	background-color: black;
 }
 
-#listeartiste ul li.critereactif a
+#listeSalle ul li.critereSalleactif a
 {
 	color: white;
 }
 
 
-#listeartiste a 
+#listeSalle a 
 {
 	color : black;
 }

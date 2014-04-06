@@ -16,6 +16,7 @@
 	<link rel="stylesheet" href="views/style/pagesallestyle.css">	
 	<link rel="stylesheet" href="views/style/listeartisteStyle.css"/>	
 	<link rel="stylesheet" href="views/style/forumstyle.css">
+	<link rel="stylesheet" href="views/style/listeSallesStyle.css">	
 
 	<link rel="stylesheet" href="views/style/javaStyle.css">
   	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
@@ -90,7 +91,7 @@ $( document ).click(function() {
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "salles"><a href="index.php?page=pageSallecontrolleur">Salles</a>
+				<li id = "salles"><a href="index.php?page=listeSallescontrolleur">Salles</a>
 					<ul class = "menu3">
 						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>

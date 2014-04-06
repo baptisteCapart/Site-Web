@@ -62,24 +62,24 @@ html, body
 
 
 
-#menudyna3
+#menuSalle
 {
 	font-size: 2em;
-	background-color: #9F0000;
+	background-color: #F4607A;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
 }
 
-#menudyna3 ul 
+#menuSalle ul 
 {
 	list-style: none;
 	margin-top: 0;
 }
 
 
-#menudyna3 li 
+#menuSalle li 
 {
 	display: inline;
 	padding-left: 0.5%;
@@ -89,48 +89,38 @@ html, body
 }
 
 
-#menudyna3 a 
+#menuSalle a 
 {
 	color : black;
 }
 
-#menudyna3 ul li:hover
+#menuSalle ul li:hover
 {
-	background-color: #A0CF9E;
+	background-color: #8C8C8C;
+}
+
+.active
+{
+	background-color: black;
+}
+#menuSalle ul li.active a 
+{
+	color: white;
 }
 
 
-.contenusalle
+#contenuSalle
 {
 	background-color: #494949;
 	color : white;
-	height: 550px;
-	width: 100%;
-
-}
-.contenusalle2
-{
-	background-color: #494949;
-	color : white;
-	height: 550px;
-	width: 100%;
-
-}
-.contenusalle3
-{
-	background-color: #494949;
-	color : white;
-	height: 550px;
-	width: 100%;
-
-}
-.contenusalle4
-{
-	background-color: #494949;
-	color : white;
-	height: 550px;
+	overflow: hidden;
 	width: 100%;
 
 }
 
+#contenuSalle div
+{
+		padding: 20px;	
+
+}
 
