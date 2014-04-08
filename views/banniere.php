@@ -18,17 +18,6 @@
 	<link rel="stylesheet" href="views/style/forumstyle.css">
 	<link rel="stylesheet" href="views/style/listeSallesStyle.css">	
 
-	<link rel="stylesheet" href="views/style/javaStyle.css">
-  	<script src="//code.jquery.com/jquery-1.9.1.js"></script>
- 	<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-
-
-<script>
-$( document ).click(function() {
-  $( "#liste_news" ).effect( "slide" , "slow" );
-});
-</script>
-
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>

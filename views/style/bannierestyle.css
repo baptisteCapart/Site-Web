@@ -250,7 +250,7 @@ ul.menu1 li
 #compte a:hover
 {
 
-	background-color: #69D15D;
+	background-color: #DBDBDB;
 	color : black;
 }
 #menu li ul li a:hover
@@ -260,25 +260,25 @@ ul.menu1 li
 
 #artistes a:hover
 {
-	background-color: #D4D451;
+	background-color: #DBDBDB;
 	color : black;
 }
 
 #salles a:hover
 {
-	background-color: #D42626;
+	background-color: #DBDBDB;
 	color : black;
 }
 
 #concerts a:hover
 {
-	background-color: #318CE7;
+	background-color: #DBDBDB;
 	color : black;
 }
 
 #forum a:hover
 {
-	background-color: #ED841B;
+	background-color: #DBDBDB;
 	color : black;
 }
 
@@ -290,7 +290,7 @@ nav ul li ul li a:hover
 
 #compte .menu1 li:hover
 {
-	background-color:#69D15D;
+	background-color:#DBDBDB;
 }
 
 #compte .menu1 li:hover a
@@ -312,15 +312,15 @@ nav ul li ul li a:hover
 
 #artistes .menu2 li:hover
 {
-	background-color: #D4D451;
+	background-color: #DBDBDB;
 }
 #salles .menu3 li:hover
 {
-	background-color: #D42626;
+	background-color: #DBDBDB;
 }
 #concerts .menu4 li:hover
 {
-	background-color: #318CE7;
+	background-color: #DBDBDB;
 }
 
 

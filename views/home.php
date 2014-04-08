@@ -13,6 +13,10 @@
 						<li><a href="#"> La salle Pleyel restaurée : les prochains évènements ...</a></li>
 					</ul>
 				</div>
+				<div id= "buttontest">
+					<br><br><br><br><br>
+					<a href="">NEWS</a>
+				</div>
 		</div>
 		<?php 
 		if(isset($_SESSION['pseudo'])){
