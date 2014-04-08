@@ -162,7 +162,7 @@ html, body
 #menudyna4
 {
 	font-size: 2em;
-	background-color: #7D577D;
+	background: -webkit-linear-gradient(top, rgba(47,99,50,1) 0%,rgba(58,150,63,1) 50%,rgba(47,99,50,1) 100%);
 	width : 100%;
 	display: inline-block;
 	margin: 0;
@@ -193,7 +193,7 @@ html, body
 
 #menudyna4 ul li:hover
 {
-	background-color: #9E2326;
+	background: -webkit-linear-gradient(top, rgba(58,150,63,1) 0%,rgba(47,99,50,1) 50%,rgba(58,150,63,1) 100%);
 }
 
 
