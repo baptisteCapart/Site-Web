@@ -34,7 +34,12 @@ html, body
 #menuArtiste
 {
 	font-size: 2em;
-	background: -webkit-linear-gradient(top, rgba(122,188,255,1) 0%,rgba(76,80,196,1) 50%,rgba(64,150,238,1) 100%);
+/*	bleu
+	background: -webkit-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(48,150,229,1) 50%,rgba(125,185,232,1) 100%);
+	jaune
+	background: -webkit-linear-gradient(top, rgba(242,244,124,1) 0%,rgba(243,247,0,1) 50%,rgba(245,247,116,1) 100%);
+	rouge*/
+	background: -webkit-linear-gradient(top, rgba(142,0,2,1) 0%,rgba(255,0,0,1) 50%,rgba(145,0,7,1) 100%,rgba(26,33,25,1) 100%);
 	width : 100%;
 	display: inline-block;
 	margin: 0;
@@ -65,16 +70,27 @@ html, body
 
 #menuArtiste ul li:hover
 {
-	background: -webkit-linear-gradient(top, rgba(76,80,196,1) 0%,rgba(122,188,255,1) 50%,rgba(76,80,196,1) 100%);
+/*	bleu
+	background: -webkit-linear-gradient(top, rgba(61,156,229,1) 0%,rgba(2,129,226,1) 50%,rgba(61,156,229,1) 100%);
+	jaune
+	background: -webkit-linear-gradient(top, rgba(242,244,124,1) 0%,rgba(211,201,0,1) 50%,rgba(245,247,116,1) 100%);
+	rouge*/
+	background: -webkit-linear-gradient(top, rgba(142,0,2,1) 0%,rgba(196,0,0,1) 50%,rgba(145,0,7,1) 100%,rgba(26,33,25,1) 100%);
 }
 
 .active
 {
-	background: -webkit-linear-gradient(top, rgba(0,127,255,1) 0%,rgba(0,6,193,1) 50%,rgba(0,127,255,1) 100%);;
+/*	bleu
+	background: -webkit-linear-gradient(top, rgba(28,37,89,1) 0%,rgba(0,3,33,1) 50%,rgba(28,37,89,1) 100%);
+	jaune
+	background: -webkit-linear-gradient(top, rgba(71,70,67,1) 0%,rgba(0,0,0,1) 50%,rgba(71,70,67,1) 100%,rgba(26,33,25,1) 100%);
+	rouge*/
+	background: -webkit-linear-gradient(top, rgba(71,70,67,1) 0%,rgba(0,0,0,1) 50%,rgba(71,70,67,1) 100%,rgba(26,33,25,1) 100%);
+
 }
 #menuArtiste ul li.active a 
 {
-	color: black;
+	color: white;
 }
 
 
