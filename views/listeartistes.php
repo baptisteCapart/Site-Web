@@ -4,6 +4,8 @@
 
 <div id="listeartiste">
 
+  <span class = "titreartistes"> Artistes </span>
+
   <ul>
       <li class = "<?php if($critere==1){ echo "critereactif";}?>"> <?php echo'<a href = "index.php?page=listeartistecontrolleur&critere=1"> Par ordre alphabétique</a>'; ?>
   	  </li>

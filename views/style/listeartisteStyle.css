@@ -8,8 +8,16 @@
 	padding: 0;
 }
 
+.titreartistes
+{
+	padding : 30px;
+	font-size: 2em;
+	margin-top: 50px;
+}
+
 #listeartiste ul 
 {
+	padding-top: 30px;
 	list-style: none;
 	margin-top: 0;
 }
@@ -20,7 +28,6 @@
 	display: inline;
 	padding-left: 0.5%;
 	padding-right: 0.5%;
-	border-right: 1px solid #616161;
 	float: left;
 }
 
