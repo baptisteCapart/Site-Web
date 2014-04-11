@@ -3,6 +3,8 @@
 include ('models/membremodel.php');
 
 $donnees = recuperer($_SESSION['id']);
+$arr = explode('-', $donnees['date_de_naissance']);
+$birthdate = $arr[2].'-'.$arr[1].'-'.$arr[0];
 $ongletMembre =1;
 
 if(isset($_GET['ongletMembre'])){
@@ -23,6 +25,8 @@ if(isset($_GET['ongletMembre'])){
 	}
 
 }	
+
+
 
 	include ('views/PageMembre.php');
 

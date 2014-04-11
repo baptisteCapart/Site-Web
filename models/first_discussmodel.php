@@ -5,10 +5,9 @@ try
 {
 	$bdd = new PDO('mysql:host=localhost;dbname=forum', 'root', '');
 }
-
 catch(Exception $e)
 {
-    die('Erreur : '.$e->getMessage());
+        die('Erreur : '.$e->getMessage());
 }
 
 
@@ -18,10 +17,12 @@ $reponse = $bdd->query('SELECT pseudo, message FROM forum_discussion ORDER BY ID
 
 if ($reponse!= FALSE)
 {
-	for ($cle = 0; $cle <= 10; $cle++)
-	{
-    	$donnees = $reponse->fetch();
-    	echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : ' . htmlspecialchars($donnees['message']) . '</p>';
-	}
+for ($cle = 0; $cle <= 10; $cle++)
+{
+    $donnees = $reponse->fetch();
+    echo '<p><strong>' . htmlspecialchars($donnees['pseudo']) . '</strong> : ' . htmlspecialchars($donnees['message']) . '</p>';
+}
 }
 ?>
+    </body>
+</html>
