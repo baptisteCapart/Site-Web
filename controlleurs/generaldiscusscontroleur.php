@@ -1,4 +1,4 @@
-<?php include("views/banniere.php"); ?>
+<?php include("bannierecontrolleur.php"); ?>
 
 <?php include("views/generaldiscussview.php"); ?>
 
