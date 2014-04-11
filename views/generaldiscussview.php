@@ -1,12 +1,14 @@
-<h1>Général</h1>
+<div class="body">
+	<h1>Général</h1>
 
-<div id= "listediscuss">
+	<div id= "listediscuss">
 
-<ul class="discussions">
+	<ul class="discussions">
 	
-		<li><a href="index.php?page=first_discusscontroleur"> Le rap c trop cool </a></li>
-		<li>Rambouillet c trop cool</li>
+			<li><a href="index.php?page=first_discusscontroleur"> Le rap c trop cool </a></li>
+			<li>Rambouillet c trop cool</li>
 
-	</li>
-</ul>	
+	</ul>
+
+	</div>
 </div>
