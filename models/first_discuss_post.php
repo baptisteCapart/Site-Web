@@ -12,5 +12,5 @@ catch(Exception $e)
 $req = $bdd->prepare('INSERT INTO forum_discussion (pseudo, message) VALUES(?, ?)');
 $req->execute(array($_POST['pseudo'], $_POST['message']));
 
-header('Location: first_discuss.php');
+header('Location: first_discussmodel.php');
 ?>

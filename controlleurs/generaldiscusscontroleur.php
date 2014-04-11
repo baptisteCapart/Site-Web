@@ -1,5 +1,6 @@
-<?php include("banniere.php"); ?>
+<?php include("views/banniere.php"); ?>
 
-<?php include("view.generaldiscussview.php"); ?>
+<?php include("views/generaldiscussview.php"); ?>
 
-<?php include("footer.php"); ?>
+<?php include("views/footer.php"); ?>
+

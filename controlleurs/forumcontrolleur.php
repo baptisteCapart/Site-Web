@@ -4,9 +4,9 @@
 <head>
 	 <meta charset="utf-8" />
 
-<?php include("banniere.php"); ?>
+<?php include("views/banniere.php"); ?>
 
-<?php include("view/menuview.php"); ?>
+<?php include("views/menuview.php"); ?>
 
-<?php include("footer.php"); ?>
+<?php include("views/footer.php"); ?>
 
