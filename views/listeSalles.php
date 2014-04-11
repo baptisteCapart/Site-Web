@@ -4,6 +4,8 @@
 
 <div id="listeSalle">
 
+  <span class = "titresalles"> Salles </span>
+
   <ul>
       <li class = "<?php if($critereSalle==1){ echo "critereSalleActif";}?>"> <?php echo'<a href = "index.php?page=listeSallescontrolleur&critereSalle=1"> Par ordre alphabétique</a>'; ?>
   	  </li>

@@ -195,7 +195,7 @@ nav
 {
 	 display:block;
 	 text-align: left;
-	 background-color: rgba(100,100,100,0.5);
+	 background-color: rgba(100,100,100,0.7);
 
 }
 
@@ -226,25 +226,25 @@ ul.menu1 li
 {
 	font-size: 0.75em;
 	//color : #D4D451;
-	color : #7E7E7E;
+	color : #DBDBDB;
 }
 #salles a
 {
 	font-size: 0.75em;
 	//color : #D42626;
-	color : #CDCDCD;
+	color : #DBDBDB;
 }
 #concerts a
 {
 	font-size: 0.75em;
 	//color : #318CE7;
-	color : #7A7A7A;
+	color : #DBDBDB;
 }
 #forum a
 {
 	font-size: 0.75em;
 	//color : #CB8932;
-	color : #CDCDCD;
+	color : #DBDBDB;
 }
 
 #compte a:hover
