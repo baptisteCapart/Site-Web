@@ -7,7 +7,6 @@ function verification($login){
   	$donnee = $req->fetch();
   	return $donnee;
 }
-
 function verifpseudo($pseudo){
 	global $bdd;
 
@@ -21,12 +20,13 @@ function verifpseudo($pseudo){
 }
 
 
+
 }
 
-function insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
+function insert($pseudo, $mdp, $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
 	global $bdd;
 
-	$bdd->query("INSERT INTO membre(pseudo, mot_de_passe, mail, code_postal, ville, sexe, pays, photoprofil, photocover )  VALUES ('$pseudo', '$mdp', '$mail' ,'$codepostal', '$ville' ,'$sexe', '$pays','$photodeprofil', '$photodecover')");
+	$bdd->query("INSERT INTO membre(pseudo, mot_de_passe, mail, date_de_naissance, code_postal, ville, sexe, pays, photoprofil, photocover )  VALUES ('$pseudo', '$mdp', '$mail' , '$age' ,'$codepostal', '$ville' ,'$sexe', '$pays','$photodeprofil', '$photodecover')");
 }
 
 

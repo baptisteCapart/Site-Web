@@ -15,10 +15,9 @@
 			<ul>
 				<li><?= $_SESSION['pseudo'] ?> </li>
 				<li><?= $donnees['sexe'] ?></li>
-				<li><?= $donnees['date_de_naissance'] ?></li>
+				<li><?= $birthdate ?></li>
 				<li><?= $donnees['ville'] ?></li>
 				<li><?= $donnees['pays'] ?></li>
-				<li><?= $donnees['code_postal'] ?></li>
 			</ul>
 		</li>
 

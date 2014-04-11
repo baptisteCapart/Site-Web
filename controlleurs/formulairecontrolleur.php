@@ -14,7 +14,9 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 		$codepostal = mysql_real_escape_string(htmlspecialchars($_POST['codepostal']));
 		$pays = mysql_real_escape_string(htmlspecialchars($_POST['pays']));
 		$ville = mysql_real_escape_string(htmlspecialchars($_POST['ville']));
-		$age = mysql_real_escape_string(htmlspecialchars($_POST['age']));		
+		$age = mysql_real_escape_string(htmlspecialchars($_POST['age']));
+		var_dump($age);	
+
 		$photodeprofil = "";
 		$photodecover = "";
 
@@ -28,10 +30,11 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 
 		$mdp = sha1($mdp);
 
+
 		include ('models/membremodel.php');
 		$validation = verifpseudo($pseudo);
 		if ($validation == true){
-			insert($pseudo, $mdp, $mail ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
+			insert($pseudo, $mdp, $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
 		}else{
 			echo '<span +class = "erreur">ce pseudo est déjà utilisé</span>';
 		}
