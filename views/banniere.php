@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="views/style/listeartisteStyle.css"/>	
 	<link rel="stylesheet" href="views/style/forumstyle.css">
 	<link rel="stylesheet" href="views/style/listeSallesStyle.css">	
+	<link rel="stylesheet" href="views/style/generaldiscuss.css">
+	
 
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 

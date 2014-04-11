@@ -1,10 +1,5 @@
 
-<!DOCTYPE html>
-<html>
-<head>
-	 <meta charset="utf-8" />
-
-<?php include("views/banniere.php"); ?>
+<?php include("bannierecontrolleur.php"); ?>
 
 <?php include("views/menuview.php"); ?>
 
