@@ -12,7 +12,7 @@
 		<ul>
 			<li class="soussujet"> Discussion
 					<ul>		
-						<li><a href="generaldiscuss.php">Général</a></li>
+						<li><a href="views/generaldiscussview.php">Général</a></li>
 						<p>Dans ce forum parlez de tout et de <br>
 							rien bref de ce que vous voulez.
 						
