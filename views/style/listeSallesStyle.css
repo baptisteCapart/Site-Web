@@ -8,6 +8,13 @@
 	padding: 0;
 }
 
+.titresalles
+{
+	padding : 30px;
+	font-size: 2em;
+	margin-top: 50px;
+}
+
 #listeSalle ul li 
 {
 	display: inline-block;
