@@ -148,7 +148,7 @@ a[href*="intent"] {
 	overflow:hidden;
 }
 .rating a {
-	//float:right;
+/*	float:right;*/
 	color: #aaa;
 	text-decoration: none;
 	-webkit-transition: color .4s;
