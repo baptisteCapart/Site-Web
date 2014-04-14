@@ -1,7 +1,7 @@
+<?php
 
-<?php include("bannierecontrolleur.php"); ?>
+include("bannierecontrolleur.php");
+include("views/forumview.php");
+include("views/footer.php"); 
 
-<?php include("views/menuview.php"); ?>
-
-<?php include("views/footer.php"); ?>
-
+?>

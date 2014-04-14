@@ -12,15 +12,15 @@
 		<ul>
 			<li class="soussujet"> Discussion
 					<ul>		
-						<li><a href="index.php?page=generaldiscusscontroleur">Général</a></li>
-						<p>Dans ce forum parlez de tout et de <br>
+						<li><a href="index.php?page=liste_topiccontrolleur">Général</a></li>
+						<p>Dans ce forum parlez de tout et de <br/>
 							rien bref de ce que vous voulez.
 						
 						<li><a href="#">Styles de musique</a></li>
-						<p>Ici vous pouvez discuter avec les autres <br>
+						<p>Ici vous pouvez discuter avec les autres <br/>
 							membres de vos goûts musicaux. </p>
 						<li><a href="#">Salles</a></li>	
-						<p>Vous êtes déjà allé dans cette salle ? Vous
+						<p>Vous êtes déjà allé dans cette salle ? Vous<br/>
 						voulez en parler, c'est ici. </p>
 					</ul>
 			</li>
