@@ -12,6 +12,7 @@ html, body
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	height: 500px;
 	width: 100%;
 
