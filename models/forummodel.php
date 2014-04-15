@@ -3,10 +3,16 @@
 
 function topicname ($topic)
 {
+	if (isset($_GET['topic'])) {
+
 	global $bdd;
-	$topic_name = $bdd->query("SELECT nom FROM topic WHERE id_topic = $topic");
+	$sql = ('SELECT * from topic where id_topic ='.$_GET["topic"].'');
+	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+	$topic_name = $req-> fetch();
 	return $topic_name;
+	}
 }
+
 
 function newtopic ($name, $description){
 	global $bdd;

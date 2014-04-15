@@ -4,7 +4,7 @@
 	<div id= "listediscuss">
 		<ul class="discussions">
 			<?php foreach ($topicList as $topic)
-			{echo ' <li><a href = "index.php?page=discusscontroleur&id='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a></li>';}?>
+			{echo ' <li><a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a></li>';}?>
 		</ul>
 	</div>
 

@@ -1,5 +1,5 @@
 <div class="discuss">    
-    <h1>$topic_name</h1>
+    <h1> <?= $topic_name['nom'] ?> </h1>
 
     <form action="#" method="post">
         <p class="v1">
