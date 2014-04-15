@@ -21,6 +21,7 @@ function verifpseudo($pseudo){
 
 
 
+
 }
 
 function insert($pseudo, $mdp, $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
