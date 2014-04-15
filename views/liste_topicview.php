@@ -11,4 +11,5 @@
 	</ul>
 
 	</div>
+	<div class="nouveau"><a href="index.php?page=new_topiccontroleur">Ton propre topic, c'est ici !</a></div>
 </div>
