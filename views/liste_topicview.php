@@ -1,5 +1,5 @@
 <div class="generaldiscuss">
-	<h1>Général</h1>
+	<h2>Général</h2>
 
 	<div id= "listediscuss">
 		<ul class="discussions">
