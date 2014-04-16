@@ -10,3 +10,16 @@
 	padding-bottom: 2%;
 	margin-bottom: 2%;
 }
+
+table
+{
+    border-collapse: collapse;
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+    padding-bottom: 200px;
+}
+td, th
+{
+    border: 1px solid black;
+}
