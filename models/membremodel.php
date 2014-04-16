@@ -21,6 +21,7 @@ function verifpseudo($pseudo){
 
 
 
+
 }
 
 <<<<<<< HEAD

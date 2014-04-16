@@ -20,6 +20,7 @@
 	<link rel="stylesheet" href="views/style/liste_topicstyle.css">
 	<link rel="stylesheet" href="views/style/discuss_style.css">
 	<link rel="stylesheet" href="views/style/wrong_topicstyle.css">
+	<link rel="stylesheet" href="views/style/new_topicstyle.css">
 	
 
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
