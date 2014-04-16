@@ -1,12 +1,37 @@
 .generaldiscuss
 {
 	background-color: white;
+		background-color: #97A8D0;
+	border: 7px solid #787BE9;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	color : black;
 }
 
+.listediscuss
+{
+		background-color: #97A8D0;
+	border: 7px solid #787BE9;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	color : black;
+}
 
  .discussions
 {
 	border-bottom: 0.5px solid #868686;
 	padding-bottom: 2%;
 	margin-bottom: 2%;
+}
+
+.nouveau
+{
+		background-color: #97A8D0;
+	border: 7px solid #787BE9;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	color : black;
 }
