@@ -23,7 +23,7 @@ Tous les champs sont obligatoires
 			</li>
 
 			<li>
-				<div class="age"><span> Date de naissance: </span><input class = "textbox" type="date" name="age" value=""/></div>
+				<div class="age"><span> Date de naissance: </span><select class = "textbox" type="date" name="age" value=""/></div>
 
 			</li>			
 

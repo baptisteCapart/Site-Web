@@ -1,4 +1,8 @@
 .nouveau_topic
 {
-	background-color: white;
-}
+		background-color: #97A8D0;
+	border: 7px solid #787BE9;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	color : black;}

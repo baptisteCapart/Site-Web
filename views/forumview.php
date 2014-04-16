@@ -3,37 +3,37 @@
 		<a href="#">Charte</a>
 	</div>
 	<div id = "intro">
-		<h2>Bienvenue sur les forum de Tune in Town </h2> </br>
+		<h1>Bienvenue sur les forum de Tune in Town </h1> </br>
 		<p>Vous trouverez ici différentes rubriques pour exprimer vos opinions, </br> débattre sur les différents artistes et accéder au F.A.Q. </br> Exprimez vos opinions ...</p>
 	</div>
 
 
 	<div id="sujet">
 		<ul>
-			<li class="soussujet"> Discussion
+			<li class="soussujet"> <h1>Discussion</h1>
 					<ul>		
-						<li><a href="index.php?page=liste_topiccontrolleur">Général</a></li>
+						<li><a href="index.php?page=liste_topiccontrolleur"><h2>Général</h2></a></li>
 						<p>Dans ce forum parlez de tout et de <br/>
 							rien bref de ce que vous voulez.
 						
-						<li><a href="#">Styles de musique</a></li>
+						<li><a href="#"><h2>Styles de musique</h2></a></li>
 						<p>Ici vous pouvez discuter avec les autres <br/>
 							membres de vos goûts musicaux. </p>
-						<li><a href="#">Salles</a></li>	
-						<p>Vous êtes déjà allé dans cette salle ? Vous<br/>
-						voulez en parler, c'est ici. </p>
+						<li><a href="#"><h2>Salles</h2></a></li>	
+						<p>Vous êtes déjà allé dans cette salle ? <br/>
+						Vous voulez en parler ? c'est ici. </p>
 					</ul>
 			</li>
-			<li class="sousujet"> Promotions
+			<li class="sousujet"> <h1>Promotions</h1>
 					<ul>
-						<li><a href="#">Artiste</a></li>
-						<p>Pour parler de ces artistes préférés.</p>
-						<li><a href="#">Salle</a></li>
+						<li><a href="#"><h2>Artiste</h2></a></li>
+						<p>Pour parler de ses artistes préférés.</p>
+						<li><a href="#"><h2>Salle</h2></a></li>
 
-						<li><a href="#">Concert</a></li>
+						<li><a href="#"><h2>Concert</h2></a></li>
 					</ul>
 			</li>
-			<li class="soussujet"> F.A.Q
+			<li class="soussujet"> <h1>F.A.Q</h1>
 
 			</li>
 		</ul>
