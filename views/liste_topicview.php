@@ -1,12 +1,12 @@
 <div class="generaldiscuss">
 	<h2>Général</h2>
 
-<!-- 	<div id= "listediscuss">
+<!--  	<div id= "listediscuss">
 		<ul class="discussions">
 			<?php foreach ($topicList as $topic)
 			{echo ' <li><a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a></li>';}?>
 		</ul>
-	</div> -->
+	</div>  -->
 
 
 
@@ -19,9 +19,8 @@
 	       <th>Crée par</th>
    		</tr>
 
-   		<?php foreach ($topicList as $topic) { var_dump($topic);?>
+   		<?php foreach ($topicList as $topic) { ?>
 	   	<tr>
-
 	       <td> <?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a>';?></td>
 	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["description"].'<br/>'.' </a>';?></td>
 	       <td>3</td>
