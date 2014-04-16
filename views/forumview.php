@@ -20,14 +20,14 @@
 						<p>Ici vous pouvez discuter avec les autres <br/>
 							membres de vos goûts musicaux. </p>
 						<li><a href="#"><h2>Salles</h2></a></li>	
-						<p>Vous êtes déjà allé dans cette salle ? Vous<br/>
-						voulez en parler, c'est ici. </p>
+						<p>Vous êtes déjà allé dans cette salle ? <br/>
+						Vous voulez en parler ? c'est ici. </p>
 					</ul>
 			</li>
 			<li class="sousujet"> <h1>Promotions</h1>
 					<ul>
 						<li><a href="#"><h2>Artiste</h2></a></li>
-						<p>Pour parler de ces artistes préférés.</p>
+						<p>Pour parler de ses artistes préférés.</p>
 						<li><a href="#"><h2>Salle</h2></a></li>
 
 						<li><a href="#"><h2>Concert</h2></a></li>
