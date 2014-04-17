@@ -20,16 +20,22 @@ html, body
 
 #nomartiste
 {
-	position: absolute;
+	//position: absolute;
 	bottom : 0; 
 	height :50px;
-	font-size: 3em;
+	font-size: 4em;
 	color : #BEBEBE;
-    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
-	width: 100%;
+    //background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
+	//width: 100%;
 	vertical-align: middle;
-	display: inline-block;
-	padding-bottom: 15px;
+	//display: inline-block;
+/*	padding-bottom: 15px;
+*/	float: right;
+	position: relative;
+	top : 350px;
+	margin-right: 20px;
+	font-family: 'Quicksand' , sans-serif;
+
 }
 
 #menuArtiste
