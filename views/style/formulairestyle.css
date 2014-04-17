@@ -53,7 +53,8 @@ html
 form ul li div
 {
 	border-bottom: 1px solid #868686;
-	padding-bottom: 2%;
+	padding-bottom: 20px;
+	padding-top: 33px;
 	margin-bottom: 0;
 }
 
