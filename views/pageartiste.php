@@ -25,6 +25,7 @@
  </div> 
 
 <div id="contenuArtiste">
+  <div id="textArtist">
     <?php  if($onglet==1){ ?> 
       <div class = "descrption"> <?= $donnees["description"] ?></div>
     <?php } ?> 
@@ -50,7 +51,7 @@
     <?php  if($onglet==5){ ?> 
       <div class = "photos"> photos</div>
     <?php } ?> 
-
+  </div>
 </div>
 
 

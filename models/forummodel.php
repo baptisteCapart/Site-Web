@@ -30,7 +30,7 @@ function newpost ($pseudo, $message, $id_topic)
 function listeTopic(){
 
 	global $bdd;
- 	$req = $bdd-> query('SELECT id_topic, nom FROM topic ORDER BY nom') or die(print_r($bdd->errorInfo()));
+ 	$req = $bdd-> query('SELECT * FROM topic ORDER BY nom') or die(print_r($bdd->errorInfo()));
 	return $req;
 
 }

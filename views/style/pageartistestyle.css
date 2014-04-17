@@ -101,12 +101,15 @@ html, body
 	color : white;
 	overflow: hidden;
 	width: 100%;
-
 }
-
+#textArtist
+{
+	margin-left: 20%;
+	margin-right: 20%;
+}
 #contenuArtiste div
 {
-		padding: 20px;	
+	padding: 20px;	
 
 }
 .bouton2
@@ -143,13 +146,12 @@ a[href*="intent"] {
 }
 
 .rating {
-	width: 226px;
 	margin: 0 auto 1em;
 	font-size: 45px;
 	overflow:hidden;
+	text-align: center;
 }
 .rating a {
-/*	float:right;*/
 	color: #aaa;
 	text-decoration: none;
 	-webkit-transition: color .4s;

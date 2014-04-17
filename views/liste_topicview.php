@@ -1,15 +1,6 @@
 <div class="generaldiscuss">
 	<h2>Général</h2>
 
-<!--  	<div id= "listediscuss">
-		<ul class="discussions">
-			<?php foreach ($topicList as $topic)
-			{echo ' <li><a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a></li>';}?>
-		</ul>
-	</div>  -->
-
-
-
 
 	<table>
 		<tr>
@@ -19,7 +10,7 @@
 	       <th>Crée par</th>
    		</tr>
 
-   		<?php foreach ($topicList as $topic) { ?>
+<?php  while($topic = $topicList->fetch()) { ?>
 	   	<tr>
 	       <td> <?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a>';?></td>
 	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["description"].'<br/>'.' </a>';?></td>
@@ -29,6 +20,7 @@
 	   <?php }  ?>
 
 	</table>
+
 
 	<div class="nouveau"><a href="index.php?page=new_topiccontroleur">Ton propre topic, c'est ici !</a></div>
 </div>
