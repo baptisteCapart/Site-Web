@@ -143,8 +143,9 @@ html, body
 #global2
 {
 	position: absolute;
-	top : 550px;	
+	top : 530px;	
 	width: 100%;
+	right: 3%;
 
 }
 

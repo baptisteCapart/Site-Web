@@ -26,28 +26,27 @@
 </div>
 
 <div id="global">
-<ul id="parametres">
-	<li><input class = "bouton" type="submit" value="Paramètres" /></li>
-	<li><input class = "bouton" type="submit" value="Suivre"/></li>
-	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
-</ul>
+    <ul id="parametres">
+    	<li><input class = "bouton" type="submit" value="Paramètres" /></li>
+    	<li><input class = "bouton" type="submit" value="Suivre"/></li>
+    	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
+    </ul>
 </div>
 
 <div id="menuMembre">
+        <ul>
+            <li class = "<?php if($ongletMembre==1){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=1"> Artistes</a>'; ?>
+            </li>
 
-  <ul>
-      <li class = "<?php if($ongletMembre==1){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=1"> Artistes</a>'; ?>
-  	  </li>
+            <li class = "<?php if($ongletMembre==2){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=2"> Salles </a>'; ?>
+            </li>
 
-      <li class = "<?php if($ongletMembre==2){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=2"> Salles </a>'; ?>
-      </li>
+            <li class = "<?php if($ongletMembre==3){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=3"> Concerts</a>'; ?>
+            </li>
 
-      <li class = "<?php if($ongletMembre==3){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=3"> Concerts</a>'; ?>
-  	  </li>
-
-      <li class = "<?php if($ongletMembre==4){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=4"> Avis </a>'; ?>
-      </li>      
-  </ul>
+            <li class = "<?php if($ongletMembre==4){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=4"> Avis </a>'; ?>
+            </li>      
+        </ul>
 </div> 
 
 <div id="contenuMembre">
