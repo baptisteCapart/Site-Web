@@ -13,11 +13,19 @@ function topicname ($topic)
 	}
 }
 
+function membername ($membre_id)
+{
+	global $bdd;
+	$req = ("SELECT pseudo FROM membre WHERE membre_id=".$membre_id);
+	$rep = $bdd->query($req);
+	$but = $rep->fetch();
+	return $but['pseudo'];
+}
 
 function newtopic ($name, $description, $membre_id){
 	global $bdd;
 	$nb = 0;
-	$bdd->query("INSERT INTO topic (nom, description, nombre_message, $membre_id)
+	$bdd->query("INSERT INTO topic (nom, description, nombre_message, membre_id)
 		VALUES ('$name','$description', '$nb', '$membre_id')");
 }
 

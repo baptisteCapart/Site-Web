@@ -18,7 +18,7 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
     
     echo 'Vous etes bien loggé';
 
-    header ('location: index.php?page=homecontrolleur');
+    header ('location: index.php?'.$_GET['redirect']);
   } 
 
 
