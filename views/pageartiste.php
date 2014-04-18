@@ -1,10 +1,19 @@
 
-  <?php include("views/banniere.php"); ?>
-  <div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
+<?php include("views/banniere.php"); ?>
+<div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
     <div id="nomartiste">
         <?= $donnees["nom"] ?>
     </div>
-  </div>
+    <div id="menuArtiste">
+        <ul class = "page">
+          <li class = "<?php if($onglet==1){ echo "active";}?>"> <?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=1"> Présentation </a>'; ?></li>
+          <li class = "<?php if($onglet==2){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=2"> Concerts </a>'; ?></li>
+          <li class = "<?php if($onglet==3){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3"> Extraits </a>'; ?></li>
+          <li class = "<?php if($onglet==4){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4"> Avis </a>'; ?></li>
+          <li class = "<?php if($onglet==5){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=5"> Photos </a>'; ?></li>
+        </ul>
+    </div> 
+</div>
 
   <div id="global2">
     <ul id="parametres2">
@@ -13,16 +22,7 @@
     </ul>
   </div>
 
-<div id="menuArtiste">
 
-  <ul class = "page">
-    <li class = "<?php if($onglet==1){ echo "active";}?>"> <?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=1"> Présentation </a>'; ?></li>
-    <li class = "<?php if($onglet==2){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=2"> Concerts </a>'; ?></li>
-    <li class = "<?php if($onglet==3){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3"> Extraits </a>'; ?></li>
-    <li class = "<?php if($onglet==4){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4"> Avis </a>'; ?></li>
-    <li class = "<?php if($onglet==5){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=5"> Photos </a>'; ?></li>
-  </ul>
- </div> 
 
 <div id="contenuArtiste">
   <div id="textArtist">

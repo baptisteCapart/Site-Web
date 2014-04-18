@@ -4,9 +4,6 @@
 	//background-color: #97A8D0;
 	background-color: #1E1E1E;
 	//border: 7px solid #787BE9;
-/*	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;*/
 	color : black;
 	font-family: 'Quicksand' , sans-serif;
 }
@@ -14,18 +11,15 @@
 .listediscuss
 {
 	background-color: #97A8D0;
-/*	border: 7px solid #787BE9;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;*/
+/*	border: 7px solid #787BE9;*/
+
 	color : black;
 }
 
  .discussions
 {
-/*	border-bottom: 0.5px solid #868686;
-	padding-bottom: 2%;
-	margin-bottom: 2%;*/
+	border-bottom: 0.5px solid #868686;
+
 }
 
 #generaldiscuss h2

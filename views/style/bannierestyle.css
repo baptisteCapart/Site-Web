@@ -5,7 +5,7 @@ header
 	width: 100%;
 	min-width: 1000px;
 	margin : none;
-	border-bottom: 3px solid grey;
+	//border-bottom: 3px solid grey;
 }
 
 .logg
@@ -132,7 +132,7 @@ nav
 	display: inline-block;
 	font-weight: bold;
 	position : absolute;
-	top : 55px;
+	top : 50px;
 	width: 100%;
 	min-width: 1000px;
 }
@@ -173,6 +173,13 @@ nav
 	 margin:0;
 	 padding:15px;
 }
+
+#menu li li 
+{
+	padding: 0;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
 #menu li a 
 {
 	text-decoration:none;
@@ -195,9 +202,10 @@ nav
 {
 	 display:block;
 	 text-align: left;
-	 background-color: rgba(100,100,100,0.7);
-
+	 background-color: rgba(10,10,10,0.4);
+	 //border-bottom: solid 1px white;
 }
+
 
 #menu li ul li :hover
 {
@@ -247,17 +255,16 @@ ul.menu1 li
 	color : #DBDBDB;
 }
 
-#compte a:hover
-{
 
-	background-color: #DBDBDB;
-	color : black;
-}
 #menu li ul li a:hover
 {
 	background-color: transparent;
 }
-
+/*#compte a:hover
+{
+	background-color: #DBDBDB;
+	color : black;
+}
 #artistes a:hover
 {
 	background-color: #DBDBDB;
@@ -281,36 +288,35 @@ ul.menu1 li
 	background-color: #DBDBDB;
 	color : black;
 }
+*/
+
+#compte a:hover, #artistes a:hover, #salles a:hover, #concerts a:hover, #forum a:hover
+{
+	color: white;
+	font-weight: bold;
+	border-bottom: 1px solid white;
+	padding-bottom: 10px;
+}
 
 nav ul li ul li a:hover
 {
 	background-color: none;
 }
 
-
+/*
 #compte .menu1 li:hover
 {
 	background-color:#DBDBDB;
+}*/
+
+#compte .menu1 li:hover a, #artistes .menu2 li:hover a,#salles .menu3 li:hover a, #concerts .menu4 li:hover a
+{
+	color:white ;
+	text-decoration: none;
 }
 
-#compte .menu1 li:hover a
-{
-	color: black;
-}
-#artistes .menu2 li:hover a
-{
-	color: black;
-}
-#salles .menu3 li:hover a
-{
-	color: black;
-}
-#concerts .menu4 li:hover a
-{
-	color: black;
-}
 
-#artistes .menu2 li:hover
+/*#artistes .menu2 li:hover
 {
 	background-color: #DBDBDB;
 }
@@ -321,7 +327,7 @@ nav ul li ul li a:hover
 #concerts .menu4 li:hover
 {
 	background-color: #DBDBDB;
-}
+}*/
 
 
 

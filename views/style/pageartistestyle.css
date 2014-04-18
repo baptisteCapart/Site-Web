@@ -13,7 +13,7 @@ html, body
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 500px;
+	height: 550px;
 	width: 100%;
 
 }	
@@ -56,6 +56,11 @@ html, body
 	height: 47px;
 	padding-top: 10px;
 	border-bottom: 1px solid #D7D7D7;
+	position: absolute;
+	bottom: 0;
+	z-index: 5;
+	background-color: black;
+	opacity: 0.8;
 
 }
 

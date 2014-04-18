@@ -1,12 +1,13 @@
 <div id="panel">
-	<div id="charte">
-		<a href="#">Charte</a>
-	</div>
+
 	<div id = "intro">
 		<h1>Bienvenue sur le forum de Tune in Town </h1> </br>
 		<p>Vous trouverez ici différentes rubriques pour exprimer vos opinions, </br> 
 			débattre sur les différents artistes et accéder au F.A.Q. </br>
 			Exprimez vos opinions ...</p>
+		<div id="charte">
+			<a href="#">Charte du forum</a>
+		</div>		
 	</div>
 
 
@@ -16,7 +17,7 @@
 					<ul>		
 						<li><a href="index.php?page=liste_topiccontrolleur"><h2>Général</h2></a></li>
 						<p>Dans ce forum parlez de tout et de <br/>
-							rien bref de ce que vous voulez.
+							rien bref de ce que vous voulez.</p>
 						
 						<li><a href="#"><h2>Styles de musique</h2></a></li>
 						<p>Ici vous pouvez discuter avec les autres <br/>

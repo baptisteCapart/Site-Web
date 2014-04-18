@@ -1,21 +1,12 @@
-#charte
-{
-	  text-align: right;
-}
-
 #panel
 {
-  	position: relative;
-	margin-left: auto;
-	margin-right: auto;
 	width: 100%;
-	text-align: left;
 	//background-color: #15033A;
 	//background-color: #1F1F1F;
 	background-color: #121212;
 	font-family: 'Quicksand' , sans-serif;
-
 }
+
 #intro
 {
 	//background-color: #97A8D0;
@@ -28,7 +19,27 @@
 	text-align: center;
 }
 
+#charte a 
+{
+	color : white;
+	padding: 10px;
+	border-radius: 20px;
+	border: solid white 1px;
+}
+#charte
+{
+	margin-bottom: 20px;
+	float: right;
+	margin-top: 20px;
+}
 
+#charte a:hover
+{
+	color : white;
+	padding: 10px;
+	border-radius: 20px;
+	border: solid #54E14D 1px;
+}
 
 #sujet h1
 {
@@ -39,7 +50,7 @@
 
 #sujet h2{
 	border-bottom: 3px solid #53DD17;
-	width: 15%;
+	width: 30%;
 	padding-bottom: 15px;
 }
 
@@ -49,7 +60,7 @@
 }
 #sujet p {
 	color : #6F6F6F;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 #sujet
@@ -62,7 +73,6 @@
 }
 .soussujet
 {
-
 	color : black;
 }
 
