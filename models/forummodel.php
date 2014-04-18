@@ -22,22 +22,29 @@ function membername ($membre_id)
 	return $but['pseudo'];
 }
 
-function newtopic ($name, $description, $membre_id){
+function newtopic ($name, $description, $membre_id)
+{
 	global $bdd;
 	$nb = 0;
 	$bdd->query("INSERT INTO topic (nom, description, nombre_message, membre_id)
 		VALUES ('$name','$description', '$nb', '$membre_id')");
 }
 
-function newpost ($pseudo, $message, $id_topic)
+function newpost ($membre_id, $message, $topic_id)
 {
 	global $bdd;
-	$membre_id = $bdd->query('SELECT membre_id FROM membre WHERE pseudo = "$pseudo"');
-	$bdd->query("INSERT INTO post VALUES($message, NOW(), id_topic, $membre_id)");
+	$bdd->query("INSERT INTO post (contenu, topic_id, membre_id) VALUES ('$message', '$topic_id', '$membre_id')");
 }
 
-function listeTopic(){
+function listePost ($topic_id)
+{
+	global $bdd;
+	$req = $bdd->query('SELECT * FROM post WHERE topic_id='.$topic_id.' ORDER BY id_post DESC') or die (print_r($bdd->errorInfo()));
+	return $req;
+}
 
+function listeTopic ()
+{
 	global $bdd;
  	$req = $bdd-> query('SELECT * FROM topic ORDER BY nom') or die(print_r($bdd->errorInfo()));
 	return $req;

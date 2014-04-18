@@ -13,8 +13,10 @@ else
 
 if(isset($_POST['message']))
 {
-	$newpost = newpost($_POST['pseudo'], $_POST['message'], $_GET['topic']);
+	$newpost = newpost($_SESSION['id'], $_POST['message'], $_GET['topic']);
 }
+
+$listepost = listePost ($_GET['topic']);
 
 include('controlleurs/bannierecontrolleur.php');
 include('views/discussview.php');
