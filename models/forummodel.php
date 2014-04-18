@@ -14,10 +14,11 @@ function topicname ($topic)
 }
 
 
-function newtopic ($name, $description){
+function newtopic ($name, $description, $membre_id){
 	global $bdd;
-	$bdd->query("INSERT INTO topic (nom, description)
-		VALUES ('$name','$description')");
+	$nb = 0;
+	$bdd->query("INSERT INTO topic (nom, description, nombre_message, $membre_id)
+		VALUES ('$name','$description', '$nb', '$membre_id')");
 }
 
 function newpost ($pseudo, $message, $id_topic)

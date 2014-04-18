@@ -78,8 +78,8 @@
 				</li>	
 				<li id = "artistes"><a href="index.php?page=listeartistecontrolleur">Artistes</a>
 					<ul class = "menu2">
-						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
-						<li id = "style"><a href="#">Par style</a></li>
+						<li id = "alpha"><a href="index.php?page=listeartistecontrolleur&critere=1">Par ordre alphabétique</a> </li>
+						<li id = "style"><a href="index.php?page=listeartistecontrolleur&critere=2">Par style</a></li>
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
 						<li id = "créer"><a href="index.php?page=formulairegroupecontrolleur">Créer un profil artiste</a></li>
 						<?php } ?>

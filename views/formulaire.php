@@ -5,7 +5,7 @@
 Tous les champs sont obligatoires
 </div>
 <div id="formulaire">
-	<form class ="form2" method="post" action="index.php?page=formulairecontrolleur">
+	<form class ="form2" method="post" action="index.php&page=homecontrolleur">
 		<ul>
 			<li>
 				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value=""/> </div>
@@ -23,7 +23,7 @@ Tous les champs sont obligatoires
 			</li>
 
 			<li>
-				<div class="age"><span> Date de naissance: </span><select class = "textbox" type="date" name="age" value=""/></div>
+				<div class="age"><span> Date de naissance: </span><input class = "textbox" type="date" name="age" value=""/></div>
 
 			</li>			
 

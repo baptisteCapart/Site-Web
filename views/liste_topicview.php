@@ -6,16 +6,16 @@
 		<tr>
 	       <th>Nom</th>
 	       <th>Description</th>
-	       <th>nombre de messages</th>
-	       <th>Crée par</th>
+	       <th>Nombre de messages</th>
+	       <th>Créé par</th>
    		</tr>
 
 <?php  while($topic = $topicList->fetch()) { ?>
 	   	<tr>
 	       <td> <?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a>';?></td>
 	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["description"].'<br/>'.' </a>';?></td>
-	       <td>3</td>
-	       <td>Xavier</td>
+	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nombre_message"].'<br/>'.' </a>';?></td>
+	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["membre_id"].'<br/>'.' </a>';?></td>
 	   </tr>
 	   <?php }  ?>
 

@@ -1,5 +1,4 @@
 
-		<?php include("controlleurs/bannierecontrolleur.php"); ?>
 		<div id="blochome">
 		<div id="news">			
 				<div id="liste_news">
@@ -124,6 +123,3 @@
 		}
 		?>
 		</div>
-
-		<?php include("views/footer.php"); ?>
-		
