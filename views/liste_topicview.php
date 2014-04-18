@@ -10,12 +10,13 @@
 	       <th>Créé par</th>
    		</tr>
 
-<?php  while($topic = $topicList->fetch()) { ?>
+<?php while($topic = $topicList->fetch()) {
+	   	$createur_pseudo = membername($topic["membre_id"]); ?>
 	   	<tr>
 	       <td> <?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a>';?></td>
 	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["description"].'<br/>'.' </a>';?></td>
 	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nombre_message"].'<br/>'.' </a>';?></td>
-	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["membre_id"].'<br/>'.' </a>';?></td>
+	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $createur_pseudo.'<br/>'.' </a>';?></td>
 	   </tr>
 	   <?php }  ?>
 

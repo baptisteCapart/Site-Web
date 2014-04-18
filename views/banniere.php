@@ -37,9 +37,10 @@
 
 		<?php 
 		if(!isset($_SESSION['pseudo'])){
+			$redirect = $_SERVER["QUERY_STRING"];
 			?>
 			<div class="container">
-				<form class="form" method="post" action="index.php?page=bannierecontrolleur">
+				<form class="form" method="post" action="index.php?page=bannierecontrolleur&redirect=<?php echo "$redirect"; ?>">
 					<span class="login">Pseudo : </span>
 					<input class ="boite" type="text" name="login" value=""/>
 					<span class="login">Password : </span>
