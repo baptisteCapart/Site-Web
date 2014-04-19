@@ -12,13 +12,15 @@
 
 <?php while($topic = $topicList->fetch()) {
 	   	$createur_pseudo = membername($topic["membre_id"]); ?>
-	   	<tr>
-	       <td> <?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a>';?></td>
-	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["description"].'<br/>'.' </a>';?></td>
-	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nombre_message"].'<br/>'.' </a>';?></td>
-	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $createur_pseudo.'<br/>'.' </a>';?></td>
-	   </tr>
-	   <?php }  ?>
+	   	<?php echo('<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">');?>
+	   		<tr>
+	    	   <td><?php echo ($topic['nom']);?></td>
+	    	   <td><?php echo ($topic['description']);?></td>
+	    	   <td><?php echo ($topic['nombre_message']);?></td>
+	    	   <td><?php echo ($createur_pseudo);?></td>
+	   		</tr>
+		</a>
+	   <?php } ?>
 
 	</table>
 
