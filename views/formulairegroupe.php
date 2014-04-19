@@ -20,6 +20,7 @@
 				<li>
 					<div class="photogroupe"><span>Photo du groupe : </span><input class = "textbox" type="file" name="photogroupe" /></div>
 				</li>
+								
 
 				<li>
 					<input class = "envoyer" type="submit" value="Envoyer !"/>

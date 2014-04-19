@@ -35,7 +35,27 @@
     <?php } ?>
 
     <?php  if($onglet==3){ ?> 
-      <div class = "extraits"> extraits</div>
+      <div class = "extraits">
+
+        <?php foreach ($musiques as $music){ ?>
+          <audio  src="<?php echo $music['nom']; ?>"controls></audio>
+        <?php 
+        }
+        ?>
+        <form class ="formulaireExtraits" method="post" action="index.php?page=pageartistecontrolleur">
+            <ul>
+                <li>
+                    <div class="extrait"><span>Extrait de musique n°1 : </span><input class = "textbox" type="file" name="extrait1" /></div>
+                </li> 
+                <li>
+                    <div class="extrait"><span>Extrait de musique n°2 : </span><input class = "textbox" type="file" name="extrait2" /></div>
+                </li>
+                <li>
+                    <input class = "envoyer" type="submit" value="Envoyer !"/>
+                </li>              
+            </ul>
+        </form>        
+      </div>
     <?php } ?> 
 
     <?php  if($onglet==4){ ?> 
