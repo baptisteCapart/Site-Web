@@ -6,7 +6,6 @@ html, body
 	margin: 0;
 	padding: 0;
 	background: black;
-
 }
 
 
@@ -15,7 +14,7 @@ html, body
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
-	height: 530px;
+	height: 540px;
 	width: 100%;
 	opacity : 0.5;
 }
@@ -69,7 +68,7 @@ html, body
 #global
 {
 	position: absolute;
-	top : 550px;	
+	top : 510px;	
 	width: 100%;
 }
 

@@ -348,8 +348,7 @@ nav ul li ul li a:hover
 footer
 {
 	background-image: url(../controlleurs/images/darkmetal.jpg);
-	height: 100px;
-	min-height: 50px;
+	height: 0px;
 	width: 100%;
 	text-align: center;
 

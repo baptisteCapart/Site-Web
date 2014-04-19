@@ -1,8 +1,23 @@
+
 .nouveau_topic
 {
-		background-color: #97A8D0;
-	border: 7px solid #787BE9;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-	color : black;}
+
+	padding-top: 70px;
+	width: 100%;
+	float: left;
+	background-color: #3C3C3C;
+	color: #B7B7B7;
+	padding-left: 70px;
+}
+
+.invite
+{
+	font-size: 1.5em;
+}
+
+.nouveau_topic input,textarea
+{
+	box-shadow: 0 0 9px #111 inset ;
+	border-radius: 5px;
+	border: solid 1px #999;
+}

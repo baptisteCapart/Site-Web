@@ -1,18 +1,30 @@
+#blocpage
+{
+	font-family: 'Quicksand' , sans-serif;
+}
+
 #listeartiste
 {
 	font-size: 2em;
-	background-color: #F3F920;
+	//background-color: #F3F920;
+	background-color: #191919;
 	width : 100%;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	background-image: url(../../controlleurs/images/listeart.jpg) ;	
 }
+
+
 
 .titreartistes
 {
 	padding : 30px;
 	font-size: 2em;
 	margin-top: 50px;
+	color : #DDDDDD;
 }
 
 #listeartiste ul 
@@ -20,53 +32,64 @@
 	padding-top: 30px;
 	list-style: none;
 	margin-top: 0;
+	font-size: 0.7em;
 }
 
 
-#listeartiste li 
+#listeartiste li a
 {
 	display: inline;
-	padding-left: 0.5%;
-	padding-right: 0.5%;
+	margin-right: 2%;
 	float: left;
+	padding: 10px;
+	border-radius: 30px;
+	border: solid #919191 1px;
+	color: #919191;
 }
 
-.critereactif
-{
-	background-color: black;
-}
 
 #listeartiste ul li.critereactif a
 {
-	color: white;
+	padding: 10px;
+	border-radius: 30px;
+	border: solid white 1px;
+	color : white;	
 }
 
-
-#listeartiste a 
+#listeartiste ul li a:hover
 {
-	color : black;
+	color: white;	
+	padding: 10px;
+	border-radius: 30px;
+	border: solid #57F23C 1px;
 }
+
 
 #contenuliste
 {
-	background-color: #494949;
-	color : white;
+	background-color: #464646;
+	//color : #252525;
 	overflow: hidden;
 	width: 100%;
 
 }
 
+
 #contenuliste div
 {
-		padding: 20px;	
+	padding: 20px;	
 }
-#contenuliste a 
+#contenuliste ul li a 
+{
+	color : #CECECE;
+}
+
+#contenuliste ul li a:hover
 {
 	color : white;
-
 }
 
 #contenuliste ul
 {
-	list-style: square;
+	padding: 20px;
 }
