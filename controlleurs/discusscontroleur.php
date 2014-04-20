@@ -11,10 +11,16 @@ else
 }
 
 
-if(isset($_POST['message']))
-{
-	$newpost = newpost($_SESSION['id'], $_POST['message'], $_GET['topic']);
+
+if(isset($_POST['message'])){
+	
+		if($_SESSION['pseudo'] != ""){
+			$newpost = newpost($_SESSION['id'], $_POST['message'], $_GET['topic']);
+		}else{
+	   		header ('location: index.php?page=formulairecontrolleur');
+		}
 }
+
 
 $listepost = listePost ($_GET['topic']);
 
