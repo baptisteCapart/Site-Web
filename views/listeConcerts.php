@@ -19,11 +19,11 @@
 
   <div id="contenuliste">
        <?php  if($critereConcert==1){ ?> 
-        <div> Liste des salles classées par date </div>
+        <div> Liste des concerts classées par date </div>
       <?php } ?>
 
        <?php  if($critereConcert==2){ ?> 
-        <div> Liste des salles classées par lieu</div>
+        <div> Liste des concerts classées par lieu</div>
       <?php } ?>
       	
   </div> 
