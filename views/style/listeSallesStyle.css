@@ -1,4 +1,4 @@
-#listeSalle
+/*#listeSalle
 {
 	font-size: 2em;
 	background-color: #F3F920;
@@ -67,4 +67,103 @@
 {
 	list-style: square;
 }
-*/
+*/*/
+
+#blocpage
+{
+	font-family: 'Quicksand' , sans-serif;
+}
+
+#listeSalle
+{
+	font-size: 2em;
+	//background-color: #F3F920;
+	background-color: #191919;
+	width : 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	padding-top: 30px;
+	padding-bottom: 10px;
+	background-image: url(../../controlleurs/images/listeSalles2.jpg) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;	
+}
+
+
+
+.titresalles
+{
+	padding : 30px;
+	font-size: 2em;
+	margin-top: 50px;
+	color : #DDDDDD;
+}
+
+#listeSalle ul 
+{
+	padding-top: 30px;
+	list-style: none;
+	margin-top: 0;
+	font-size: 0.7em;
+}
+
+
+#listeSalle li a
+{
+	display: inline;
+	margin-right: 2%;
+	float: left;
+	padding: 10px;
+	border-radius: 30px;
+	border: solid #919191 1px;
+	color: #919191;
+}
+
+
+#listeSalle ul li.critereSalleactif a
+{
+	padding: 10px;
+	border-radius: 30px;
+	border: solid white 1px;
+	color : white;	
+}
+
+#listeSalle ul li a:hover
+{
+	color: white;	
+	padding: 10px;
+	border-radius: 30px;
+	border: solid #57F23C 1px;
+}
+
+
+#contenuliste
+{
+	background-color: #464646;
+	//color : #252525;
+	overflow: hidden;
+	width: 100%;
+
+}
+
+
+#contenuliste div
+{
+	padding: 20px;	
+}
+#contenuliste ul li a 
+{
+	color : #CECECE;
+}
+
+#contenuliste ul li a:hover
+{
+	color : white;
+}
+
+#contenuliste ul
+{
+	padding: 20px;
+}
