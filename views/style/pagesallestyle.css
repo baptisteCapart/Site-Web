@@ -1,4 +1,4 @@
-html, body
+/*html, body
 {
 	width: 100%;
 	height: 100%;
@@ -125,3 +125,200 @@ html, body
 
 }
 
+*/
+
+html, body
+{
+	width: 100%;
+	height: 100%;
+	font-family: calibri;
+	margin: 0;
+	padding: 0;
+}
+
+#photosalle
+{
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 550px;
+	width: 100%;
+
+}	
+
+#nomsalle
+{
+	//position: absolute;
+	bottom : 0; 
+	height :50px;
+	font-size: 4em;
+	color : #BEBEBE;
+    //background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 50%);
+	//width: 100%;
+	vertical-align: middle;
+	//display: inline-block;
+/*	padding-bottom: 15px;
+*/	float: right;
+	position: relative;
+	top : 350px;
+	margin-right: 20px;
+	font-family: 'Quicksand' , sans-serif;
+
+}
+
+#menuSalle
+{
+	font-size: 1.6em;
+/*	bleu
+	background: -webkit-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(48,150,229,1) 50%,rgba(125,185,232,1) 100%);
+	jaune*/
+	//background: -webkit-linear-gradient(top, rgba(242,244,124,1) 0%,rgba(243,247,0,1) 50%,rgba(245,247,116,1) 100%);
+/*	rouge
+	background: -webkit-linear-gradient(top, rgba(142,0,2,1) 0%,rgba(255,0,0,1) 50%,rgba(145,0,7,1) 100%,rgba(26,33,25,1) 100%);
+*/	width : 100%;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	//color: #C7C7C7;
+	font-family: 'Quicksand' , sans-serif;
+	height: 47px;
+	padding-top: 10px;
+	border-bottom: 1px solid #D7D7D7;
+	position: absolute;
+	bottom: 0;
+	z-index: 5;
+	background-color: black;
+	opacity: 0.8;
+
+}
+
+#menuSalle ul 
+{
+	list-style: none;
+	margin-top: 0;
+}
+
+
+#menuSalle li 
+{
+	display: inline;
+	padding-right: 50px;
+	//border-right: 1px solid #616161;
+}
+
+
+#menuSalle a 
+{
+	color : #C7C7C7;
+}
+
+#menuSalle ul li:hover
+{
+/*	bleu
+	background: -webkit-linear-gradient(top, rgba(61,156,229,1) 0%,rgba(2,129,226,1) 50%,rgba(61,156,229,1) 100%);
+	jaune*/
+	//background: -webkit-linear-gradient(top, rgba(242,244,124,1) 0%,rgba(211,201,0,1) 50%,rgba(245,247,116,1) 100%);
+/*	rouge
+	background: -webkit-linear-gradient(top, rgba(142,0,2,1) 0%,rgba(196,0,0,1) 50%,rgba(145,0,7,1) 100%,rgba(26,33,25,1) 100%);*/
+}
+
+.activeSalle
+{
+/*	bleu
+	background: -webkit-linear-gradient(top, rgba(28,37,89,1) 0%,rgba(0,3,33,1) 50%,rgba(28,37,89,1) 100%);
+	jaune
+	background: -webkit-linear-gradient(top, rgba(71,70,67,1) 0%,rgba(0,0,0,1) 50%,rgba(71,70,67,1) 100%,rgba(26,33,25,1) 100%);
+	rouge*/
+	//background: -webkit-linear-gradient(top, rgba(71,70,67,1) 0%,rgba(0,0,0,1) 50%,rgba(71,70,67,1) 100%,rgba(26,33,25,1) 100%);
+	color : white;
+
+}
+#menuSalle ul li.activeSalle a 
+{
+	color: white;
+	font-weight: bold;
+	border-bottom: 3px solid #53DD17;
+	width: 15%;
+	padding-bottom: 15px;
+}
+
+
+#contenuSalle
+{
+	background-color: #494949;
+	color : white;
+	overflow: hidden;
+	width: 100%;
+}
+#textSalle
+{
+	margin-left: 20%;
+	margin-right: 20%;
+}
+#contenuSalle div
+{
+	padding: 20px;	
+
+}
+.bouton3
+{
+	box-shadow: 0 0 9px #333 inset ;
+	border-radius: 4px;
+	border: solid 1px #555;
+	font-size: 1.3em;
+}
+
+#global3
+{
+	position: absolute;
+	top : 530px;	
+	width: 100%;
+	right: 3%;
+
+}
+
+#parametres3
+{
+	float: right;
+}
+
+#parametres3 li 
+{
+	display: inline-block;
+}
+
+
+
+a[href*="intent"] {
+	display:inline-block;
+	margin-top: 0.4em;
+}
+
+.rating {
+	margin: 0 auto 1em;
+	font-size: 45px;
+	overflow:hidden;
+	text-align: center;
+}
+.rating a {
+	color: #aaa;
+	text-decoration: none;
+	-webkit-transition: color .4s;
+	-moz-transition: color .4s;
+	-o-transition: color .4s;
+	transition: color .4s;
+}
+.rating a:hover,
+.rating a:hover ~ a,
+.rating a:focus,
+.rating a:focus ~ a		{
+	color: orange;
+	cursor: pointer;
+}
+.rating2 {
+	direction: rtl;
+}
+.rating2 a {
+	float:none
+}

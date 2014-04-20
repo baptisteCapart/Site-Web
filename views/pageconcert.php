@@ -1,11 +1,19 @@
 	<?php include("views/banniere.php"); ?>
 		<div id = "photoconcert">
 			<div id="nomconcert">
-				Concert
-			</div>
+		        CONCERT
+		    </div>
+
+		    <div id="menuConcert">
+				  <ul class = "page">
+				    <li class = "<?php if($ongletConcert==1){ echo "activeConcert";}?>"><?php echo'<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=1"> Présentation </a>'; ?></li>
+				    <li class = "<?php if($ongletConcert==2){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=2"> Photos </a>'; ?></li>
+				    <li class = "<?php if($ongletConcert==4){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=4"> Avis </a>'; ?></li>
+				  </ul>
+ 			</div> 
 
 			<span class = "listegroupe" >
-				<div><img  class = "hoverimg2" src="controlleurs/images/groupesalle.jpg" alt="participants">
+				<div><img  class = "hoverimg2" src="controlleurs/images/groupeconcert.jpg" alt="participants">
 					<div>
 						<ul id="liste2"> <span class="groupespart">Ils s'y produisent : </span>
 							<li>a</li>
@@ -64,21 +72,44 @@
 			</span>
 		</div>
 
-<div id="global4">
-	<ul id="parametres4">
-		<li><input class = "bouton4" type="submit" value="Paramètres" /></li>
-		<li><input class = "bouton4" type="submit" value="Participer"/></li>
-	</ul>
-</div>
-<div id="menudyna4">
-			<ul>
-				<li  style = "background-color : black"> <a style = "color : white" href="../controlleurs/pageConcertcontrolleur.php">Présentation</a> </br>
-				</li>
-				<li > <a  href="../controlleurs/pageConcertcontrolleur2.php">Photos</a> </br>
-				<li> <a href="../controlleurs/pageConcertcontrolleur3.php">Avis</a> </br>
-			</ul> 	
 
+<div id="global3">
+<ul id="parametres3">
+	<li><input class = "bouton3" type="submit" value="Paramètres" /></li>
+	<li><input class = "bouton3" type="submit" value="Suivre"/></li>
+</ul>
 </div>
-<div class="contenuconcert"> aaaaaaaaaaaaaaaaaaaaaaaaaaaa</div>
+
+
+
+<div id="contenuConcert">
+  <div id="textConcert">
+    <?php  if($ongletConcert==1){ ?> 
+      	<div class = "descrption"> 
+	      	<ul>
+		      	<li>adresse</li>
+		      	<li>ville</li>
+		      	<li>code postal</li>
+	      	</ul>	
+  		</div>
+    <?php } ?> 
+
+    <?php  if($ongletConcert==2){ ?> 
+      <div class = "photos"> concerts</div>
+    <?php } ?>
+
+
+    <?php  if($ongletConcert==4){ ?> 
+      <div class="rating rating2">
+        <a href="#5" title="Give 5 stars">★</a>
+        <a href="#4" title="Give 4 stars">★</a>
+        <a href="#3" title="Give 3 stars">★</a>
+        <a href="#2" title="Give 2 stars">★</a>
+        <a href="#1" title="Give 1 star">★</a>
+      </div>
+    <?php } ?>   
+
+  </div>
+</div>
 		
 	<?php include("footer.php"); ?>

@@ -1,74 +1,3 @@
-/*#listeSalle
-{
-	font-size: 2em;
-	background-color: #F3F920;
-	width : 100%;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-}
-
-.titresalles
-{
-	padding : 30px;
-	font-size: 2em;
-	margin-top: 50px;
-}
-
-#listeSalle ul li 
-{
-	display: inline-block;
-}
-
-#listeSalle ul 
-{
-	list-style: none;
-	margin-top: 0;
-}
-
-
-
-.critereSalleactif
-{
-	background-color: black;
-}
-
-#listeSalle ul li.critereSalleactif a
-{
-	color: white;
-}
-
-
-#listeSalle a 
-{
-	color : black;
-}
-
-/*#contenuliste
-{
-	background-color: #494949;
-	color : white;
-	overflow: hidden;
-	width: 100%;
-
-}
-
-#contenuliste div
-{
-		padding: 20px;	
-}
-#contenuliste a 
-{
-	color : white;
-
-}
-
-#contenuliste ul
-{
-	list-style: square;
-}
-*/*/
-
 #blocpage
 {
 	font-family: 'Quicksand' , sans-serif;
@@ -85,7 +14,7 @@
 	padding: 0;
 	padding-top: 30px;
 	padding-bottom: 10px;
-	background-image: url(../../controlleurs/images/listeSalles2.jpg) ;
+	background-image: url(../../controlleurs/images/listeSalles.jpg) ;
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;	
@@ -117,8 +46,10 @@
 	float: left;
 	padding: 10px;
 	border-radius: 30px;
-	border: solid #919191 1px;
-	color: #919191;
+	/*border: solid #919191 1px;
+	color: #919191;*/
+	border: solid #C4C4C4 1px;
+	color: #C4C4C4;
 }
 
 

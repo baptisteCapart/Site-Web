@@ -5,6 +5,15 @@
     <div id="nomsalle">
         <?= $donnees["nom"] ?>
     </div>
+    <div id="menuSalle">
+
+  <ul class = "page">
+    <li class = "<?php if($ongletSalle==1){ echo "activeSalle";}?>"><?php echo'<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=1"> Présentation </a>'; ?></li>
+    <li class = "<?php if($ongletSalle==2){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=2"> Concerts </a>'; ?></li>
+    <li class = "<?php if($ongletSalle==4){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4"> Avis </a>'; ?></li>
+    <li class = "<?php if($ongletSalle==5){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=5"> Photos </a>'; ?></li>
+  </ul>
+ </div> 
 </div>
 
 <div id="global3">
@@ -14,18 +23,10 @@
 </ul>
 </div>
 
-<div id="menuSalle">
 
-  <ul class = "page">
-    <li class = "<?php if($ongletSalle==1){ echo "activeSalle";}?>"><?php echo'<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=1"> Présentation </a>'; ?></li>
-    <li class = "<?php if($ongletSalle==2){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=2"> Concerts </a>'; ?></li>
-    <li class = "<?php if($ongletSalle==3){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=3"> Extraits </a>'; ?></li>
-    <li class = "<?php if($ongletSalle==4){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4"> Avis </a>'; ?></li>
-    <li class = "<?php if($ongletSalle==5){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=5"> Photos </a>'; ?></li>
-  </ul>
- </div> 
 
 <div id="contenuSalle">
+  <div id="textSalle">
     <?php  if($ongletSalle==1){ ?> 
       	<div class = "descrption"> 
 	      	<ul>
@@ -40,9 +41,6 @@
       <div class = "concerts"> concerts</div>
     <?php } ?>
 
-    <?php  if($ongletSalle==3){ ?> 
-      <div class = "extraits"> extraits</div>
-    <?php } ?> 
 
     <?php  if($ongletSalle==4){ ?> 
       <div class="rating rating2">
@@ -57,7 +55,7 @@
     <?php  if($ongletSalle==5){ ?> 
       <div class = "photos"> photos</div>
     <?php } ?> 
-
+  </div>
 </div>
 
 
