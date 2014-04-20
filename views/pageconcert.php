@@ -1,8 +1,8 @@
 	<?php include("views/banniere.php"); ?>
 		<div id = "photoconcert">
-			<div id="nomconcert">
+			<!-- <div id="nomconcert">
 		        CONCERT
-		    </div>
+		    </div> -->
 
 		    <div id="menuConcert">
 				  <ul class = "page">
@@ -13,7 +13,7 @@
  			</div> 
 
 			<span class = "listegroupe" >
-				<div><img  class = "hoverimg2" src="controlleurs/images/groupeconcert.jpg" alt="participants">
+				<div><img  class = "hoverimg2" src="controlleurs/images/groupesalle.jpg" alt="participants">
 					<div>
 						<ul id="liste2"> <span class="groupespart">Ils s'y produisent : </span>
 							<li>a</li>

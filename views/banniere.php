@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="views/style/discuss_style.css">
 	<link rel="stylesheet" href="views/style/wrong_topicstyle.css">
 	<link rel="stylesheet" href="views/style/new_topicstyle.css">
-	
+	<link rel="stylesheet" href="views/style/listeConcertsstyle.css">	
 
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 
@@ -95,9 +95,9 @@
 						<?php } ?>
 					</ul>
 				</li>	
-				<li id = "concerts"><a href="index.php?page=pageconcertcontrolleur">Concerts</a>
+				<li id = "concerts"><a href="index.php?page=listeConcertscontrolleur">Concerts</a>
 					<ul class = "menu4">
-						<li id = "date"><a href="#">Par date</a> </li>
+						<li id = "date"><a href="index.php?page=pageconcertcontrolleur">Par date</a> </li>
 						<li id = "lieu"><a href="#">Par lieu</a></li>
 					</ul>
 				</li>	

@@ -3,7 +3,7 @@
 	font-family: 'Quicksand' , sans-serif;
 }
 
-#listeartiste
+#listeConcert
 {
 	font-size: 2em;
 	//background-color: #F3F920;
@@ -14,12 +14,15 @@
 	padding: 0;
 	padding-top: 30px;
 	padding-bottom: 10px;
-	background-image: url(../../controlleurs/images/listeart.jpg) ;	
+	background-image: url(../../controlleurs/images/listeconcert.jpg) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;	
 }
 
 
 
-.titreartistes
+.titreconcerts
 {
 	padding : 30px;
 	font-size: 2em;
@@ -27,7 +30,7 @@
 	color : #DDDDDD;
 }
 
-#listeartiste ul 
+#listeConcert ul 
 {
 	padding-top: 30px;
 	list-style: none;
@@ -36,19 +39,21 @@
 }
 
 
-#listeartiste li a
+#listeConcert li a
 {
 	display: inline;
 	margin-right: 2%;
 	float: left;
 	padding: 10px;
 	border-radius: 30px;
-	border: solid #919191 1px;
-	color: #919191;
+	/*border: solid #919191 1px;
+	color: #919191;*/
+	border: solid #C4C4C4 1px;
+	color: #C4C4C4;
 }
 
 
-#listeartiste ul li.critereactif a
+#listeConcert ul li.critereConcertactif a
 {
 	padding: 10px;
 	border-radius: 30px;
@@ -56,7 +61,7 @@
 	color : white;	
 }
 
-#listeartiste ul li a:hover
+#listeConcert ul li a:hover
 {
 	color: white;	
 	padding: 10px;
@@ -64,11 +69,11 @@
 	border: solid #57F23C 1px;
 }
 
-
+/*
 #contenuliste
 {
 	background-color: #464646;
-	color : #CECECE;
+	color : #252525;
 	overflow: hidden;
 	width: 100%;
 
@@ -92,4 +97,4 @@
 #contenuliste ul
 {
 	padding: 20px;
-}
+}*/
