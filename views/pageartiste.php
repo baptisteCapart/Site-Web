@@ -36,13 +36,14 @@
 
     <?php  if($onglet==3){ ?> 
       <div class = "extraits">
-
-        <?php foreach ($musiques as $music){ ?>
-          <audio  src="<?php echo $music['nom']; ?>"controls></audio>
-        <?php 
-        }
-        ?>
-        <form class ="formulaireExtraits" method="post" action="index.php?page=pageartistecontrolleur">
+          <ul>
+          <?php foreach ($musiques as $music){  ?>
+           <li>  <?php echo $music['nom']; ?> <br><audio  src="<?php echo $music['nom']; ?>"controls></audio></li>
+          <?php 
+          }
+          ?>
+          </ul>
+        <form class ="formulaireExtraits" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
             <ul>
                 <li>
                     <div class="extrait"><span>Extrait de musique n°1 : </span><input class = "textbox" type="file" name="extrait1" /></div>

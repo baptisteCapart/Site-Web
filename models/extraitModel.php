@@ -9,7 +9,6 @@ function insertExtrait($artisteID, $nom){
 function listeMusiques(){
 if (isset($_GET['id'])) {
 	global $bdd;
-
  	$req = $bdd-> query('SELECT nom FROM extrait where artiste_id ='.$_GET["id"].'') or die(print_r($bdd->errorInfo()));
 	return $req;
 }

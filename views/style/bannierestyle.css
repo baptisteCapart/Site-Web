@@ -88,7 +88,7 @@ header
 
 .pseudo a:hover
 {
-	text-decoration: underline;
+	color: white;
 }
 
 .boite
