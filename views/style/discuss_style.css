@@ -2,3 +2,35 @@
 {
 	background-color: white;
 }
+
+.ajout
+{
+	margin: 0px;
+	padding: 50px;
+	padding-top: 30px;
+}
+
+#message
+{
+}
+
+.fil
+{
+	padding-left: 7%;
+	padding-bottom: 20px;
+}
+
+.post
+{
+	padding-bottom: 7px;
+}
+
+.auteur
+{
+	font-weight: bold;
+}
+
+.contenu
+{
+	padding-left: 2%;
+}

@@ -1,12 +1,12 @@
 <div class="discuss">    
     <h1> <?php $topic_name['nom'] ?> </h1>
 
-    <form method="post" action="#">
-        <p class="v1">
-        	<label for="message">Message : </label><input type="text" name="message" id="message" /><br />
+    <div class="ajout">
+    	<form method="post" action="#">
+        	<label for="message">Ton utile contribution :</label><br><textarea name="message" id="message" cols="50" rows="3"></textarea>
 			<input type="submit" value="Envoyer" />
-		</p>
-    </form>
+    	</form>
+	</div>
 
     <div class="fil">
     	<?php while ($post = $listepost->fetch()) { ?>
@@ -14,10 +14,10 @@
 				<span class="auteur">
 					<?php 
 					$name = membername($post['membre_id']);
-					echo($name.'<br>');
+					echo($name.' :<br>');
 					 ?>
 				</span>
-				<span class="message">
+				<span class="contenu">
 					<?php 
 					echo($post['contenu']);
 					 ?>
