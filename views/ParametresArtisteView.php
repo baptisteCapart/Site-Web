@@ -14,7 +14,7 @@
 					<div class="style"><span>Style de musique : </span><input class = "textbox" type="text" name="style" value=""/></div>			
 				</li>
 				<li>
-					<div class="description"><span>Description : <TEXTAREA name="description" rows=10 COLS=40 value = "<?=$donnees['description'] ?>"></TEXTAREA></div>			
+					<div class="description"><span>Description : <TEXTAREA name="description" rows=10 COLS=40 ><?=$donnees['description'] ?></TEXTAREA></div>			
 				</li>				
 				<li>
 					<div class="photogroupe"><span>Photo du groupe : </span><input class = "textbox" type="file" name="photogroupe" /></div>
