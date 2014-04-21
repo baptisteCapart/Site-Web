@@ -27,6 +27,40 @@ if(isset($_GET['ongletMembre'])){
 }	
 
 
+if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
+{
+	
+		$mail = mysql_real_escape_string(htmlspecialchars($_POST['mail']));
+		$sexe = mysql_real_escape_string(htmlspecialchars($_POST['sexe']));
+		$codepostal = mysql_real_escape_string(htmlspecialchars($_POST['codepostal']));
+		$pays = mysql_real_escape_string(htmlspecialchars($_POST['pays']));
+		$ville = mysql_real_escape_string(htmlspecialchars($_POST['ville']));
+		$age = mysql_real_escape_string(htmlspecialchars($_POST['age']));
+
+		$photodeprofil = "";
+		$photodecover = "";
+
+
+		if(!empty($_POST['photodeprofil'])){
+			$photodeprofil = mysql_real_escape_string(htmlspecialchars($_POST['photodeprofil']));
+		}
+		if(!empty($_POST['photodecover'])){
+			$photodecover = mysql_real_escape_string(htmlspecialchars($_POST['photodecover']));
+		} 	
+
+		if ($photodeprofil == ""){
+			$photodeprofil = $donnees['photoprofil'];
+		}
+		if ($photodecover == ""){
+			$photodecover = $donnees['photocover'];
+		}		
+
+
+		modifier($_SESSION['id'], $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
+
+
+}
+
 
 	include ('views/PageMembre.php');
 

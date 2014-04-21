@@ -17,10 +17,7 @@ function verifpseudo($pseudo){
 
 	}else{
 		return false;
-}
-
-
-
+	}
 
 }
 
@@ -40,4 +37,20 @@ function recuperer($id){
   	$donnee = $req-> fetch();
   	return $donnee;
 }
- ?>
+
+function modifier($id, $mail, $age ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
+	global $bdd;
+	$bdd->query("UPDATE membre 
+		SET mail='$mail',
+			sexe='$sexe',
+			date_de_naissance='$age',
+			code_postal='$codepostal',
+			ville='$ville',
+			pays= '$pays',
+			photocover='$photodecover',
+			photoprofil='$photodeprofil'
+
+		WHERE membre_id='$id'");
+}
+
+?>

@@ -27,7 +27,7 @@
 
 <div id="global">
     <ul id="parametres">
-    	<li><input class = "bouton" type="submit" value="Paramètres" /></li>
+    	<li><form class ="form3" method="post" action="index.php?page=ParametresMembrecontrolleur"><input class = "bouton" type="submit" value="Paramètres" /></form></li>
     	<li><input class = "bouton" type="submit" value="Suivre"/></li>
     	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
     </ul>
