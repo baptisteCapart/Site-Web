@@ -6,11 +6,11 @@
     </div>
     <div id="menuArtiste">
         <ul class = "page">
-          <li class = "<?php if($onglet==1){ echo "active";}?>"> <?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=1"> Présentation </a>'; ?></li>
-          <li class = "<?php if($onglet==2){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=2"> Concerts </a>'; ?></li>
-          <li class = "<?php if($onglet==3){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3"> Extraits </a>'; ?></li>
-          <li class = "<?php if($onglet==4){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4"> Avis </a>'; ?></li>
-          <li class = "<?php if($onglet==5){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=5"> Photos </a>'; ?></li>
+          <li class = "<?php if($onglet==1){ echo "active";}?>"> <?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=1 #contenuArtiste"> Présentation </a>'; ?></li>
+          <li class = "<?php if($onglet==2){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=2 #contenuArtiste"> Concerts </a>'; ?></li>
+          <li class = "<?php if($onglet==3){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3 #contenuArtiste"> Extraits </a>'; ?></li>
+          <li class = "<?php if($onglet==4){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4 #contenuArtiste"> Avis </a>'; ?></li>
+          <li class = "<?php if($onglet==5){ echo "active";}?>"><?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=5 #contenuArtiste"> Photos </a>'; ?></li>
         </ul>
     </div> 
 </div>

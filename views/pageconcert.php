@@ -6,9 +6,9 @@
 
 		    <div id="menuConcert">
 				  <ul class = "page">
-				    <li class = "<?php if($ongletConcert==1){ echo "activeConcert";}?>"><?php echo'<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=1"> Présentation </a>'; ?></li>
-				    <li class = "<?php if($ongletConcert==2){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=2"> Photos </a>'; ?></li>
-				    <li class = "<?php if($ongletConcert==4){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=4"> Avis </a>'; ?></li>
+				    <li class = "<?php if($ongletConcert==1){ echo "activeConcert";}?>"><?php echo'<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=1 #contenuConcert"> Présentation </a>'; ?></li>
+				    <li class = "<?php if($ongletConcert==2){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=2 #contenuConcert"> Photos </a>'; ?></li>
+				    <li class = "<?php if($ongletConcert==4){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=4 #contenuConcert"> Avis </a>'; ?></li>
 				  </ul>
  			</div> 
 

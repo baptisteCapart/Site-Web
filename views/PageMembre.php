@@ -35,16 +35,16 @@
 
 <div id="menuMembre">
         <ul>
-            <li class = "<?php if($ongletMembre==1){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=1"> Artistes</a>'; ?>
+            <li class = "<?php if($ongletMembre==1){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=1 #menuMembre"> Artistes</a>'; ?>
             </li>
 
-            <li class = "<?php if($ongletMembre==2){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=2"> Salles </a>'; ?>
+            <li class = "<?php if($ongletMembre==2){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=2 #menuMembre"> Salles </a>'; ?>
             </li>
 
-            <li class = "<?php if($ongletMembre==3){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=3"> Concerts</a>'; ?>
+            <li class = "<?php if($ongletMembre==3){ echo "actifMembre";}?>"> <?php echo'<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=3 #menuMembre"> Concerts</a>'; ?>
             </li>
 
-            <li class = "<?php if($ongletMembre==4){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=4"> Avis </a>'; ?>
+            <li class = "<?php if($ongletMembre==4){ echo "actifMembre";}?>"><?php echo '<a href = "index.php?page=PageMembrecontrolleur&ongletMembre=4 #menuMembre"> Avis </a>'; ?>
             </li>      
         </ul>
 </div> 

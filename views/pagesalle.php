@@ -8,10 +8,10 @@
     <div id="menuSalle">
 
   <ul class = "page">
-    <li class = "<?php if($ongletSalle==1){ echo "activeSalle";}?>"><?php echo'<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=1"> Présentation </a>'; ?></li>
-    <li class = "<?php if($ongletSalle==2){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=2"> Concerts </a>'; ?></li>
-    <li class = "<?php if($ongletSalle==4){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4"> Avis </a>'; ?></li>
-    <li class = "<?php if($ongletSalle==5){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=5"> Photos </a>'; ?></li>
+    <li class = "<?php if($ongletSalle==1){ echo "activeSalle";}?>"><?php echo'<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=1 #contenuSalle"> Présentation </a>'; ?></li>
+    <li class = "<?php if($ongletSalle==2){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=2 #contenuSalle"> Concerts </a>'; ?></li>
+    <li class = "<?php if($ongletSalle==4){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4 #contenuSalle"> Avis </a>'; ?></li>
+    <li class = "<?php if($ongletSalle==5){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=5 #contenuSalle"> Photos </a>'; ?></li>
   </ul>
  </div> 
 </div>
