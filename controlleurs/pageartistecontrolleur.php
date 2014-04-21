@@ -3,14 +3,19 @@
 include ('models/artistemodel.php');
 include ('models/extraitModel.php');
 
-$donnees = recuperer2();
 
+
+if(isset($_GET['id'])){
+	$createur=Authentification($_GET["id"]);
+}
+
+if(isset($_GET['id'])){
+	$_SESSION['artisteID'] = $_GET['id'];
+}
+
+$donnees = recuperer2($_SESSION['artisteID']);
 if(!empty($_POST['extrait1']) and!empty($_POST['extrait2']) ){
-
-	// $extrait1 = mysql_real_escape_string(htmlspecialchars($_POST['extrait1']));
-	// $extrait1 = mysql_real_escape_string(htmlspecialchars($_POST['extrait2']));
-	// $extrait1 ="";
-	// $extrait2 ="";		
+	
 		if(!empty($_POST['extrait1'])){
 			$extrait1 = mysql_real_escape_string(htmlspecialchars($_POST['extrait1']));
 		}
@@ -21,10 +26,6 @@ if(!empty($_POST['extrait1']) and!empty($_POST['extrait2']) ){
 			insertExtrait($_GET['id'], $extrait1);
 			insertExtrait($_GET['id'], $extrait2);
 		}
-}
-
-if(isset($_GET['id'])){
-	$_SESSION['artisteID'] = $_GET['id'];
 }
 
 $musiques = listeMusiques();
@@ -52,5 +53,27 @@ if(isset($_GET['onglet'])){
 	}
 }
 
+
+if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($_POST['style']) AND !empty ($_POST['photogroupe'])){
+
+
+		$nomartiste = mysql_real_escape_string(htmlspecialchars($_POST['nomartiste']));
+		$style = mysql_real_escape_string(htmlspecialchars($_POST['style']));
+		$photogroupe = mysql_real_escape_string(htmlspecialchars($_POST['photogroupe']));
+		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
+		$photogroupe ="";
+
+		if(!empty($_POST['photogroupe'])){
+			$photogroupe = mysql_real_escape_string(htmlspecialchars($_POST['photogroupe']));
+		}
+
+		if ($photogroupe == ""){
+			$photogroupe = $donnees['photocover'];
+		}
+
+		modifierArtiste($_SESSION['artisteID'], $nomartiste, $description, $photogroupe);
+	}	
+
 include ('views/pageartiste.php');
+
  ?>

@@ -3,7 +3,7 @@
 Tous les champs sont obligatoires
 </div>
 <div id="formulaire">
-	<form class ="form2" method="post" action="index.php?page=PageMembrecontrolleur">
+	<form class ="form2" method="post" action=" index.php?page=PageMembrecontrolleur">
 		<ul>
 							
 			<li>
