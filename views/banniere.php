@@ -88,8 +88,8 @@
 				</li>	
 				<li id = "salles"><a href="index.php?page=listeSallescontrolleur">Salles</a>
 					<ul class = "menu3">
-						<li id = "alpha"><a href="#">Par ordre alphabétique</a> </li>
-						<li id = "lieu"><a href="#">Par lieu</a></li>
+						<li id = "alpha"><a href="index.php?page=listeSallescontrolleur&critereSalle=1">Par ordre alphabétique</a> </li>
+						<li id = "lieu"><a href="index.php?page=listeSallescontrolleur&critereSalle=2">Par lieu</a></li>
 						<?php if(isset($_SESSION['pseudo'])) { ?>
 						<li id = "créer"><a href="index.php?page=formulairesallecontrolleur">Créer un profil salle</a></li>
 						<?php } ?>
@@ -97,8 +97,9 @@
 				</li>	
 				<li id = "concerts"><a href="index.php?page=listeConcertscontrolleur">Concerts</a>
 					<ul class = "menu4">
-						<li id = "date"><a href="index.php?page=pageconcertcontrolleur">Par date</a> </li>
-						<li id = "lieu"><a href="#">Par lieu</a></li>
+						<li id = "date"><a href="index.php?page=listeConcertscontrolleur&critereConcert=1">Par date</a> </li>
+						<li id = "lieu"><a href="index.php?page=listeConcertscontrolleur&critereConcert=2">Par lieu</a></li>
+						<li id="exemple"><a href="index.php?page=pageconcertcontrolleur"> exemple</a></li>
 					</ul>
 				</li>	
 				<li id = "forum"><a href="index.php?page=forumcontrolleur">Forum</a></li>

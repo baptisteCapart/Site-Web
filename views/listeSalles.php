@@ -7,10 +7,10 @@
     <span class = "titresalles"> Salles </span>
 
     <ul>
-        <li class = "<?php if($critereSalle==1){ echo "critereSalleActif";}?>"> <?php echo'<a href = "index.php?page=listeSallescontrolleur&critereSalle=1"> Par ordre alphabétique</a>'; ?>
+        <li class = "<?php if($critereSalle==1){ echo "critereSalleactif";}?>"> <?php echo'<a href = "index.php?page=listeSallescontrolleur&critereSalle=1"> Par ordre alphabétique</a>'; ?>
     	  </li>
 
-        <li class = "<?php if($critereSalle==2){ echo "critereSalleActif";}?>"><?php echo '<a href = "index.php?page=listeSallescontrolleur&critereSalle=2"> Par Lieu  </a>'; ?>
+        <li class = "<?php if($critereSalle==2){ echo "critereSalleactif";}?>"><?php echo '<a href = "index.php?page=listeSallescontrolleur&critereSalle=2"> Par Lieu  </a>'; ?>
         </li>
     </ul>
   </div> 

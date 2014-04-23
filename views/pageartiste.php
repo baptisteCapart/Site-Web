@@ -61,8 +61,8 @@
     <?php } ?> 
 
     <?php  if($onglet==4){ ?>
-
-        <?php if (isset($_SESSION['id'])) { ?>
+      <?php if(isset($_SESSION['id'])) { ?>
+        <?php if ($createur['membre_id']!= $_SESSION['id']) { ?>
           <div id="AVIS">
               <span class="intro">Clique sur le nombre d'étoiles que tu désires et laisse un commentaire pour noter cet artiste !</span>
               <div class="rating rating2">
@@ -71,16 +71,17 @@
                 <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=3 #contenuArtiste"> ★ </a>'; ?>
                 <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=2 #contenuArtiste"> ★ </a>'; ?>
                 <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=1 #contenuArtiste"> ★ </a>'; ?>
+             </div>
               <div class="taperText">
                   <form method="post" action="#">
                       <label for="contenu"></label><br><textarea name="contenu" id="message" cols="50" rows="3"></textarea> <br>
                       <input type="submit" value="Envoyer" />
                  </form>
               </div>
-
-
-             </div>
-        <?php }else { ?>
+         <?php }elseif($createur['membre_id']== $_SESSION['id']){ ?>  
+                 <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre page</span>
+        <?php } ?>                                  
+      <?php }else { ?>
                 <span class="autorisation">Pour donner un avis sur un artiste, merci de créer un compte sur Tune in Town</span>    
         <?php } ?>
             <div class="fil">
