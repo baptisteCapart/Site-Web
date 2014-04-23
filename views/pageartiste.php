@@ -1,5 +1,4 @@
 
-<?php include("views/banniere.php"); ?>
 <div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
     <div id="nomartiste">
         <?= $donnees["nom"] ?>
@@ -61,14 +60,77 @@
       </div>
     <?php } ?> 
 
-    <?php  if($onglet==4){ ?> 
-      <div class="rating rating2">
-        <a href="#5" title="Give 5 stars">★</a>
-        <a href="#4" title="Give 4 stars">★</a>
-        <a href="#3" title="Give 3 stars">★</a>
-        <a href="#2" title="Give 2 stars">★</a>
-        <a href="#1" title="Give 1 star">★</a>
-      </div>
+    <?php  if($onglet==4){ ?>
+
+        <?php if (isset($_SESSION['id'])) { ?>
+          <div id="AVIS">
+              <span class="intro">Clique sur le nombre d'étoiles que tu désires et laisse un commentaire pour noter cet artiste !</span>
+              <div class="rating rating2">
+                <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=5 #contenuArtiste"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=4 #contenuArtiste"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=3 #contenuArtiste"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=2 #contenuArtiste"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=4&note=1 #contenuArtiste"> ★ </a>'; ?>
+              <div class="taperText">
+                  <form method="post" action="#">
+                      <label for="contenu"></label><br><textarea name="contenu" id="message" cols="50" rows="3"></textarea> <br>
+                      <input type="submit" value="Envoyer" />
+                 </form>
+              </div>
+
+
+             </div>
+        <?php }else { ?>
+                <span class="autorisation">Pour donner un avis sur un artiste, merci de créer un compte sur Tune in Town</span>    
+        <?php } ?>
+            <div class="fil">
+                 <?php while ($liste = $listeAvis->fetch()) { ?>
+                      <div class="post">
+                          <span class="auteurAvis">
+                            <?php 
+                              $name = AuteurAvis($liste['membre_id']);
+                              echo("$name : ");
+                              ?>
+                          </span>
+
+                          <span class="note">
+                            <?php 
+                              if($liste['note'] == 1 ){
+                                  echo('★');
+                              }
+                              
+
+                              if($liste['note'] == 2 ){
+                                  echo('★★');
+                              }
+                              
+                              if($liste['note'] == 3 ){
+                                  echo('★★★');
+                              }
+                              
+                              if($liste['note'] == 4 ){
+                                  echo('★★★★');
+                              }
+                              
+                              if($liste['note'] == 5 ){
+                                  echo('★★★★★');
+                              }
+                            ?>  
+                                <br>                                                                                                     
+                          </span>                          
+                          <span class="contenuAvis">
+                            <?php 
+                            $contenu = $liste['contenu'];
+                            echo("\"$contenu\"");
+                            ?>
+
+                          </span>
+                      </div>
+                <?php } ?>
+            </div>
+
+        </div>
+
     <?php } ?>   
 
     <?php  if($onglet==5){ ?> 
@@ -77,6 +139,3 @@
   </div>
 </div>
 
-
-
-<?php include("views/footer.php"); ?>

@@ -159,6 +159,38 @@ html, body
 	display: inline-block;
 }
 
+.note
+{
+	color : orange;
+}
+#taperText
+{
+	padding: 0;
+	border: solid 1px green;
+	
+
+}
+
+
+.autorisation, .intro
+{
+	font-size: 1.5em;
+	/*margin-left: 5%;
+	margin-right: 5%;*/
+	width: 100%;
+}
+
+.auteurAvis
+{
+	color : white;
+	font-weight: bold;
+}
+
+.contenuAvis
+{
+	color : #B6B6B6;
+	padding: 30px;
+}
 
 
 a[href*="intent"] {

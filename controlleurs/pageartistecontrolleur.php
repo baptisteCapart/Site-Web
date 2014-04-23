@@ -53,6 +53,18 @@ if(isset($_GET['onglet'])){
 	}
 }
 
+if(isset($_GET['id'])){
+	if(isset($_GET['note'])){
+		if(isset($_POST['contenu'])){
+
+				Avis($_SESSION['id'], $_SESSION['artisteID'], $_POST['contenu'], $_GET['note']);
+			
+		}
+	}		
+}
+if(isset($_GET['id'])){
+	$listeAvis = listeAvis($_GET['id']);
+}
 
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($_POST['style']) AND !empty ($_POST['photogroupe'])){
 
@@ -73,7 +85,9 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($
 
 		modifierArtiste($_SESSION['artisteID'], $nomartiste, $description, $photogroupe);
 	}	
-
+include('controlleurs/bannierecontrolleur.php');
 include ('views/pageartiste.php');
+include('views/footer.php');
+
 
  ?>
