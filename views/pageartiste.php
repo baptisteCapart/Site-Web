@@ -17,8 +17,10 @@
   <div id="global2">
     <ul id="parametres2">
        <?php if(isset($_SESSION['id'])){
+          if(isset($createur['id'])){
            if($createur['membre_id']==$_SESSION['id']) { ?>
-                <li><form class ="form3" method="post" action="index.php?page=ParametresArtistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" value="Paramètres" /></form></li><?php }} ?>
+                <li><form class ="form3" method="post" action="index.php?page=ParametresArtistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" value="Paramètres" /></form></li>
+                <?php }}} ?>
        <li><input class = "bouton2" type="submit" value="Suivre"/></li>
     </ul>
   </div>
