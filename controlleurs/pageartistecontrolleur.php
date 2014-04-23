@@ -2,6 +2,7 @@
 
 include ('models/artistemodel.php');
 include ('models/extraitModel.php');
+include ('models/SuivreModel.php');
 
 
 
@@ -83,7 +84,16 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($
 		}
 
 		modifierArtiste($_SESSION['artisteID'], $nomartiste, $description, $photogroupe);
-	}	
+}
+
+if (isset($_POST['suivre'])){
+	follow($_SESSION['id'], $_SESSION['artisteID']);
+}
+
+$follower=check($_SESSION['id'], $_SESSION['artisteID']);
+$NbAbonnes = NbAbonnes($_SESSION['artisteID']);
+
+
 include('controlleurs/bannierecontrolleur.php');
 include ('views/pageartiste.php');
 include('views/footer.php');

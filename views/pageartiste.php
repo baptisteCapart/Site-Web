@@ -2,6 +2,7 @@
 <div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
     <div id="nomartiste">
         <?= $donnees["nom"] ?>
+        <?= $NbAbonnes["Nb"] ?>
     </div>
     <div id="menuArtiste">
         <ul class = "page">
@@ -17,11 +18,13 @@
   <div id="global2">
     <ul id="parametres2">
        <?php if(isset($_SESSION['id'])){
-          if(isset($createur['id'])){
+         
            if($createur['membre_id']==$_SESSION['id']) { ?>
                 <li><form class ="form3" method="post" action="index.php?page=ParametresArtistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" value="Paramètres" /></form></li>
-                <?php }}} ?>
-       <li><input class = "bouton2" type="submit" value="Suivre"/></li>
+                <?php }} ?>
+       <?php if($follower==true) {?>
+            <li><form class ="form3" method="post" action="index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" name = "suivre" value="Suivre"/></form></li>
+       <?php } ?>
     </ul>
   </div>
 
