@@ -23,9 +23,11 @@ function NbAbonnes($artiste_id){
 	return	$req;	
 }
 
-function artistes($membre_id){
+
+function ArtistesSuivis($membre_id){
+	
 	global $bdd;
-	$req = $bdd->query("SELECT artiste_id from suivre where membre_id=$membre_id") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT artiste.nom, artiste.artiste_id FROM artiste, suivre WHERE suivre.artiste_id = artiste.artiste_id AND suivre.membre_id=$membre_id") or die(print_r($bdd->errorInfo()));
 	return $req;
 }
 

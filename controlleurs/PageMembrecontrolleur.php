@@ -1,6 +1,7 @@
 <?php
 
 include ('models/membremodel.php');
+include ('models/SuivreModel.php');
 
 $donnees = recuperer($_SESSION['id']);
 $arr = explode('-', $donnees['date_de_naissance']);
@@ -57,9 +58,10 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 
 
 		modifier($_SESSION['id'], $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
-
-
 }
+
+
+$liste=ArtistesSuivis($_SESSION['id']);
 
 
 	include ('views/PageMembre.php');

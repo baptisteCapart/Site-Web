@@ -16,7 +16,7 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($
 include ('models/artistemodel.php');
 
 if(isset($_SESSION['id'])){
-	insert($nomartiste, $style ,$description, $photogroupe, $_SESSION['id']);
+	insertArtiste($nomartiste, $style ,$description, $photogroupe, $_SESSION['id']);
 }
 
 

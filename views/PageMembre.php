@@ -51,7 +51,11 @@
 
 <div id="contenuMembre">
     <?php  if($ongletMembre==1){ ?> 
-      <div> artistes suivis par ce membre </div>
+      <div> artistes suivis par ce membre
+            <?php foreach($liste as $listeSuivis) { 
+                echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$listeSuivis["artiste_id"].'">'. $listeSuivis["nom"].'<br/>'.' </a></li>';}
+            ?> 
+       </div>
     <?php } ?> 
 
     <?php  if($ongletMembre==2){ ?> 

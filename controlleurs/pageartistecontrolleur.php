@@ -94,6 +94,7 @@ $follower=check($_SESSION['id'], $_SESSION['artisteID']);
 $NbAbonnes = NbAbonnes($_SESSION['artisteID']);
 
 
+
 include('controlleurs/bannierecontrolleur.php');
 include ('views/pageartiste.php');
 include('views/footer.php');
