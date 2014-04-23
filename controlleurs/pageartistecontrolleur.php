@@ -66,12 +66,11 @@ if(isset($_GET['id'])){
 	$listeAvis = listeAvis($_GET['id']);
 }
 
-if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($_POST['style']) AND !empty ($_POST['photogroupe'])){
+if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($_POST['style']) ){
 
 
 		$nomartiste = mysql_real_escape_string(htmlspecialchars($_POST['nomartiste']));
 		$style = mysql_real_escape_string(htmlspecialchars($_POST['style']));
-		$photogroupe = mysql_real_escape_string(htmlspecialchars($_POST['photogroupe']));
 		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
 		$photogroupe ="";
 

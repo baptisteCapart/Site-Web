@@ -38,7 +38,7 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 	$bdd->query("UPDATE artiste 
 		SET nom='$nom',
 			description='$description',
-			photocover='$photogroupe',
+			photocover='$photogroupe'
 
 		WHERE artiste_id='$id'");
 }
