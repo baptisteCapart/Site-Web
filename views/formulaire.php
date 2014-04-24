@@ -1,14 +1,14 @@
 
-<?php include("views/banniere.php"); ?>
 <div id="bloc">
 <div id="bienvenue">Remplis pour 300€ ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit ! <br>
 Tous les champs sont obligatoires
 </div>
+<div class="erreur"><?php echo($error); ?></div>
 <div id="formulaire">
-	<form class ="form2" method="post" action="index.php?page=homecontrolleur">
+	<form class ="form2" method="post" action="index.php?page=formulairecontrolleur">
 		<ul>
 			<li>
-				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value=""/> </div>
+				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value="<?php echo($dftpseudo); ?>"/> </div>
 
 			</li>
 			<li>
@@ -18,12 +18,12 @@ Tous les champs sont obligatoires
 				<div class="motdepasse2"><span>Confirmation du mot de passe : </span><input class = "textbox"  type="password" name="mdp2" value=""/></div>
 			</li>				
 			<li>
-				<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="email" name="mail" value=""/></div>
+				<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="email" name="mail" value="<?php echo($dftmail); ?>"/></div>
 
 			</li>
 
 			<li>
-				<div class="age"><span> Date de naissance: </span><input class = "textbox" type="date" name="age" value=""/></div>
+				<div class="age"><span> Date de naissance: </span><input class = "textbox" type="date" name="age" value="<?php echo($dftage); ?>"/></div>
 
 			</li>			
 
@@ -35,15 +35,15 @@ Tous les champs sont obligatoires
 			</select></div>
 			</li>
 			<li>
-				<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" value=""/></div>
+				<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" value="<?php echo($dftville); ?>"/></div>
 
 			</li>
 			<li>
-				<div class="codepostal"><span>Code postal : </span><input class = "textbox" type="text" name="codepostal" value=""/></div>
+				<div class="codepostal"><span>Code postal : </span><input class = "textbox" type="text" name="codepostal" value="<?php echo($dftcodepostal); ?>"/></div>
 
 			</li>
 			<li>
-				<div class="pays"><span>Pays : </span><input class = "textbox" type="text" name="pays" value=""/></div>
+				<div class="pays"><span>Pays : </span><input class = "textbox" type="text" name="pays" value="<?php echo($dftpays); ?>"/></div>
 
 			</li>			
 			<li>
@@ -64,6 +64,4 @@ Tous les champs sont obligatoires
 
 
 	</form>
-</div>
-<?php include ('views/footer.php'); ?>
 </div>
