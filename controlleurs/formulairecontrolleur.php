@@ -37,7 +37,7 @@ if(!empty($_POST['age']))
 else
 { $dftage = ""; }
 
-
+$error = "";
 if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2']) AND !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
 {
 
@@ -74,7 +74,7 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 		if ($validation == true)
 		{
 			insert($pseudo, $mdp, $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
-			header('registersuccessed');
+			header('location: index.php?page=register_complete_controlleur');
 		}
 		else
 		{
