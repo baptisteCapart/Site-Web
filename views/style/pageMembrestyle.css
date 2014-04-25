@@ -59,16 +59,33 @@ html, body
 
 .bouton
 {
-	box-shadow: 0 0 9px #333 inset ;
-	border-radius: 4px;
-	border: solid 1px #555;
-	font-size: 1.3em;
+	font-family: 'Quicksand' , sans-serif;	
+	font-size: 90%;
+	padding : 7px 30px 7px 30px;
+	border-radius: 30px;
+	border: solid white 1px;
+	color: white;
+	background-color: black;
+	opacity: 0.7;
+}
+
+.bouton:hover
+{
+	font-family: 'Quicksand' , sans-serif;	
+	font-size: 90%;
+	padding : 7px 30px 7px 30px;
+	border-radius: 30px;
+	border: solid #73EB3F 1px;
+	color: white;
+	background-color: black;
+	opacity: 0.7;
 }
 
 #global
 {
 	position: absolute;
-	top : 510px;	
+	top : 510px;
+	right: 3%;	
 	width: 100%;
 }
 
