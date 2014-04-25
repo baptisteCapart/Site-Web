@@ -193,4 +193,22 @@ html, body
 
 }
 
+#listeSuivis a
+{
+	color : #B2B2B2;
+}
+
+#listeSuivis a:hover
+{
+	color : white;
+	border-bottom: solid 1px white;
+	padding-bottom: 5px;
+}
+
+#listeSuivis li
+{
+	padding: 15px;
+	list-style: none;
+
+}
 

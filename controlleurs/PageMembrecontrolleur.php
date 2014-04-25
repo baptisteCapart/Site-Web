@@ -62,8 +62,9 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 
 
 $liste=ArtistesSuivis($_SESSION['id']);
+$liste2 = SallesSuivies($_SESSION['id']);
 
 
-	include ('views/PageMembre.php');
+include ('views/PageMembre.php');
 
  ?>

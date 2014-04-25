@@ -22,9 +22,10 @@
            if($createur['membre_id']==$_SESSION['id']) { ?>
                 <li><form class ="form3" method="post" action="index.php?page=ParametresArtistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" value="Paramètres" /></form></li>
                 <?php }} ?>
-       <?php if($follower==true) {?>
+       <?php if (isset($follower)){
+       if($follower==true) {?>
             <li><form class ="form3" method="post" action="index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" name = "suivre" value="Suivre"/></form></li>
-       <?php } ?>
+       <?php }} ?>
     </ul>
   </div>
 

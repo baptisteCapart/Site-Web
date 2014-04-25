@@ -72,8 +72,8 @@
 					<?php }else{ ?> href="index.php?page=formulairecontrolleur" <?php } ?> >Compte</a>
 					<ul class = "menu1">
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "groupes"><a href="PageMembrecontrolleur.php">Mes artistes</a></li>
-						<li id = "rooms"><a href="PageMembrecontrolleur2.php">Mes salles</a></li>
+						<li id = "groupes"><a href="index.php?page=PageMembrecontrolleur&ongletMembre=1 #menuMembre">Mes artistes</a></li>
+						<li id = "rooms"><a href="index.php?page=PageMembrecontrolleur&ongletMembre=2 #menuMembre">Mes salles</a></li>
 						<li id = "shows"><a href="PageMembrecontrolleur3.php">Mes concerts</a></li>
 						<?php } ?>
 					</ul>

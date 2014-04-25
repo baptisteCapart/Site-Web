@@ -87,11 +87,13 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($
 }
 
 if (isset($_POST['suivre'])){
-	follow($_SESSION['id'], $_SESSION['artisteID']);
+	followArtiste($_SESSION['id'], $_SESSION['artisteID']);
+}
+if (isset($_SESSION['id'])){
+	$follower=checkArtiste($_SESSION['id'], $_SESSION['artisteID']);
 }
 
-$follower=check($_SESSION['id'], $_SESSION['artisteID']);
-$NbAbonnes = NbAbonnes($_SESSION['artisteID']);
+$NbAbonnes = NbAbonnesArtiste($_SESSION['artisteID']);
 
 
 

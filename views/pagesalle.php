@@ -4,6 +4,7 @@
 <div id = "photosalle" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
     <div id="nomsalle">
         <?= $donnees["nom"] ?>
+        <?= $NbAbonnes["Nb"] ?>        
     </div>
     <div id="menuSalle">
 
@@ -18,8 +19,14 @@
 
 <div id="global3">
 <ul id="parametres3">
-	<li><input class = "bouton3" type="submit" value="Paramètres" /></li>
-	<li><input class = "bouton3" type="submit" value="Suivre"/></li>
+         <?php if(isset($_SESSION['id'])){
+           if($createur['membre_id']==$_SESSION['id']) { ?>
+	               <li><form class ="form3" method="post" action="index.php?page=ParametresSallecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton3" type="submit" value="Paramètres" /></form></li>
+        <?php }} ?>
+  <?php if (isset($follower)){
+    if($follower==true) {?>
+    	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
+  <?php }} ?>
 </ul>
 </div>
 

@@ -1,7 +1,16 @@
 <?php 
 
 include ('models/sallemodel.php');
-$_SESSION['salleID'] = $_GET['id'];
+include ('models/SuivreModel.php');
+
+if(isset($_GET['id'])){
+	$createur=Authentification($_GET["id"]);
+}
+
+if(isset($_GET['id'])){
+	$_SESSION['salleID'] = $_GET['id'];
+}
+
 $donnees = recuperer3();
 $ongletSalle =1;
 
@@ -26,6 +35,17 @@ if(isset($_GET['ongletSalle'])){
 		$ongletSalle=5;
 	}
 }
+
+if (isset($_POST['suivre'])){
+	followSalle($_SESSION['id'], $_SESSION['salleID']);
+}
+if (isset($_SESSION['id'])){
+	$follower=checkSalle($_SESSION['id'], $_SESSION['salleID']);
+}
+
+$NbAbonnes = NbAbonnesSalle($_SESSION['salleID']);
+
+
 
 include ('views/pageSalle.php');
 

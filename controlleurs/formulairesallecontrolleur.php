@@ -18,9 +18,9 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		}
 
 include ('models/sallemodel.php');
-
-insert($Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle);
-
+if(isset($_SESSION['id'])){
+	insert($Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle, $_SESSION['id']);
+}
 
 
 include ('views/formulairesalle.php');
