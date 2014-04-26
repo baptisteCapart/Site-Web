@@ -83,8 +83,12 @@
 						<li id = "alpha"><a href="index.php?page=listeartistecontrolleur&critere=1">Par ordre alphabétique</a> </li>
 						<li id = "style"><a href="index.php?page=listeartistecontrolleur&critere=2">Par style</a></li>
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="index.php?page=formulairegroupecontrolleur">Créer un profil artiste</a></li>
+							<li id = "créer"><a href="index.php?page=formulairegroupecontrolleur">Créer un profil artiste</a></li>
 						<?php } ?>
+						<?php if(isset($_SESSION['pseudo'])) {
+							if ($verifArtiste ==false) { ?>
+							<li><?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$Artiste["artiste_id"].'">Mon profil artiste</a>'; ?></li>
+						<?php }} ?>
 					</ul>
 				</li>	
 				<li id = "salles"><a href="index.php?page=listeSallescontrolleur">Salles</a>
@@ -92,8 +96,12 @@
 						<li id = "alpha"><a href="index.php?page=listeSallescontrolleur&critereSalle=1">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="index.php?page=listeSallescontrolleur&critereSalle=2">Par lieu</a></li>
 						<?php if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "créer"><a href="index.php?page=formulairesallecontrolleur">Créer un profil salle</a></li>
+							<li id = "créer"><a href="index.php?page=formulairesallecontrolleur">Créer un profil salle</a></li>
 						<?php } ?>
+						<?php if(isset($_SESSION['pseudo'])) { 
+							 if ($verifSalle ==false) { ?>
+							<li><?php echo'<a href = "index.php?page=pageSallecontrolleur&id='.$Salle["salle_id"].'">Mon profil salle</a>'; ?></li>
+						<?php }} ?>						
 					</ul>
 				</li>	
 				<li id = "concerts"><a href="index.php?page=listeConcertscontrolleur">Concerts</a>

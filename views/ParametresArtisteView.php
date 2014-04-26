@@ -1,7 +1,7 @@
 
 <div id="bloc">
 
-	<div id="bienvenue">Remplis gratuitement ce formulaire d'inscription pour créer ton groupe et ainsi bénéficier de tous les privilèges d'un groupe !</div>
+	<div id="bienvenue">Tu peux modifier ici tes paramètres</div>
 	<div id="formulaire">
 		<form class ="form2" method="post" action=" index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>">
 			<ul>
@@ -18,6 +18,7 @@
 				</li>				
 				<li>
 					<div class="photogroupe"><span>Photo du groupe : </span><input class = "textbox" type="file" name="photogroupe" /></div>
+					<span class = "indications">Si vous choisissez une photo, celle-ci écrasera votre actuelle photo de profil. Si vous ne téléchargez aucune photo, vou conservez votre photo de profil actuelle</span>
 				</li>
 								
 
@@ -29,6 +30,4 @@
 			
 		</form>
 	</div>
-	</div>
-
-		<?php include ('views/footer.php'); ?>
+</div>

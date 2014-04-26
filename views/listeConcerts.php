@@ -1,6 +1,4 @@
 
-<?php include("views/banniere.php"); ?>
-
 <div id="blocpage">
   <div id="listeConcert">
 
@@ -28,5 +26,3 @@
       	
   </div> 
 </div>
-		
-<?php include("views/footer.php"); ?>

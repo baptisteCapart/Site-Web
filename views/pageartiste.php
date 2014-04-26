@@ -2,8 +2,8 @@
 <div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
     <div id="nomartiste">
         <?= $donnees["nom"] ?>
-        <?= $NbAbonnes["Nb"] ?>
-    </div>
+<!--         <?= $NbAbonnes["Nb"] ?>
+ -->    </div>
     <div id="menuArtiste">
         <ul class = "page">
           <li class = "<?php if($onglet==1){ echo "active";}?>"> <?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=1 #contenuArtiste"> Présentation </a>'; ?></li>
@@ -18,14 +18,14 @@
   <div id="global2">
     <ul id="parametres2">
        <?php if(isset($_SESSION['id'])){
-         
            if($createur['membre_id']==$_SESSION['id']) { ?>
                 <li><form class ="form3" method="post" action="index.php?page=ParametresArtistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" value="Paramètres" /></form></li>
                 <?php }} ?>
-       <?php if (isset($follower)){
-       if($follower==true) {?>
-            <li><form class ="form3" method="post" action="index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" name = "suivre" value="Suivre"/></form></li>
-       <?php }} ?>
+        <?php if($createur['membre_id']!=$_SESSION['id']) {
+           if (isset($follower)){
+             if($follower==true) {?>
+                  <li><form class ="form3" method="post" action="index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" name = "suivre" value="Suivre"/></form></li>
+       <?php }}} ?>
     </ul>
   </div>
 
@@ -43,6 +43,7 @@
 
     <?php  if($onglet==3){ ?> 
       <div class = "extraits">
+        <span class="intro">Tu peux ajouter ici 1 à 2 extaits de ton répertoire pour faire découvrir ta musique aux membre du site</span>         
           <ul>
           <?php foreach ($musiques as $music){  ?>
            <li>  <?php echo $music['nom']; ?> <br><audio  src="<?php echo $music['nom']; ?>"controls></audio></li>
@@ -50,19 +51,23 @@
           }
           ?>
           </ul>
-        <form class ="formulaireExtraits" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
-            <ul>
-                <li>
-                    <div class="extrait"><span>Extrait de musique n°1 : </span><input class = "textbox" type="file" name="extrait1" /></div>
-                </li> 
-                <li>
-                    <div class="extrait"><span>Extrait de musique n°2 : </span><input class = "textbox" type="file" name="extrait2" /></div>
-                </li>
-                <li>
-                    <input class = "envoyer" type="submit" value="Envoyer !"/>
-                </li>              
-            </ul>
-        </form>        
+         <?php if(isset($_SESSION['id'])){
+             if($createur['membre_id']==$_SESSION['id']) { ?>         
+                  <form class ="formulaireExtraits" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
+                      <ul>
+                          <li>
+                              <div class="extrait"><span>Extrait de musique n°1 : </span><input class = "textbox" type="file" name="extrait1" /></div>
+                          </li> 
+                          <li>
+                              <div class="extrait"><span>Extrait de musique n°2 : </span><input class = "textbox" type="file" name="extrait2" /></div>
+                          </li>
+                          <li>
+                              <input class = "envoyer" type="submit" value="Envoyer !"/>
+                          </li>              
+                      </ul>
+                  </form>
+        <?php }} ?>              
+
       </div>
     <?php } ?> 
 

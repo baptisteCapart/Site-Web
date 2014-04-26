@@ -1,6 +1,4 @@
 
-<?php include("views/banniere.php"); ?>
-
 <div id= "cover" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); " >
 </div>
 
@@ -77,5 +75,4 @@
 </div> 
 
 		
-<?php include("views/footer.php"); ?>
 

@@ -14,6 +14,8 @@ if(isset($_GET['critereConcert'])){
 
 }
 
+include('controlleurs/bannierecontrolleur.php');
 include ('views/listeConcerts.php');
+include('views/footer.php');
 
  ?>

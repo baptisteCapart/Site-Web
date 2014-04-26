@@ -27,6 +27,9 @@ if(isset($_GET['ongletConcert'])){
 	}
 }
 
+
+include('controlleurs/bannierecontrolleur.php');
 include ('views/pageconcert.php');
+include('views/footer.php');
 
  ?>

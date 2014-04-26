@@ -1,5 +1,5 @@
 
-		<div id="blochome">
+<div id="blochome">
 		<div id="news">			
 				<div id="liste_news">
 					<ul>
@@ -122,4 +122,4 @@
 		<?php
 		}
 		?>
-		</div>
+</div>

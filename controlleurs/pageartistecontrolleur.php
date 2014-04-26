@@ -3,11 +3,10 @@
 include ('models/artistemodel.php');
 include ('models/extraitModel.php');
 include ('models/SuivreModel.php');
-
-
+include ('models/DonnerAvis.php');
 
 if(isset($_GET['id'])){
-	$createur=Authentification($_GET["id"]);
+	$createur=AuthentificationArtiste($_GET["id"]);
 }
 
 if(isset($_GET['id'])){
@@ -15,17 +14,19 @@ if(isset($_GET['id'])){
 }
 
 $donnees = recuperer2($_SESSION['artisteID']);
-if(!empty($_POST['extrait1']) and!empty($_POST['extrait2']) ){
-	
-		if(!empty($_POST['extrait1'])){
-			$extrait1 = mysql_real_escape_string(htmlspecialchars($_POST['extrait1']));
-		}
-		if(!empty($_POST['extrait2'])){
-			$extrait2 = mysql_real_escape_string(htmlspecialchars($_POST['extrait2']));
-		}		
-		if(isset($_GET['id'])){
-			insertExtrait($_GET['id'], $extrait1);
-			insertExtrait($_GET['id'], $extrait2);
+if(!empty($_POST['extrait1']) or !empty($_POST['extrait2']) ){
+		if(isset($_GET['id'])){	
+			if(!empty($_POST['extrait1'])){
+				$extrait1 = mysql_real_escape_string(htmlspecialchars($_POST['extrait1']));
+				insertExtrait($_GET['id'], $extrait1);
+			}
+			if(!empty($_POST['extrait2'])){
+				$extrait2 = mysql_real_escape_string(htmlspecialchars($_POST['extrait2']));
+				insertExtrait($_GET['id'], $extrait2);
+			}		
+
+			
+			
 		}
 }
 
@@ -58,13 +59,13 @@ if(isset($_GET['id'])){
 	if(isset($_GET['note'])){
 		if(isset($_POST['contenu'])){
 
-				Avis($_SESSION['id'], $_SESSION['artisteID'], $_POST['contenu'], $_GET['note']);
+				AvisArtiste($_SESSION['id'], $_SESSION['artisteID'], $_POST['contenu'], $_GET['note']);
 			
 		}
 	}		
 }
 if(isset($_GET['id'])){
-	$listeAvis = listeAvis($_GET['id']);
+	$listeAvis = listeAvisArtiste($_GET['id']);
 }
 
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($_POST['style']) ){

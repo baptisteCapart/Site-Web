@@ -1,11 +1,9 @@
 
-<?php include("views/banniere.php"); ?>
-
 <div id = "photosalle" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
     <div id="nomsalle">
         <?= $donnees["nom"] ?>
-        <?= $NbAbonnes["Nb"] ?>        
-    </div>
+<!--         <?= $NbAbonnes["Nb"] ?>        
+ -->    </div>
     <div id="menuSalle">
 
   <ul class = "page">
@@ -21,12 +19,13 @@
 <ul id="parametres3">
          <?php if(isset($_SESSION['id'])){
            if($createur['membre_id']==$_SESSION['id']) { ?>
-	               <li><form class ="form3" method="post" action="index.php?page=ParametresSallecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton3" type="submit" value="Paramètres" /></form></li>
+	               <li><form class ="form3" method="post" action="index.php?page=ParametresSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" value="Paramètres" /></form></li>
         <?php }} ?>
-  <?php if (isset($follower)){
-    if($follower==true) {?>
-    	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
-  <?php }} ?>
+  <?php if($createur['membre_id']!=$_SESSION['id']) {     
+       if (isset($follower)){
+        if($follower==true) {?>
+        	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
+  <?php }}} ?>
 </ul>
 </div>
 
@@ -50,13 +49,76 @@
 
 
     <?php  if($ongletSalle==4){ ?> 
-      <div class="rating rating2">
-        <a href="#5" title="Give 5 stars">★</a>
-        <a href="#4" title="Give 4 stars">★</a>
-        <a href="#3" title="Give 3 stars">★</a>
-        <a href="#2" title="Give 2 stars">★</a>
-        <a href="#1" title="Give 1 star">★</a>
-      </div>
+      <?php if(isset($_SESSION['id'])) { ?>
+        <?php if ($createur['membre_id']!= $_SESSION['id']) { ?>
+          <div id="AVIS">
+              <span class="intro">Clique sur le nombre d'étoiles que tu désires et laisse un commentaire pour noter cette salle !</span>
+              <div class="rating rating2">
+                <?php echo '<a href = "index.php?page=pageSallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4&note=5 #contenuSalle"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageSallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4&note=4 #contenuSalle"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageSallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4&note=3 #contenuSalle"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageSallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4&note=2 #contenuSalle"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageSallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4&note=1 #contenuSalle"> ★ </a>'; ?>
+             </div>
+              <div class="taperText">
+                  <form method="post" action="#">
+                      <label for="contenu"></label><br><textarea name="contenu" id="message" cols="50" rows="3"></textarea> <br>
+                      <input type="submit" value="Envoyer" />
+                 </form>
+              </div>
+         <?php }elseif($createur['membre_id']== $_SESSION['id']){ ?>  
+                 <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre page</span>
+        <?php } ?>                                  
+      <?php }else { ?>
+                <span class="autorisation">Pour donner un avis sur une salle, merci de créer un compte sur Tune in Town</span>    
+        <?php } ?>
+            <div class="fil">
+                 <?php while ($liste = $listeAvis->fetch()) { ?>
+                      <div class="post">
+                          <span class="auteurAvis">
+                            <?php 
+                              $name = AuteurAvis($liste['membre_id']);
+                              echo("$name : ");
+                              ?>
+                          </span>
+
+                          <span class="note">
+                            <?php 
+                              if($liste['note'] == 1 ){
+                                  echo('★');
+                              }
+                              
+
+                              if($liste['note'] == 2 ){
+                                  echo('★★');
+                              }
+                              
+                              if($liste['note'] == 3 ){
+                                  echo('★★★');
+                              }
+                              
+                              if($liste['note'] == 4 ){
+                                  echo('★★★★');
+                              }
+                              
+                              if($liste['note'] == 5 ){
+                                  echo('★★★★★');
+                              }
+                            ?>  
+                                <br>                                                                                                     
+                          </span>                          
+                          <span class="contenuAvis">
+                            <?php 
+                            $contenu = $liste['contenu'];
+                            echo("\"$contenu\"");
+                            ?>
+
+                          </span>
+                      </div>
+                <?php } ?>
+            </div>
+
+        </div>
     <?php } ?>   
 
     <?php  if($ongletSalle==5){ ?> 
@@ -64,7 +126,4 @@
     <?php } ?> 
   </div>
 </div>
-
-
-<?php include("views/footer.php"); ?>
 

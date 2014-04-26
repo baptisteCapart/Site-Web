@@ -155,13 +155,7 @@ html, body
 #menuConcert
 {
 	font-size: 1.6em;
-/*	bleu
-	background: -webkit-linear-gradient(top, rgba(125,185,232,1) 0%,rgba(48,150,229,1) 50%,rgba(125,185,232,1) 100%);
-	jaune*/
-	//background: -webkit-linear-gradient(top, rgba(242,244,124,1) 0%,rgba(243,247,0,1) 50%,rgba(245,247,116,1) 100%);
-/*	rouge
-	background: -webkit-linear-gradient(top, rgba(142,0,2,1) 0%,rgba(255,0,0,1) 50%,rgba(145,0,7,1) 100%,rgba(26,33,25,1) 100%);
-*/	width : 100%;
+	width : 100%;
 	display: inline-block;
 	margin: 0;
 	padding: 0;
@@ -175,7 +169,7 @@ html, body
 	z-index: 5;
 	background-color: black;
 	opacity: 0.8;
-
+	font-family: 'Quicksand' , sans-serif;
 }
 
 #menuConcert ul 

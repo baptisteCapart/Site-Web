@@ -13,18 +13,25 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		$capacité = mysql_real_escape_string(htmlspecialchars($_POST['capacité']));		
 
 		$photosalle ="";
+		
 		if(!empty($_POST['photosalle'])){
-		$photosalle = mysql_real_escape_string(htmlspecialchars($_POST['photosalle']));
+			$photosalle = mysql_real_escape_string(htmlspecialchars($_POST['photosalle']));
 		}
 
-include ('models/sallemodel.php');
-if(isset($_SESSION['id'])){
-	insert($Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle, $_SESSION['id']);
-}
+		include ('models/sallemodel.php');
+		
+		if(isset($_SESSION['id'])){
+			insertSalle($Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle, $_SESSION['id']);
+		}
 
 
-include ('views/formulairesalle.php');
+		include('controlleurs/bannierecontrolleur.php');
+		include ('views/formulairesalle.php');
+		include('views/footer.php');
+
 }else{
-include ('views/formulairesalle.php');
+		include('controlleurs/bannierecontrolleur.php');
+		include ('views/formulairesalle.php');
+		include('views/footer.php');
 }
  ?>

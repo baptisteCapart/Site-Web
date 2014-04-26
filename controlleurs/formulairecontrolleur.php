@@ -95,7 +95,7 @@ else
 	}
 }
 
-include("views/banniere.php");
+include('controlleurs/bannierecontrolleur.php');
 include ('views/formulaire.php');
 include ('views/footer.php');
 

@@ -3,7 +3,7 @@
 include ('models/sallemodel.php');
 
 
-$listesalle = liste();
+$listesalle = listeSalle();
 
 $critereSalle =1;
 
@@ -18,6 +18,9 @@ if(isset($_GET['critereSalle'])){
 
 }
 
+
+include('controlleurs/bannierecontrolleur.php');
 include ('views/listeSalles.php');
+include('views/footer.php');
 
  ?>

@@ -65,6 +65,8 @@ $liste=ArtistesSuivis($_SESSION['id']);
 $liste2 = SallesSuivies($_SESSION['id']);
 
 
+include('controlleurs/bannierecontrolleur.php');
 include ('views/PageMembre.php');
+include('views/footer.php');
 
  ?>

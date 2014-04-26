@@ -3,7 +3,7 @@
 include ('models/artistemodel.php');
 
 
-$listegroupe = liste();
+$listegroupe = listeArtiste();
 
 $critere =1;
 
@@ -18,6 +18,7 @@ if(isset($_GET['critere'])){
 
 }
 
+include('controlleurs/bannierecontrolleur.php');
 include ('views/listeartistes.php');
-
+include('views/footer.php');
  ?>

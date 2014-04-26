@@ -1,5 +1,7 @@
 <?php 
 
+include_once('models/artistemodel.php');
+include_once('models/sallemodel.php');
 
 if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
   extract($_POST);
@@ -26,7 +28,17 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
 //   echo '<p>Vous avez oublié de remplir un champ.</p>';
 //   exit;
 }
+if(isset($_SESSION['id'])){
+  $verifArtiste = PossedeArtiste($_SESSION['id']);
+  $verifSalle = PossedeSalle($_SESSION['id']);
 
+    if($verifArtiste == false){
+      $Artiste=MaPageArtiste($_SESSION['id']);
+    }
+    if($verifSalle == false){
+      $Salle=MaPageSalle($_SESSION['id']);
+    }    
+}
 include ('views/banniere.php');
 
 ?>

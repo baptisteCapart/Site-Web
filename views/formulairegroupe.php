@@ -1,5 +1,4 @@
 
-		<?php include("views/banniere.php"); ?>
 <div id="bloc">
 
 		<div id="bienvenue">Remplis gratuitement ce formulaire d'inscription pour créer ton groupe et ainsi bénéficier de tous les privilèges d'un groupe !</div>
@@ -30,6 +29,4 @@
 			
 		</form>
 		</div>
-		</div>
-
-		<?php include ('views/footer.php'); ?>
+</div>
