@@ -21,11 +21,12 @@
            if($createur['membre_id']==$_SESSION['id']) { ?>
 	               <li><form class ="form3" method="post" action="index.php?page=ParametresSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" value="Paramètres" /></form></li>
         <?php }} ?>
-  <?php if($createur['membre_id']!=$_SESSION['id']) {     
-       if (isset($follower)){
-        if($follower==true) {?>
-        	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
-  <?php }}} ?>
+         <?php if(isset($_SESSION['id'])){        
+             if($createur['membre_id']!=$_SESSION['id']) {     
+                 if (isset($follower)){
+                  if($follower==true) {?>
+                  	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
+        <?php }}}} ?>
 </ul>
 </div>
 
