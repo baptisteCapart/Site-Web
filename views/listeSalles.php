@@ -19,7 +19,7 @@
       <?php  if($critereSalle==1){ ?> 
         <div> <ul><?php
   			foreach ($listesalle as $salle)
-  			{echo ' <li><a href = "index.php?page=pagesallecontrolleur&id='.$salle["salle_id"].'">'. $salle["nom"].'<br/>'.' </a></li>';}
+  			{echo ' <li><a href = "index.php?page=pagesallecontrolleur&id='.$salle["salle_id"].'"> <img src="controlleurs/images/'.$salle['photocover'].'" alt="" /> '. $salle["nom"].'<br/>'.' </a></li>';}
   		?></ul></div>
       <?php } ?> 
 

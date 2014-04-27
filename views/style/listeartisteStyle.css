@@ -67,11 +67,20 @@
 
 #contenuliste
 {
-	background-color: #464646;
+	//background-color: #464646;
+	background-color: #303030;
 	color : #CECECE;
 	overflow: hidden;
 	width: 100%;
 
+}
+#contenuliste img
+{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	border-radius: 50px;
+	margin-right: 6px;
 }
 
 
@@ -79,16 +88,28 @@
 {
 	padding: 20px;	
 }
+
+#contenuliste li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 17%;
+	margin: 3px;
+}
 #contenuliste ul li a 
 {
 	color : #CECECE;
 }
 
-#contenuliste ul li a:hover
+#contenuliste ul li:hover
 {
-	color : white;
+	background-color: #202020;
 }
-
+#contenuliste ul li:hover a
+{
+	color: white;
+	margin-left: 10px;
+}
 #contenuliste ul
 {
 	padding: 20px;

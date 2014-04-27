@@ -19,7 +19,7 @@
       <?php  if($critere==1){ ?> 
         <div class = "alpha"> <ul><?php
   			foreach ($listegroupe as $group)
-  			{echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$group["artiste_id"].'">'. $group["nom"].'<br/>'.' </a></li>';}
+  			{echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$group["artiste_id"].'"> <img src="controlleurs/images/'.$group['photocover'].'" alt="" /> '. $group["nom"].'<br/>'.' </a></li>';}
   		?></ul></div>
       <?php } ?> 
 

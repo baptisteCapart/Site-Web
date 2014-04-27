@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
 function listeSalle(){
 
 	global $bdd;
- 	$req = $bdd-> query('SELECT salle_id, nom FROM salle ORDER BY nom') or die(print_r($bdd->errorInfo()));
+ 	$req = $bdd-> query('SELECT * FROM salle ORDER BY nom') or die(print_r($bdd->errorInfo()));
 	return $req;
 
 }

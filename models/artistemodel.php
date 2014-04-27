@@ -19,7 +19,7 @@ function recuperer2($id){
 function listeArtiste(){
 
 	global $bdd;
- 	$req = $bdd-> query('SELECT artiste_id, nom FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
+ 	$req = $bdd-> query('SELECT * FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
 	return $req;
 
 }
