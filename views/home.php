@@ -115,7 +115,7 @@
 						</li>
 					</ul>
 				</li>
-				<li class = "formulaire">Et bien plus encore ! Il suffit de t'inscrire gratuitement en remplissant <a href="index.php?page=formulairecontrolleur" target="_blank">ce formulaire</a></li>
+				<li class = "formulaire">Et bien plus encore ! Il suffit de t'inscrire gratuitement en remplissant <a href="index.php?page=formulairecontrolleur" >ce formulaire</a></li>
 			</ul>
 		</div>
 

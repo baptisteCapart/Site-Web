@@ -47,7 +47,7 @@
 					<span class="login">Password : </span>
 					<input class ="boite" type="password" name="pwd" value=""/>
 					<input class = "logg" type="submit" value="Log in"/>
-					<span class="sign_in"><a href ="index.php?page=formulairecontrolleur" target="_blank">Inscription</a></span>
+					<span class="sign_in"><a href ="index.php?page=formulairecontrolleur" >Inscription</a></span>
 				</form>
 			</div>
 
