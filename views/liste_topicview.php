@@ -23,9 +23,10 @@
 	</table>
 
 
-		<?php  if($_SESSION['pseudo'] != ""){ ?>
+		<?php  if(isset($_SESSION['pseudo'])){
+			 if($_SESSION['pseudo'] != ""){ ?>
 			<div class="nouveau"><a href="index.php?page=new_topiccontroleur">Ton propre topic, c'est ici !</a></div>
 		<?php }else{ ?>
 			<div class="nouveau"><a href="index.php?page=formulairecontrolleur">Pour créer ton propre topic, il suffit de t'inscrire ici</a></div>
-		<?php } ?>	
+		<?php }} ?>	
 </div>
