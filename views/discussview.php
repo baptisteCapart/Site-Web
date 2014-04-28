@@ -17,11 +17,11 @@
 					echo($name.' :<br>');
 					 ?>
 				</span>
-				<span class="contenu">
+				<div class="contenu">
 					<?php 
 					echo($post['contenu']);
 					 ?>
-				</span>
+				</div>
 			</div>
     	<?php } ?>
     </div>
