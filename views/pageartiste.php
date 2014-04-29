@@ -44,7 +44,7 @@
 
     <?php  if($onglet==3){ ?> 
       <div class = "extraits">
-        <span class="intro">Tu peux ajouter ici 1 à 2 extaits de ton répertoire pour faire découvrir ta musique aux membre du site</span>         
+              
           <ul>
           <?php foreach ($musiques as $music){  ?>
            <li>  <?php echo $music['nom']; ?> <br><audio  src="<?php echo $music['nom']; ?>"controls></audio></li>
@@ -53,7 +53,8 @@
           ?>
           </ul>
          <?php if(isset($_SESSION['id'])){
-             if($createur['membre_id']==$_SESSION['id']) { ?>         
+             if($createur['membre_id']==$_SESSION['id']) { ?>    
+              <span class="intro">Tu peux ajouter ici 1 à 2 extaits de ton répertoire pour faire découvrir ta musique aux membre du site</span>       
                   <form class ="formulaireExtraits" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
                       <ul>
                           <li>
