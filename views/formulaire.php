@@ -1,6 +1,6 @@
 
 <div id="bloc">
-<div id="bienvenue">Remplis pour 300€ ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit ! <br>
+<div id="bienvenue">Remplis ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit ! <br>
 Tous les champs sont obligatoires
 </div>
 <div class="erreur"><?php echo($error); ?></div>

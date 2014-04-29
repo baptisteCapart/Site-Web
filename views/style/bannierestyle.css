@@ -347,11 +347,11 @@ nav ul li ul li a:hover
 
 footer
 {
-	background-image: url(../controlleurs/images/darkmetal.jpg);
+	//background-image: url(../controlleurs/images/darkmetal.jpg);
 	height: 0px;
 	width: 100%;
 	text-align: center;
-
+	vertical-align: middle;
 }
 
 #like
