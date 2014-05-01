@@ -33,7 +33,7 @@ function newtopic ($name, $description, $membre_id)
 function newpost ($membre_id, $message, $topic_id)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO post (contenu, topic_id, membre_id) VALUES ('$message', '$topic_id', '$membre_id')");
+	$bdd->query("INSERT INTO post (contenu, topic_id, membre_id) VALUES ( '$message', '$topic_id', '$membre_id')") or die (print_r($bdd->errorInfo()));
 	$res = $bdd->query("SELECT nombre_message FROM topic WHERE id_topic=".$topic_id);
 	$res2 = $res->fetch();
 	$nb_posts = $res2['nombre_message'] + 1;

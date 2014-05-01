@@ -3,7 +3,7 @@
 
 function insertArtiste($nomartiste, $style ,$description, $photogroupe,$membreID){
 	global $bdd;
-	$bdd-> query("INSERT INTO artiste(nom, description, photocover, membre_id)  VALUES ('$nomartiste', '$description', '$photogroupe' , '$membreID')");
+	$bdd-> query("INSERT INTO artiste(nom, description, photocover, membre_id)  VALUES ('$nomartiste', '$description', '$photogroupe' , '$membreID')") or die(print_r($bdd->errorInfo()));
 }
 
 

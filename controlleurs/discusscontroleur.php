@@ -14,8 +14,13 @@ else
 
 if(isset($_POST['message'])){
 	
+	$message = $_POST['message'];
+	$message = nl2br($message);
+	$message = mysql_real_escape_string($message);
+	
+
 		if($_SESSION['pseudo'] != ""){
-			$newpost = newpost($_SESSION['id'], $_POST['message'], $_GET['topic']);
+			$newpost = newpost($_SESSION['id'], $message, $_GET['topic']); 
 		}else{
 	   		header ('location: index.php?page=formulairecontrolleur');
 		}

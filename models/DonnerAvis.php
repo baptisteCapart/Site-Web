@@ -3,14 +3,14 @@
 function AvisSalle ($membre_id, $salle_id, $contenu, $note)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO donner_avis (membre_id, salle_id, contenu, note) VALUES ('$membre_id', '$salle_id', '$contenu', '$note')");
+	$bdd->query("INSERT INTO donner_avis (membre_id, salle_id, contenu, note) VALUES ('$membre_id', '$salle_id', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
 }
 
 
 function AvisArtiste ($membre_id, $artiste_id, $contenu, $note)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO donner_avis (membre_id, artiste_id, contenu, note) VALUES ('$membre_id', '$artiste_id', '$contenu', '$note')");
+	$bdd->query("INSERT INTO donner_avis (membre_id, artiste_id, contenu, note) VALUES ('$membre_id', '$artiste_id', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
 }
 
 function listeAvisSalle ($salle_id)

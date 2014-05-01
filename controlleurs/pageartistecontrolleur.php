@@ -58,8 +58,10 @@ if(isset($_GET['onglet'])){
 if(isset($_GET['id'])){
 	if(isset($_GET['note'])){
 		if(isset($_POST['contenu'])){
-
-				AvisArtiste($_SESSION['id'], $_SESSION['artisteID'], $_POST['contenu'], $_GET['note']);
+				$contenu = $_POST['contenu'];
+				$contenu = nl2br($contenu);
+				$contenu = mysql_real_escape_string($contenu);
+				AvisArtiste($_SESSION['id'], $_SESSION['artisteID'], $contenu, $_GET['note']);
 			
 		}
 	}		
