@@ -34,9 +34,11 @@ if(isset($_SESSION['id'])){
 
     if($verifArtiste == false){
       $Artiste=MaPageArtiste($_SESSION['id']);
+      $_SESSION['artiste_id'] = $Artiste;
     }
     if($verifSalle == false){
       $Salle=MaPageSalle($_SESSION['id']);
+      $_SESSION['salle_id'] = $Salle;
     }    
 }
 include ('views/banniere.php');

@@ -26,6 +26,7 @@
                  if (isset($follower)){
                   if($follower==true) {?>
                   	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
+                 <li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur"><input class = "bouton3" type="submit" name = "inviter" value="Inviter"/></form></li> 
         <?php }}}} ?>
 </ul>
 </div>
