@@ -1,5 +1,9 @@
 <?php 
 
+if(isset($_GET['invite'])){
+
+	$invite=$_GET['invite'];
+}		
 
 if(!empty($_POST['nom'])){
 		$photocover = "";
@@ -18,27 +22,31 @@ if(!empty($_POST['nom'])){
 
 if(isset($_GET['new'])){
 
-echo "tyty";
 		if($_GET['new']=='new'){
-			if($_GET['invite'] == 'artiste')
-			{
-				$artiste_id = $_GET['id'];
-				$salle_id = $_SESSION['salle_id']['salle_id'];
-			}
-			else
-			{
-				$salle_id = $_GET['id'];
-				$artiste_id = $_SESSION['artiste_id']['artiste_id'];
+			if(isset($_GET['invite'])){
+				if($invite == 'artiste')
+				{
+					$artiste_id = $_GET['id'];
+					$salle_id = $_SESSION['salle_id']['salle_id'];
+				}
+				else
+				{
+					$salle_id = $_GET['id'];
+					$artiste_id = $_SESSION['artiste_id']['artiste_id'];
+					var_dump($salle_id);
+				}
 			}
 			insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id);
-		}
-	}
-		else
-		{
+		
+	
+		}else{
+
 			if(isset($_GET['concert_id'])){
 				$id = $_GET['concert_id'];
 				updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $id);
-		}}
+			}
+		}
+}
 		include('controlleurs/bannierecontrolleur.php');
 		include ('views/formulaireconcertview.php');
 		include('views/footer.php');		
@@ -47,5 +55,6 @@ echo "tyty";
 
 		include('controlleurs/bannierecontrolleur.php');
 		include ('views/formulaireconcertview.php');
-		include('views/footer.php');}
+		include('views/footer.php');
+}
  ?>

@@ -132,7 +132,12 @@
     <?php } ?> 
 
     <?php  if($ongletSalle==6){ ?> 
-      <div class = "invitations"> invitations
+      <div class = "invitations"> <?php if (isset($notif)){
+             if($notif==true) {?>
+             <div>tu as une notif</div>
+             <?php }else{ ?>
+             <div>aucune notif</div>
+        <?php }} ?> 
         
       </div>
     <?php } ?> 

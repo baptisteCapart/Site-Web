@@ -3,11 +3,13 @@
 include ('models/sallemodel.php');
 include ('models/SuivreModel.php');
 include ('models/DonnerAvis.php');
-
+include ('models/concertmodel.php');
 
 
 if(isset($_GET['id'])){
 	$createur=AuthentificationSalle($_GET["id"]);
+	$salle_id=$_GET["id"];
+	$notif = nouveauMessageS($salle_id);
 }
 
 if(isset($_GET['id'])){

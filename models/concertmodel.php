@@ -11,9 +11,21 @@ function insertConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 	newpost($message,$topic_id);
 }
 
-function nouveauMessage($id){
+function nouveauMessageA($id){
 	global $bdd;
-	$result = $bdd->query ("SELECT $id from concert where $id = '$id' and non_lu =1");
+	$result= $bdd->query ("SELECT artiste_id from concert where artiste_id = '$id' and non_lu =1");
+	$result2 = $result->fetch();
+	if (!$result2){
+		return false;
+
+	}else{
+		return true;
+	}
+}
+
+function nouveauMessageS($id){
+	global $bdd;
+	$result = $bdd->query ("SELECT concert_id from concert where salle_id = '$id' and non_lu =1");
 	$result2 = $result->fetch();
 	if (!$result2){
 		return false;

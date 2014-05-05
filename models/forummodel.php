@@ -50,7 +50,7 @@ function listePost ($topic_id)
 function listeTopic ()
 {
 	global $bdd;
- 	$req = $bdd-> query('SELECT * FROM topic ORDER BY nom') or die(print_r($bdd->errorInfo()));
+ 	$req = $bdd-> query('SELECT * FROM topic where public = 0 ORDER BY nom') or die(print_r($bdd->errorInfo()));
 	return $req;
 
 }
