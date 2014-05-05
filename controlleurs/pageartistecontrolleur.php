@@ -4,9 +4,11 @@ include ('models/artistemodel.php');
 include ('models/extraitModel.php');
 include ('models/SuivreModel.php');
 include ('models/DonnerAvis.php');
+include ('models/concertmodel.php');
 
 if(isset($_GET['id'])){
 	$createur=AuthentificationArtiste($_GET["id"]);
+	$notif=nouveauMessage($_GET["id"]);
 }
 
 if(isset($_GET['id'])){
@@ -53,6 +55,9 @@ if(isset($_GET['onglet'])){
 	if ($_GET["onglet"] ==5){
 		$onglet=5;
 	}
+	if ($_GET["onglet"] ==6){
+		$onglet=6;
+	}	
 }
 
 if(isset($_GET['id'])){

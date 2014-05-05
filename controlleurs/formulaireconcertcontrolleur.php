@@ -2,11 +2,12 @@
 
 
 if(!empty($_POST['nom'])){
-
+		$photocover = "";
 		$nom = mysql_real_escape_string(htmlspecialchars($_POST['nom']));
-		$date = mysql_real_escape_string(htmlspecialchars($_POST['date']));
+		$jour = $_POST['jour'];
 		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
-		$début = mysql_real_escape_string(htmlspecialchars($_POST['début']));
+		$début = $_POST['début'];
+		$duree = $_POST['duree'];
 		$message = mysql_real_escape_string(htmlspecialchars($_POST['message']));
 		
 		if(!empty($_POST['photocover'])){
@@ -22,23 +23,21 @@ echo "tyty";
 			if($_GET['invite'] == 'artiste')
 			{
 				$artiste_id = $_GET['id'];
-				$salle_id = $_SESSION['salle_id'];
+				$salle_id = $_SESSION['salle_id']['salle_id'];
 			}
 			else
 			{
 				$salle_id = $_GET['id'];
-				$artiste_id = $_SESSION['artiste_id'];
+				$artiste_id = $_SESSION['artiste_id']['artiste_id'];
 			}
-			var_dump($artiste_id);
-			var_dump($salle_id);
-			insertConcert($nom, $date ,$description, $début, $durée, $message, $photocover, $topic_id, $salle_id, $artiste_id);
+			insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id);
 		}
 	}
 		else
 		{
 			if(isset($_GET['concert_id'])){
 				$id = $_GET['concert_id'];
-				updateConcert($nom, $date ,$description, $début, $durée, $message, $photocover, $id);
+				updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $id);
 		}}
 		include('controlleurs/bannierecontrolleur.php');
 		include ('views/formulaireconcertview.php');

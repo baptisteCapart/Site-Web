@@ -2,26 +2,57 @@
 
 
 
-function insertConcert($nom, $date ,$description, $début, $durée, $message, $photocover, $topic_id, $salle_id, $artiste_id)
+function insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO concert(nom, 'date', heure, durée, description, message, salle_id, artiste_id, photocover, topic_id) 
-		VALUES ('$nom', '$date', '$heure', '$durée', '$description', '$message', '$salle_id', '$artiste_id', '$photocover', '$topic_id')");
+	$topic_id = newtopic();
+	$bdd->query("INSERT INTO concert(nom, jour, heure, duree, description, message, salle_id, artiste_id, photocover, topic_id) 
+		VALUES ('$nom', '$jour', '$début', '$duree', '$description', '$message', '$salle_id', '$artiste_id', '$photocover', '$topic_id')") or die(print_r($bdd->errorInfo()));
+	newpost($message,$topic_id);
 }
 
-function updateConcert($nom, $date ,$description, $début, $durée, $message, $photocover, $id)
+function nouveauMessage($id){
+	global $bdd;
+	$result = $bdd->query ("SELECT $id from concert where $id = '$id' and non_lu =1");
+	$result2 = $result->fetch();
+	if (!$result2){
+		return false;
+
+	}else{
+		return true;
+	}
+}
+
+
+function updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $id)
 {
 	global $bdd;
 
 	$bdd->query("UPDATE concert 
 		SET nom='$nom',
-			'date'='$date',
+			jour='$jour',
 			heure='$heure',
-			durée='$durée',
-			description=$description,
+			duree='$duree',
+			description='$description',
 			message= '$message',
 			photocover='$photocover'
 
 		WHERE concert_id='$id'");
+}
+
+function newtopic ()
+{
+	global $bdd;
+	$public = 1;
+	$bdd->query("INSERT INTO topic (public) VALUES ('$public')");
+	$sql = $bdd->query("SELECT id_topic from topic where public = 1 order by id_topic DESC limit 1") or die(print_r($bdd->errorInfo()));
+	$req = $sql->fetch();
+	return $req['id_topic'];
+}
+
+function newpost ($message, $topic_id)
+{
+	global $bdd;
+	$bdd->query("INSERT INTO post (contenu, topic_id) VALUES ( '$message', '$topic_id')") or die (print_r($bdd->errorInfo()));
 }
  ?>

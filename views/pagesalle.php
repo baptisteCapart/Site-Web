@@ -11,6 +11,10 @@
     <li class = "<?php if($ongletSalle==2){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=2 #contenuSalle"> Concerts </a>'; ?></li>
     <li class = "<?php if($ongletSalle==4){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=4 #contenuSalle"> Avis </a>'; ?></li>
     <li class = "<?php if($ongletSalle==5){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=5 #contenuSalle"> Photos </a>'; ?></li>
+      <?php if(isset($_SESSION['id'])){
+           if($createur['membre_id']==$_SESSION['id']) { ?>
+    <li class = "<?php if($ongletSalle==6){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=6 #contenuSalle"> Invitations </a>'; ?></li>
+<?php }} ?>
   </ul>
  </div> 
 </div>
@@ -26,7 +30,7 @@
                  if (isset($follower)){
                   if($follower==true) {?>
                   	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
-                 <li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur"><input class = "bouton3" type="submit" name = "inviter" value="Inviter"/></form></li> 
+                 <li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur&invite=salle&new=new<?='&id='.$_SESSION['salleID']?>"><input class = "bouton3" type="submit" name = "inviter" value="Inviter"/></form></li> 
         <?php }}}} ?>
 </ul>
 </div>
@@ -126,6 +130,15 @@
     <?php  if($ongletSalle==5){ ?> 
       <div class = "photos"> photos</div>
     <?php } ?> 
+
+    <?php  if($ongletSalle==6){ ?> 
+      <div class = "invitations"> invitations
+        
+      </div>
+    <?php } ?> 
+
+
+
   </div>
 </div>
 

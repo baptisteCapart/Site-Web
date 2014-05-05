@@ -37,7 +37,11 @@ if(isset($_GET['ongletSalle'])){
 	if ($_GET["ongletSalle"] ==5){
 		$ongletSalle=5;
 	}
+	if ($_GET["ongletSalle"] ==6){
+		$ongletSalle=6;
+	}
 }
+
 
 if(isset($_GET['id'])){
 	if(isset($_GET['note'])){

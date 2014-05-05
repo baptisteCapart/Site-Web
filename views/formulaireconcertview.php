@@ -10,7 +10,7 @@
 				</li>
 				<li>
 					<span>Date :</span>
-					<input type="date" name="date">
+					<input type="date" name="jour">
 				</li>
 				<li>
 					<span>Heure de début :</span>
@@ -18,7 +18,7 @@
 				</li>
 				<li>
 					<span>Durée :</span>
-					<input type="time" name="durée">
+					<input type="time" name="duree">
 				</li>
 				<li>
 					<span>Description :</span>
