@@ -17,7 +17,22 @@
 	background-image: url(../../controlleurs/images/listeart.jpg) ;	
 }
 
-
+.listelettres a
+{
+	color : white;	
+}
+.listelettres a:hover
+{
+	border-bottom: 3px solid #4BE218;
+	padding-bottom: 5px;
+	
+}
+.listelettres
+{
+	padding: 10px;
+	font-size: 2em;	
+	background-color: #0C0C0C;
+}
 
 .titreartistes
 {

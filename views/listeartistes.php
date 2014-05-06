@@ -13,15 +13,22 @@
 
   </div> 
 
-
-
   <div id="contenuliste">
       <?php  if($critere==1){ ?> 
-        <div class = "alpha"> <ul><?php
-  			foreach ($listegroupe as $group)
+      <div class = "listelettres">
+          <?php
+          foreach(range('A','Z') as $i) {
+              echo '<a href="index.php?page=listeartistecontrolleur&lettre='.$i.'">'.$i.'</a>';
+              // On peut ajouter un séparateur
+              if ($i != "Z") echo "   -    ";
+          }
+          ?>
+      </div>
+        <div class = "alpha"> <ul>
+  			<?php if(isset($LISTE)){ foreach ($LISTE as $group)
   			{echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$group["artiste_id"].'"> <img src="controlleurs/images/'.$group['photocover'].'" alt="" /> '. $group["nom"].'<br/>'.' </a></li>';}
   		?></ul></div>
-      <?php } ?> 
+      <?php }else echo "cliquez sur une lettre pour afficher les artistes commençant par cette lettre";} ?> 
 
        <?php  if($critere==2){ ?> 
         <div class = "style"> Liste des artistes classés par genre</div>

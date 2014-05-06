@@ -3,8 +3,6 @@
 include ('models/sallemodel.php');
 
 
-$listesalle = listeSalle();
-
 $critereSalle =1;
 
 if(isset($_GET['critereSalle'])){
@@ -17,7 +15,16 @@ if(isset($_GET['critereSalle'])){
 	}
 
 }
+if(isset($_GET['lettre'])){
+	$lettre = $_GET['lettre'];
+	$LISTE = affichagesalle($lettre);
+}
 
+if(isset($_GET['code_postal'])){
+
+	$code_postal = $_GET['code_postal'];
+	$LISTE = departement($code_postal);
+}
 
 include('controlleurs/bannierecontrolleur.php');
 include ('views/listeSalles.php');

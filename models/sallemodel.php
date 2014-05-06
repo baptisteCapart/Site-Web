@@ -5,6 +5,18 @@ function insertSalle($Nom_de_salle, $code_postal, $ville ,$adresse, $type, $capa
 	$bdd->query("INSERT INTO salle(nom, code_postal, ville, adresse, type, capacite, photocover, membre_id )  VALUES ('$Nom_de_salle', '$code_postal', '$ville' ,'$adresse' ,'$type', '$capacité','$photosalle', '$membre_id')");
 }
 
+function affichagesalle($lettre){
+	global $bdd;
+	$sql = $bdd-> query("SELECT * from salle where nom LIKE '$lettre%' order by nom");
+	return $sql;
+}
+
+function departement($code_postal){
+	global $bdd;
+	$sql = $bdd-> query("SELECT * from salle where convert(code_postal,char(16)) LIKE '$code_postal%' order by nom");
+	return $sql;	
+}
+
 function recuperer3(){
 
 if (isset($_GET['id'])) {
@@ -16,13 +28,6 @@ if (isset($_GET['id'])) {
   }
 }
 
-function listeSalle(){
-
-	global $bdd;
- 	$req = $bdd-> query('SELECT * FROM salle ORDER BY nom') or die(print_r($bdd->errorInfo()));
-	return $req;
-
-}
 
 function AuthentificationSalle($id){
 	global $bdd;

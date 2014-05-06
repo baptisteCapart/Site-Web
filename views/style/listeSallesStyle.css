@@ -20,8 +20,17 @@
 	background-position: center;	
 }
 
-
-
+.listeCP a
+{
+	color: white;
+	font-size: 1.2em;
+}
+.listeCP a:hover
+{
+	border-bottom: 3px solid #4BE218;
+	padding-bottom: 5px;
+	
+}
 .titresalles
 {
 	padding : 30px;

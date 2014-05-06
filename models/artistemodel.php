@@ -6,7 +6,17 @@ function insertArtiste($nomartiste, $style ,$description, $photogroupe,$membreID
 	$bdd-> query("INSERT INTO artiste(nom, description, photocover, membre_id)  VALUES ('$nomartiste', '$description', '$photogroupe' , '$membreID')") or die(print_r($bdd->errorInfo()));
 }
 
+function trialpha(){
+	global $bdd;
+	$sql = $bdd-> query("SELECT * from artiste order by nom") or die(print_r($bdd->errorInfo()));
+	return $sql;
+}
 
+function affichage($lettre){
+	global $bdd;
+	$sql = $bdd-> query("SELECT * from artiste where nom LIKE '$lettre%' order by nom") or die(print_r($bdd->errorInfo()));
+	return $sql;
+}
 
 function recuperer2($id){
 	global $bdd;
@@ -16,13 +26,7 @@ function recuperer2($id){
   	return $donnee;
 }
 
-function listeArtiste(){
 
-	global $bdd;
- 	$req = $bdd-> query('SELECT * FROM artiste ORDER BY nom') or die(print_r($bdd->errorInfo()));
-	return $req;
-
-}
 
 function AuthentificationArtiste($id){
 	global $bdd;
