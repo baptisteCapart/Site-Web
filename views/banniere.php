@@ -114,7 +114,7 @@
 				</li>	
 				<li id = "forum"><a href="index.php?page=forumcontrolleur">Forum</a></li>
 				<li id = "search">
-					<form class ="recherche" method="post" action="index.php?page=recherchecontrolleur.php" >
+					<form class ="recherche" method="post" action="index.php?page=recherchecontrolleur&redirect=<?php echo "$redirect"; ?>" >
 						<input class = "barresearch" type="text" name="recherche" placeholder="   Rechercher" size = "30"/>
 					</form>
 				</li>
