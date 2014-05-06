@@ -6,7 +6,7 @@
 			débattre sur les différents artistes et accéder au F.A.Q. </br>
 			Exprimez vos opinions ...</p>
 		<div id="charte">
-			<a href="#">Charte du forum</a>
+			<a href="index.php?page=charteForumcontrolleur">Charte du forum</a>
 		</div>		
 	</div>
 
