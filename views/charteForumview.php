@@ -2,15 +2,15 @@
 
 <h1>CHARTE</h1>
 	<p>
-	L'inscription à ce forum est gratuite. Nous insistons sur le fait que vous devez respecter les règles détaillées ci-dessous. Lors de votre phase d'inscription, si vous êtes d'accord avec les règles, veuillez cocher la case « J'ai lu les règles du Forum FS Generation et j'accepte de les respecter. » et cliquer sur le bouton « S'inscrire ». Si vous souhaitez annuler votre inscription, cliquez ici pour retourner à l'accueil des forums.<br>
+	L'inscription à ce forum est gratuite. Nous insistons sur le fait que vous devez respecter les règles détaillées ci-dessous. Lors de votre phase d'inscription, si vous êtes d'accord avec les règles, veuillez cocher la case « J'ai lu les règles du Forum de Tune in Town et j'accepte de les respecter. » et cliquer sur le bouton « S'inscrire ». Si vous souhaitez annuler votre inscription.<br>
 <br>
-Bien que les administrateurs et les modérateurs du Forum FS Generation essaient d'écarter tout message répréhensible de ce forum, il leur est impossible de contrôler tous les messages. Ceux-ci expriment uniquement les opinions de leur auteur. Les propriétaires du Forum FS Generation et Jelsoft Enterprises Limited (développeurs de vBulletin) n'entendent donner ni approbation, ni improbation des propos émis sur ce forum. Ils ne sauraient être considérés comme responsables du contenu des messages dont ils ne sont pas les auteurs.<br>
+Bien que les administrateurs et les modérateurs du Forum Tune in Town essaient d'écarter tout message répréhensible de ce forum, il leur est impossible de contrôler tous les messages. Ceux-ci expriment uniquement les opinions de leur auteur. Les propriétaires du Forum Tune in Town n'entendent donner ni approbation, ni improbation des propos émis sur ce forum. Ils ne sauraient être considérés comme responsables du contenu des messages dont ils ne sont pas les auteurs.<br>
 <br>
 En acceptant ces règles, vous vous engagez à n'écrire aucun message à caractère obscène, vulgaire, discriminatoire, menaçant, diffamatoire, injurieux, portant atteinte au droit de la personnalité (droit au respect de la vie privée, droit à l’image, droit au secret professionnel), à la sécurité des personnes et des biens et au code de la propriété intellectuelle (piratage et intrusion dans les systèmes informatiques et de télécommunications) ou contraire aux lois et règlements en vigueur.<br>
 <br>
-Vous autorisez les hébergeurs du Forum FS Generation à supprimer, modifier, déplacer ou fermer n'importe quel message pour n'importe quelle raison et sans autorisation préalable de votre part.<br>
+Vous autorisez les hébergeurs du Forum Tune in Town à supprimer, modifier, déplacer ou fermer n'importe quel message pour n'importe quelle raison et sans autorisation préalable de votre part.<br>
 <br>
-Des bénévoles identifiés comme étant "Modérateur" ont été sélectionnés par l'équipe du Forum FS Generation pour veiller à ce que les membres inscrits puissent s'exprimer dans les meilleures conditions possibles tout en respectant cette charte. En cas de manquement à ces règles, ceux-ci peuvent notamment être amenés à exclure temporairement ou définitivement un utilisateur ne respectant pas cette charte.<br>
+Des bénévoles identifiés comme étant "Modérateur" ont été sélectionnés par l'équipe du Forum Tune in Town pour veiller à ce que les membres inscrits puissent s'exprimer dans les meilleures conditions possibles tout en respectant cette charte. En cas de manquement à ces règles, ceux-ci peuvent notamment être amenés à exclure temporairement ou définitivement un utilisateur ne respectant pas cette charte.<br>
 <br>
 Conduite à tenir sur le forum<br>
 <br>
