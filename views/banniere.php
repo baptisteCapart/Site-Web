@@ -5,6 +5,7 @@
 	<meta charset="utf-8"/>
 	<title>Tune In Town</title>
 	<rel type="stylesheet" href="" />
+	<link rel="stylesheet" href="views/style/FAQstyle.css" />
 	<link rel="stylesheet" href="views/style/charteForumstyle.css" />
 	<link rel="stylesheet" href="views/style/pageMembrestyle.css">
 	<link rel="stylesheet" href="views/style/bannierestyle.css"/>
