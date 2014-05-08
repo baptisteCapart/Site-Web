@@ -30,8 +30,8 @@
                  if (isset($follower)){
                   if($follower==true) {?>
                   	 <li><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" name = "suivre" value="Suivre"/></form></li>
-                 <li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur&invite=salle&new=new<?='&id='.$_SESSION['salleID']?>"><input class = "bouton3" type="submit" name = "inviter" value="Inviter"/></form></li> 
         <?php }}}} ?>
+        <li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur&invite=salle&new=new<?='&id='.$_SESSION['salleID']?>"><input class = "bouton3" type="submit" name = "inviter" value="Inviter"/></form></li> 
 </ul>
 </div>
 
@@ -134,7 +134,11 @@
     <?php  if($ongletSalle==6){ ?> 
       <div class = "invitations"> <?php if (isset($notif)){
              if($notif==true) {?>
-             <div>tu as une notif</div>
+             <div>tu as une notif
+                  <?php foreach ($concert as $listeconcert) {
+                    echo ' <li><a href = "index.php?page=modifierconcertcontrolleur&id='.$listeconcert["concert_id"].'">'. $listeconcert["nom"].'<br/>'.' </a></li>';
+                  } ?>
+             </div>
              <?php }else{ ?>
              <div>aucune notif</div>
         <?php }} ?> 

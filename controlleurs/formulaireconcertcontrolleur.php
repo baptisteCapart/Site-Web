@@ -5,15 +5,18 @@ if(isset($_GET['invite'])){
 	$invite=$_GET['invite'];
 }		
 
-if(!empty($_POST['nom'])){
+if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])){
 		$photocover = "";
 		$nom = mysql_real_escape_string(htmlspecialchars($_POST['nom']));
 		$jour = $_POST['jour'];
 		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
 		$début = $_POST['début'];
 		$duree = $_POST['duree'];
-		$message = mysql_real_escape_string(htmlspecialchars($_POST['message']));
-		
+		if(isset($_POST['message'])){
+			$message = $_POST['message'];
+			$message = nl2br($message);
+			$message = mysql_real_escape_string($message);	
+		}
 		if(!empty($_POST['photocover'])){
 			$photocover = mysql_real_escape_string(htmlspecialchars($_POST['photocover']));
 		}

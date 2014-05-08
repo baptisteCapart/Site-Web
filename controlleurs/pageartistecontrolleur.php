@@ -10,6 +10,7 @@ if(isset($_GET['id'])){
 	$createur=AuthentificationArtiste($_GET["id"]);
 	$artiste_id = $_GET["id"];
 	$notif=nouveauMessageA($artiste_id);
+	$concert=listeConcertsA($artiste_id);
 }
 
 if(isset($_GET['id'])){
