@@ -2,18 +2,18 @@
 
 
 
-function insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id)
+function insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur)
 {
 	global $bdd;
 	$topic_id = newtopic();
-	$bdd->query("INSERT INTO concert(nom, jour, heure, duree, description, message, salle_id, artiste_id, photocover, topic_id) 
-		VALUES ('$nom', '$jour', '$début', '$duree', '$description', '$message', '$salle_id', '$artiste_id', '$photocover', '$topic_id')") or die(print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO concert(nom, jour, heure, duree, description, message, salle_id, artiste_id, photocover, topic_id, inviteur) 
+		VALUES ('$nom', '$jour', '$début', '$duree', '$description', '$message', '$salle_id', '$artiste_id', '$photocover', '$topic_id', '$inviteur')") or die(print_r($bdd->errorInfo()));
 	newpost($message,$topic_id);
 }
 
 function nouveauMessageA($id){
 	global $bdd;
-	$result= $bdd->query ("SELECT artiste_id from concert where artiste_id = '$id' and non_lu =1");
+	$result= $bdd->query ("SELECT artiste_id from concert where artiste_id = '$id' and non_lu =1 and inviteur = 0");
 	$result2 = $result->fetch();
 	if (!$result2){
 		return false;
@@ -25,7 +25,7 @@ function nouveauMessageA($id){
 
 function nouveauMessageS($id){
 	global $bdd;
-	$result = $bdd->query ("SELECT concert_id from concert where salle_id = '$id' and non_lu =1");
+	$result = $bdd->query ("SELECT concert_id from concert where salle_id = '$id' and non_lu =1 and inviteur = 1");
 	$result2 = $result->fetch();
 	if (!$result2){
 		return false;
