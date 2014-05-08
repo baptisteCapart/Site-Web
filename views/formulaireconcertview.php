@@ -3,37 +3,37 @@
 
 		<div id="formulaire">
 		<form class ="form2" method="post" action="<?php if($invite=='artiste'){ echo'index.php?page=formulaireconcertcontrolleur&new=new&invite=artiste&id='.$_SESSION['artisteID']; 
-		}else{echo'index.php?page=formulaireconcertcontrolleur&new=new&invite=salle&id='.$_SESSION['salleID'];} ?>"
+		}else{echo'index.php?page=formulaireconcertcontrolleur&new=new&invite=salle&id='.$_SESSION['salleID'];} ?>">
+			
 			<ul>
 				<li>
-					<span>Nom :</span>
-					<input type="text" name="nom">
+					<div><span>Nom :</span>
+					<input class = "textbox" type="text" name="nom"></div>
 				</li>
 				<li>
-					<span>Date :</span>
-					<input type="date" name="jour">
+					<div><span>Date :</span>
+					<input class = "textbox" type="date" name="jour"></div>
 				</li>
 				<li>
-					<span>Heure de début :</span>
-					<input type="time" name="début">
+					<div><span>Heure de début :</span>
+					<input class = "textbox" type="time" name="début"></div>
 				</li>
 				<li>
-					<span>Durée :</span>
-					<input type="time" name="duree">
+					<div><span>Durée :</span>
+					<input class = "textbox"type="time" name="duree"></div>
 				</li>
 				<li>
-					<span>Description :</span>
-					<input type="text" name="description">
+					<div><span>Description :
+					<TEXTAREA name="description" rows=10 COLS=40></TEXTAREA></div>
 				</li>
 				<li>
-					<span>Message :</span>
-					<input type="text" name="message">
-				</li>
+					<div><span>Message :
+					<TEXTAREA name="message" rows=10 COLS=40></TEXTAREA></div>
 				<li>
-					<span>Photo de couverture :</span>
-					<input type="file" name="photocover">
+					<div><span>Photo de couverture :</span>
+					<input type="file" name="photocover"></div>
 				</li>
-				<li><input type="submit">C'est parti</input></li>
+				<li><input class = "envoyer" type="submit"></input></li>
 			</ul>
 			
 			
