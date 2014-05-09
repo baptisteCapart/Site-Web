@@ -59,7 +59,7 @@
 			<div class="container">
 				<div class="pseudo"> 
 					<ul>
-						<li><a href="index.php?page=PageMembrecontrolleur"> <?= $_SESSION['pseudo'] ?> </a></li>
+						<li><?php echo '<a href="index.php?page=PageMembrecontrolleur&id='.$_SESSION["id"].'">'; ?> <?= $_SESSION['pseudo'] ?> </a></li>
 						<li><a href="index.php?page=deconnexioncontrolleur">Déconnexion</a></li>
 					</ul>
 				</div>
@@ -70,7 +70,7 @@
 		?>
 		<nav id="menu">
 			<ul>
-				<li id = "compte"><a  <?php  if(isset($_SESSION['pseudo'])) { ?> href="index.php?page=PageMembrecontrolleur"  
+				<li id = "compte"><a  <?php  if(isset($_SESSION['pseudo'])) { ?> <?php echo ' href="index.php?page=PageMembrecontrolleur&id='.$_SESSION["id"].'"'; ?>  
 					<?php }else{ ?> href="index.php?page=formulairecontrolleur" <?php } ?> >Compte</a>
 					<ul class = "menu1">
 						<?php  if(isset($_SESSION['pseudo'])) { ?>

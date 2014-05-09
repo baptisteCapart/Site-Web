@@ -1,7 +1,8 @@
 <?php 
-
+include('models/concertmodel.php');
 
 $critereConcert =1;
+$liste = listeConcerts();
 
 if(isset($_GET['critereConcert'])){
 

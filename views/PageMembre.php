@@ -11,7 +11,7 @@
 		</li>
 		<li id="donneesmembre">
 			<ul>
-				<li><?= $_SESSION['pseudo'] ?> </li>
+				<li><?= $donnees['pseudo'] ?> </li>
 				<li><?= $donnees['sexe'] ?></li>
 				<li><?= $birthdate ?></li>
 				<li><?= $donnees['ville'] ?></li>
@@ -25,8 +25,9 @@
 
 <div id="global">
     <ul id="parametres">
+        <?php if($_SESSION['id']==$_GET['id']){ ?>
     	<li><form class ="form3" method="post" action="index.php?page=ParametresMembrecontrolleur"><input class = "bouton" type="submit" value="Paramètres" /></form></li>
-    	<li><input class = "bouton" type="submit" value="Suivre"/></li>
+    	<?php }else{ ?><li><input class = "bouton" type="submit" value="Suivre"/></li><?php } ?>
     	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
     </ul>
 </div>

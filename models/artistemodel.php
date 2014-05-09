@@ -26,6 +26,13 @@ function recuperer2($id){
   	return $donnee;
 }
 
+function recuperer4($id){
+	global $bdd;
+	$sql = "SELECT * from artiste where artiste_id ='$id'";
+ 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+ 	return $req;
+}
+
 
 
 function AuthentificationArtiste($id){

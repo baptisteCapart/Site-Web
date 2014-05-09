@@ -1,13 +1,14 @@
-<div id = "photoconcert">
-			<!-- <div id="nomconcert">
-		        CONCERT
+<div id = "photoconcert" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
+<!-- 			<div id="nomconcert">
+		        <?= $donnees["nom"] ?>
 		    </div> -->
 
 	<div id="menuConcert">
 			<ul class = "page">
-				<li class = "<?php if($ongletConcert==1){ echo "activeConcert";}?>"><?php echo'<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=1 #contenuConcert"> Présentation </a>'; ?></li>
-				<li class = "<?php if($ongletConcert==2){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=2 #contenuConcert"> Photos </a>'; ?></li>
-				<li class = "<?php if($ongletConcert==4){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&ongletConcert=4 #contenuConcert"> Avis </a>'; ?></li>
+				<li class = "<?php if($ongletConcert==1){ echo "activeConcert";}?>"><?php echo'<a href = "index.php?page=pageconcertcontrolleur&id='.$_GET['id'].'&ongletConcert=1 #contenuConcert"> Présentation </a>'; ?></li>
+				<li class = "<?php if($ongletConcert==3){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&id='.$_GET['id'].'&ongletConcert=3 #contenuConcert"> Salle </a>'; ?></li>
+				<li class = "<?php if($ongletConcert==2){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&id='.$_GET['id'].'&ongletConcert=2 #contenuConcert"> Photos </a>'; ?></li>
+				<li class = "<?php if($ongletConcert==4){ echo "activeConcert";}?>"><?php echo '<a href = "index.php?page=pageconcertcontrolleur&id='.$_GET['id'].'&ongletConcert=4 #contenuConcert"> Avis </a>'; ?></li>
 			</ul>
  	</div> 
 
@@ -15,26 +16,11 @@
 		<div><img  class = "hoverimg2" src="controlleurs/images/groupesalle.jpg" alt="participants">
 			<div>
 				<ul id="liste2"> <span class="groupespart">Ils s'y produisent : </span>
-					<li>a</li>
-					<li>b</li>
-					<li>c</li>
-					<li>d</li>
-					<li>e</li>
-					<li>f</li>
-					<li>g</li>
-					<li>h</li>
-					<li>i</li>
-					<li>j</li>
-					<li>k</li>
-					<li>l</li>
-					<li>m</li>
-					<li>n</li>
-					<li>o</li>
-					<li>p</li>
-					<li>q</li>
-					<li>r</li>
-					<li>s</li>
-					<li>t</li>
+                    <?php  if(isset($LISTE)){    
+                         foreach ($LISTE as $artiste){
+                          echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$artiste["artiste_id"].'">'. $artiste["nom"].'<br/>'.' </a></li>';
+                        }}
+                         ?>
 				</ul>
 			</div>
 		</div>
@@ -44,26 +30,11 @@
 		<div><img  class = "hoverimg" src="controlleurs/images/membre.jpg" alt="participants"> 
 			<div>
 				<ul id="liste"> <span class="membres">Ils y participent : </span>
-					<li>a</li>
-					<li>b</li>
-					<li>c</li>
-					<li>d</li>
-					<li>e</li>
-					<li>f</li>
-					<li>g</li>
-					<li>h</li>
-					<li>i</li>
-					<li>j</li>
-					<li>k</li>
-					<li>l</li>
-					<li>m</li>
-					<li>n</li>
-					<li>o</li>
-					<li>p</li>
-					<li>q</li>
-					<li>r</li>
-					<li>s</li>
-					<li>t</li>
+						<?php  if(isset($membreinfo)){    
+                         	foreach ($membreinfo as $membre){
+                          	echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'">'. $membre["pseudo"].'<br/>'.' </a></li>';
+                        }}
+                         ?>
 				</ul>
 			</div>
 		</div>
@@ -74,8 +45,7 @@
 
 <div id="global3">
 <ul id="parametres3">
-	<li><input class = "bouton3" type="submit" value="Paramètres" /></li>
-	<li><input class = "bouton3" type="submit" value="Suivre"/></li>
+	<li><form action=""><input class = "bouton3" type="submit" name = "participer" value="Participer"/></form></li>
 </ul>
 </div>
 
@@ -85,13 +55,16 @@
   <div id="textConcert">
     <?php  if($ongletConcert==1){ ?> 
       	<div class = "descrption"> 
-	      	<ul>
-		      	<li>adresse</li>
-		      	<li>ville</li>
-		      	<li>code postal</li>
-	      	</ul>	
+			<?= $donnees['description'] ?>
   		</div>
     <?php } ?> 
+
+    <?php  if($ongletConcert==3){ ?> 
+      <div class = "salle"> 
+		<?php echo '<a href="index.php?page=pageSallecontrolleur&id='.$salle['salle_id'].'">'.$salle["nom"].'</a>'; ?>
+      </div>
+    <?php } ?>
+
 
     <?php  if($ongletConcert==2){ ?> 
       <div class = "photos"> concerts</div>

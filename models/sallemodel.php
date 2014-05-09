@@ -17,15 +17,15 @@ function departement($code_postal){
 	return $sql;	
 }
 
-function recuperer3(){
+function recuperer3($id){
 
-if (isset($_GET['id'])) {
+
 	global $bdd;
-	$sql = 'SELECT * from salle where salle_id ='.$_GET["id"].'';
+	$sql = "SELECT * from salle where salle_id ='$id'";
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
  	$donnee = $req-> fetch();
   	return $donnee;
-  }
+  
 }
 
 

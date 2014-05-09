@@ -32,15 +32,17 @@ if(isset($_GET['new'])){
 					$artiste_id = $_GET['id'];
 					$salle_id = $_SESSION['salle_id']['salle_id'];
 					$inviteur = 0;
+					$non_repondu = 'artiste';
 				}
 				else
 				{
 					$salle_id = $_GET['id'];
 					$artiste_id = $_SESSION['artiste_id']['artiste_id'];
 					$inviteur = 1;
+					$non_repondu = 'salle';
 				}
 			}
-			insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur);
+			insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur,$non_repondu);
 		
 	
 		}else{

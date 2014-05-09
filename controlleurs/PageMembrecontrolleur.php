@@ -3,7 +3,7 @@
 include ('models/membremodel.php');
 include ('models/SuivreModel.php');
 
-$donnees = recuperer($_SESSION['id']);
+$donnees = recuperer($_GET['id']);
 $arr = explode('-', $donnees['date_de_naissance']);
 $birthdate = $arr[2].'-'.$arr[1].'-'.$arr[0];
 $ongletMembre =1;

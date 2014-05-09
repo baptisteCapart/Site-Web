@@ -4,7 +4,7 @@
 		<div id="formulaire">
 		<form class ="form2" method="post" action="<?php echo'index.php?page=modifierconcertcontrolleur&id='.$donnees['concert_id']; 
 	 ?>">
-			
+			<div class = "intro">Si vous n'apportez aucune modification, cliquez simplement sur "Valider" pour que le concert soit crée</div>
 			<ul>
 				<li>
 					<div><span>Nom :</span>

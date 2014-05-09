@@ -10,14 +10,15 @@ if(isset($_GET['id'])){
 	$createur=AuthentificationSalle($_GET["id"]);
 	$salle_id=$_GET["id"];
 	$notif = nouveauMessageS($salle_id);
-	$concert=listeConcertsS($salle_id);	
+	$concert=listeConcertsS($salle_id);
+	$donnees = recuperer3($salle_id);	
 }
 
 if(isset($_GET['id'])){
 	$_SESSION['salleID'] = $_GET['id'];
 }
 
-$donnees = recuperer3();
+
 $ongletSalle =1;
 
 if(isset($_GET['ongletSalle'])){
