@@ -4,7 +4,7 @@ include('models/concertmodel.php');
 if(isset($_GET['id'])){
 
 	$concert_id=$_GET['id'];
-	$donnees = recuperer($concert_id);
+	$donnees = recuperer5($concert_id);
 	$listepost = listePost($donnees['topic_id']);
 }
 
