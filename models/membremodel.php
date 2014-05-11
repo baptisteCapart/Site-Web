@@ -37,6 +37,7 @@ function recuperer($id){
   	return $donnee;
 }
 
+
 function modifier($id, $mail, $age ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
 	global $bdd;
 	$bdd->query("UPDATE membre 

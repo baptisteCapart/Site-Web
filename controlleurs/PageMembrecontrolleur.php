@@ -61,8 +61,8 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 }
 
 
-$liste=ArtistesSuivis($_SESSION['id']);
-$liste2 = SallesSuivies($_SESSION['id']);
+$liste=ArtistesSuivis($_GET['id']);
+$liste2 = SallesSuivies($_GET['id']);
 
 
 include('controlleurs/bannierecontrolleur.php');

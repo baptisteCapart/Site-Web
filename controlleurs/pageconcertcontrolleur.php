@@ -6,15 +6,20 @@
  include('models/membremodel.php');
 
 $ongletConcert =1;
-if (isset($_GET['id'])) {
-	$concert_id = $_GET['id'];
-	$donnees = recuperer5($concert_id);
+if(isset($_GET['id'])){
+	$_SESSION['concertID'] = $_GET['id'];
+	$donnees = recuperer5($_SESSION['concertID']);
+	$check = checkParticipation($_SESSION['concertID']);
+	$listemembre=Membres($_SESSION['concertID']);
+}
+if (isset($_POST['participer'])){
+	participate($_SESSION['id'],$_GET['id']);
 }
 
 $salle=recuperer3($donnees['salle_id']);
 $LISTE=recuperer4($donnees['artiste_id']);
-$listemembre=listeMembre($donnees['concert_id']);
-$membreinfo = recuperer($listemembre);
+
+
 
 
 if(isset($_GET['ongletConcert'])){
@@ -39,9 +44,7 @@ if(isset($_GET['ongletConcert'])){
 	}
 }
 
-if (isset($_POST['participer'])){
-	participate($_SESSION['id'],$_GET['id']);
-}
+
 include('controlleurs/bannierecontrolleur.php');
 include ('views/pageconcert.php');
 include('views/footer.php');

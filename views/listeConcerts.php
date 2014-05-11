@@ -19,8 +19,8 @@
        <?php  if($critereConcert==1){ ?> 
         <div> Liste des concerts classées par date
           <?php foreach ($liste as $concert){
-                        echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$concert["concert_id"].'"> '. $concert["nom"].'<br/>'.' </a></li>';
-                      }  ?>
+                  echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$concert["concert_id"].'"> '. $concert["nom"].'<br/>'.' </a></li>';
+                }  ?>
          </div>
       <?php } ?>
 

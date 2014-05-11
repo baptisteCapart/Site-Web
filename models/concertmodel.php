@@ -53,7 +53,6 @@ function recuperer5($id){
 	global $bdd;
 	$sql = "SELECT * from concert where concert_id ='$id'";
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
- 	
   	$donnee = $req-> fetch();
   	return $donnee;
 }
@@ -105,9 +104,9 @@ function listePost ($topic_id)
 	$req = $bdd->query('SELECT * FROM post WHERE topic_id='.$topic_id.' ORDER BY id_post DESC') or die (print_r($bdd->errorInfo()));
 	return $req;
 }
-function participate($concert_id, $membre_id){
+function participate($membre_id, $concert_id){
 	global $bdd;
-	$bdd-> query("INSERT INTO participation(membre_id,concert_id)  VALUES ($membre_id','$concert_id')");
+	$bdd-> query("INSERT INTO participation(membre_id,concert_id)  VALUES ('$membre_id','$concert_id')");
 }
 
 function listeMembre($id)
@@ -117,5 +116,24 @@ function listeMembre($id)
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
  	$donnee = $req->fetch();
   	return $donnee;
+}
+
+function Membres($concert_id){
+	
+	global $bdd;
+	$req = $bdd->query("SELECT membre.pseudo, membre.membre_id FROM membre, participation WHERE membre.membre_id = participation.membre_id AND participation.concert_id = $concert_id") or die(print_r($bdd->errorInfo()));
+	return $req;
+}
+
+function checkParticipation($concert_id){
+	global $bdd;
+	$sql = $bdd->query("SELECT membre_id from participation where concert_id=$concert_id") or die(print_r($bdd->errorInfo()));
+	$req = $sql->fetch();
+	if (!$req){
+		return true;
+
+	}else{
+		return false;
+	}
 }
  ?>

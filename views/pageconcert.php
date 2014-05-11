@@ -30,11 +30,16 @@
 		<div><img  class = "hoverimg" src="controlleurs/images/membre.jpg" alt="participants"> 
 			<div>
 				<ul id="liste"> <span class="membres">Ils y participent : </span>
-						<?php  if(isset($membreinfo)){    
-                         	foreach ($membreinfo as $membre){
-                          	echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'">'. $membre["pseudo"].'<br/>'.' </a></li>';
-                        }}
-                         ?>
+						<?php  if($check==false){
+							if(isset($listemembre)){    
+	                         	foreach ($listemembre as $membre){
+	                          		echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'">'. $membre["pseudo"].'<br/>'.' </a></li>';
+	                        	}
+	                    	}
+	                    }else{
+	                    	echo "<br />personne ne se rend à ce concert pour l'insant";
+	                	}
+                        ?>
 				</ul>
 			</div>
 		</div>
@@ -45,7 +50,7 @@
 
 <div id="global3">
 <ul id="parametres3">
-	<li><form action=""><input class = "bouton3" type="submit" name = "participer" value="Participer"/></form></li>
+	<li><form method = "post" action="index.php?page=pageconcertcontrolleur<?='&id='.$_SESSION['concertID'].''?>"><input class = "bouton3" type="submit" name = "participer" value="Participer"/></form></li>
 </ul>
 </div>
 
