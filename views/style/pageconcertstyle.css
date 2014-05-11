@@ -18,12 +18,14 @@ html, body
 
 }
 
-.listembr, #listegroupe
+.listembr, .listegroupe
 {
 	
 	width: 100%;
 	margin: 0;
 	height: 100%;
+	font-family: 'Quicksand' , sans-serif;
+
 
 }
 
@@ -114,12 +116,25 @@ html, body
 
 }
 
-.listembr ul .membres, .listegroupe ul .groupespart
+#participants
+{
+	margin-top: 50px;
+}
+
+.groupespart
 {
 	font-weight: bold;
 }
 
+#liste2 a, #liste a
+{
+	color : white;
+}
 
+#liste2 a:hover, #liste a:hover
+{
+	color : #71E34F;
+}
 #photoconcert
 {
 	position: relative;

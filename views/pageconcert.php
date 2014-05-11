@@ -16,11 +16,13 @@
 		<div><img  class = "hoverimg2" src="controlleurs/images/groupesalle.jpg" alt="participants">
 			<div>
 				<ul id="liste2"> <span class="groupespart">Ils s'y produisent : </span>
+                    <span id="participants">
                     <?php  if(isset($LISTE)){    
                          foreach ($LISTE as $artiste){
                           echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$artiste["artiste_id"].'">'. $artiste["nom"].'<br/>'.' </a></li>';
                         }}
                          ?>
+                     </span>
 				</ul>
 			</div>
 		</div>
@@ -29,7 +31,8 @@
 	<span class = "listembr" >
 		<div><img  class = "hoverimg" src="controlleurs/images/membre.jpg" alt="participants"> 
 			<div>
-				<ul id="liste"> <span class="membres">Ils y participent : </span>
+				<ul id="liste"> <span class="groupespart">Ils y participent : </span>
+						 <span id="participants">
 						<?php  if($check==false){
 							if(isset($listemembre)){    
 	                         	foreach ($listemembre as $membre){
@@ -40,6 +43,7 @@
 	                    	echo "<br />personne ne se rend à ce concert pour l'insant";
 	                	}
                         ?>
+                    </span>
 				</ul>
 			</div>
 		</div>
