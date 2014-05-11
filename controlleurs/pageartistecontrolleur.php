@@ -5,6 +5,7 @@ include ('models/extraitModel.php');
 include ('models/SuivreModel.php');
 include ('models/DonnerAvis.php');
 include ('models/concertmodel.php');
+include ('models/sallemodel.php');
 
 if(isset($_GET['id'])){
 	$createur=AuthentificationArtiste($_GET["id"]);
@@ -18,6 +19,7 @@ if(isset($_GET['id'])){
 }
 
 $donnees = recuperer2($_SESSION['artisteID']);
+
 if(!empty($_POST['extrait1']) or !empty($_POST['extrait2']) ){
 		if(isset($_GET['id'])){	
 			if(!empty($_POST['extrait1'])){

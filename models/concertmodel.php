@@ -16,12 +16,13 @@ function listeConcerts(){
 
 function listeConcertsA($id){
 	global $bdd;
-	$result= $bdd->query ("SELECT concert_id, nom from concert where artiste_id = '$id' and non_repondu ='artiste' and inviteur = 0 and accord = 0");
+	$result= $bdd->query ("SELECT concert_id, nom, salle_id from concert where artiste_id = '$id' and non_repondu ='artiste' and inviteur = 0 and accord = 0");
 	return $result;
 }
+
 function listeConcertsS($id){
 	global $bdd;
-	$result= $bdd->query ("SELECT concert_id, nom from concert where salle_id = '$id' and non_repondu = 'salle' and inviteur = 1 and accord = 0");
+	$result= $bdd->query ("SELECT concert_id, nom, artiste_id from concert where salle_id = '$id' and non_repondu = 'salle' and inviteur = 1 and accord = 0");
 	return $result;
 }
 

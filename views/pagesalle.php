@@ -136,7 +136,8 @@
              if($notif==true) {?>
              <div>tu as une notif
                   <?php foreach ($concert as $listeconcert) {
-                    echo ' <li><a href = "index.php?page=modifierconcertcontrolleur&id='.$listeconcert["concert_id"].'">'. $listeconcert["nom"].'<br/>'.' </a></li>';
+                      $artisteNom = recuperer2($listeconcert['artiste_id']); 
+                    echo ' <li><a href = "index.php?page=modifierconcertcontrolleur&id='.$listeconcert["concert_id"].'">'. $listeconcert["nom"].''.' </a>Proposé par : <a href = "index.php?page=pageartistecontrolleur&id='.$listeconcert["artiste_id"].'">'. $artisteNom["nom"].'<br/>'.' </li></a>';
                   } ?>
              </div>
              <?php }else{ ?>

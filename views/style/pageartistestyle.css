@@ -223,3 +223,17 @@ a[href*="intent"] {
 .rating2 a {
 	float:none
 }
+.invitations a 
+{
+	color : #7CEB70;
+	padding-bottom: 7px;
+}
+
+.invitations a:hover
+{
+	border-bottom: 1px solid #7CEB70;
+}
+.invitations li 
+{
+	padding-bottom: 10px;
+}

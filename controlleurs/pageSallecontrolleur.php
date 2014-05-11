@@ -4,6 +4,7 @@ include ('models/sallemodel.php');
 include ('models/SuivreModel.php');
 include ('models/DonnerAvis.php');
 include ('models/concertmodel.php');
+include ('models/artistemodel.php');
 
 
 if(isset($_GET['id'])){
@@ -11,7 +12,8 @@ if(isset($_GET['id'])){
 	$salle_id=$_GET["id"];
 	$notif = nouveauMessageS($salle_id);
 	$concert=listeConcertsS($salle_id);
-	$donnees = recuperer3($salle_id);	
+	$donnees = recuperer3($salle_id);
+
 }
 
 if(isset($_GET['id'])){
