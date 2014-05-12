@@ -26,7 +26,10 @@
 		 <br>
 		 Je gère une salle sur votre site et j'aimerais contacter un des artistes présent sur le site<br>
 		 comment faire ?<br>
-		 Pour ce faire appuyer sur le bouton invité sur la page de cet artiste et suivez les indications.
+		 Pour ce faire appuyer sur le bouton invité sur la page de cet artiste et suivez les indications.<br>
+		 <br>
+		 J'utilise régulièrement votre site et j'aimerais parler à une des personnes gérant le site, comment faire ?<br>
+		 Pour nous contacter, allez voir dans le bas d'une des pages du site et cliquez sur nous contacter.
 	</p>
 
 </div> 
