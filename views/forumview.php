@@ -1,7 +1,7 @@
 <div id="panel">
 
 	<div id = "intro">
-		<h1>Bienvenue sur le forum de Tune in Town </h1> </br>
+		<div id="titreforumintro">Bienvenue sur le forum de Tune in Town </div></br>
 		<p>Vous trouverez ici différentes rubriques pour exprimer vos opinions, </br> 
 			débattre sur les différents artistes et accéder à la F.A.Q. </br>
 			Exprimez vos opinions ...</p>
