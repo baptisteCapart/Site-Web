@@ -12,15 +12,15 @@
   		}	
   		?>
   	</ul>
-  </span></span>
+  </span></span><br>
 
   <span class="artistes">Artistes : 
-  </span>
+  </span><br>
 
   <span class="salles">Salles : 
-  </span>
+  </span><br>
 
   <span class="concerts">Concerts : 
-  </span> 
+  </span> <br>
   
 </div>
