@@ -1,29 +1,31 @@
 <?php
 
+include ('controlleurs/bannierecontrolleur.php');
+include ('models/rechercheModel.php');
 
-	include ('models/rechercheModel.php');
+if(isset($_POST['recherche'])){
+	$recherche = $_POST['recherche'];
+	var_dump($recherche);
+	$concert = 'concert';
+	$artiste = 'artiste';
+	$salle = 'salle';
+	$erreur = 'aucune resultat dans cette catégorie';
 
-if(isset($_POST) && !empty($_POST['recherche'])){
-	extract($_POST);
-	$verif= verifRecherche($recherche)
+	// $verif= verifRecherche($artiste, $recherche);
+	// $verif2= verifRecherche($concert, $recherche);
+	// $verif3= verifRecherche($salle, $recherche);
+	// $verif0 = verifRecherche2($recherche);
 
-	if ($verif = true) {
-		
-		$requete = Recherche($recherche);
-		echo "nom : $nom, pseudo : $pseudo";
+	$result= Recherche($artiste, $recherche);
+	$result2=Recherche($concert, $recherche);
+	$result3=Recherche($salle, $recherche);
+	$result0=Recherche2($recherche);
 
-	} else {
-
-		echo '<p> Aucun résultat ne correspond à cette recherche. Essayez autre chose. </p>';
-  	  	exit;
-
-	}
+	include ('views/rechercheview.php');
+	include ('views/footer.php');
 	
 }
 
-	include ('controlleurs/bannierecontrolleur.php');
-	include ('views/rechercheview.php');
-	include ('views/footer.php');
 
 
 	?>

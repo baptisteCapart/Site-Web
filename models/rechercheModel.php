@@ -1,27 +1,41 @@
 <?php
 
-function verifRecherche($recherche) {
+function verifRecherche($table, $recherche) {
 	global $bdd;
 
-	$requete= "SELECT nom, pseudo from concert, artiste, salle";
-	if ($requete != %$recherche%) {
+	$requete=$bdd->query("SELECT * from $table where nom LIKE '%$recherche");
+	$result = $requete->fetch();
+	if (!$requete) {
 		return false;
 	}else{
 		return true;
 	}
-
 }
 
-function Recherche($recherche){
+function verifRecherche2($recherche) {
 	global $bdd;
 
-	$requete= "SELECT * from concert, artiste, salle WHERE nom, pseudo LIKE '%$recherche%'";
-	$resultat=mysql_query($requete);
+	$requete=$bdd->query("SELECT *from membre where pseudo LIKE '%$recherche%");
+	$result = $requete->fetch();
+	if (!$requete) {
+		return false;
+	}else{
+		return true;
+	}
+}
 
-	while ($rows=mysql_fetch_array($resultat)) {
-	$nom=$rows[nom]; $pseudo=$rows[pseudo];
-	
 
+
+function Recherche($table, $recherche) {
+	global $bdd;
+	$requete=$bdd->query("SELECT * from $table where nom LIKE '%$recherche%");
+	return $requete;
+}
+
+function Recherche2($recherche) {
+	global $bdd;
+	$requete=$bdd->query("SELECT * from membre where pseudo LIKE '%$recherche%");
+	return $requete;
 }
 
 ?>
