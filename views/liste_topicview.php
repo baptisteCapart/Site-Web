@@ -1,6 +1,11 @@
 <div class="generaldiscuss">
 	<div id="titlegeneraldiscuss">
-		<?= $categorie ?>
+	<?php
+		if ($categorie == 'Style_de_musique')
+		{ echo "Style de musique"; }
+		else
+		{ echo $categorie; }
+	?>
 	</div>
 
 	<table>

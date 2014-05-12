@@ -14,10 +14,7 @@ include ('models/forummodel.php');
 	}
 if ( isset ($_GET['categorie']) )
 {
-
-
 	$categorie = $_GET['categorie'];
-	var_dump($categorie);
 	$topicList=listeTopic($categorie);
 }
 include("controlleurs/bannierecontrolleur.php");

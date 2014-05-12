@@ -43,14 +43,14 @@ function newpost ($membre_id, $message, $topic_id)
 function listePost ($topic_id)
 {
 	global $bdd;
-	$req = $bdd->query('SELECT * FROM post WHERE topic_id='.$topic_id.' ORDER BY id_post DESC') or die (print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT * FROM post WHERE topic_id = '$topic_id' ORDER BY id_post DESC") or die (print_r($bdd->errorInfo()));
 	return $req;
 }
 
 function listeTopic ($categorie)
 {
 	global $bdd;
- 	$req = $bdd-> query('SELECT * FROM topic where public = 0 and categorie = '.$categorie.' ORDER BY nom');
+ 	$req = $bdd-> query("SELECT * FROM topic WHERE categorie = '$categorie' ORDER BY nom") or die (print_r($bdd->errorInfo()));
 	return $req;
 
 }
