@@ -1,6 +1,6 @@
 <div class="generaldiscuss">
-	<h2>Général</h2>
-
+	<div id="titlegeneraldiscuss">Général
+	</div>
 
 	<table>
 		<tr>

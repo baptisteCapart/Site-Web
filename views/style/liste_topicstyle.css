@@ -1,9 +1,6 @@
 .generaldiscuss
 {
-	//background-color: white;
-	//background-color: #97A8D0;
 	background-color: #1E1E1E;
-	//border: 7px solid #787BE9;
 	color : black;
 	font-family: 'Quicksand' , sans-serif;
 }
@@ -11,24 +8,23 @@
 .listediscuss
 {
 	background-color: #97A8D0;
-/*	border: 7px solid #787BE9;*/
-
 	color : black;
 }
 
  .discussions
 {
 	border-bottom: 0.5px solid #868686;
-
 }
 
-#generaldiscuss h2
+#titlegeneraldiscuss
 {
 	color: white;
 	border-bottom: 3px solid #53DD17;
 	width: 12%;
-	padding-bottom: 15px;
+	padding-top: 15px;
 	margin-left : 50px;	
+	margin-bottom: 15px;
+	font-size: 40px;
 }
 
 table
