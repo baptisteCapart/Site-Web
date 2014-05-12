@@ -1,0 +1,141 @@
+#blocpage
+{
+	background-color: #1E1E1E;
+	padding-left: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#blocpage span
+{
+	font-weight: bold;
+}
+
+.search_member ul img
+{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	border-radius: 50px;
+	margin-right: 6px;
+}
+
+.search_member ul li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 17%;
+	margin: 3px;
+}
+
+.search_member ul li:hover
+{
+	background-color: #202020;
+}
+
+.search_member ul li a
+{
+	color : #CECECE;
+}
+
+.search_member ul li:hover a
+{	
+	color: white;
+	margin-left: 10px;
+}
+
+.search_artist ul img
+{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+.search_artist ul li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 17%;
+	margin: 3px;
+}
+
+.search_artist ul li:hover
+{
+	background-color: #202020;
+}
+
+.search_artist ul li a
+{
+	color : #CECECE;
+}
+
+.search_artist ul li:hover a
+{	
+	color: white;
+	margin-left: 10px;
+}
+
+.search_room ul img
+{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+.search_room ul li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 17%;
+	margin: 3px;
+}
+
+.search_room ul li:hover
+{
+	background-color: #202020;
+}
+
+.search_room ul li a
+{
+	color : #CECECE;
+}
+
+.search_room ul li:hover a
+{	
+	color: white;
+	margin-left: 10px;
+}
+
+.search_concert ul img
+{
+	width: 40px;
+	height: 40px;
+	vertical-align: middle;
+	margin-right: 6px;
+}
+
+.search_concert ul li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 17%;
+	margin: 3px;
+}
+
+.search_concert ul li:hover
+{
+	background-color: #202020;
+}
+
+.search_concert ul li a
+{
+	color : #CECECE;
+}
+
+.search_concert ul li:hover a
+{	
+	color: white;
+	margin-left: 10px;
+}

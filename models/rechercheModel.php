@@ -2,39 +2,30 @@
 
 function verifRecherche($table, $recherche) {
 	global $bdd;
-
-	$requete=$bdd->query("SELECT * from $table where nom LIKE '%$recherche");
+	$requete=$bdd->query("SELECT count(nom) FROM $table WHERE nom LIKE '$recherche%'");
 	$result = $requete->fetch();
-	if (!$requete) {
-		return false;
-	}else{
-		return true;
-	}
+	return $result;
 }
 
 function verifRecherche2($recherche) {
 	global $bdd;
 
-	$requete=$bdd->query("SELECT *from membre where pseudo LIKE '%$recherche%");
+	$requete=$bdd->query("SELECT count(pseudo) FROM membre WHERE pseudo LIKE '$recherche%'");
 	$result = $requete->fetch();
-	if (!$requete) {
-		return false;
-	}else{
-		return true;
-	}
+	return $result;
 }
 
 
 
 function Recherche($table, $recherche) {
 	global $bdd;
-	$requete=$bdd->query("SELECT * from $table where nom LIKE '%$recherche%");
+	$requete=$bdd->query("SELECT * FROM $table WHERE nom LIKE '$recherche%'");
 	return $requete;
 }
 
 function Recherche2($recherche) {
 	global $bdd;
-	$requete=$bdd->query("SELECT * from membre where pseudo LIKE '%$recherche%");
+	$requete=$bdd->query("SELECT * FROM membre WHERE pseudo LIKE '$recherche%'") or die (print_r($bdd->errorInfo()));
 	return $requete;
 }
 
