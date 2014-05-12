@@ -6,10 +6,20 @@ include ('models/forummodel.php');
 	{
 		$name = mysql_real_escape_string(htmlspecialchars($_POST['name']));
 		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
-		newtopic ($name, $description, $_SESSION['id']);
+		if ( isset ($_GET['categorie']) )
+		{
+			$categorie = $_GET['categorie'];
+			newtopic ($name, $description, $_SESSION['id'],$categorie);
+		}
 	}
+if ( isset ($_GET['categorie']) )
+{
 
-$topicList=listeTopic();
+
+	$categorie = $_GET['categorie'];
+	var_dump($categorie);
+	$topicList=listeTopic($categorie);
+}
 include("controlleurs/bannierecontrolleur.php");
 include("views/liste_topicview.php");
 include("views/footer.php");
