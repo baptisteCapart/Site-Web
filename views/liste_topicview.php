@@ -1,5 +1,6 @@
 <div class="generaldiscuss">
-	<div id="titlegeneraldiscuss">Général
+	<div id="titlegeneraldiscuss">
+		<?= $categorie ?>
 	</div>
 
 	<table>
@@ -10,7 +11,10 @@
 	       <th>Créé par</th>
    		</tr>
 
-<?php while($topic = $topicList->fetch()) {
+<?php
+if (isset ($topicList))
+{
+ while($topic = $topicList->fetch()) {
 	   $createur_pseudo = membername($topic["membre_id"]); ?>
 	   	<tr>
  	       <td> <?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a>';?></td>
@@ -18,14 +22,14 @@
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nombre_message"].'<br/>'.' </a>';?></td>
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $createur_pseudo.'<br/>'.' </a>';?></td>
  	   </tr>
- <?php }  ?>
+ <?php } } ?>
 
 	</table>
 
 
 		<?php  if(isset($_SESSION['pseudo'])){
 			 if($_SESSION['pseudo'] != ""){ ?>
-			<div class="nouveau"><a href="index.php?page=new_topiccontroleur">Ton propre topic, c'est ici !</a></div>
+			<div class="nouveau"><?php echo '<a href = "index.php?page=new_topiccontroleur&categorie='.$categorie.'">Pour créer ton topic clique ici</a>';?></div>
 		<?php }else{ ?>
 			<div class="nouveau"><a href="index.php?page=formulairecontrolleur">Pour créer ton propre topic, il suffit de t'inscrire ici</a></div>
 		<?php }} ?>	

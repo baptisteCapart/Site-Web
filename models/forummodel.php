@@ -22,12 +22,12 @@ function membername ($membre_id)
 	return $but['pseudo'];
 }
 
-function newtopic ($name, $description, $membre_id)
+function newtopic ($name, $description, $membre_id, $categorie)
 {
 	global $bdd;
 	$nb = 0;
-	$bdd->query("INSERT INTO topic (nom, description, nombre_message, membre_id)
-		VALUES ('$name','$description', '$nb', '$membre_id')");
+	$bdd->query("INSERT INTO topic (nom, description, nombre_message, membre_id,categorie)
+		VALUES ('$name','$description', '$nb', '$membre_id','$categorie')");
 }
 
 function newpost ($membre_id, $message, $topic_id)
@@ -47,10 +47,10 @@ function listePost ($topic_id)
 	return $req;
 }
 
-function listeTopic ()
+function listeTopic ($categorie)
 {
 	global $bdd;
- 	$req = $bdd-> query('SELECT * FROM topic where public = 0 ORDER BY nom') or die(print_r($bdd->errorInfo()));
+ 	$req = $bdd-> query('SELECT * FROM topic where public = 0 and categorie = '.$categorie.' ORDER BY nom');
 	return $req;
 
 }
