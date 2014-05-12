@@ -19,8 +19,12 @@ if(isset($_GET['critere'])){
 
 if(isset($_GET['lettre'])){
 	$lettre = $_GET['lettre'];
-	$LISTE = affichage($lettre);
 }
+else
+{
+	$lettre = 'a';
+}
+$LISTE = affichage($lettre);
 
 
 // $requete = trialpha();

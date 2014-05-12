@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="views/style/listeConcertsstyle.css">	
 	<link rel="stylesheet" href="views/style/ParametresMembreStyle.css">
 	<link rel="stylesheet" href="views/style/register_complete_style.css">
+	<link rel="stylesheet" href="views/style/recherchestyle.css">
 <link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
 
 </head>

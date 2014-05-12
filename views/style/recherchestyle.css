@@ -1,0 +1,163 @@
+#blocpage
+{
+	background-color: #1E1E1E;
+	padding-left: 5%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color : #818181;
+}
+
+#blocpage span
+{
+	font-weight: bold;
+}
+
+.membres, .artistes, .salles, .concerts
+{
+	color : #E5E5E5;
+}
+
+.noresult
+{
+	font-size: 0.8em;
+}
+
+.search_member ul img
+{
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	border-radius: 100px;
+	//margin-right: 0px;
+}
+
+.search_member ul li
+{
+	//padding : 2px;
+	background-color: #191919;
+	width: 15%;
+	margin: 9px;
+	display: inline-block;
+	text-align: center;
+}
+
+.search_member ul li:hover
+{
+	background-color: #111111;
+}
+
+.search_member ul li a
+{
+	color : #CECECE;
+}
+
+.search_member ul li:hover a
+{	
+	color: white;
+	opacity: 0.4;
+}
+
+.search_artist ul img
+{
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	border-radius: 100px;
+	//margin-right: 6px;
+}
+
+.search_artist ul li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 15%;
+	margin: 3px;
+	display: inline-block;
+	text-align: center;
+}
+
+.search_artist ul li:hover
+{
+	background-color: #111111;
+}
+
+.search_artist ul li a
+{
+	color : #CECECE;
+}
+
+.search_artist ul li:hover a
+{	
+	color: white;
+	opacity: 0.4;
+}
+
+.search_room ul img
+{
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	border-radius: 100px;
+	//margin-right: 6px;
+}
+
+.search_room ul li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 15%;
+	margin: 3px;
+	display: inline-block;
+	text-align: center;
+}
+
+.search_room ul li:hover
+{
+	background-color: #111111;
+}
+
+.search_room ul li a
+{
+	color : #CECECE;
+}
+
+.search_room ul li:hover a
+{	
+	color: white;
+	opacity: 0.4;
+}
+
+.search_concert ul img
+{
+	width: 150px;
+	height: 150px;
+	vertical-align: middle;
+	border-radius: 100px;
+	margin-right: 6px;
+}
+
+.search_concert ul li
+{
+	padding : 5px;
+	background-color: #191919;
+	width: 15%;
+	margin: 3px;
+	display: inline-block;
+	text-align: center;
+}
+
+.search_concert ul li:hover
+{
+	background-color: #111111;
+}
+
+.search_concert ul li a
+{
+	color : #CECECE;
+}
+
+.search_concert ul li:hover a
+{	
+	color: white;
+	opacity: 0.4;
+}

@@ -25,9 +25,9 @@
 
 <div id="global">
     <ul id="parametres">
-        <?php if($_SESSION['id']==$_GET['id']){ ?>
+        <?php if(isset($_SESSION['id'])){if($_SESSION['id']==$_GET['id']){ ?>
     	<li><form class ="form3" method="post" action="index.php?page=ParametresMembrecontrolleur"><input class = "bouton" type="submit" value="Paramètres" /></form></li>
-    	<?php }else{ ?><li><input class = "bouton" type="submit" value="Suivre"/></li><?php } ?>
+    	<?php }else{ ?><li><input class = "bouton" type="submit" value="Suivre"/></li><?php }} ?>
     	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
     </ul>
 </div>
