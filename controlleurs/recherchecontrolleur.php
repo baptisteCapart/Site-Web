@@ -26,6 +26,4 @@ if(isset($_POST['recherche'])){
 	
 }
 
-
-
-	?>
+?>
