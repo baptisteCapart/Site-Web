@@ -15,18 +15,36 @@ function verifRecherche2($recherche) {
 	return $result;
 }
 
-
-
 function Recherche($table, $recherche) {
+	global $bdd;
+	Recherche0;
+}
+
+function Recherche0($table, $recherche)
+{
+	global $bdd;
+	$requete=$bdd->query("SELECT * FROM $table WHERE nom = ".$recherche);
+	return $requete;
+}
+
+function Recherche1($table, $recherche) {
 	global $bdd;
 	$requete=$bdd->query("SELECT * FROM $table WHERE nom LIKE '$recherche%'");
 	return $requete;
 }
 
-function Recherche2($recherche) {
+function Recherche2($table, $recherche) {
+	global $bdd;
+	$requete=$bdd->query("SELECT * FROM $table WHERE nom LIKE '$recherche%'");
+	return $requete;
+}
+
+function Recherchem($recherche) {
 	global $bdd;
 	$requete=$bdd->query("SELECT * FROM membre WHERE pseudo LIKE '$recherche%'") or die (print_r($bdd->errorInfo()));
 	return $requete;
 }
+
+
 
 ?>

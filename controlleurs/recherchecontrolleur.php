@@ -1,7 +1,6 @@
 <?php
-
-include ('controlleurs/bannierecontrolleur.php');
 include ('models/rechercheModel.php');
+
 
 if(isset($_POST['recherche'])){
 	$recherche = $_POST['recherche'];
@@ -18,12 +17,13 @@ if(isset($_POST['recherche'])){
 	$resulta= Recherche($artiste, $recherche);
 	$resultc=Recherche($concert, $recherche);
 	$results=Recherche($salle, $recherche);
-	$resultm=Recherche2($recherche);
+	$resultm=Recherchem($recherche);
 
 	
 }
 
 
+include ('controlleurs/bannierecontrolleur.php');
 include ('views/rechercheview.php');
 include ('views/footer.php');
 

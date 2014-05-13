@@ -117,7 +117,7 @@
 				<li id = "forum"><a href="index.php?page=forumcontrolleur">Forum</a></li>
 				<li id = "search">
 					<form class ="recherche" method="post" action="index.php?page=recherchecontrolleur" >
-						<input method = "submit" class = "barresearch" type="text" name="recherche" placeholder="   Rechercher" size = "30"/>
+						<input method = "submit" class = "barresearch" type="text" name="recherche" placeholder="Rechercher" size = "30" <?php if(isset($recherche)){ echo 'value="'.$recherche.'"'; } ?>/>
 					</form>
 				</li>
 			</ul>
