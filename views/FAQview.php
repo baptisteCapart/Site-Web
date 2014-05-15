@@ -11,25 +11,27 @@
 	</div>
 
 
-	<p>Comment me déconnecter de votre site ?<br>
+	<p><b>Comment me déconnecter de votre site ?</b><br>
 		<br>
 		Facile, il suffit de cliquer sur le bouton déconnexion après vous être connecté.<br>
 		<br>
 		<br>
-		Comment faire pour créer un compte membre sur votre site ?<br>
+		<b>Comment faire pour créer un compte membre sur votre site ?</b><br>
 		<br>
 		Sur la bannière du site vous pouvez cliquez sur le bouton d'inscription pour accéder à un petit<br>
 		 formulaire qui une fois rempli vous permettra d'avoir votre propre compte sur notre site.<br>
 		 <br>
-		 L'inscription sur votre site est-elle payante ?<br>
+		 <b>L'inscription sur votre site est-elle payante ?</b><br>
 		 Malheureusement non.<br>
 		 <br>
-		 Je gère une salle sur votre site et j'aimerais contacter un des artistes présent sur le site<br>
-		 comment faire ?<br>
+		 <b>Je gère une salle sur votre site et j'aimerais contacter un des artistes présent sur le site<br>
+		 comment faire ?</b><br>
 		 Pour ce faire appuyer sur le bouton invité sur la page de cet artiste et suivez les indications.<br>
 		 <br>
-		 J'utilise régulièrement votre site et j'aimerais parler à une des personnes gérant le site, comment faire ?<br>
-		 Pour nous contacter, allez voir dans le bas d'une des pages du site et cliquez sur nous contacter.
+		 <b>J'utilise régulièrement votre site et j'aimerais parler à une des personnes gérant le site, comment faire ?</b><br>
+		 Pour nous contacter, allez voir dans le bas d'une des pages du site et cliquez sur nous contacter.<br>
+		 <br>
+
 	</p>
 
 </div> 
