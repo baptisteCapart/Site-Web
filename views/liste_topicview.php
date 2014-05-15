@@ -1,4 +1,5 @@
 <div class="generaldiscuss">
+	<div class="retour"><a href="index.php?page=forumcontrolleur">Retour aux catégories</a></div>
 	<div id="titlegeneraldiscuss">
 	<?php
 		if ($categorie == 'Style_de_musique')

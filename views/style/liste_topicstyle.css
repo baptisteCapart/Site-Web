@@ -5,6 +5,17 @@
 	font-family: 'Quicksand' , sans-serif;
 }
 
+.retour
+{
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.retour a
+{
+	color: white;
+}
+
 .listediscuss
 {
 	background-color: #97A8D0;
