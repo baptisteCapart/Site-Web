@@ -62,4 +62,14 @@ function SallesSuivies($membre_id){
 	return $req;
 }
 
+function StopsuiviA($membre_id, $artiste_id){
+	global $bdd;
+	$req=$bdd->query("DELETE from suivre where membre_id=$membre_id and artiste_id=$artiste_id");
+}
+
+function StopsuiviS($membre_id, $salle_id){
+	global $bdd;
+	$req=$bdd->query("DELETE from suivre where membre_id=$membre_id and salle_id=$salle_id");
+}
+
 ?>

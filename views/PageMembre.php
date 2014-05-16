@@ -66,7 +66,11 @@
     <?php } ?>
 
     <?php  if($ongletMembre==3){ ?> 
-      <div> concerts suivis par ce membre </div>
+      <div id = "listeSuivis"> 
+            <?php foreach($liste3 as $listeConcerts) { 
+                echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$listeConcerts["concert_id"].'">'. $listeConcerts["nom"].'<br/>'.' </a></li>';}
+            ?> 
+       </div>
     <?php } ?>
 
     <?php  if($ongletMembre==4){ ?> 

@@ -73,6 +73,9 @@ if (isset($_SESSION['id'])){
 
 $NbAbonnes = NbAbonnesSalle($_SESSION['salleID']);
 
+if (isset($_POST['stop'])){
+	StopsuiviS($_SESSION['id'], $_SESSION['salleID']);
+}
 
 if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty ($_POST['ville']) AND !empty ($_POST['adresse'])
  AND !empty ($_POST['type']) AND !empty ($_POST['capacité'])  ){

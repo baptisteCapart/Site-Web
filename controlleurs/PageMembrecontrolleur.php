@@ -2,6 +2,7 @@
 
 include ('models/membremodel.php');
 include ('models/SuivreModel.php');
+include ('models/concertmodel.php');
 
 $donnees = recuperer($_GET['id']);
 $arr = explode('-', $donnees['date_de_naissance']);
@@ -63,6 +64,7 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 
 $liste=ArtistesSuivis($_GET['id']);
 $liste2 = SallesSuivies($_GET['id']);
+$liste3 = ConcertsParticipes($_GET['id']);
 
 
 include('controlleurs/bannierecontrolleur.php');

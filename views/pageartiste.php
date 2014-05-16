@@ -24,14 +24,16 @@
        <?php if(isset($_SESSION['id'])){
            if($createur['membre_id']==$_SESSION['id']) { ?>
                 <li><form class ="form3" method="post" action="index.php?page=ParametresArtistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" value="Paramètres" /></form></li>
+                <?php }else{ ?><li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur&invite=artiste&new=new<?='&id='.$_SESSION['artisteID']?>"><input class = "bouton2" type="submit" name = "inviter" value="Inviter"/></form></li>
                 <?php }} ?>
        <?php if(isset($_SESSION['id'])){                
          if($createur['membre_id']!=$_SESSION['id']) {
            if (isset($follower)){
              if($follower==true) {?>
                   <li><form class ="form3" method="post" action="index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" name = "suivre" value="Suivre"/></form></li>
+              <?php }else{ ?> <li><form class ="form3" method="post" action="index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>"><input class = "bouton2" type="submit" name = "stop" value="Ne plus suivre"/></form></li>
         <?php }}}} ?>
-        <li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur&invite=artiste&new=new<?='&id='.$_SESSION['artisteID']?>"><input class = "bouton2" type="submit" name = "inviter" value="Inviter"/></form></li>
+        
     </ul>
   </div>
 

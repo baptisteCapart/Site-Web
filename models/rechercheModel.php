@@ -51,6 +51,7 @@ function Recherche($table, $recherche) {
 	else
 	{
 		$resultat = array_merge($exact, $levenshtein);
+		$resultat = $exact;
 	}
 	
 	// On ne garde que les 10 premiers éléments de resultat :

@@ -9,7 +9,9 @@ $ongletConcert =1;
 if(isset($_GET['id'])){
 	$_SESSION['concertID'] = $_GET['id'];
 	$donnees = recuperer5($_SESSION['concertID']);
-	$check = checkParticipation($_SESSION['concertID']);
+	if(isset($_SESSION['id'])){
+		$check = checkParticipation($_SESSION['id'],$_SESSION['concertID']);
+	}	
 	$listemembre=Membres($_SESSION['concertID']);
 }
 if (isset($_POST['participer'])){

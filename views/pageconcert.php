@@ -54,7 +54,9 @@
 
 <div id="global3">
 <ul id="parametres3">
-	<li><form method = "post" action="index.php?page=pageconcertcontrolleur<?='&id='.$_SESSION['concertID'].''?>"><input class = "bouton3" type="submit" name = "participer" value="Participer"/></form></li>
+	<?php if($check==true){ ?>
+		<li><form method = "post" action="index.php?page=pageconcertcontrolleur<?='&id='.$_SESSION['concertID'].''?>"><input class = "bouton3" type="submit" name = "participer" value="Participer"/></form></li>
+	<?php } ?>
 </ul>
 </div>
 

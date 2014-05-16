@@ -33,13 +33,17 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 			$message = nl2br($message);
 			$message = mysql_real_escape_string($message);
 			newpost($message,$donnees['topic_id']);
+			$photocover="";
 	
 		}
 		if(!empty($_POST['photocover'])){
 			$photocover = mysql_real_escape_string(htmlspecialchars($_POST['photocover']));
 		}
+		if($photocover==""){
+			$photocover=$donnees['photocover'];
+		}
 		if($donnees['nom']==$nom and $donnees['jour']==$jour and $donnees['heure']==$début and $donnees['duree']==$duree 
-			and $donnees['description']==$description ){
+			and $donnees['description']==$description and $photocover==$donnees['photocover'] ){
 			$accord = 1;
 			accord($concert_id, $accord);
 		}

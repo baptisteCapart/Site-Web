@@ -89,7 +89,7 @@
 .search_artist ul li:hover a
 {	
 	color: white;
-	opacity: 0.4;
+	background-opacity: 0.4;
 }
 
 .search_room ul img

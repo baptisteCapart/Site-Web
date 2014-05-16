@@ -14,6 +14,8 @@ if(isset($_GET['id'])){
 	$concert=listeConcertsA($artiste_id);
 }
 
+
+
 if(isset($_GET['id'])){
 	$_SESSION['artisteID'] = $_GET['id'];
 }
@@ -107,6 +109,9 @@ if (isset($_SESSION['id'])){
 
 $NbAbonnes = NbAbonnesArtiste($_SESSION['artisteID']);
 
+if(isset($_POST['stop'])){
+	StopsuiviA($_SESSION['id'], $_SESSION['artisteID']);
+}
 
 
 include('controlleurs/bannierecontrolleur.php');

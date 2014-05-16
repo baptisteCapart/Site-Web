@@ -126,9 +126,9 @@ function Membres($concert_id){
 	return $req;
 }
 
-function checkParticipation($concert_id){
+function checkParticipation($membre_id, $concert_id){
 	global $bdd;
-	$sql = $bdd->query("SELECT membre_id from participation where concert_id=$concert_id") or die(print_r($bdd->errorInfo()));
+	$sql = $bdd->query("SELECT membre_id from participation where concert_id='$concert_id' and membre_id='$membre_id'") or die(print_r($bdd->errorInfo()));
 	$req = $sql->fetch();
 	if (!$req){
 		return true;
@@ -137,4 +137,12 @@ function checkParticipation($concert_id){
 		return false;
 	}
 }
- ?>
+
+function ConcertsParticipes($membre_id){
+	
+	global $bdd;
+	$req = $bdd->query("SELECT concert.nom, concert.concert_id FROM concert, participation WHERE participation.concert_id = concert.concert_id AND participation.membre_id=$membre_id") or die(print_r($bdd->errorInfo()));
+	return $req;
+}
+
+?>

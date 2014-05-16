@@ -1,16 +1,21 @@
 .discuss
 {
+	position: relative;
 	width: 100%;
 	background-color: #121212;
 	font-family: 'Quicksand' , sans-serif;
 }
 
-.discuss h1
+.topicName
 {
 	color :#BBBBBB ;
 	font-weight: bold;
 	padding-left: 7%;
-	padding-top: 4%;
+	position : absolute;
+	top : 0;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 2.5em;
 
 }
 
@@ -18,13 +23,11 @@
 {
 	margin: 0px;
 	padding-left: 7%;
-	padding-top: 15px;
+	padding-top: 75px;
 	padding-bottom: 30px;
 }
 
-#message
-{
-}
+
 
 #contrib
 {
@@ -42,8 +45,8 @@
 .post
 {
 	padding: 15px;
-	  background-color:#444444;
-	  margin: 10px;
+	background-color:#444444;
+	margin: 10px;
 }
 
 .auteur
