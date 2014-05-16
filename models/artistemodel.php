@@ -76,4 +76,17 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 		WHERE artiste_id='$id'");
 }
 
+
+
+function classement(){
+	global $bdd;
+	$sql = $bdd->query("SELECT artiste_id from donner_avis");
+	foreach($sql as $id){
+	$req = $bdd->query('SELECT AVG(note) from donner_avis where artiste_id=$id'.["artiste_id"].'');
+	var_dump($req);
+	var_dump($sql);
+	}
+	return $req;
+}
+
  ?>

@@ -18,9 +18,10 @@
   <div id="contenuliste">
        <?php  if($critereConcert==1){ ?> 
         <div> Liste des concerts classées par date
-          <?php foreach ($liste as $concert){
-                  echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$concert["concert_id"].'"> '. $concert["nom"].'<br/>'.' </a></li>';
+          <ul><?php foreach ($liste as $concert){
+                  echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$concert["concert_id"].'"> <img src="controlleurs/images/'.$concert['photocover'].'" alt="" /> '. $concert["nom"].'<br/>'.' </a></li>';
                 }  ?>
+         </ul>
          </div>
       <?php } ?>
 

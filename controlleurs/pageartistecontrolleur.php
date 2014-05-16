@@ -12,6 +12,9 @@ if(isset($_GET['id'])){
 	$artiste_id = $_GET["id"];
 	$notif=nouveauMessageA($artiste_id);
 	$concert=listeConcertsA($artiste_id);
+	$concertartiste = ConcertArtisteP($artiste_id);
+	$concertartiste2 = ConcertArtisteF($artiste_id);
+
 }
 
 

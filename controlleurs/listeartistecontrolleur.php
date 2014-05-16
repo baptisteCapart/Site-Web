@@ -2,7 +2,7 @@
 
 include ('models/artistemodel.php');
 
-
+// $notes = classement();
 
 $critere =1;
 
@@ -14,7 +14,9 @@ if(isset($_GET['critere'])){
 	if ($_GET["critere"] ==2){
 		$critere=2;
 	}
-
+	if ($_GET["critere"] ==3){
+		$critere=3;
+	}
 }
 
 if(isset($_GET['lettre'])){

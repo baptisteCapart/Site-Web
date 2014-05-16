@@ -1,5 +1,5 @@
 
-<div id="blocpage">
+<div id="blocrecherche">
   <span class="membres">Membres</span><br>
   <div class="search_member">
   	<ul>

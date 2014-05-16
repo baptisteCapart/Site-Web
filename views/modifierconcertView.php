@@ -31,14 +31,15 @@
 					<TEXTAREA name="message" rows=10 COLS=40></TEXTAREA></div>
 				<li>
 					<div><span>Photo de couverture :</span>
-					<input type="file" name="photocover"></div>
+					<input type="file" name="photocover"> </div>
+					<img class = "photo" src="controlleurs/images/<?=$donnees['photocover']?>" alt="">
 				</li>
-			    <div class="fil">
+			    <div class="commentaires"> Commentaires : 
 			    	<?php while ($post = $listepost->fetch()) { ?>
-						<div class="contenu">
-							<?php 
+						<div class="messages">
+							<ul><li><?php 
 							echo($post['contenu']);
-							 ?>
+							 ?></li></ul>
 						</div>
 			    	<?php } ?>
 			    </div>				

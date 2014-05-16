@@ -18,12 +18,18 @@
 					$name = membername($post['membre_id']);
 					echo($name.' :<br>');
 					 ?>
+					</span>
+					 
 				</span>
 				<div class="contenu">
 					<?php 
 					echo($post['contenu']);
 					 ?>
 				</div>
+				<span class = "date">
+					<?php 
+					echo($post['datepost'].'<br>');
+					 ?>
 			</div> 
     	<?php } ?>
     </div>

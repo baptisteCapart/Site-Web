@@ -100,3 +100,26 @@ form ul li div span {
 	color : #DDDDDD;
 	text-decoration: underline;
 }
+.photo
+{
+	margin-right: 30%;
+	margin-left: 30%;
+	width: 40%;
+	height: 170px;
+	padding-top: 20px;
+}
+.messages
+{
+	color: #0D0D0D;
+	padding-left: 3%;
+	padding-top: 5px;
+
+}
+.commentaires ul 
+{
+	list-style: square;
+}
+.envoyer
+{
+	margin-bottom: 20px;
+}

@@ -9,6 +9,8 @@
 
           <li class = "<?php if($critere==2){ echo "critereactif";}?>"><?php echo '<a href = "index.php?page=listeartistecontrolleur&critere=2"> Par style </a>'; ?>
           </li>
+          <li class = "<?php if($critere==3){ echo "critereactif";}?>"><?php echo '<a href = "index.php?page=listeartistecontrolleur&critere=3"> Par note </a>'; ?>
+          </li>          
       </ul>
 
   </div> 
@@ -33,6 +35,11 @@
        <?php  if($critere==2){ ?> 
         <div class = "style"> Liste des artistes classés par genre</div>
       <?php } ?>
+
+      <?php  if($critere==3){ ?> 
+        <div class = "style"> Liste des artistes classés par note
+        </div>
+       <?php } ?> 
       	
   </div> 
 </div>

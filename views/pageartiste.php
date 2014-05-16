@@ -46,7 +46,17 @@
     <?php } ?> 
 
     <?php  if($onglet==2){ ?> 
-      <div class = "concerts"> concerts</div>
+      <div class = "concerts">
+        Concerts passés :  
+          <?php foreach ($concertartiste as $eventaP) {
+                    echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventaP["concert_id"].'">'. $eventaP["nom"].'</a></li>';
+            } ?> <br>
+        Concerts à venir :  
+          <?php foreach ($concertartiste2 as $eventaF) {
+                    echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventaF["concert_id"].'">'. $eventaF["nom"].'</a></li>';
+            } ?>            
+
+      </div>
     <?php } ?>
 
     <?php  if($onglet==3){ ?> 

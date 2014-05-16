@@ -52,7 +52,18 @@
     <?php } ?> 
 
     <?php  if($ongletSalle==2){ ?> 
-      <div class = "concerts"> concerts</div>
+      <div class = "concerts">
+        Concerts passés : 
+        <?php foreach ($concertsalle as $eventsP) {
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a></li>';
+        } ?>
+        <br>  
+
+        Concerts à venir : 
+        <?php foreach ($concertsalle2 as $eventsF) {
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].'</a></li>';
+        } ?>        
+      </div>
     <?php } ?>
 
 

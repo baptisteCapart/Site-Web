@@ -13,6 +13,8 @@ if(isset($_GET['id'])){
 	$notif = nouveauMessageS($salle_id);
 	$concert=listeConcertsS($salle_id);
 	$donnees = recuperer3($salle_id);
+	$concertsalle = ConcertSalleP($salle_id);
+	$concertsalle2 = ConcertSalleF($salle_id);
 
 }
 
