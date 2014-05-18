@@ -80,13 +80,13 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 
 function classement(){
 	global $bdd;
-	$sql = $bdd->query("SELECT artiste_id from donner_avis");
-	foreach($sql as $id){
-	$req = $bdd->query('SELECT AVG(note) from donner_avis where artiste_id=$id'.["artiste_id"].'');
+
+	$req = $bdd->query("SELECT AVG(note), artiste_id from donner_avis GROUP BY artiste_id order by note");
 	var_dump($req);
-	var_dump($sql);
+	foreach($req as $notes){
+		$infos = recuperer4($notes['artiste_id']);
 	}
-	return $req;
+	return $infos;	
 }
 
  ?>

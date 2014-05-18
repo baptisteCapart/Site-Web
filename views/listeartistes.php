@@ -21,7 +21,6 @@
           <?php
           foreach(range('A','Z') as $i) {
               echo '<a href="index.php?page=listeartistecontrolleur&lettre='.$i.'">'.$i.'</a>';
-              // On peut ajouter un séparateur
               if ($i != "Z") echo "   -    ";
           }
           ?>
@@ -38,6 +37,9 @@
 
       <?php  if($critere==3){ ?> 
         <div class = "style"> Liste des artistes classés par note
+          <?php if(isset($notes)){ foreach($notes as $listenotes){
+            echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$listenotes["artiste_id"].'"> <img src="controlleurs/images/'.$listenotes['photocover'].'" alt="" /> '. $listenotes["nom"].'<br/>'.' </a></li>';
+          }} ?>
         </div>
        <?php } ?> 
       	

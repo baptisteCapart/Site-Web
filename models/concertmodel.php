@@ -147,25 +147,25 @@ function ConcertsParticipes($membre_id){
 
 function ConcertSalleP($salle_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE salle_id=$salle_id and accord = 1 and jour<CURDATE() and heure<CURTIME()") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE salle_id=$salle_id and accord = 1 and jour<CURDATE() ") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
 function ConcertArtisteP($artiste_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour<CURDATE() and heure<CURTIME()") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour<CURDATE() ") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
 function ConcertSalleF($salle_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE salle_id=$salle_id and accord = 1 and jour>CURDATE() and heure>CURTIME()") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE salle_id=$salle_id and accord = 1 and jour>CURDATE() ") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
 function ConcertArtisteF($artiste_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour>CURDATE() and heure>CURTIME()") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour>CURDATE()") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 

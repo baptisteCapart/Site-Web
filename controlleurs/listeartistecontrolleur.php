@@ -2,7 +2,7 @@
 
 include ('models/artistemodel.php');
 
-// $notes = classement();
+$notes = classement();
 
 $critere =1;
 
