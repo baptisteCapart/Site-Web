@@ -9,9 +9,9 @@ if(isset($_POST['recherche'])){
 	$salle = 'salle';
 	$erreur = 'Aucun resultat pour votre recherche dans cette catégorie';
 
-	// $verifa = verifRecherche($artiste, $recherche);
-	// $verifc = verifRecherche($concert, $recherche);
-	// $verifs = verifRecherche($salle, $recherche);
+	$verifa = verifRecherche($artiste, $recherche);
+	$verifc = verifRecherche($concert, $recherche);
+	$verifs = verifRecherche($salle, $recherche);
 	// $verifm = verifRecherche2($recherche);
 
 	$resulta= Recherche($artiste, $recherche);

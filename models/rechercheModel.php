@@ -19,7 +19,10 @@ function Recherche_exacte($table, $recherche)
 {
 	global $bdd;
 	$req = $bdd->query("SELECT nom FROM $table WHERE nom LIKE '$recherche%'");
-	$res = $req->fetch();
+	$res = array();
+	foreach ($req as $cle => $valeur) {
+		$res[$valeur['nom']] = 0;
+	}
 	return $res;
 }
 
@@ -28,7 +31,6 @@ function Recherche($table, $recherche) {
 	
 	// On recherche d'abord des résultats contenant le mot-clé exact de la recherche et on les stocke dans le tableau "exact" :
 	$exact = Recherche_exacte($table, $recherche);
-	var_dump($exact);
 	
 	// Création du tableau levenshtein (regroupe les noms et leur distance Levenshtein au mot-clé) :
 	$levenshtein = array();
@@ -37,13 +39,15 @@ function Recherche($table, $recherche) {
 	$requete = $bdd->query("SELECT nom FROM $table");
 	foreach ($requete as $nom) {
 		$vladimir = levenshtein($recherche, $nom['nom']);
-		$levenshtein[$nom['nom']] = $vladimir;
+		if ($vladimir <= 5){
+			$levenshtein[$nom['nom']] = $vladimir;
+		}
 	}
 	
 	// On trie le tableau par distance Levenshtein croissante (pertinence) :
 	asort($levenshtein);
 	
-	// On fusionne ensuite dans le tableau result exact et levenshtein dans le cas où exact contient des éléments (s'il est différent de false) :
+	// On fusionne ensuite dans le tableau exact et levenshtein dans le cas où exact contient des éléments (s'il est différent de false) :
 	if (!$exact)
 	{
 		$resultat = $levenshtein;
@@ -51,7 +55,6 @@ function Recherche($table, $recherche) {
 	else
 	{
 		$resultat = array_merge($exact, $levenshtein);
-		$resultat = $exact;
 	}
 	
 	// On ne garde que les 10 premiers éléments de resultat :
@@ -60,6 +63,7 @@ function Recherche($table, $recherche) {
 	// Dans result (trié par pertinence), on prend chaque (nom) et on cherche dans la table de la bdd l'entrée qui lui correspond (chaque pseudo est unique)
 	// Ensuite on remplace les valeurs par les tableaux qui regroupent ces informations :
 	foreach ($result as $nom => $vladimir) {
+		var_dump($nom);
 		$req = $bdd->query("SELECT * FROM $table WHERE nom = '$nom'") or die (print_r($bdd->errorInfo()));
 		$entree = $req->fetch();
 		$result[$nom] = $entree;
