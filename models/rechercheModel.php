@@ -49,7 +49,7 @@ function Recherche($table, $recherche) {
 	$requete = $bdd->query("SELECT nom FROM $table");
 	foreach ($requete as $nom) {
 		$vladimir = levenshtein($recherche, $nom['nom']);
-		if ($vladimir <= 5){
+		if ($vladimir <= 3){
 			$levenshtein[$nom['nom']] = $vladimir;
 		}
 	}
@@ -77,7 +77,11 @@ function Recherche($table, $recherche) {
 		$entree = $req->fetch();
 		$result[$nom] = $entree;
 	}
-	
+	// Dans le cas ou la recherche ne renvoie aucun résultat, on renvoie false pour déclencher le message d'erreur :
+	if (empty ($result)){
+		return false;
+	}
+
 	// On retourne le résultat (un tableau à 2 dimansions qui regroupe les infos) :
 	return $result;
 }
@@ -96,7 +100,7 @@ function Recherchem($recherche) {
 	$requete = $bdd->query("SELECT pseudo FROM $table");
 	foreach ($requete as $pseudo) {
 		$vladimir = levenshtein($recherche, $pseudo['pseudo']);
-		if ($vladimir <= 5){
+		if ($vladimir <= 3){
 			$levenshtein[$pseudo['pseudo']] = $vladimir;
 		}
 	}
@@ -124,7 +128,11 @@ function Recherchem($recherche) {
 		$entree = $req->fetch();
 		$result[$pseudo] = $entree;
 	}
-	
+	// Dans le cas ou la recherche ne renvoie aucun résultat, on renvoie false pour déclencher le message d'erreur :
+	if (empty ($result)){
+		return false;
+	}
+
 	// On retourne le résultat (un tableau à 2 dimansions qui regroupe les infos) :
 	return $result;
 }

@@ -6,9 +6,12 @@
     <?php 
     if(isset($resultm))
     {
-      foreach ($resultm as $membre)
-      {
-        echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'"> <img src="controlleurs/images/'.$membre['photoprofil'].'" alt="" /> <br/>'. $membre["pseudo"].'<br/>'.' </a></li>';
+      if (!$resultm){
+        echo $erreur;
+      } else {
+        foreach ($resultm as $membre){
+          echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'"> <img src="controlleurs/images/'.$membre['photoprofil'].'" alt="" /> <br/>'. $membre["pseudo"].'<br/>'.' </a></li>';
+        }
       }
     }
   		?>
@@ -21,9 +24,12 @@
     <?php 
     if(isset($resulta))
     {
-      foreach ($resulta as $artiste)
-      {
-        echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$artiste["artiste_id"].'"> <img src="controlleurs/images/'.$artiste['photocover'].'" alt="" /> '. $artiste["nom"].'<br/>'.' </a></li>';
+      if (!$resulta){
+        echo $erreur;
+      } else {
+        foreach ($resulta as $artiste){
+          echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$artiste["artiste_id"].'"> <img src="controlleurs/images/'.$artiste['photocover'].'" alt="" /> '. $artiste["nom"].'<br/>'.' </a></li>';
+        }
       }
     }
     ?>
@@ -36,9 +42,12 @@
     <?php 
     if(isset($results))
     {
-      foreach ($results as $salle)
-      {
-        echo ' <li><a href = "index.php?page=pageSallecontrolleur&id='.$salle["salle_id"].'"> <img src="controlleurs/images/'.$salle['photocover'].'" alt="" /> '. $salle["nom"].'<br/>'.' </a></li>';
+      if (!$results){
+        echo $erreur;
+      } else {
+        foreach ($results as $salle){
+          echo ' <li><a href = "index.php?page=pageSallecontrolleur&id='.$salle["salle_id"].'"> <img src="controlleurs/images/'.$salle['photocover'].'" alt="" /> '. $salle["nom"].'<br/>'.' </a></li>';
+       }
       }
     }
     ?>
@@ -50,9 +59,13 @@
     <ul>
     <?php 
     if(isset($resultc)){
-      foreach ($resultc as $concert)
-      {
-        echo ' <li><a href = "index.php?page=pagconcertcontrolleur&id='.$concert["concert_id"].'"> <img src="controlleurs/images/'.$concert['photocover'].'" alt="" /> '. $concert["nom"].'<br/>'.' </a></li>';
+      if (!$resultc){
+        echo $erreur;
+      } else {
+        foreach ($resultc as $concert)
+        {
+          echo ' <li><a href = "index.php?page=pagconcertcontrolleur&id='.$concert["concert_id"].'"> <img src="controlleurs/images/'.$concert['photocover'].'" alt="" /> '. $concert["nom"].'<br/>'.' </a></li>';
+        }
       }
     }
     ?>
