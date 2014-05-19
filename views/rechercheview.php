@@ -6,16 +6,9 @@
     <?php 
     if(isset($resultm))
     {
-      if ($verifm['count(pseudo)'] != 0)
-      {  
-        foreach ($resultm as $membre)
-        {
-          echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'"> <img src="controlleurs/images/'.$membre['photoprofil'].'" alt="" /> <br/>'. $membre["pseudo"].'<br/>'.' </a></li>';
-        }
-      }
-      else
+      foreach ($resultm as $membre)
       {
-        echo "<span class='noresult'>$erreur</span>";
+        echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'"> <img src="controlleurs/images/'.$membre['photoprofil'].'" alt="" /> <br/>'. $membre["pseudo"].'<br/>'.' </a></li>';
       }
     }
   		?>

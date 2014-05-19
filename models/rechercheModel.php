@@ -18,10 +18,20 @@ function verifRecherche2($recherche) {
 function Recherche_exacte($table, $recherche)
 {
 	global $bdd;
-	$req = $bdd->query("SELECT nom FROM $table WHERE nom LIKE '$recherche%'");
+	if ($table == "membre"){
+		$req = $bdd->query("SELECT pseudo FROM $table WHERE pseudo LIKE '$recherche%'");
+	} else {
+		$req = $bdd->query("SELECT nom FROM $table WHERE nom LIKE '$recherche%'");
+	}
 	$res = array();
-	foreach ($req as $cle => $valeur) {
-		$res[$valeur['nom']] = 0;
+	if ($table == "membre"){
+		foreach ($req as $cle => $valeur) {
+			$res[$valeur['pseudo']] = 0;
+		}
+	} else {
+		foreach ($req as $cle => $valeur) {
+			$res[$valeur['nom']] = 0;
+		}
 	}
 	return $res;
 }
@@ -63,7 +73,6 @@ function Recherche($table, $recherche) {
 	// Dans result (trié par pertinence), on prend chaque (nom) et on cherche dans la table de la bdd l'entrée qui lui correspond (chaque pseudo est unique)
 	// Ensuite on remplace les valeurs par les tableaux qui regroupent ces informations :
 	foreach ($result as $nom => $vladimir) {
-		var_dump($nom);
 		$req = $bdd->query("SELECT * FROM $table WHERE nom = '$nom'") or die (print_r($bdd->errorInfo()));
 		$entree = $req->fetch();
 		$result[$nom] = $entree;
@@ -75,8 +84,49 @@ function Recherche($table, $recherche) {
 
 function Recherchem($recherche) {
 	global $bdd;
-	$requete=$bdd->query("SELECT * FROM membre WHERE pseudo LIKE '$recherche%'") or die (print_r($bdd->errorInfo()));
-	return $requete;
+	$table = 'membre';
+
+	// On recherche d'abord des résultats contenant le mot-clé exact de la recherche et on les stocke dans le tableau "exact" :
+	$exact = Recherche_exacte($table, $recherche);
+	
+	// Création du tableau levenshtein (regroupe les pseudos et leur distance Levenshtein au mot-clé) :
+	$levenshtein = array();
+	
+	// On prend tous les pseudos de la table et on calcule leur distance Levenshtein par rapport au mot-clé, et on les range dans le tableau :
+	$requete = $bdd->query("SELECT pseudo FROM $table");
+	foreach ($requete as $pseudo) {
+		$vladimir = levenshtein($recherche, $pseudo['pseudo']);
+		if ($vladimir <= 5){
+			$levenshtein[$pseudo['pseudo']] = $vladimir;
+		}
+	}
+	
+	// On trie le tableau par distance Levenshtein croissante (pertinence) :
+	asort($levenshtein);
+	
+	// On fusionne ensuite dans le tableau exact et levenshtein dans le cas où exact contient des éléments (s'il est différent de false) :
+	if (!$exact)
+	{
+		$resultat = $levenshtein;
+	}
+	else
+	{
+		$resultat = array_merge($exact, $levenshtein);
+	}
+	
+	// On ne garde que les 10 premiers éléments de resultat :
+	$result = array_slice($resultat, 0, 10);
+	
+	// Dans result (trié par pertinence), on prend chaque (pseudo) et on cherche dans la table de la bdd l'entrée qui lui correspond (chaque pseudo est unique)
+	// Ensuite on remplace les valeurs par les tableaux qui regroupent ces informations :
+	foreach ($result as $pseudo => $vladimir) {
+		$req = $bdd->query("SELECT * FROM $table WHERE pseudo = '$pseudo'") or die (print_r($bdd->errorInfo()));
+		$entree = $req->fetch();
+		$result[$pseudo] = $entree;
+	}
+	
+	// On retourne le résultat (un tableau à 2 dimansions qui regroupe les infos) :
+	return $result;
 }
 
 ?>
