@@ -28,8 +28,8 @@
 	<link rel="stylesheet" href="views/style/ParametresMembreStyle.css">
 	<link rel="stylesheet" href="views/style/register_complete_style.css">
 	<link rel="stylesheet" href="views/style/recherchestyle.css">
-<link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
-
+	<link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
+	<script type = "text/javascript" src = "script.js"></script>
 </head>
 
 <body>
@@ -45,11 +45,11 @@
 			$redirect = $_SERVER["QUERY_STRING"];
 			?>
 			<div class="container">
-				<form class="form" method="post" action="index.php?page=bannierecontrolleur&redirect=<?php echo "$redirect"; ?>">
+				<form name = "formCo" class="form" method="post" onsubmit = " return verif()" action="index.php?page=bannierecontrolleur&redirect=<?php echo "$redirect"; ?>">
 					<span class="login">Pseudo : </span>
-					<input class ="boite" type="text" name="login" value=""/>
+					<input class ="boite"  type="text" name="login" value=""/>
 					<span class="login">Password : </span>
-					<input class ="boite" type="password" name="pwd" value=""/>
+					<input class ="boite" type="password"  name="pwd" value=""/>
 					<input class = "logg" type="submit" value="Log in"/>
 					<span class="sign_in"><a href ="index.php?page=formulairecontrolleur" >Inscription</a></span>
 				</form>

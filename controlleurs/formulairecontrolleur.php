@@ -1,44 +1,45 @@
 <?php
 include('models/membremodel.php');
 
-// initialisation des valeurs par défaut :
-if(!empty($_POST['pseudo']))
-{ $dftpseudo = $_POST['pseudo']; }
-else
-{ $dftpseudo = ""; }
+// // initialisation des valeurs par défaut :
+// if(!empty($_POST['pseudo']))
+// { $dftpseudo = $_POST['pseudo']; }
+// else
+// { $dftpseudo = ""; }
 
 
-if(!empty($_POST['mail']))
-{ $dftmail = $_POST['mail']; }
-else
-{ $dftmail = ""; }
+// if(!empty($_POST['mail']))
+// { $dftmail = $_POST['mail']; }
+// else
+// { $dftmail = ""; }
 
 
-if(!empty($_POST['codepostal']))
-{ $dftcodepostal = $_POST['codepostal']; }
-else
-{ $dftcodepostal = ""; }
+// if(!empty($_POST['codepostal']))
+// { $dftcodepostal = $_POST['codepostal']; }
+// else
+// { $dftcodepostal = ""; }
 
 
-if(!empty($_POST['pays']))
-{ $dftpays = $_POST['pays']; }
-else
-{ $dftpays = ""; }
+// if(!empty($_POST['pays']))
+// { $dftpays = $_POST['pays']; }
+// else
+// { $dftpays = ""; }
 
 
-if(!empty($_POST['ville']))
-{ $dftville = $_POST['ville']; }
-else
-{ $dftville = ""; }
+// if(!empty($_POST['ville']))
+// { $dftville = $_POST['ville']; }
+// else
+// { $dftville = ""; }
 
 
-if(!empty($_POST['age']))
-{ $dftage = $_POST['age']; }
-else
-{ $dftage = ""; }
+// if(!empty($_POST['age']))
+// { $dftage = $_POST['age']; }
+// else
+// { $dftage = ""; }
 
-$error = "";
-if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2']) AND !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
+ $error = "";
+if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2']) AND !empty ($_POST['mail']) 
+	AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
 {
 
 	$mdp = mysql_real_escape_string(htmlspecialchars($_POST['mdp']));
@@ -61,11 +62,15 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 		if(!empty($_POST['photodeprofil']))
 		{
 			$photodeprofil = mysql_real_escape_string(htmlspecialchars($_POST['photodeprofil']));
+		}else{
+			$photodeprofil = "profildefaut.jpg";
 		}
 		if(!empty($_POST['photodecover']))
 		{
 			$photodecover = mysql_real_escape_string(htmlspecialchars($_POST['photodecover']));
-		} 	
+		} else{
+			$photodecover = "coverdefaut.jpg";
+		}	
 
 		$mdp = sha1($mdp);
 

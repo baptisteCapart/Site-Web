@@ -18,7 +18,6 @@ if(isset($_POST) && !empty($_POST['login']) && !empty($_POST['pwd'])) {
     $_SESSION['pseudo'] = $login;
     $_SESSION['id'] = $donnee['membre_id'];
     
-    echo 'Vous etes bien loggé';
 
     header ('location: index.php?'.$_GET['redirect']);
   } 

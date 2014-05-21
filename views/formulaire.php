@@ -5,25 +5,25 @@ Tous les champs sont obligatoires
 </div>
 <div class="erreur"><?php echo($error); ?></div>
 <div id="formulaire">
-	<form class ="form2" method="post" action="index.php?page=formulairecontrolleur">
+	<form class ="form2" onsubmit = "return grosseVerif()" name = "formIn" method="post" action="index.php?page=formulairecontrolleur">
 		<ul>
 			<li>
-				<div class="pseudo2"><span>Pseudo : </span><input class = "textbox" type="text" name="pseudo" value="<?php echo($dftpseudo); ?>"/> </div>
+				<div class="pseudo2"><span>Pseudo : </span><input onblur = "return verifPseudo()" class = "textbox" type="text" name="pseudo" /> </div>
 
 			</li>
 			<li>
 				<div class="motdepasse"><span>Mot de passe : </span><input class = "textbox"  type="password" name="mdp" value=""/></div>
 			</li>	
 			<li>
-				<div class="motdepasse2"><span>Confirmation du mot de passe : </span><input class = "textbox"  type="password" name="mdp2" value=""/></div>
+				<div class="motdepasse2"><span>Confirmation du mot de passe : </span><input onblur = "return verifmdp()" class = "textbox"  type="password" name="mdp2" value=""/></div>
 			</li>				
 			<li>
-				<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="email" name="mail" value="<?php echo($dftmail); ?>"/></div>
+				<div class="mail"><span>Adresse mail : </span><input class = "textbox" type="email" name="mail" /></div>
 
 			</li>
 
 			<li>
-				<div class="age"><span> Date de naissance: </span><input class = "textbox" type="date" name="age" value="<?php echo($dftage); ?>"/></div>
+				<div class="age"><span> Date de naissance: </span><input class = "textbox" type="date" name="age" /></div>
 
 			</li>			
 
@@ -35,15 +35,15 @@ Tous les champs sont obligatoires
 			</select></div>
 			</li>
 			<li>
-				<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" value="<?php echo($dftville); ?>"/></div>
+				<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" /></div>
 
 			</li>
 			<li>
-				<div class="codepostal"><span>Code postal : </span><input class = "textbox" type="text" name="codepostal" value="<?php echo($dftcodepostal); ?>"/></div>
+				<div class="codepostal"><span>Code postal : </span><input class = "textbox" type="text" name="codepostal" /></div>
 
 			</li>
 			<li>
-				<div class="pays"><span>Pays : </span><input class = "textbox" type="text" name="pays" value="<?php echo($dftpays); ?>"/></div>
+				<div class="pays"><span>Pays : </span><input class = "textbox" type="text" name="pays" /></div>
 
 			</li>			
 			<li>
