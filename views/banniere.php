@@ -46,7 +46,7 @@
 			$redirect = $_SERVER["QUERY_STRING"];
 			?>
 			<div class="container">
-				<form name = "formCo" class="form" method="post" onsubmit = " return verif()" action="index.php?page=bannierecontrolleur&redirect=<?php echo "$redirect"; ?>">
+				<form name = "formCo" class="form" method="post" onsubmit = "return verif()" action="index.php?page=bannierecontrolleur&redirect=<?php echo "$redirect"; ?>">
 					<span class="login">Pseudo : </span>
 					<input class ="boite"  type="text" name="login" value=""/>
 					<span class="login">Password : </span>

@@ -20,24 +20,30 @@ function verifPseudo() {
 		return true;	
 	};
 }
-function pwdComplex(){
+
+
+function pwdComplex()
+{
 	var mdp = document.formIn.mdp;
-	var min= 6;
-	var max = 16;
-	var regex =  "(?=(.*[A-Z]){2,})"              + //contient une majuscule
-               "(?=(.*[a-z]){2,})"   + //contient au moins deux minuscule
-               "(?=(.*[0-9]){2,})" ;  + //contient au moins deux chiffres
-               
-	if(mdp.length<min || mdp.length>16){
-		alert('le mot de passe doit contenir entre 6 et 16 caractères');
-		return false;
-	}else if (!regex.test(mdp)){
-		alert('le mot de passe doit contenir des lettres ET des chiffres');
-		return false;
-	}
-	else{
+	var myRegex = new RegExp("^(?=.*[a-z]+)(?=.*[A-Z]+)(?=.*[0-9]+)([^\\s]{6,})$", "g");
+	if(mdp.value.match(myRegex)){
 		return true;
-	};
+	} else {
+		alert('le mot de passe doit contenir des lettres minuscules et majuscules ainsi que des chiffres');
+		return false;	
+	}
+}
+
+function code()
+{
+	var code = document.formIn.codepostal;
+	var myRegex = new RegExp("^(?=.*[0-9]+)([^\\s]{5,})$", "g");
+	if(code.value.match(myRegex)){
+		return true;
+	} else {
+		alert('vous devez entrer un code postal à 5 chiffres');
+		return false;	
+	}
 }
 
 function verifmdp(){

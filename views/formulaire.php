@@ -39,7 +39,7 @@ Tous les champs sont obligatoires
 
 			</li>
 			<li>
-				<div class="codepostal"><span>Code postal : </span><input class = "textbox" type="text" name="codepostal" /></div>
+				<div class="codepostal"><span>Code postal : </span><input onblur = "return code()" class = "textbox" type="text" name="codepostal" /></div>
 
 			</li>
 			<li>
