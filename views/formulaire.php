@@ -12,7 +12,7 @@ Tous les champs sont obligatoires
 
 			</li>
 			<li>
-				<div class="motdepasse"><span>Mot de passe : </span><input class = "textbox"  type="password" name="mdp" value=""/></div>
+				<div class="motdepasse"><span>Mot de passe : </span><input onblur = "return pwdComplex()" class = "textbox"  type="password" name="mdp" value=""/></div>
 			</li>	
 			<li>
 				<div class="motdepasse2"><span>Confirmation du mot de passe : </span><input onblur = "return verifmdp()" class = "textbox"  type="password" name="mdp2" value=""/></div>

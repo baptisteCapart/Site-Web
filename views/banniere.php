@@ -4,6 +4,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Tune In Town</title>
+	<link rel="shortcut icon" type="image/x-icon" href="controlleurs/images/logo_1.2.png" />
 	<rel type="stylesheet" href="" />
 	<link rel="stylesheet" href="views/style/nouscontacterstyle.css" />
 	<link rel="stylesheet" href="views/style/FAQstyle.css" />
