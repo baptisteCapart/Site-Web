@@ -1,7 +1,8 @@
 <div id="bloc">
 	<div id="bienvenue">Tu peux modifier tes paramètres ici</div>
 	<div id="formulaire">
-		<form class ="form2" method="post" action=" index.php?page=PageMembrecontrolleur">
+		<?php if(isset($_SESSION['id'])){ ?>
+		<form class ="form2" method="post" action=" index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION['id']; ?>"><?php } ?>
 			<ul>
 								
 				<li>

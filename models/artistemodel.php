@@ -82,7 +82,6 @@ function classement(){
 	global $bdd;
 
 	$req = $bdd->query("SELECT AVG(note), artiste_id from donner_avis GROUP BY artiste_id order by note");
-	var_dump($req);
 	foreach($req as $notes){
 		$infos = recuperer4($notes['artiste_id']);
 	}

@@ -5,7 +5,7 @@ Tous les champs sont obligatoires
 </div>
 <div class="erreur"><?php echo($error); ?></div>
 <div id="formulaire">
-	<form class ="form2" onsubmit = "return grosseVerif()" name = "formIn" method="post" action="index.php?page=formulairecontrolleur">
+	<form enctype = "multipart/form-data" class ="form2" onsubmit = "return grosseVerif()" name = "formIn" method="post" action="index.php?page=formulairecontrolleur">
 		<ul>
 			<li>
 				<div class="pseudo2"><span>Pseudo : </span><input onblur = "return verifPseudo()" class = "textbox" type="text" name="pseudo" /> </div>

@@ -8,4 +8,10 @@
 	color: #DDDDDD;
 	text-align: center;
 	font-size: 1.8em;
+	font-family: 'Quicksand' , sans-serif; 
+}
+
+.format{
+	font-size: 0.8em;
+	color : #960A0A;
 }

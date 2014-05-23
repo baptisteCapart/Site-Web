@@ -28,6 +28,19 @@ function insert($pseudo, $mdp, $mail, $age ,$codepostal, $ville ,$sexe, $pays,$p
 	$bdd->query("INSERT INTO membre(pseudo, mot_de_passe, mail, date_de_naissance, code_postal, ville, sexe, pays, photoprofil, photocover )  VALUES ('$pseudo', '$mdp', '$mail' , '$age','$codepostal', '$ville' ,'$sexe', '$pays','$photodeprofil', '$photodecover')");
 }
 
+function photoProf($membre_id,$photo){
+	global $bdd;
+	$bdd->query("UPDATE membre 
+	SET photoprofil='$photo'
+	WHERE membre_id='$membre_id'");
+}
+
+function photoCov($membre_id,$photo){
+	global $bdd;
+	$bdd->query("UPDATE membre 
+	SET photocover='$photo'
+	WHERE membre_id='$membre_id'");
+}
 
 function recuperer($id){
 	global $bdd;
