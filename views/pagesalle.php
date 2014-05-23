@@ -22,7 +22,12 @@
 <div id="global3">
 <ul id="parametres3">
          <?php if(isset($_SESSION['id'])){
-           if($createur['membre_id']==$_SESSION['id']) { ?>
+
+            if($_SESSION['id']==10){ ?>
+                <li><form class ="form3" method="post" action=""><input class = "bouton2" type="submit" name = "supprimer2" value="Supprimer"/></form></li>
+            <?php } ?>
+
+          <?php if($createur['membre_id']==$_SESSION['id']) { ?>
 	               <li><form class ="form3" method="post" action="index.php?page=ParametresSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>"><input class = "bouton3" type="submit" value="Paramètres" /></form></li>
           <?php }else{ ?><li><form class ="form3" method="post" action="index.php?page=formulaireconcertcontrolleur&invite=salle&new=new<?='&id='.$_SESSION['salleID']?>"><input class = "bouton3" type="submit" name = "inviter" value="Inviter"/></form></li>
         <?php }} ?>
