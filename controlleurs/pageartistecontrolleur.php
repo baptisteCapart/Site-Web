@@ -84,11 +84,10 @@ if(isset($_GET['id'])){
 	$listeAvis = listeAvisArtiste($_GET['id']);
 }
 
-if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($_POST['style']) ){
+if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) ){
 
 
 		$nomartiste = mysql_real_escape_string(htmlspecialchars($_POST['nomartiste']));
-		$style = mysql_real_escape_string(htmlspecialchars($_POST['style']));
 		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
 		$photogroupe ="";
 

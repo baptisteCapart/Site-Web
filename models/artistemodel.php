@@ -4,6 +4,14 @@
 function insertArtiste($nomartiste, $style ,$description, $photogroupe,$membreID){
 	global $bdd;
 	$bdd-> query("INSERT INTO artiste(nom, description, photocover, membre_id)  VALUES ('$nomartiste', '$description', '$photogroupe' , '$membreID')") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT artiste_id FROM artiste WHERE membre_id = '$membreID'") or die(print_r($bdd->errorInfo()));
+	$res = $req->fetch();
+	return $res['artiste_id'] ;
+}
+
+function finishartiste ($artiste_id, $style){
+	global $bdd;
+	$bdd->query("INSERT INTO style_de_groupe (artiste_id, style_de_musique) VALUES ('$artiste_id', '$style')");
 }
 
 function trialpha(){
