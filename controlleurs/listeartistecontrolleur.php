@@ -19,16 +19,6 @@ if(isset($_GET['critere'])){
 	}
 }
 
-// if(isset($_GET['lettre'])){
-// 	$lettre = $_GET['lettre'];
-// }
-// else
-// {
-// 	$lettre = 'a';
-// }
-// $LISTE = affichage($lettre);
-
-
 
 include('controlleurs/bannierecontrolleur.php');
 include ('views/listeartistes.php');

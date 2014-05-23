@@ -104,28 +104,42 @@
 	padding: 20px;	
 }
 
-#contenuliste li
+#contenuliste ul.liste_artistes li
 {
 	padding : 5px;
 	background-color: #191919;
-	width: 17%;
+	width: 22%;
 	margin: 3px;
 }
-#contenuliste ul li a 
+#contenuliste ul.liste_artistes li a 
 {
 	color : #CECECE;
 }
 
-#contenuliste ul li:hover
+#contenuliste ul.liste_artistes li:hover
 {
 	background-color: #202020;
 }
-#contenuliste ul li:hover a
+#contenuliste ul.liste_artistes li:hover a
 {
 	color: white;
 	margin-left: 10px;
 }
-#contenuliste ul
+#contenuliste ul.liste_artistes
 {
 	padding: 20px;
+	margin-left: 10%
+}
+
+#contenuliste ul.ancres
+{
+	position: fixed;
+	top: 15%;
+	left: 1%;
+	padding-left: 2%;
+}
+
+#contenuliste ul.ancres li.ancre a
+{
+	color: white;
 }
