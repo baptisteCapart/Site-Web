@@ -112,14 +112,14 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 			insert($pseudo, $mdp, $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
 			$donnee = verification($pseudo);
 			$nomInitProf = $_FILES['photodeprofil']['name'];
-			//$nomInitCov = $_FILES['photodecover']['name'];
+			$nomInitCov = $_FILES['photodecover']['name'];
 			$infosPathProf = pathinfo($nomInitProf);
-			//$infosPathCov = pathinfo($nomInitCov);
+			$infosPathCov = pathinfo($nomInitCov);
 			$extensionProf = $infosPathProf['extension'];
-			//$extensionCov = $infosPathCov['extension'];
+			$extensionCov = $infosPathCov['extension'];
 			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
 			$nomDestinationProf = $donnee['membre_id'].".".$extensionProf;
-			//$nomDestinationCov = $donnee['membre_id'].".".$extensionCov;
+			$nomDestinationCov = $donnee['membre_id'].".".$extensionCov;
 			var_dump($infosPathProf);
 			
 
@@ -137,23 +137,23 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 
 			}
 
-			// if (!(in_array($extensionCov, $extensionsAutorisees))) {
+			if (!(in_array($extensionCov, $extensionsAutorisees))) {
 			
-			// 	$message = "le format de votre photo de couverture n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de couverture";
-			// 	$_SESSION['format2'] = $message;
-			// } else { 
-			// 	photoCov($donnee['membre_id'], $nomDestinationCov);   
-			// 	// Copie dans le repertoire du script avec un nom
-			// 	// incluant l'heure a la seconde pres 
-			// 	$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"; // Copie dans le répertoire img
-			// 	//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
+				$message2 = "le format de votre photo de couverture n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de couverture";
+				$_SESSION['format2'] = $message;
+			} else { 
+				photoCov($donnee['membre_id'], $nomDestinationCov);   
+				// Copie dans le repertoire du script avec un nom
+				// incluant l'heure a la seconde pres 
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"; // Copie dans le répertoire img
+				//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
 
-			// 	move_uploaded_file($_FILES["photodecover"]["tmp_name"], $repertoireDestination.$nomDestinationProf);
+				move_uploaded_file($_FILES["photodecover"]["tmp_name"], $repertoireDestination.$nomDestinationCov);
 
-			// 	  // $message = "Le fichier temporaire ".$_FILES["photo"]["tmp_name"].
-			// 	    //       " a été déplacé vers ".$repertoireDestination.$nomDestination;
+				  // $message = "Le fichier temporaire ".$_FILES["photo"]["tmp_name"].
+				    //       " a été déplacé vers ".$repertoireDestination.$nomDestination;
 
-			// }
+			}
 
 			header('location: index.php?page=register_complete_controlleur');
 		}
