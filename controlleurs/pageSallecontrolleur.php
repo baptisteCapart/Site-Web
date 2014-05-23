@@ -18,7 +18,7 @@ if(isset($_GET['id'])){
 
 	if(isset($_POST['supprimer2'])){
 
-		dropArtiste($salle_id);
+		dropSalle($salle_id);
 		header('location: index.php?page=listeSallescontrolleur');
 	}
 
