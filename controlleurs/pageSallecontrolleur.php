@@ -16,6 +16,13 @@ if(isset($_GET['id'])){
 	$concertsalle = ConcertSalleP($salle_id);
 	$concertsalle2 = ConcertSalleF($salle_id);
 
+	if(isset($_POST['supprimer2'])){
+
+		dropSalle($salle_id);
+		header('location: index.php?page=listeSallescontrolleur');
+	}
+
+
 }
 
 if(isset($_GET['id'])){
