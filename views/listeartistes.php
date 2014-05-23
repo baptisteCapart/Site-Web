@@ -20,19 +20,30 @@
       <div class = "listelettres">
           <?php
           foreach(range('A','Z') as $i) {
-              echo '<a href="index.php?page=listeartistecontrolleur&lettre='.$i.'">'.$i.'</a>';
+              echo '<a href="index.php?page=listeartistecontrolleur#'.$i.'">'.$i.'</a>';
               if ($i != "Z") echo "   -    ";
           }
-          ?>
+        }
+        ?>
       </div>
-        <div class = "alpha"> <ul>
-  			<?php if(isset($LISTE)){ foreach ($LISTE as $group)
-  			{echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$group["artiste_id"].'"> <img src="controlleurs/images/'.$group['photocover'].'" alt="" /> '. $group["nom"].'<br/>'.' </a></li>';}
-  		?></ul></div>
-      <?php }else echo "cliquez sur une lettre pour afficher les artistes commençant par cette lettre";} ?> 
+        <div class = "alpha">
+          <ul>
+            <?php 
+            $listealpha = trialpha();
+            $cur_letter = '0';
+            foreach ($listealpha as $artiste) {
+              $test_letter= substr($artiste['nom'], 0, 1);  
+              if ($test_letter!= $cur_letter) {
+                $cur_letter= $test_letter;
+                echo "<span id=".$cur_letter.">".$cur_letter."</span>";
+              }
+              ?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/<?= $artiste['photocover'] ?>"><?= $artiste['nom'] ?></a></li> <?php
+            } ?>
+          </ul>
+        </div>
 
-       <?php  if($critere==2){ ?> 
-        <div class = "style"> Liste des artistes classés par genre</div>
+      <?php  if($critere==2){ ?> 
+      <div class = "style"> Liste des artistes classés par genre</div>
       <?php } ?>
 
       <?php  if($critere==3){ ?> 
