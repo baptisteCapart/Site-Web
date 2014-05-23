@@ -1,5 +1,10 @@
 <?php 
 
+function dropArtiste($id){
+	global $bdd;
+	$bdd->query("DELETE FROM artiste WHERE artiste_id= $id") or die(print_r($bdd->errorInfo()));
+}
+
 
 function insertArtiste($nomartiste, $style ,$description, $photogroupe,$membreID){
 	global $bdd;

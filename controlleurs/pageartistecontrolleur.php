@@ -7,6 +7,10 @@ include ('models/DonnerAvis.php');
 include ('models/concertmodel.php');
 include ('models/sallemodel.php');
 
+
+
+
+
 if(isset($_GET['id'])){
 	$createur=AuthentificationArtiste($_GET["id"]);
 	$artiste_id = $_GET["id"];
@@ -14,6 +18,11 @@ if(isset($_GET['id'])){
 	$concert=listeConcertsA($artiste_id);
 	$concertartiste = ConcertArtisteP($artiste_id);
 	$concertartiste2 = ConcertArtisteF($artiste_id);
+	if(isset($_POST['supprimer'])){
+
+		dropArtiste($artiste_id);
+		header('location: index.php?page=listeartistecontrolleur');
+	}
 
 }
 

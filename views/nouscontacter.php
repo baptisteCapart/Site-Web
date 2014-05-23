@@ -6,6 +6,7 @@
         
         <p>
             Pseudo : <input name="pseudo" /><br />
+            <br>
             Message :<br />
             <textarea name="message" rows="8" cols="35"></textarea><br />
             <input type="submit" value="Envoyer" />
