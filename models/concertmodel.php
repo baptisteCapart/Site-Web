@@ -1,5 +1,4 @@
 <?php 
-include("artistemodel.php");
 
 function insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur,$non_repondu)
 {
@@ -81,10 +80,10 @@ function accord($id, $accord){
 	global $bdd;
 	$bdd->query("UPDATE concert SET accord='$accord' WHERE concert_id='$id'");
 	$concert = recuperer5($id);
-	$artiste = recuperer2($concert['artiste_id']);
+	$artiste = recupererartiste($concert['artiste_id']);
 	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour ".$concert['jour'].", tenez-vous prêts !";
 	$bdd->query("INSERT INTO news (datenews, photocover, description, lien) 
-		VALUES ("$concert['jour'].", ".$concert['photocover'].", $description, 'index.php?page=pageconcertcontrolleur&id='".$concert['concert_id'].")");
+		VALUES ('".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
 }
 
 function newtopic ()
@@ -179,5 +178,12 @@ function caroussel(){
 	return $req;
 }
 
+function recupererartiste($id){
+	global $bdd;
+	$sql = "SELECT * from artiste where artiste_id ='$id'";
+ 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+ 	$donnee = $req-> fetch();
+  	return $donnee;
+}
 
 ?>
