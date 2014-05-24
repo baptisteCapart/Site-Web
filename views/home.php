@@ -9,7 +9,9 @@
 					<ul>
 						<?php  if(isset($caroussel)){
 							foreach ($caroussel as $diapo) {
-							echo ' <li><img src="controlleurs/images/'.$diapo['photocover'].'" alt="" /></li>';
+							echo ' <li><a href='.$diapo["lien"].'><img src="controlleurs/images/'.$diapo['photocover'].'" alt="" /></a><p class="azerty">
+							'.$diapo['description'].'</p> </li>';
+
 						}} ?>
 					</ul>
 				</div>
