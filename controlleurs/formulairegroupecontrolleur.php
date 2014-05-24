@@ -19,7 +19,6 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($
 
 		if(isset($_SESSION['id'])){
 			$current_id = insertArtiste($nomartiste, $style ,$description, $photogroupe, $_SESSION['id']);
-			var_dump($current_id);
 			finishartiste($current_id, $style);
 			header ('location: index.php?page=pageartistecontrolleur&id='.$current_id);
 		}
