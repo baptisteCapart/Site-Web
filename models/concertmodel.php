@@ -169,5 +169,11 @@ function ConcertArtisteF($artiste_id){
 	return $req;	
 }
 
+function caroussel(){
+	global $bdd;
+	$req=$bdd->query("SELECT photocover from concert order by jour limit 5");
+	return $req;
+}
+
 
 ?>
