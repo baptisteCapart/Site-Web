@@ -133,13 +133,32 @@
 
 #contenuliste ul.ancres
 {
-	position: fixed;
-	top: 15%;
-	left: 1%;
+	display: none;
 	padding-left: 2%;
+}
+
+#contenuliste ul.ancres:hover
+{
+	display: block;
 }
 
 #contenuliste ul.ancres li.ancre a
 {
 	color: white;
+}
+
+#contenuliste .decl_ancre
+{
+	position: fixed;
+	top: 90%;
+	left: 1%;
+}
+
+#contenuliste .decl_ancre:hover ul
+{
+	color: white;
+	display: block;
+	margin-left: 10px;
+	position: fixed;
+	top: 12%;
 }

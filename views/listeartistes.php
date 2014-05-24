@@ -17,6 +17,7 @@
   <div id="contenuliste">
       <?php  if($critere==1){ ?> 
         <div class = "alpha">
+	      	<div class="decl_ancre">
 	      	<ul class="ancres">
 		        <?php
 		       	foreach(range('A','Z') as $i) {
@@ -25,6 +26,7 @@
 		    	}
 		    	?>
 	    	</ul>
+		    Saut rapide</div>
           	<ul class="liste_artistes">
 	            <?php 
 	            $listealpha = trialpha();
