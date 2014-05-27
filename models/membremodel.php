@@ -1,5 +1,10 @@
 <?php 
 
+function dropMembre($id){
+	global $bdd;
+	$bdd->query("DELETE FROM membre WHERE membre_id= $id") or die(print_r($bdd->errorInfo()));
+}
+
 function verification($login){
 	global $bdd;
 	$sql = "SELECT membre_id, mot_de_passe from membre where pseudo ='$login'";
