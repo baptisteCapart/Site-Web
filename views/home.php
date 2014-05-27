@@ -27,7 +27,7 @@
 							if(isset($localnews)){
 								foreach ($localnews as $local) {
 									if($local['cp']==$code){
-										echo ' <li><a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">
+										echo ' <li title = "'.$local["description"].'"><a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">
 										<img src="controlleurs/images/'.$local['photocover'].'" alt="" />'.$local['nom'].'</a> 
 										Le '.$local['jour'].' à : '.$local['salle_nom'].' </li>';
 						}}} ?>
