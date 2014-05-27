@@ -30,7 +30,9 @@
 	<link rel="stylesheet" href="views/style/register_complete_style.css">
 	<link rel="stylesheet" href="views/style/recherchestyle.css">
 	<link href='http://fonts.googleapis.com/css?family=Condiment|Codystar|Poiret+One|Quicksand|Fascinate+Inline|Iceland|Germania+One|Bangers|Open+Sans' rel='stylesheet' type='text/css'>
+	<script src="jquery-2.1.1.min.js"></script>
 	<script type = "text/javascript" src = "script.js"></script>
+
 </head>
 
 <body>
@@ -77,8 +79,8 @@
 					<?php }else{ ?> href="index.php?page=formulairecontrolleur" <?php } ?> >Compte</a>
 					<ul class = "menu1">
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
-						<li id = "groupes"><a href="index.php?page=PageMembrecontrolleur&ongletMembre=1 #menuMembre">Mes artistes</a></li>
-						<li id = "rooms"><a href="index.php?page=PageMembrecontrolleur&ongletMembre=2 #menuMembre">Mes salles</a></li>
+						<li id = "groupes"><a href="index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION["id"];?>&ongletMembre=1#menuMembre">Mes artistes</a></li>
+						<li id = "rooms"><a href="index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION["id"];?>&ongletMembre=2#menuMembre">Mes salles</a></li>
 						<li id = "shows"><a href="PageMembrecontrolleur3.php">Mes concerts</a></li>
 						<?php } ?>
 					</ul>

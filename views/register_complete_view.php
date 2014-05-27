@@ -3,6 +3,10 @@
 	<?php if (isset($_SESSION["format"])){
 		echo ($message);
 	} ?>
+<br>	
+	<?php if (isset($_SESSION["format2"])){
+		echo ($message2);
+	} ?>	
 </span>
 <br>
 	Merci de nous avoir rejoint, ton inscription a bien été prise en compte, tu disposes maintenant d'un compte membre, 

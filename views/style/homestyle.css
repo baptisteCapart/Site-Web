@@ -10,6 +10,10 @@ body
 	padding: 0;
 }
 
+#caroussel ul li.newstexte{
+	float: left;
+}
+
 #blochome
 {
 		background-color: white;
@@ -33,7 +37,7 @@ div
 
 #news
 {
-	background-image: url(../../controlleurs/images/concert.jpg);
+	
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -306,6 +310,66 @@ ul
 {
 	margin-top: 3%;
 }
+
+#caroussel img{
+	width: 1400px;
+	height: 500px;
+}
+
+.azerty {
+	background-color: #0E0E0C;
+	opacity: 0.5;
+	padding : 20px;
+	margin-top: -75px;
+	color : #F0F0F0;
+	font-size: 1.5em;
+	font-family: 'Quicksand' , sans-serif;	
+
+}
+
+#caroussel{
+
+    overflow:hidden;
+
+    width:1400px;
+
+    height:500px;
+
+    //margin:25% auto 0 auto;
+
+}
+
+
+
+ 
+
+#caroussel ul{
+
+    position:relative;
+
+    list-style-type:none;
+
+    margin: 0px;
+
+    padding: 0px;
+
+    width:9999px;
+
+
+}
+
+ 
+
+#caroussel li{
+
+    padding:0px;
+
+    list-style:none;
+
+    float:left;
+
+}
+
 
 
 

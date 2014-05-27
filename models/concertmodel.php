@@ -1,4 +1,5 @@
 <?php 
+
 function insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur,$non_repondu)
 {
 	global $bdd;
@@ -77,10 +78,12 @@ function updateConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 
 function accord($id, $accord){
 	global $bdd;
-	$bdd->query("UPDATE concert 
-		SET accord='$accord'
-
-		WHERE concert_id='$id'");
+	$bdd->query("UPDATE concert SET accord='$accord' WHERE concert_id='$id'");
+	$concert = recuperer5($id);
+	$artiste = recupererartiste($concert['artiste_id']);
+	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour ".$concert['jour'].", tenez-vous prêts !";
+	$bdd->query("INSERT INTO news (datenews, photocover, description, lien) 
+		VALUES ('".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
 }
 
 function newtopic ()
@@ -169,5 +172,18 @@ function ConcertArtisteF($artiste_id){
 	return $req;	
 }
 
+function caroussel(){
+	global $bdd;
+	$req=$bdd->query("SELECT * from news order by datenews limit 5");
+	return $req;
+}
+
+function recupererartiste($id){
+	global $bdd;
+	$sql = "SELECT * from artiste where artiste_id ='$id'";
+ 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+ 	$donnee = $req-> fetch();
+  	return $donnee;
+}
 
 ?>

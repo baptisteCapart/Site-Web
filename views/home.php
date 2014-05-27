@@ -1,18 +1,21 @@
+<script>
+	caroussel();
+
+</script>
 
 <div id="blochome">
-		<div id="news">			
-				<div id="liste_news">
+				
+				<div id="caroussel" >
 					<ul>
-						<li></li>
-						<li><a href="#"> Grand Corps Malade à la Cigale !</a></li>
-						<li><a href="#"> Dj Vincent, ou le grand retour</a></li>
-						<li><a href="#"> Le Trombinoscope : une nouvelle salle débarque</a></li>
-						<li><a href="#"> Stromae dépasse les 1000 abonnés !</a></li>
-						<li><a href="#"> Concert d'inauguration de la salle du Triton au Lilas</a></li>
-						<li><a href="#"> La salle Pleyel restaurée : les prochains évènements ...</a></li>
+						<?php  if(isset($caroussel)){
+							foreach ($caroussel as $diapo) {
+							echo ' <li><a href='.$diapo["lien"].'><img src="controlleurs/images/'.$diapo['photocover'].'" alt="" /></a><p class="azerty">
+							'.$diapo['description'].'</p> </li>';
+
+						}} ?>
 					</ul>
 				</div>
-		</div>
+
 		<?php 
 		if(isset($_SESSION['pseudo'])){
 		?>
