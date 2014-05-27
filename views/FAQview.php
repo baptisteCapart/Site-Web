@@ -1,7 +1,7 @@
 <div id="listeFAQ">
 	
 	<div id="introduction">
-		<h1>F.A.Q</h1>
+		<h1>F.A.Q.</h1>
 		
 		<p>Bienvenue sur la F.A.Q de Tune in Town.<br>
 		    Ici vous trouverez divers renseignements sur les différentes fonctionalitées de notre site.<br>
@@ -30,6 +30,9 @@
 		 <br>
 		 <b>J'utilise régulièrement votre site et j'aimerais parler à une des personnes gérant le site, comment faire ?</b><br>
 		 Pour nous contacter, allez voir dans le bas d'une des pages du site et cliquez sur nous contacter.<br>
+		 <br>
+		 <b>Je voudrais des amis comment faire ?</b><br>
+		 Aller voir sur facebook.
 		 <br>
 
 	</p>
