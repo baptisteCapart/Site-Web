@@ -176,7 +176,7 @@ ul
 
 #proche_vous, #groupe, #salle
 {
-	//padding-top: 60px;
+	padding-top: 30px;
 	padding-bottom: 20px;
 	border-bottom: 2px black;
 
@@ -184,7 +184,7 @@ ul
 
 
 
-#proche_vous .image
+#proche_vous ul li img
 {
 	position: absolute;
 	right: 15%;
@@ -196,38 +196,16 @@ ul
 	border: solid 1px #999;
 }
 
-.proche1 img.image, .proche2 img.image, .proche3 img.image, .proche4 img.image, .proche5 img.image
-{
+#proche_vous ul li img{
 	display: none;
 }
 
+#proche_vous ul li:hover img
+{
+	display: inline-block;
+	z-index: 50;
+}
 
-
-.proche1:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche2:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche3:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche4:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche5:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
 
 #inscristoi
 {

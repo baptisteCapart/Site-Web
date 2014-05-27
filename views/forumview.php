@@ -3,7 +3,7 @@
 	<div id = "intro">
 		<div id="titreforumintro">Bienvenue sur le forum de Tune in Town </div></br>
 		<p>Vous trouverez ici différentes rubriques pour exprimer vos opinions, </br> 
-			débattre sur les différents artistes et accéder à la F.A.Q. </br>
+			débattre sur les différents artistes et accéder à la FAQ </br>
 			Exprimez vos opinions ...</p>
 		<div id="charte">
 			<a href="index.php?page=charteForumcontrolleur">Charte du forum</a>
@@ -36,7 +36,7 @@
 						<li><a href="index.php?page=liste_topiccontrolleur&categorie=Concert"><h2>Concert</h2></a></li>
 					</ul>
 			</li>
-			<li class="soussujet"> <h1>F.A.Q</h1>
+			<li class="soussujet"> <h1>FAQ</h1>
 
 			</li>
 		</ul>
