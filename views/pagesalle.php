@@ -23,7 +23,7 @@
 <ul id="parametres3">
          <?php if(isset($_SESSION['id'])){
 
-            if($_SESSION['id']==10){ ?>
+            if($admin['id_admin']==1){ ?>
                 <li><form class ="form3" method="post" action=""><input class = "bouton2" type="submit" name = "supprimer2" value="Supprimer"/></form></li>
             <?php } ?>
 

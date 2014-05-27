@@ -6,9 +6,14 @@ include ('models/SuivreModel.php');
 include ('models/DonnerAvis.php');
 include ('models/concertmodel.php');
 include ('models/sallemodel.php');
+include ('models/membremodel.php');
 
 
 
+
+if(isset($_SESSION['id'])){
+	$admin = recuperer($_SESSION['id']);
+}
 
 
 if(isset($_GET['id'])){
