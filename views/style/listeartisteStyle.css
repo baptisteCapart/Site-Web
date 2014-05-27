@@ -134,6 +134,7 @@
 #contenuliste ul.ancres
 {
 	display: none;
+	width: 50px;
 	padding-left: 2%;
 }
 
@@ -150,7 +151,7 @@
 #contenuliste .decl_ancre
 {
 	position: fixed;
-	top: 90%;
+	top: 575px;
 	left: 1%;
 }
 
@@ -160,5 +161,5 @@
 	display: block;
 	margin-left: 10px;
 	position: fixed;
-	top: 12%;
+	top: 77px;
 }

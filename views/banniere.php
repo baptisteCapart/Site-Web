@@ -115,7 +115,6 @@
 					<ul class = "menu4">
 						<li id = "date"><a href="index.php?page=listeConcertscontrolleur&critereConcert=1">Par date</a> </li>
 						<li id = "lieu"><a href="index.php?page=listeConcertscontrolleur&critereConcert=2">Par lieu</a></li>
-						<li id="exemple"><a href="index.php?page=pageconcertcontrolleur"> exemple</a></li>
 					</ul>
 				</li>	
 				<li id = "forum"><a href="index.php?page=forumcontrolleur">Forum</a></li>
