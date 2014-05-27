@@ -151,15 +151,15 @@
 #contenuliste .decl_ancre
 {
 	position: fixed;
-	top: 575px;
+	top: 90%;
 	left: 1%;
 }
 
-#contenuliste .decl_ancre:hover ul
+#contenuliste .decl_ancre:hover ul.ancres
 {
 	color: white;
 	display: block;
 	margin-left: 10px;
 	position: fixed;
-	top: 77px;
+	top: 12%;
 }

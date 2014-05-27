@@ -11,6 +11,7 @@
 				</li>
 				<li>
 					<div class="style"><span>Style de musique : </span> <br>
+
 					<input class = "stylebox" type="checkbox"  name="style[]" value="Rock">Rock<br>
 					<input class = "stylebox" type="checkbox"  name="style[]" value="blues">Blues<br>
 					<input class = "stylebox" type="checkbox"  name="style[]" value="Jazz">Jazz<br>
@@ -23,6 +24,7 @@
 					<input class = "stylebox" type="checkbox"  name="style[]" value="RnB">RnB<br>
 					<input class = "stylebox" type="checkbox"  name="style[]" value="Pop Rock">Pop Rock<br>
 					<input class = "stylebox" type="checkbox"  name="style[]" value="Pop">Pop<br>
+
 
 
 
