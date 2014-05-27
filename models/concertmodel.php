@@ -186,4 +186,19 @@ function recupererartiste($id){
   	return $donnee;
 }
 
+function localnews(){
+	global $bdd;
+	$retour= array();
+	$req = $bdd->query('SELECT * from concert where accord=1 and jour>= CURDATE() order by jour') or die(print_r($bdd->errorInfo()));
+	foreach($req as $concert){
+		$id=$concert['salle_id'];
+		$sql=$bdd->query("SELECT code_postal, nom from salle where salle_id = '$id'");
+		$postal = $sql->fetch();
+		$concert['cp']= (int)($postal['code_postal']/1000);
+		$concert['salle_nom']=$postal['nom'];
+		$retour[] = $concert;
+	}
+	return $retour;
+
+}
 ?>
