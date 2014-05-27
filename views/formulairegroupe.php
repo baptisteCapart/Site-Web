@@ -23,6 +23,7 @@
 					<input class = "stylebox" type="checkbox"  name="style" value="RnB">RnB<br>
 					<input class = "stylebox" type="checkbox"  name="style" value="Pop Rock">Pop Rock<br>
 					<input class = "stylebox" type="checkbox"  name="style" value="Pop">Pop<br>
+					<input class = "stylebox" type="checkbox"  name="style" value="Variété Française">Variété Française<br>
 
 
 
