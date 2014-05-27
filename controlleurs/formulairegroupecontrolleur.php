@@ -14,12 +14,15 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) AND !empty ($
 		}
 
 		include ('models/artistemodel.php');
-
-
+if(!empty($_POST['choix'])){
+		for ($i=0;$i<count($_POST['choix']);$i++){
+			$choix .= $_POST['choix'][$i];
+		}
+}
 
 		if(isset($_SESSION['id'])){
 			$current_id = insertArtiste($nomartiste, $style ,$description, $photogroupe, $_SESSION['id']);
-			finishartiste($current_id, $style);
+			finishartiste($current_id, $choix);
 			header ('location: index.php?page=pageartistecontrolleur&id='.$current_id);
 		}
 
