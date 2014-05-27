@@ -9,6 +9,24 @@ $arr = explode('-', $donnees['date_de_naissance']);
 $birthdate = $arr[2].'-'.$arr[1].'-'.$arr[0];
 $ongletMembre =1;
 
+
+if(isset($_SESSION['id'])){
+	$admin = recuperer($_SESSION['id']);
+}
+
+
+
+	if(isset($_POST['supprimer3'])){
+
+		dropMembre($donnees['membre_id']);
+
+		header('location: index.php?page=homecontrolleur');
+	}
+
+
+
+
+
 if(isset($_GET['ongletMembre'])){
 
 	if ($_GET["ongletMembre"] ==1){
