@@ -85,20 +85,12 @@ function grosseVerif(){
 function caroussel(){
 	$(document).ready(function(){
         $("#caroussel").each(function(){
-
             var t = setInterval(function(){
-
                 $("#caroussel ul").animate({marginLeft:-1400},2000,function(){
-
                     $("#caroussel ul li:last").after($("#caroussel ul li:first"));
-
                     $(this).css({marginLeft:0});
-
                 })
-
             },5000);
-
         });
-
    });
 }
