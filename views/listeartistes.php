@@ -18,15 +18,20 @@
       <?php  if($critere==1){ ?> 
         <div class = "alpha">
 	      	<div class="decl_ancre">
-	      	<ul class="ancres">
-		        <?php
-		       	foreach(range('A','Z') as $i) {
-		            echo '<li class="ancre"><a href="index.php?page=listeartistecontrolleur#'.$i.'">'.$i.'</a></li>';
-		        }
-		    	}
-		    	?>
-	    	</ul>
-		    Saut rapide</div>
+			    <ul>  	
+			      	<li>
+			      		<ul class="ancres">
+				        	<?php
+				       		foreach(range('A','Z') as $i) {
+				            	echo '<li class="ancre"><a href="index.php?page=listeartistecontrolleur#'.$i.'">'.$i.'</a></li>';
+				        	}
+				    		}
+				    		?>
+			    		</ul>
+			      	</li>
+				    <li>Saut rapide</li>
+				</ul>
+			</div>
           	<ul class="liste_artistes">
 	            <?php 
 	            $listealpha = trialpha();
