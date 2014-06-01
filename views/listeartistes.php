@@ -53,9 +53,11 @@
 
       <?php  if($critere==3){ ?> 
 	    <div class = "style"> Liste des artistes classés par note
-		<?php if(isset($notes)){ foreach($notes as $listenotes){
-		    echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$listenotes["artiste_id"].'"> <img src="controlleurs/images/'.$listenotes['photocover'].'" alt="" /> '. $listenotes["nom"].'<br/>'.' </a></li>';
-		}} ?>
+	    	<ul class="liste_artistes">
+			<?php if(isset($notes)){ foreach($notes as $listenotes){
+		    	echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$listenotes["artiste_id"].'"> <img src="controlleurs/images/'.$listenotes['photocover'].'" alt="" /> '. $listenotes["nom"].'<br/>'.' </a></li>';
+			}} ?>
+	    	</ul>
 	    </div>
        <?php } ?> 
       	
