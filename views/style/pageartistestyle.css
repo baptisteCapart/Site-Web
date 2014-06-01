@@ -7,6 +7,14 @@ html, body
 	padding: 0;
 }
 
+.erreurphoto
+{
+	color : red;
+	font-weight: bold;
+	font-family: 'Quicksand' , sans-serif;
+
+}
+
 #photoartiste
 {
 	position: relative;
