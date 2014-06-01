@@ -37,38 +37,7 @@ include('models/membremodel.php');
 // else
 // { $dftage = ""; }
 
-// $verif=veriflogin($login);
-// if($verif){
-// inscription($login, $password,$mail, $zipcode, $photo, $name);
-// $donnee = verification($login);
-// $nomOrigine = $_FILES['photo']['name'];
-// $elementsChemin = pathinfo($nomOrigine);
-// $extensionFichier = $elementsChemin['extension'];
-// $extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
-// $nomDestination = $donnee['id'].".".$extensionFichier; // Nom du fichier : id.extension
-// ajout_photo($donnee['id'], $nomDestination); // Ajout de l'attribu photo au membre
-// $message = 'Inscription réussite';
-
-// if (!(in_array($extensionFichier, $extensionsAutorisees))) {
-// $message = "Le fichier n'a pas l'extension attendue";
-// } else {    
-// // Copie dans le repertoire du script avec un nom
-// // incluant l'heure a la seconde pres 
-// $repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"; // Copie dans le répertoire img
-// //   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
-
-// move_uploaded_file($_FILES["photo"]["tmp_name"], $repertoireDestination.$nomDestination);
-
-//   // $message = "Le fichier temporaire ".$_FILES["photo"]["tmp_name"].
-//     //       " a été déplacé vers ".$repertoireDestination.$nomDestination;
-
-// }
-
-
-
-
-
- $error = "";
+$error = "";
 if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2']) AND !empty ($_POST['mail']) 
 	AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
 {
@@ -130,7 +99,6 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 				photoProf($donnee['membre_id'], $nomDestinationProf);   
 
 				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; 
-				//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
 
 				move_uploaded_file($_FILES["photodeprofil"]["tmp_name"], $repertoireDestination.$nomDestinationProf);
 
@@ -143,16 +111,10 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 				$_SESSION['format2'] = $message;
 			} else { 
 				photoCov($donnee['membre_id'], $nomDestinationCov);   
-				// Copie dans le repertoire du script avec un nom
-				// incluant l'heure a la seconde pres 
-				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; // Copie dans le répertoire img
-				//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
+
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; 
 
 				move_uploaded_file($_FILES["photodecover"]["tmp_name"], $repertoireDestination.$nomDestinationCov);
-
-				  // $message = "Le fichier temporaire ".$_FILES["photo"]["tmp_name"].
-				    //       " a été déplacé vers ".$repertoireDestination.$nomDestination;
-
 			}
 
 			header('location: index.php?page=register_complete_controlleur');
