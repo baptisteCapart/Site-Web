@@ -9,7 +9,9 @@ include ('models/sallemodel.php');
 include ('models/membremodel.php');
 
 
-
+if(isset($_SESSION['formatA'])){
+	$messageA = $_SESSION['formatA'];
+}
 
 if(isset($_SESSION['id'])){
 	$admin = recuperer($_SESSION['id']);

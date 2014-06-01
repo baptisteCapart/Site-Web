@@ -1,12 +1,12 @@
 
-<div id= "cover" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); " >
+<div id= "cover" style="background-image:url(<?php echo 'controlleurs/images/membres/'.$donnees['photocover']; ?>); " >
 </div>
 
 <div id="donnees">	
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src=<?= '"controlleurs/images/'.$donnees['photoprofil'].'"' ?> alt="Photo de Gérard" />
+				<img id="image" src=<?= '"controlleurs/images/membres/'.$donnees['photoprofil'].'"' ?> alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">

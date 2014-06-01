@@ -1,5 +1,6 @@
 
-<div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
+<div id = "photoartiste" style="background-image:url(<?php echo 'controlleurs/images/artistes/'.$donnees['photocover']; ?>); ">
+  
     <div id="nomartiste">
         <?= $donnees["nom"] ?>
 <!--         <?= $NbAbonnes["Nb"] ?>

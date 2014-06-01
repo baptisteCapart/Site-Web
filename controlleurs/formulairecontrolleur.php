@@ -118,8 +118,8 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 			$extensionProf = $infosPathProf['extension'];
 			$extensionCov = $infosPathCov['extension'];
 			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
-			$nomDestinationProf = $donnee['membre_id'].".".$extensionProf;
-			$nomDestinationCov = $donnee['membre_id'].".".$extensionCov;
+			$nomDestinationProf = $donnee['membre_id']."."."P".".".$extensionProf;
+			$nomDestinationCov = $donnee['membre_id']."."."C".".".$extensionCov;
 			var_dump($infosPathProf);
 			
 
@@ -129,7 +129,7 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 			} else { 
 				photoProf($donnee['membre_id'], $nomDestinationProf);   
 
-				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"; 
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; 
 				//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
 
 				move_uploaded_file($_FILES["photodeprofil"]["tmp_name"], $repertoireDestination.$nomDestinationProf);
@@ -145,7 +145,7 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 				photoCov($donnee['membre_id'], $nomDestinationCov);   
 				// Copie dans le repertoire du script avec un nom
 				// incluant l'heure a la seconde pres 
-				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"; // Copie dans le répertoire img
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; // Copie dans le répertoire img
 				//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
 
 				move_uploaded_file($_FILES["photodecover"]["tmp_name"], $repertoireDestination.$nomDestinationCov);

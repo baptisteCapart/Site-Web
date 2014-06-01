@@ -19,6 +19,13 @@ function finishartiste ($artiste_id, $style){
 	$bdd->query("INSERT INTO style_de_groupe (artiste_id, style_de_musique) VALUES ('$artiste_id', '$style')");
 }
 
+function photoA($id,$photo){
+	global $bdd;
+	$bdd->query("UPDATE artiste 
+	SET photocover='$photo'
+	WHERE artiste_id='$id'");
+}
+
 function trialpha(){
 	global $bdd;
 	$sql = $bdd-> query("SELECT * from artiste order by nom") or die(print_r($bdd->errorInfo()));
