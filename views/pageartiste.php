@@ -3,8 +3,12 @@
   
     <div id="nomartiste">
         <?= $donnees["nom"] ?>
-<!--         <?= $NbAbonnes["Nb"] ?>
- -->    </div>
+
+   </div>
+   <div class="erreurphoto">          <?php if(isset($erreur)){
+            echo "$erreur";
+          } ?></div>
+
     <div id="menuArtiste">
         <ul class = "page">
           <li class = "<?php if($onglet==1){ echo "active";}?>"> <?php echo'<a href = "index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=1 #contenuArtiste"> Présentation </a>'; ?></li>

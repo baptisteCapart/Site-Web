@@ -9,8 +9,8 @@ include ('models/sallemodel.php');
 include ('models/membremodel.php');
 
 
-if(isset($_SESSION['formatA'])){
-	$messageA = $_SESSION['formatA'];
+if(isset($_GET['erreur'])){
+	$erreur = $_GET['erreur'];
 }
 
 if(isset($_SESSION['id'])){
