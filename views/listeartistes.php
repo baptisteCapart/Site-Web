@@ -42,7 +42,7 @@
 	                	$cur_letter= $test_letter;
 	                	echo "<span id=".$cur_letter.">".$cur_letter."</span>";
 	              	}
-	              	?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/<?= $artiste['photocover'] ?>"><?= $artiste['nom'] ?></a></li> <?php
+	              	?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?= $artiste['photocover'] ?>"><?= $artiste['nom'] ?></a></li> <?php
 	            } ?>
 	        </ul>
         </div>
