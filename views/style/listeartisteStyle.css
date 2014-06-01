@@ -82,13 +82,13 @@
 
 #contenuliste
 {
-	//background-color: #464646;
 	background-color: #303030;
 	color : #CECECE;
 	overflow: hidden;
 	width: 100%;
 
 }
+
 #contenuliste img
 {
 	width: 40px;

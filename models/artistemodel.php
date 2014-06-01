@@ -100,10 +100,15 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 
 function classement(){
 	global $bdd;
-
-	$req = $bdd->query("SELECT AVG(note), artiste_id from donner_avis GROUP BY artiste_id order by note");
+	$infos = array();
+	$artiste = array();
+	$req = $bdd->query("SELECT artiste_id from donner_avis GROUP BY artiste_id order by note") or die (print_r($bdd->errorInfo()));
 	foreach($req as $notes){
-		$infos = recuperer4($notes['artiste_id']);
+		$res = recuperer4($notes['artiste_id']);
+		foreach ($res as $key => $attribut) {
+			$artiste[$key] = $attribut;
+		}
+		$infos[] = $artiste;
 	}
 	return $infos;	
 }
