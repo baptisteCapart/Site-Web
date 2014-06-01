@@ -24,9 +24,7 @@
 				        	<?php
 				       		foreach(range('A','Z') as $i) {
 				            	echo '<li class="ancre"><a href="index.php?page=listeartistecontrolleur#'.$i.'">'.$i.'</a></li>';
-				        	}
-				    		}
-				    		?>
+				        	} ?>
 			    		</ul>
 			      	</li>
 				    <li>Saut rapide</li>
@@ -42,10 +40,11 @@
 	                	$cur_letter= $test_letter;
 	                	echo "<span id=".$cur_letter.">".$cur_letter."</span>";
 	              	}
-	              	?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?= $artiste['photocover'] ?>"><?= $artiste['nom'] ?></a></li> <?php
+	              	?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover']?>"/><?= $artiste['nom'] ?></a></li> <?php
 	            } ?>
 	        </ul>
         </div>
+        <?php } ?>
 
       <?php  if($critere==2){ ?> 
       <div class = "style"> Liste des artistes classés par genre</div>
@@ -54,8 +53,8 @@
       <?php  if($critere==3){ ?> 
 	    <div class = "style"> Liste des artistes classés par note
 	    	<ul class="liste_artistes">
-			<?php if(isset($notes)){ foreach($notes as $listenotes){
-		    	echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$listenotes["artiste_id"].'"> <img src="controlleurs/images/'.$listenotes['photocover'].'" alt="" /> '. $listenotes["nom"].'<br/>'.' </a></li>';
+			<?php if(isset($notes)){ foreach($notes as $artiste){ ?>
+		    	<li><a href = "index.php?page=pageartistecontrolleur&id=<?=$artiste['artiste_id']?>"><img src="controlleurs/images/<?=$artiste['photocover']?>" alt="" /><?=$artiste["nom"]?></a></li> <?php
 			}} ?>
 	    	</ul>
 	    </div>
