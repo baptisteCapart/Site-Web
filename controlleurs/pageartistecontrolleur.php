@@ -7,6 +7,7 @@ include ('models/DonnerAvis.php');
 include ('models/concertmodel.php');
 include ('models/sallemodel.php');
 include ('models/membremodel.php');
+include ('models/photomodel.php');
 
 
 if(isset($_GET['erreur'])){
@@ -17,7 +18,7 @@ if(isset($_SESSION['id'])){
 	$admin = recuperer($_SESSION['id']);
 }
 
-
+$tableid="artiste_id";
 if(isset($_GET['id'])){
 	$createur=AuthentificationArtiste($_GET["id"]);
 	$artiste_id = $_GET["id"];
@@ -57,7 +58,17 @@ if(!empty($_POST['extrait1']) or !empty($_POST['extrait2']) ){
 		}
 }
 
+if(!empty($_POST['photoA']) ){
+		if(isset($_GET['id'])){	
+			$photo = mysql_real_escape_string(htmlspecialchars($_POST['photoA']));
+			
+			insertPhoto($_GET['id'], $photo);
+			var_dump($photo);
+		}
+}
+
 $musiques = listeMusiques();
+$photos=Photo();
 $onglet =1;
 
 if(isset($_GET['onglet'])){

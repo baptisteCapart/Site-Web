@@ -177,7 +177,38 @@
     <?php } ?>   
 
     <?php  if($onglet==5){ ?> 
-      <div class = "photos"> photos</div>
+      <div class = "photos"> photos
+        <?php if(isset($_SESSION['id'])){ ?>   
+          <table id = "serie">
+          <?php foreach ($photos as $picture){  ?>
+            <tr>
+              <td>
+                <img src="controlleurs/images/artistes/<?=$picture['chemin']?>"/>
+              </td>
+            </tr>
+          <?php 
+          }
+          ?>
+          </table>
+         <?php }else{ ?>
+         <span class="intro">Inscris-toi pour consulter les photos !</span> 
+         <?php } ?>
+         <?php if(isset($_SESSION['id'])){
+             if($createur['membre_id']==$_SESSION['id']) { ?>    
+              <span class="intro">Tu peux ajouter ici des photos de tes concerts ou de tes enregistrements pour te faire connaître auprès des autres membre du site</span>       
+                  <form class ="formulairePhoto" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=5' ;?>">
+                      <ul>
+                          <li>
+                              <div class="photou"><span>Ta photo : </span><input class = "textbox" type="file" name="photoA" /></div>
+                          </li> 
+                          <li>
+                              <input class = "envoyer" type="submit" value="Envoyer !"/>
+                          </li>              
+                      </ul>
+                  </form>
+        <?php }} ?>              
+
+      </div>
     <?php } ?>
     <?php if($onglet==6){ ?> 
       <div class = "invitations"> invitations
