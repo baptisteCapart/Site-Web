@@ -101,16 +101,31 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 function classement(){
 	global $bdd;
 	$infos = array();
-	$artiste = array();
 	$req = $bdd->query("SELECT artiste_id from donner_avis GROUP BY artiste_id order by note") or die (print_r($bdd->errorInfo()));
 	foreach($req as $notes){
 		$res = recuperer4($notes['artiste_id']);
-		foreach ($res as $key => $attribut) {
-			$artiste[$key] = $attribut;
-		}
+		$artiste = $res->fetch();
 		$infos[] = $artiste;
 	}
 	return $infos;	
 }
 
- ?>
+function getStyle(){
+	global $bdd;
+	$req=$bdd->query("SELECT nom from style_de_musique order by nom");
+	return $req;
+}
+
+function styleArtiste($style){
+	global $bdd;
+	$infos = array();
+	$req =$bdd->query("SELECT artiste_id from style_de_groupe where style_de_musique = '$style'");
+	foreach ($req as $artiste) {
+		$res = recuperer4($artiste['artiste_id']);
+		$infoartiste = $res->fetch();
+		$infos[] = $infoartiste;
+	}
+	return $infos;
+}
+
+?>

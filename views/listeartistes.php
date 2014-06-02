@@ -32,7 +32,6 @@
 			</div>
           	<ul class="liste_artistes">
 	            <?php 
-	            $listealpha = trialpha();
 	            $cur_letter = '0';
 	        	foreach ($listealpha as $artiste) {
 	            	$test_letter= substr($artiste['nom'], 0, 1);
