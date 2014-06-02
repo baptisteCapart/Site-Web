@@ -17,6 +17,23 @@ html, body
 	width: 100%;
 
 }	
+.map
+{
+	text-align: center;
+}
+.infos
+{
+	color: #5EDF37;
+	margin-bottom: 20px;
+}
+.bloc1
+{
+	float: left;
+}
+
+.bloc2
+{
+float : right;}
 
 #nomsalle
 {

@@ -47,12 +47,41 @@
 <div id="contenuSalle">
   <div id="textSalle">
     <?php  if($ongletSalle==1){ ?> 
-      	<div class = "descrption"> 
+      	<div class = "description"> 
+          <div class="bloc1">
 	      	<ul>
-		      	<li><?= $donnees['adresse'] ?></li>
-		      	<li><?= $donnees['ville'] ?></li>
-		      	<li><?= $donnees['code_postal'] ?></li>
-	      	</ul>	
+            <li>
+              <div><span class = "infos">Adresse : </span><br><span class="dec"><?= $donnees['adresse'] ?></span></div>      
+            </li>
+            <li>
+              <div><span class = "infos">Ville : </span><br><span class="dec"><?= $donnees['ville'] ?></span></div>         
+            </li>       
+            <li>
+              <div><span class = "infos">Code postal : </span><br><span class="dec"><?= $donnees['code_postal'] ?></span></div>       
+            </li>
+          </ul> </div>
+          <div class="bloc2">
+          <ul>
+            <li>
+              <div><span class = "infos">Téléphone : </span><br><span class="dec"><?= $donnees['telephone'] ?></span></div>          
+            </li>     
+            <li>
+              <div><span class = "infos">Type : </span><br><span class="dec"><?= $donnees['type'] ?></span></div>          
+            </li> 
+            <li>
+              <div><span class = "infos">Capacité : </span><br><span class="dec"><?= $donnees['capacite'] ?></span></div>          
+            </li> 
+          <ul>               </div>                    
+          
+           
+        <div class="map">
+            <iframe
+            width="600"
+            height="350"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTQZ5rKhEnDfS2LJiU-hmV-DuCWpql02k
+            &q=<?php echo ($donnees['adresse']); ?>+<?php echo ($donnees['code_postal']); ?>">
+          </div>
   		</div>
     <?php } ?> 
 

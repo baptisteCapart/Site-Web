@@ -5,9 +5,9 @@ function dropSalle($id){
 	$bdd->query("DELETE FROM salle WHERE salle_id= $id") or die(print_r($bdd->errorInfo()));
 }
 
-function insertSalle($Nom_de_salle, $code_postal, $ville ,$adresse, $type, $capacité,$photosalle, $membre_id){
+function insertSalle($Nom_de_salle, $code_postal, $telephone,$ville ,$adresse, $type, $capacité,$photosalle, $membre_id){
 	global $bdd;
-	$bdd->query("INSERT INTO salle(nom, code_postal, ville, adresse, type, capacite, photocover, membre_id )  VALUES ('$Nom_de_salle', '$code_postal', '$ville' ,'$adresse' ,'$type', '$capacité','$photosalle', '$membre_id')");
+	$bdd->query("INSERT INTO salle(nom, code_postal, telephone ville, adresse, type, capacite, photocover, membre_id )  VALUES ('$Nom_de_salle', '$code_postal', '$telephone', '$ville' ,'$adresse' ,'$type', '$capacité','$photosalle', '$membre_id')");
 }
 
 function affichagesalle($lettre){
