@@ -101,31 +101,35 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 function classement(){
 	global $bdd;
 	$infos = array();
-	$req = $bdd->query("SELECT artiste_id from donner_avis GROUP BY artiste_id order by note") or die (print_r($bdd->errorInfo()));
-	foreach($req as $notes){
-		$res = recuperer4($notes['artiste_id']);
-		$artiste = $res->fetch();
-		$infos[] = $artiste;
-	}
-	return $infos;	
+	$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT DISTINCT artiste_id FROM donner_avis WHERE artiste.artiste_id = donner_avis.artiste_id)")
+	or die (print_r($bdd->errorInfo()));
+	return $req;	
+}
+
+function note($artiste){
+	global $bdd;
+	$req = $bdd->query("SELECT AVG(note) FROM donner_avis WHERE artiste_id = '$artiste'")
+	or die (print_r($bdd->errorInfo()));
+	return $req->fetch();
 }
 
 function getStyle(){
 	global $bdd;
-	$req=$bdd->query("SELECT nom from style_de_musique order by nom");
+	$req=$bdd->query("SELECT nom FROM style_de_musique order by nom")
+	or die (print_r($bdd->errorInfo()));
 	return $req;
 }
 
-function styleArtiste($style){
+function getArtistes($styles){
 	global $bdd;
 	$infos = array();
-	$req =$bdd->query("SELECT artiste_id from style_de_groupe where style_de_musique = '$style'");
-	foreach ($req as $artiste) {
-		$res = recuperer4($artiste['artiste_id']);
-		$infoartiste = $res->fetch();
-		$infos[] = $infoartiste;
+	foreach ($styles as $key => $value) {
+		$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT artiste_id FROM style_de_groupe WHERE style_de_musique = '$style')")
+		or die (print_r($bdd->errorInfo()));
+		$key = $value;
+		$value = $req->fetch();
 	}
-	return $infos;
+	return $styles;
 }
 
 ?>

@@ -32,12 +32,12 @@
 			</div>
           	<ul class="liste_artistes">
 	            <?php 
-	            $cur_letter = '0';
+	            $current = '0';
 	        	foreach ($listealpha as $artiste) {
 	            	$test_letter= substr($artiste['nom'], 0, 1);
-	              	if ($test_letter!= $cur_letter) {
-	                	$cur_letter= $test_letter;
-	                	echo "<span id=".$cur_letter.">".$cur_letter."</span>";
+	              	if ($test_letter!= $current) {
+	                	$current= $test_letter;
+	                	echo "<span id=".$current.">".$current."</span>";
 	              	}
 	              	?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover']?>"/><?= $artiste['nom'] ?></a></li> <?php
 	            } ?>
@@ -45,19 +45,32 @@
         </div>
         <?php } ?>
 
-      <?php  if($critere==2){ ?> 
-      <div class = "style"> Liste des artistes classés par genre</div>
-      <?php } ?>
+	    <?php  if($critere==2){ ?> 
+		    <div class = "style">
+				<ul class="liste_artiste">
+					<?php 
+					$current ="";
+					foreach ($listestyle as $style => $artiste) {
+						if ($style != $current) {
+							$current = $style;
+							echo "<span id=".$current.">".$current."</span>";
+						}
+						?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover']?>"/><?= $artiste['nom'] ?></a></li> <?php
+					}
+					 ?>
+				</ul>
+		    </div>
+	    <?php } ?>
 
-      <?php  if($critere==3){ ?> 
-	    <div class = "style"> Liste des artistes classés par note
-	    	<ul class="liste_artistes">
-			<?php if(isset($notes)){ foreach($notes as $artiste){ ?>
-		    	<li><a href = "index.php?page=pageartistecontrolleur&id=<?=$artiste['artiste_id']?>"><img src="controlleurs/images/<?=$artiste['photocover']?>" alt="" /><?=$artiste["nom"]?></a></li> <?php
-			}} ?>
-	    	</ul>
-	    </div>
-       <?php } ?> 
-      	
+	    <?php  if($critere==3){ ?> 
+		    <div class = "note">
+		    	<ul class="liste_artistes">
+				<?php foreach($listenote as $artiste){ ?>
+			    	<li><a href = "index.php?page=pageartistecontrolleur&id=<?php echo $artiste['artiste_id']; ?>"><img src="controlleurs/images/<?php echo $artiste['photocover']; ?>" alt="" /><?=$artiste["nom"]?></a></li> <?php
+				} ?>
+		    	</ul>
+		    </div>
+	    <?php } ?> 
+	      	
   </div> 
 </div>

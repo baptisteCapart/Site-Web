@@ -13,10 +13,21 @@ if(isset($_GET['critere'])){
 	if ($_GET["critere"] ==2){
 		$critere=2;
 		$styles = getStyle();
+		$listestyle = getArtistes($styles);
 	}
 	if ($_GET["critere"] ==3){
 		$critere=3;
-		$notes = classement();
+		$resultat = classement();
+		$listenote = array();
+		foreach ($resultat as $artiste) {
+			$artiste['note'] = note($artiste['artiste_id']);
+			$listenote[] = $artiste['note'];
+		}
+		arsort($listenote);
+		foreach ($resultat as $key => $artiste) {
+			$listenote[$key] = $artiste[$key];
+		}
+		var_dump($listenote);
 	}
 }
 else 
