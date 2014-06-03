@@ -19,6 +19,13 @@ function finishartiste ($artiste_id, $style){
 	$bdd->query("INSERT INTO style_de_groupe (artiste_id, style_de_musique) VALUES ('$artiste_id', '$style')");
 }
 
+function photoA($id,$photo){
+	global $bdd;
+	$bdd->query("UPDATE artiste 
+	SET photocover='$photo'
+	WHERE artiste_id='$id'");
+}
+
 function trialpha(){
 	global $bdd;
 	$sql = $bdd-> query("SELECT * from artiste order by nom") or die(print_r($bdd->errorInfo()));
@@ -93,12 +100,36 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 
 function classement(){
 	global $bdd;
-
-	$req = $bdd->query("SELECT AVG(note), artiste_id from donner_avis GROUP BY artiste_id order by note");
-	foreach($req as $notes){
-		$infos = recuperer4($notes['artiste_id']);
-	}
-	return $infos;	
+	$infos = array();
+	$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT DISTINCT artiste_id FROM donner_avis WHERE artiste.artiste_id = donner_avis.artiste_id)")
+	or die (print_r($bdd->errorInfo()));
+	return $req;	
 }
 
- ?>
+function note($artiste){
+	global $bdd;
+	$req = $bdd->query("SELECT AVG(note) FROM donner_avis WHERE artiste_id = '$artiste'")
+	or die (print_r($bdd->errorInfo()));
+	return $req->fetch();
+}
+
+function getStyle(){
+	global $bdd;
+	$req=$bdd->query("SELECT nom FROM style_de_musique order by nom")
+	or die (print_r($bdd->errorInfo()));
+	return $req;
+}
+
+function getArtistes($styles){
+	global $bdd;
+	$infos = array();
+	foreach ($styles as $key => $value) {
+		$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT artiste_id FROM style_de_groupe WHERE style_de_musique = '$style')")
+		or die (print_r($bdd->errorInfo()));
+		$key = $value;
+		$value = $req->fetch();
+	}
+	return $styles;
+}
+
+?>

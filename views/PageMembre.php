@@ -1,12 +1,12 @@
 
-<div id= "cover" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); " >
+<div id= "cover" style="background-image:url(<?php echo 'controlleurs/images/membres/'.$donnees['photocover']; ?>); " >
 </div>
 
 <div id="donnees">	
 	<ul id="membre">
 		<li>
 			<div>
-				<img id="image" src=<?= '"controlleurs/images/'.$donnees['photoprofil'].'"' ?> alt="Photo de Gérard" />
+				<img id="image" src=<?= '"controlleurs/images/membres/'.$donnees['photoprofil'].'"' ?> alt="Photo de Gérard" />
 			</div>
 		</li>
 		<li id="donneesmembre">
@@ -25,9 +25,18 @@
 
 <div id="global">
     <ul id="parametres">
-        <?php if(isset($_SESSION['id'])){if($_SESSION['id']==$_GET['id']){ ?>
+        <?php if(isset($_SESSION['id'])){
+
+            if($admin['id_admin']==1){ ?>
+                <li><form class ="form3" method="post" action=""><input class = "bouton2" type="submit" name = "supprimer3" value="Supprimer"/></form></li>
+            <?php } ?>
+
+           <?php if($_SESSION['id']==$_GET['id']){ ?>
+
     	<li><form class ="form3" method="post" action="index.php?page=ParametresMembrecontrolleur&id=<?php echo $_SESSION['id']; ?>"><input class = "bouton" type="submit" value="Paramètres" /></form></li>
-    	<?php }else{ ?><li><input class = "bouton" type="submit" value="Suivre"/></li><?php }} ?>
+    	<?php }
+        else{ ?><li><input class = "bouton" type="submit" value="Suivre"/></li><?php }} ?>
+
     	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
     </ul>
 </div>

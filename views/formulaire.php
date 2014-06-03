@@ -1,11 +1,11 @@
 
 <div id="bloc">
 <div id="bienvenue">Remplis ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit ! <br>
-Tous les champs sont obligatoires
+<span class="precision">Tous les champs sont obligatoires sauf pour les photos. Si tu ne télécharges pas de photos, tes photos de profil et couverture seront les photos par défaut.</span> 
 </div>
 <div class="erreur"><?php echo($error); ?></div>
 <div id="formulaire">
-	<form enctype = "multipart/form-data" class ="form2" onsubmit = "return grosseVerif()" name = "formIn" method="post" action="index.php?page=formulairecontrolleur">
+	<form enctype = "multipart/form-data" class ="form2" onsubmit = "return grosseVerif()"  name = "formIn" method="post" action="index.php?page=formulairecontrolleur">
 		<ul>
 			<li>
 				<div class="pseudo2"><span>Pseudo : </span><input onblur = "return verifPseudo()" class = "textbox" type="text" name="pseudo" /> </div>
@@ -47,14 +47,14 @@ Tous les champs sont obligatoires
 
 			</li>			
 			<li>
-				<div class="photoprofil"><span>Photo de profil : </span><input class = "textbox" type="file" name="photodeprofil" /></div>
+				<div class="photoprofil"><span>Photo de profil : </span><input  class = "textbox" type="file" name="photodeprofil" /></div>
 			</li>
 			<li>
-				<div class="photocouv"><span>Photo de couverture :</span><input class = "textbox" type="file" name="photodecover" /></div>					
+				<div class="photocouv"><span>Photo de couverture :</span><input   class = "textbox" type="file" name="photodecover" /></div>					
 			</li>
 
 			<li>
-				<div class="conditions"><input class = "textbox" type="checkbox" name="conditions" required value=""/><span>J'accepte les <a class = "cgu" href="http://localhost/Site-Web/Site-Web/index.php?page=charteForumcontrolleur">conditions d'utilisation</a> </span></div>
+				<div class="conditions"><input onclick = "return upload();" class = "textbox" type="checkbox" name="conditions" required value=""/><span>J'accepte les <a class = "cgu" href="http://localhost/Site-Web/Site-Web/index.php?page=charteForumcontrolleur">conditions d'utilisation</a> </span></div>
 			</li>				
 			<li>
 				<input class = "envoyer" type="submit" value="Envoyer !"/>

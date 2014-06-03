@@ -107,29 +107,28 @@ ul
 
 #proche_vous
 {
-	background-color: #A6A6A6;
+	background-color: #494949;
 }
 
 
 #groupe
 {
-	background-color: #FFFF80;
+	background-color: #707070;
 }
 
 #salle
 {
-	background-color: #A6A6A6;
+	background-color: #494949;
 }
 
 #proche_vous #titre1, #titre2, #titre3
 {
 	text-align: center;
-	border-top: 1px solid #969696;
-	border-bottom: 1px solid #969696;
-	margin-right: 20%;
-	margin-left: 20%;
+	border-top: 2px solid #53DD17;
+	border-bottom: 2px solid #53DD17;
+	margin-right: 30%;
+	margin-left: 30%;
 }
-
 #groupe, #salle
 {
 	padding-top: 3%;
@@ -143,7 +142,7 @@ ul
 
 #titre1, #titre2, #titre3
 {
-	font-size: 3.5em;
+	font-size: 2em;
 	font-weight: bold;
 }
 
@@ -156,7 +155,7 @@ ul
 #proche_vous li , #groupe li, #salle li
 {
 	padding: 10px;
-	font-size: 2em;
+	font-size: 1.5em;
 }
 
 #proche_vous li a:hover , #groupe li a:hover, #salle li a:hover
@@ -164,19 +163,10 @@ ul
 	font-weight: bold;
 }
 
-#groupe
-{
-	background-color: #EEEEE3;
-}
-
-#salle
-{
-	background-color: #96BEC2;
-}
 
 #proche_vous, #groupe, #salle
 {
-	//padding-top: 60px;
+	padding-top: 30px;
 	padding-bottom: 20px;
 	border-bottom: 2px black;
 
@@ -184,7 +174,7 @@ ul
 
 
 
-#proche_vous .image
+#proche_vous ul li img
 {
 	position: absolute;
 	right: 15%;
@@ -196,38 +186,16 @@ ul
 	border: solid 1px #999;
 }
 
-.proche1 img.image, .proche2 img.image, .proche3 img.image, .proche4 img.image, .proche5 img.image
-{
+#proche_vous ul li img{
 	display: none;
 }
 
+#proche_vous ul li:hover img
+{
+	display: inline-block;
+	z-index: 50;
+}
 
-
-.proche1:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche2:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche3:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche4:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
-.proche5:hover img.image
-{
-	display: inline-block;
-	z-index: 50;
-}
 
 #inscristoi
 {

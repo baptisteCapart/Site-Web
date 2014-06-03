@@ -81,7 +81,8 @@ function accord($id, $accord){
 	$bdd->query("UPDATE concert SET accord='$accord' WHERE concert_id='$id'");
 	$concert = recuperer5($id);
 	$artiste = recupererartiste($concert['artiste_id']);
-	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour ".$concert['jour'].", tenez-vous prêts !";
+	$dateconcert = new DateTime($concert['jour']);
+	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour le ".$dateconcert->format('d/m/Y').", tenez-vous prêts !";
 	$bdd->query("INSERT INTO news (datenews, photocover, description, lien) 
 		VALUES ('".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
 }
@@ -150,25 +151,25 @@ function ConcertsParticipes($membre_id){
 
 function ConcertSalleP($salle_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE salle_id=$salle_id and accord = 1 and jour<CURDATE() ") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE salle_id=$salle_id and accord = 1 and jour<CURDATE() order by jour ") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
 function ConcertArtisteP($artiste_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour<CURDATE() ") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour<CURDATE() order by jour ") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
 function ConcertSalleF($salle_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE salle_id=$salle_id and accord = 1 and jour>CURDATE() ") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE salle_id=$salle_id and accord = 1 and jour>CURDATE() order by jour") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
 function ConcertArtisteF($artiste_id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour>CURDATE()") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour>CURDATE() order by jour") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
@@ -186,4 +187,19 @@ function recupererartiste($id){
   	return $donnee;
 }
 
+function localnews(){
+	global $bdd;
+	$retour= array();
+	$req = $bdd->query('SELECT * from concert where accord=1 and jour>= CURDATE() order by jour') or die(print_r($bdd->errorInfo()));
+	foreach($req as $concert){
+		$id=$concert['salle_id'];
+		$sql=$bdd->query("SELECT code_postal, nom from salle where salle_id = '$id'");
+		$postal = $sql->fetch();
+		$concert['cp']= (int)($postal['code_postal']/1000);
+		$concert['salle_nom']=$postal['nom'];
+		$retour[] = $concert;
+	}
+	return $retour;
+
+}
 ?>

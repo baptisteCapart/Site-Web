@@ -7,6 +7,25 @@ html, body
 	padding: 0;
 }
 
+.erreurphoto
+{
+	color : red;
+	font-weight: bold;
+	font-family: 'Quicksand' , sans-serif;
+
+}
+#serie tr td 
+{
+	width: 30%;
+}
+
+.photos img
+{
+	height: 150px;
+	width: 30%;
+}
+
+
 #photoartiste
 {
 	position: relative;

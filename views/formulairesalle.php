@@ -12,6 +12,9 @@
 					<div class="code_postal"><span>Code Postal : </span><input class = "textbox" type="text" name="code_postal" value=""/></div>			
 				</li>
 				<li>
+					<div class="telephone"><span>Telephone : </span><input class = "textbox" type="text" name="telephone" value=""/></div>			
+				</li>				
+				<li>
 					<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" value=""/></div>		
 				</li>
 				<li>

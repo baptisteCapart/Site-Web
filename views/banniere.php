@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="views/style/pageMembrestyle.css">
 	<link rel="stylesheet" href="views/style/bannierestyle.css"/>
 	<link rel="stylesheet" href="views/style/homestyle.css" />
-	<link rel="stylesheet" href="views/style/pageartistestyle.css" />
 	<link rel="stylesheet" href="views/style/pageconcertstyle.css" />
 	<link rel="stylesheet" href="views/style/pageMembrestyle.css">
 	<link rel="stylesheet" href="views/style/formulairestyle.css"/>
@@ -22,6 +21,7 @@
 	<link rel="stylesheet" href="views/style/forumstyle.css">
 	<link rel="stylesheet" href="views/style/listeSallesStyle.css">	
 	<link rel="stylesheet" href="views/style/liste_topicstyle.css">
+	<link rel="stylesheet" href="views/style/pageartistestyle.css" />
 	<link rel="stylesheet" href="views/style/discuss_style.css">
 	<link rel="stylesheet" href="views/style/wrong_topicstyle.css">
 	<link rel="stylesheet" href="views/style/new_topicstyle.css">
