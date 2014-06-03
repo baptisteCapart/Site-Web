@@ -43,15 +43,17 @@
 				</table>
 			</div>
 
-			<div id="groupe"> 
-				<div id="titre2"> LES NEWS DE MES GROUPES </div>
-				<ul>
-					<li><a href="#"> Concert Soul bar O'Cean</a></li>
-					<li><a href="#"> Concert DJ Vincent, Paris</a></li>
-					<li><a href="#"> Urban Clash, édition 2014</a></li>
-					<li><a href="#"> U2 first Tour</a></li>
-					<li><a href="#"> Damian Marley au Casino Royal</a></li>
-				</ul>
+			<div id="groupe" >
+					<div id="titre3"> LES NEWS DE MES ARTISTES </div>
+						<ul>
+							<?php  if(isset($newsperso)){
+								foreach ($newsperso as $news) {
+								echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news['photocover'].'" alt="" /></a><p >
+								'.$news['description'].'</p> </li>';
+
+							}} ?>
+						</ul>
+					</div>
 			</div>
 
 			<div id="salle"> 

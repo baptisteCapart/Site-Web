@@ -175,7 +175,7 @@ function ConcertArtisteF($artiste_id){
 
 function caroussel(){
 	global $bdd;
-	$req=$bdd->query("SELECT * from news order by datenews limit 5");
+	$req=$bdd->query("SELECT * from news where photo = 0 order by datenews limit 5");
 	return $req;
 }
 
