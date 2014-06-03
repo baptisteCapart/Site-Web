@@ -87,16 +87,19 @@
 
     <?php  if($ongletSalle==2){ ?> 
       <div class = "concerts">
-        Concerts passés : 
+        <div class="past">
+          <span class = "infos">Concerts passés : </span> 
         <?php foreach ($concertsalle as $eventsP) {
-              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a></li>';
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a> <span class="jour"> le '. $eventsP["jour"].'</span></li>';
         } ?>
         <br>  
-
-        Concerts à venir : 
+        </div>
+        <div class="futur">
+        <span class = "infos">Concerts à venir : </span>
         <?php foreach ($concertsalle2 as $eventsF) {
-              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].'</a></li>';
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].' le '. $eventsP["jour"].'</a></li>';
         } ?>        
+      </div>
       </div>
     <?php } ?>
 

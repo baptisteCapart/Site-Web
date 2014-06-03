@@ -21,19 +21,33 @@ html, body
 {
 	text-align: center;
 }
+.concerts li 
+{
+	list-style-type: none;
+}
+.concerts a 
+{
+	color : white;
+}
+.jour
+{
+	font-size: 0.8;
+	color : #C0C0C0;
+}
 .infos
 {
 	color: #5EDF37;
 	margin-bottom: 20px;
 }
-.bloc1
+.bloc1, .past
 {
 	float: left;
 }
 
-.bloc2
+.bloc2, .futur
 {
-float : right;}
+	float : right;
+}
 
 #nomsalle
 {
