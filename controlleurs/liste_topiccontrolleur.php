@@ -16,7 +16,15 @@ if ( isset ($_GET['categorie']) )
 {
 	$categorie = $_GET['categorie'];
 	$topicList=listeTopic($categorie);
+	
+	if(isset($_POST['supprimer4'])){
+
+		dropTopic($topic_id);
+		header('location: index.php?page=liste_topiccontrolleur.php');
+	}
 }
+
+
 include("controlleurs/bannierecontrolleur.php");
 include("views/liste_topicview.php");
 include("views/footer.php");

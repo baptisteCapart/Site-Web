@@ -113,3 +113,6 @@ tr:hover table
 	text-decoration: underline;
 	color: white;
 }
+.deletebutton {
+	background:  background-image: url(../controlleurs/images/cross.gif);
+}

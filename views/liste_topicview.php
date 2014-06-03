@@ -23,11 +23,18 @@ if (isset ($topicList))
  while($topic = $topicList->fetch()) {
 	   $createur_pseudo = membername($topic["membre_id"]); ?>
 	   	<tr>
+
  	       <td> <?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nom"].'<br/>'.' </a>';?></td>
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["description"].'<br/>'.' </a>';?></td>
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nombre_message"].'<br/>'.' </a>';?></td>
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $createur_pseudo.'<br/>'.' </a>';?></td>
+
  	   </tr>
+ 	   <?php if($admin['id_admin']==1) ?> { 
+                 <form class ="deletebutton" method="" action=""><a class = "bouton4" type="submit" name = "supprimer4" value=""/></form>
+                 					<input class = "logg" type="submit" value="Log in"/>
+
+             } 
  <?php } } ?>
 
 	</table>
