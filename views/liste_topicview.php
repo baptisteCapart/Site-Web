@@ -9,8 +9,8 @@
 	?>
 	</div>
 
-	<table>
-		<tr>
+	<table class = "forum">
+		<tr >
 	       <th>Nom</th>
 	       <th>Description</th>
 	       <th>Nombre de messages</th>

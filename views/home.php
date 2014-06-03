@@ -22,16 +22,21 @@
 		<div id="notifs">
 			<div id="proche_vous"> 
 				<div id="titre1"> PROCHE DE CHEZ VOUS ! </div>
-				<ul>
+				<table class="image">
+					<tr>
 						<?php  
 							if(isset($localnews)){
 								foreach ($localnews as $local) {
-									if($local['cp']==$code){
-										echo ' <li title = "'.$local["description"].'"><a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">
-										<img src="controlleurs/images/'.$local['photocover'].'" alt="" />'.$local['nom'].'</a> 
-										Le '.$local['jour'].' à : '.$local['salle_nom'].' </li>';
-						}}} ?>
-				</ul>
+									if($local['cp']==$code){ ?>
+										<td><div id = "tableimg" style="background-image:url(<?php echo 'controlleurs/images/'.$local['photocover']; ?>); ">
+										<div class="cadre"><div class="invisible"> <?php  echo ' <a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">
+										'.$local['nom'].'</a> 
+										Le '.$local['jour'].' à : '.$local['salle_nom'].''; ?></div></div>
+										</td>
+
+						<?php }}} ?>
+						</tr>
+				</table>
 			</div>
 
 			<div id="groupe"> 
