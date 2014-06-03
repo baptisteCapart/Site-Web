@@ -1,5 +1,9 @@
 <?php
 
+function dropTopic($id){
+	global $bdd;
+	$bdd->query("DELETE FROM topic WHERE id_topic= '$id'") or die(print_r($bdd->errorInfo()));
+}
 
 function topicname ($topic)
 {

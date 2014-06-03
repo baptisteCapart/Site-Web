@@ -24,7 +24,6 @@ function departement($code_postal){
 
 function recuperer3($id){
 
-
 	global $bdd;
 	$sql = "SELECT * from salle where salle_id ='$id'";
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
