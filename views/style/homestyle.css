@@ -10,9 +10,7 @@ body
 	padding: 0;
 }
 
-#caroussel ul li.newstexte{
-	float: left;
-}
+
 
 #blochome
 {
@@ -107,7 +105,9 @@ ul
 
 #proche_vous
 {
-	background-color: #494949;
+	/*background-color: #494949;*/
+	background-color: #3C3C3C;
+	font-family: 'Quicksand' , sans-serif;
 }
 
 
@@ -124,8 +124,8 @@ ul
 #proche_vous #titre1, #titre2, #titre3
 {
 	text-align: center;
-	border-top: 2px solid #53DD17;
-	border-bottom: 2px solid #53DD17;
+	border-top: 1px solid #53DD17;
+	border-bottom: 1px solid #53DD17;
 	margin-right: 30%;
 	margin-left: 30%;
 }
@@ -149,7 +149,7 @@ ul
 #proche_vous a, #groupe a, #salle a
 {
 	text-decoration: none;
-	color : black;
+	color : #F2F2F2;
 }
 
 #proche_vous li , #groupe li, #salle li
@@ -161,6 +161,10 @@ ul
 #proche_vous li a:hover , #groupe li a:hover, #salle li a:hover
 {
 	font-weight: bold;
+}
+#proche_vous
+{
+	color : white;
 }
 
 
@@ -188,35 +192,53 @@ ul
 table.image
 {
 	width: 100%;
+	margin-top: 20px;
 }
-#tableimg
-{
-	height: 350px;
-}
-.invisible
-{
-	display: none;
-}
+table
 
 #tableimg
 {
-	background-size: 350px;
+	height: 320px;
+}
+#tableimg
+{
 	background-repeat: no-repeat;
 	background-size: cover;
+	vertical-align: middle;
 }
 
-.cadre
+table.image td 
 {
-	background-color: white;
-	height: 350px;
-	display: none;
-	z-index: 500;
+	background-color: black;
+	padding: 0;
 }
 
-#tableimg:hover .cadre
+table.image tr 
 {
-	
-	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.invisible
+{
+	background-color: #171717;
+	color : white;
+	height: 50px;
+	font-size: 1.3em;
+	position : relative;
+	bottom : 0;
+	margin-bottom: 10px;
+	vertical-align: middle;
+}
+
+
+#tableimg:hover
+{
+	opacity: 0.4;
+}
+#tableimg:hover .invisible
+{	
+	display: block;
 }
 
 #proche_vous ul li img{
@@ -312,10 +334,7 @@ table.image
 	margin-top: 3%;
 }
 
-#caroussel img{
-	width: 1400px;
-	height: 500px;
-}
+
 
 .azerty {
 	background-color: #0E0E0C;
@@ -327,14 +346,17 @@ table.image
 	font-family: 'Quicksand' , sans-serif;	
 
 }
-
+#caroussel img{
+	width: 1350px;
+	height: 550px;
+}
 #caroussel{
 
     overflow:hidden;
 
-    width:1400px;
+    width:1350px;
 
-    height:500px;
+    height:550px;
 
     //margin:25% auto 0 auto;
 
@@ -369,6 +391,11 @@ table.image
 
     float:left;
 
+}
+
+#caroussel ul li.newstexte{
+	float: left;
+	width: 100%;
 }
 
 

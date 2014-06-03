@@ -28,10 +28,14 @@
 							if(isset($localnews)){
 								foreach ($localnews as $local) {
 									if($local['cp']==$code){ ?>
-										<td><div id = "tableimg" style="background-image:url(<?php echo 'controlleurs/images/'.$local['photocover']; ?>); ">
-										<div class="cadre"><div class="invisible"> <?php  echo ' <a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">
-										'.$local['nom'].'</a> 
-										Le '.$local['jour'].' à : '.$local['salle_nom'].''; ?></div></div>
+										<td>
+											<?php  echo ' <a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">';?>
+											<div id = "tableimg" style="background-image:url(<?php echo 'controlleurs/images/'.$local['photocover']; ?>); ">
+													
+												</div></a>
+												<div class="invisible">  
+															<?php echo 'Le '.$local['jour'].' à : '.$local['salle_nom'].''; ?>
+													</div>
 										</td>
 
 						<?php }}} ?>

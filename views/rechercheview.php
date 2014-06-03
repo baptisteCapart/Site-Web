@@ -10,7 +10,7 @@
         echo $erreur;
       } else {
         foreach ($resultm as $membre){
-          echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'"> <img src="controlleurs/images/'.$membre['photoprofil'].'" alt="" /> <br/>'. $membre["pseudo"].'<br/>'.' </a></li>';
+          echo ' <li><a href = "index.php?page=pageMembrecontrolleur&id='.$membre["membre_id"].'"> <img src="controlleurs/images/membres/'.$membre['photoprofil'].'" alt="" /> <br/>'. $membre["pseudo"].'<br/>'.' </a></li>';
         }
       }
     }
@@ -28,7 +28,7 @@
         echo $erreur;
       } else {
         foreach ($resulta as $artiste){
-          echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$artiste["artiste_id"].'"> <img src="controlleurs/images/'.$artiste['photocover'].'" alt="" /> '. $artiste["nom"].'<br/>'.' </a></li>';
+          echo ' <li><a href = "index.php?page=pageartistecontrolleur&id='.$artiste["artiste_id"].'"> <img src="controlleurs/images/artistes/'.$artiste['photocover'].'" alt="" /> '. $artiste["nom"].'<br/>'.' </a></li>';
         }
       }
     }
