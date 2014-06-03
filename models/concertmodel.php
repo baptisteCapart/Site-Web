@@ -81,7 +81,8 @@ function accord($id, $accord){
 	$bdd->query("UPDATE concert SET accord='$accord' WHERE concert_id='$id'");
 	$concert = recuperer5($id);
 	$artiste = recupererartiste($concert['artiste_id']);
-	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour ".$concert['jour'].", tenez-vous prêts !";
+	$dateconcert = new DateTime($concert['jour']);
+	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour le ".$dateconcert->format('d/m/Y').", tenez-vous prêts !";
 	$bdd->query("INSERT INTO news (datenews, photocover, description, lien) 
 		VALUES ('".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
 }

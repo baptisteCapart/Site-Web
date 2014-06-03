@@ -90,14 +90,16 @@
         <div class="past">
           <span class = "infos">Concerts passés : </span> 
         <?php foreach ($concertsalle as $eventsP) {
-              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a> <span class="jour"> le '. $eventsP["jour"].'</span></li>';
+          $date = new DateTime($eventsP['jour']);
+                        echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a> <span class="jour"> le '. $date->format('d/m/Y') .'</span></li>';
         } ?>
         <br>  
         </div>
         <div class="futur">
         <span class = "infos">Concerts à venir : </span>
         <?php foreach ($concertsalle2 as $eventsF) {
-              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].' le '. $eventsP["jour"].'</a></li>';
+          $date = new DateTime($eventsF['jour']);
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].' le '. $date->format('d/m/Y').'</a></li>';
         } ?>        
       </div>
       </div>
