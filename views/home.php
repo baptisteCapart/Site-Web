@@ -55,16 +55,17 @@
 						</ul>
 					</div>
 			</div>
+			<div id="groupe" >
+					<div id="titre3"> LES NEWS DE MES SALLES </div>
+						<ul>
+							<?php  if(isset($newsperso2)){
+								foreach ($newsperso2 as $news2) {
+								echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news2['photocover'].'" alt="" /></a><p >
+								'.$news['description'].'</p> </li>';
 
-			<div id="salle"> 
-				<div id="titre3"> LES NEWS DE MES SALLES </div>
-				<ul>
-					<li><a href="#"> Concert Soul bar O'Cean</a></li>
-					<li><a href="#"> Concert DJ Vincent, Paris</a></li>
-					<li><a href="#"> Salle Gaveau : Jean-François Zygel joue avec Beethoven</a></li>
-					<li><a href="#"> U2 first tour </a></li>
-					<li><a href="#"> Damian Marley au Casino Royal</a></li>
-				</ul>
+							}} ?>
+						</ul>
+					</div>
 			</div>
 
 

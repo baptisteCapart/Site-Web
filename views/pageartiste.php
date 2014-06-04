@@ -93,7 +93,7 @@
          <?php if(isset($_SESSION['id'])){
              if($createur['membre_id']==$_SESSION['id']) { ?>    
               <span class="intro">Tu peux ajouter ici 1 à 2 extaits de ton répertoire pour faire découvrir ta musique aux membre du site</span>       
-                  <form class ="formulaireExtraits" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
+                  <form name = "formE" class ="formulaireExtraits" onsubmit = "return checkExtE();" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
                       <ul>
                           <li>
                               <div class="extrait"><span>Extrait de musique n°1 : </span><input class = "textbox" type="file" name="extrait1" /></div>

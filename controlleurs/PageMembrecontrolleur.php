@@ -16,15 +16,21 @@ if(isset($_SESSION['id'])){
 
 
 
-	if(isset($_POST['supprimer3'])){
-
-		dropMembre($donnees['membre_id']);
-
-		header('location: index.php?page=homecontrolleur');
-	}
+if(isset($_POST['supprimer3'])){
+	dropMembre($donnees['membre_id']);
+	header('location: index.php?page=homecontrolleur');
+}
 
 
-
+if (isset($_POST['suivre'])){
+	followMembre($_SESSION['id'], $_GET['id']);
+}
+if (isset($_SESSION['id'])){
+	$follower=checkMembre($_SESSION['id'], $_GET['id']);
+}
+if(isset($_POST['stop'])){
+	StopsuiviM($_SESSION['id'], $_GET['id']);
+}
 
 
 if(isset($_GET['ongletMembre'])){
@@ -99,6 +105,7 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 $liste=ArtistesSuivis($_GET['id']);
 $liste2 = SallesSuivies($_GET['id']);
 $liste3 = ConcertsParticipes($_GET['id']);
+$liste4 = MembresSuivis($_GET['id']);
 
 
 include('controlleurs/bannierecontrolleur.php');

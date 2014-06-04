@@ -92,6 +92,9 @@ if(!empty($_POST['photoA']) ){
 
 
 
+
+
+
 $musiques = listeMusiques();
 $photos=PhotoA();
 $onglet =1;

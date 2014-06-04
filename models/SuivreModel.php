@@ -9,6 +9,11 @@ function followSalle ($membre_id, $salle_id){
 	$bdd-> query("INSERT INTO suivre(membre_id, salle_id)  VALUES ('$membre_id', '$salle_id')");	
 }
 
+function followMembre ($membre_id, $ami_id){
+	global $bdd;
+	$bdd-> query("INSERT INTO suivre(membre_id, ami_id)  VALUES ('$membre_id', '$ami_id')");	
+}
+
 function checkArtiste($membre_id, $artiste_id){
 	global $bdd;
 	$sql = $bdd->query("SELECT membre_id from suivre where artiste_id=$artiste_id and membre_id = $membre_id") or die(print_r($bdd->errorInfo()));
@@ -24,6 +29,18 @@ function checkArtiste($membre_id, $artiste_id){
 function checkSalle($membre_id, $salle_id){
 	global $bdd;
 	$sql = $bdd->query("SELECT membre_id from suivre where salle_id=$salle_id and membre_id = $membre_id") or die(print_r($bdd->errorInfo()));
+	$req = $sql->fetch();
+	if (!$req){
+		return true;
+
+	}else{
+		return false;
+	}
+}
+
+function checkMembre($membre_id, $ami_id){
+	global $bdd;
+	$sql = $bdd->query("SELECT membre_id from suivre where ami_id=$ami_id and membre_id = $membre_id") or die(print_r($bdd->errorInfo()));
 	$req = $sql->fetch();
 	if (!$req){
 		return true;
@@ -62,6 +79,13 @@ function SallesSuivies($membre_id){
 	return $req;
 }
 
+function MembresSuivis($membre_id){
+	
+	global $bdd;
+	$req = $bdd->query("SELECT membre.pseudo, membre.membre_id FROM membre, suivre WHERE suivre.ami_id = membre.membre_id AND suivre.membre_id=$membre_id") or die(print_r($bdd->errorInfo()));
+	return $req;
+}
+
 function StopsuiviA($membre_id, $artiste_id){
 	global $bdd;
 	$req=$bdd->query("DELETE from suivre where membre_id=$membre_id and artiste_id=$artiste_id");
@@ -70,6 +94,10 @@ function StopsuiviA($membre_id, $artiste_id){
 function StopsuiviS($membre_id, $salle_id){
 	global $bdd;
 	$req=$bdd->query("DELETE from suivre where membre_id=$membre_id and salle_id=$salle_id");
+}
+function StopsuiviM($membre_id, $ami_id){
+	global $bdd;
+	$req=$bdd->query("DELETE from suivre where membre_id=$membre_id and ami_id=$ami_id");
 }
 
 ?>

@@ -9,6 +9,7 @@ if(isset($_SESSION['id'])){
 	$membre = recuperer($_SESSION['id']);
 	$code = (int)($membre['code_postal']/1000);
 	$newsperso = newspersoA($_SESSION['id']);
+	$newsperso2 = newspersoS($_SESSION['id']);
 }
 
 $localnews = localnews();

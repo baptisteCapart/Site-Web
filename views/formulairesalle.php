@@ -2,7 +2,7 @@
 <div id="bloc">
 		<div id="bienvenue">Remplis gratuitement ce formulaire d'inscription pour devenir gérant de salle et ainsi bénéficier de tous les privilèges d'un gérant de salle !</div>
 		<div id="formulaire">
-		<form class ="form2" enctype = "multipart/form-data" name = "formS" onsubmit = "return checkExt(formS,photosalle);" method="post" action="index.php?page=formulairesallecontrolleur">
+		<form class ="form2" enctype = "multipart/form-data" name = "formS" onsubmit = "return checkExtS();" method="post" action="index.php?page=formulairesallecontrolleur">
 			<ul>
 				<li>
 					<div class="nom_de_salle"><span>Nom de la salle : </span><input class = "textbox" type="text" name="Nom_de_salle" value=""/></div>

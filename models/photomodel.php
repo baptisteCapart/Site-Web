@@ -57,13 +57,13 @@ function PhotoS(){
 
 function newspersoA($membre_id){
 	global $bdd;
-	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT DISTINCT artiste_id from suivre where suivre.membre_id = $membre_id)");
+	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT DISTINCT artiste_id from suivre where suivre.membre_id = $membre_id) limit 5");
 	return $sql;
 }
 
 function newspersoS($membre_id){
 	global $bdd;
-	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT DISTINCT salle_id from suivre where suivre.membre_id = $membre_id)");
+	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT DISTINCT salle_id from suivre where suivre.membre_id = $membre_id) limit 5");
 	return $sql;
 }
 
