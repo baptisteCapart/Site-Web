@@ -56,14 +56,23 @@
 
     <?php  if($onglet==2){ ?> 
       <div class = "concerts">
-        Concerts passés :  
-          <?php foreach ($concertartiste as $eventaP) {
-                    echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventaP["concert_id"].'">'. $eventaP["nom"].'</a></li>';
-            } ?> <br>
-        Concerts à venir :  
-          <?php foreach ($concertartiste2 as $eventaF) {
-                    echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventaF["concert_id"].'">'. $eventaF["nom"].'</a></li>';
-            } ?>            
+      <div class = "concerts">
+        <div class="past">
+          <span class = "infos">Concerts passés : </span> 
+        <?php foreach ($concertartiste as $eventsP) {
+          $date = new DateTime($eventsP['jour']);
+                        echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a> <span class="jour"> le '. $date->format('d/m/Y') .'</span></li>';
+        } ?>
+        <br>  
+        </div>
+        <div class="futur">
+        <span class = "infos">Concerts à venir : </span>
+        <?php foreach ($concertartiste2 as $eventsF) {
+          $date = new DateTime($eventsF['jour']);
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].' le '. $date->format('d/m/Y').'</a></li>';
+        } ?>        
+      </div>
+      </div>           
 
       </div>
     <?php } ?>
@@ -183,7 +192,7 @@
           <?php foreach ($photos as $picture){  ?>
             <tr>
               <td>
-                <img src="controlleurs/images/artistes/<?=$picture['chemin']?>"/>
+                <img src="controlleurs/images/photos/<?=$picture['chemin']?>"/>
               </td>
             </tr>
           <?php 
@@ -196,7 +205,7 @@
          <?php if(isset($_SESSION['id'])){
              if($createur['membre_id']==$_SESSION['id']) { ?>    
               <span class="intro">Tu peux ajouter ici des photos de tes concerts ou de tes enregistrements pour te faire connaître auprès des autres membre du site</span>       
-                  <form class ="formulairePhoto" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=5' ;?>">
+                  <form class ="formulairePhoto" enctype = "multipart/form-data" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=5' ;?>">
                       <ul>
                           <li>
                               <div class="photou"><span>Ta photo : </span><input class = "textbox" type="file" name="photoA" /></div>

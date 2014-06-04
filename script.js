@@ -121,6 +121,10 @@ function upload()
         {
             return true; // valid file extension
         }
+        if(file_extension=="" && file_extension2=="")
+        {
+            return true; // valid file extension
+        }        
     }
 	alert('le format de votre photo de profil et/ou de couverture est incompatible, merci de prendre un fichier jpg png ou gif');
     return false;
@@ -128,9 +132,9 @@ function upload()
 
 
 
-function checkExt()
+function checkExt(formulaire,champ)
 {
-	var photo = document.formA.photogroupe;
+	var photo = document.formulaire.champ;
 	var file = photo.value;
     var listeExt = new Array("jpg","png","gif");
     var extension = file.split('.');

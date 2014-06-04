@@ -1,5 +1,5 @@
 
-<div id = "photosalle" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
+<div id = "photosalle" style="background-image:url(<?php echo 'controlleurs/images/salles/'.$donnees['photocover']; ?>); ">
     <div id="nomsalle">
         <?= $donnees["nom"] ?>
 <!--         <?= $NbAbonnes["Nb"] ?>        
@@ -180,7 +180,38 @@
     <?php } ?>   
 
     <?php  if($ongletSalle==5){ ?> 
-      <div class = "photos"> photos</div>
+    <div class = "photos"> photos
+        <?php if(isset($_SESSION['id'])){ ?>   
+          <table id = "serie">
+          <?php foreach ($photos as $picture){  ?>
+            <tr>
+              <td>
+                <img src="controlleurs/images/photos/<?=$picture['chemin']?>"/>
+              </td>
+            </tr>
+          <?php 
+          }
+          ?>
+          </table>
+         <?php }else{ ?>
+         <span class="intro">Inscris-toi pour consulter les photos !</span> 
+         <?php } ?>
+         <?php if(isset($_SESSION['id'])){
+             if($createur['membre_id']==$_SESSION['id']) { ?>    
+              <span class="intro">Tu peux ajouter ici des photos de tes concerts ou de tes enregistrements pour te faire connaître auprès des autres membre du site</span>       
+                  <form class ="formulairePhoto" enctype = "multipart/form-data" method="post" action="<?php echo 'index.php?page=pageSallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=5' ;?>">
+                      <ul>
+                          <li>
+                              <div class="photou"><span>Ta photo : </span><input class = "textbox" type="file" name="photoS" /></div>
+                          </li> 
+                          <li>
+                              <input class = "envoyer" type="submit" value="Envoyer !"/>
+                          </li>              
+                      </ul>
+                  </form>
+        <?php }} ?>              
+
+      </div>
     <?php } ?> 
 
     <?php  if($ongletSalle==6){ ?> 

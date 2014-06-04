@@ -8,7 +8,7 @@ $caroussel=caroussel();
 if(isset($_SESSION['id'])){
 	$membre = recuperer($_SESSION['id']);
 	$code = (int)($membre['code_postal']/1000);
-	$newsperso = newsperso($_SESSION['id']);
+	$newsperso = newspersoA($_SESSION['id']);
 }
 
 $localnews = localnews();
