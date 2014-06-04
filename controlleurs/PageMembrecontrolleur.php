@@ -43,8 +43,24 @@ if(isset($_GET['ongletMembre'])){
 	if ($_GET["ongletMembre"] ==4){
 		$ongletMembre=4;
 	}
+	if ($_GET["ongletMembre"] ==5){
+		$ongletMembre=5;
+	}	
 
 }	
+
+if(isset($_SESSION['id'])){
+	$membre = $_SESSION['id'];
+	$listepost=listePostM($membre);
+}
+
+if(isset($_POST['contenu'])){
+	$contenu = $_POST['contenu'];
+	if(isset($_GET['id'])){
+		newpostM($contenu,$membre,$_GET['id'] );
+	}
+	
+}
 
 
 if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )

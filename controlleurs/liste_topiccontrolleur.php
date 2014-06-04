@@ -21,12 +21,12 @@ if ( isset ($_GET['categorie']) )
 {
 	$categorie = $_GET['categorie'];
 	$topicList=listeTopic($categorie);
-	$id_topic = $topicList['id_topic']
+	// $id_topic = $topicList['id_topic']
 	
-	if(isset($_POST['supprimer4'])){
+	// if(isset($_POST['supprimer4'])){
 
-		header('location: index.php?page=liste_topiccontrolleur.php');
-	}
+	// 	header('location: index.php?page=liste_topiccontrolleur.php');
+	// }
 }
 
 

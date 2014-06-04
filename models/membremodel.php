@@ -71,4 +71,26 @@ function modifier($id, $mail, $age ,$codepostal, $ville ,$sexe, $pays,$photodepr
 		WHERE membre_id='$id'");
 }
 
+function newpostM ($message, $membre_id, $destinataire)
+{
+	global $bdd;
+	$bdd->query("INSERT INTO post (contenu, membre_id, destinataire, messagePrive) VALUES ( '$message', '$membre_id', $destinataire, 1)") or die (print_r($bdd->errorInfo()));
+}
+
+function membernameM ($membre_id)
+{
+	global $bdd;
+	$req = ("SELECT pseudo FROM membre WHERE membre_id=".$membre_id);
+	$rep = $bdd->query($req);
+	$but = $rep->fetch();
+	return $but['pseudo'];
+}
+
+function listePostM ($membre_id)
+{
+	global $bdd;
+	$req = $bdd->query("SELECT * FROM post WHERE messagePrive=1 and destinataire= '$membre_id' order by id_post DESC  ") or die (print_r($bdd->errorInfo()));
+	return $req;
+}
+
 ?>

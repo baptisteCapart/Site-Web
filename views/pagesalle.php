@@ -185,9 +185,7 @@
           <table id = "serie">
           <?php foreach ($photos as $picture){  ?>
             <tr>
-              <td>
-                <img src="controlleurs/images/photos/<?=$picture['chemin']?>"/>
-              </td>
+              <td><img src="controlleurs/images/photos/<?=$picture['chemin']?>"/></td>
             </tr>
           <?php 
           }
