@@ -108,9 +108,10 @@ function classement(){
 
 function note($artiste){
 	global $bdd;
-	$req = $bdd->query("SELECT AVG(note) FROM donner_avis WHERE artiste_id = '$artiste'")
+	$req = $bdd->query("SELECT artiste_id, AVG(note) FROM donner_avis WHERE artiste_id = '$artiste' GROUP BY artiste_id")
 	or die (print_r($bdd->errorInfo()));
-	return $req->fetch();
+	$res = $req->fetch();
+	return $res['AVG(note)'];
 }
 
 function getStyle(){

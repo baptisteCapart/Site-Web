@@ -23,9 +23,12 @@ if(isset($_GET['critere'])){
 			$artiste['note'] = note($artiste['artiste_id']);
 			$listenote[] = $artiste['note'];
 		}
+		unset($artiste);
 		arsort($listenote);
+		reset($resultat);
 		foreach ($resultat as $key => $artiste) {
 			$listenote[$key] = $artiste[$key];
+			var_dump($artiste[$key]);
 		}
 		var_dump($listenote);
 	}
