@@ -123,7 +123,7 @@
                             echo($post['contenu']);
                              ?>
                         </div>
-                    o</div>         
+                    </div>         
                 <?php } ?>
             </div>
         <?php } ?>

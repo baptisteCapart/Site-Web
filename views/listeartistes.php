@@ -65,8 +65,8 @@
 	    <?php  if($critere==3){ ?> 
 		    <div class = "note">
 		    	<ul class="liste_artistes">
-				<?php foreach($listenote as $artiste){ ?>
-			    	<li><a href = "index.php?page=pageartistecontrolleur&id=<?php echo $artiste['artiste_id']; ?>"><img src="controlleurs/images/<?php echo $artiste['photocover']; ?>" alt="" /><?=$artiste["nom"]?></a></li> <?php
+				<?php foreach($definitif as $artiste){ ?>
+			    	<li><a href = "index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover'] ?>" alt="" /><?=$artiste["nom"], $artiste['note']?></a></li> <?php
 				} ?>
 		    	</ul>
 		    </div>
