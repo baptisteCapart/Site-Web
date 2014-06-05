@@ -52,7 +52,7 @@
 					<span class="login">Pseudo : </span>
 					<input class ="boite"  type="text" name="login" value=""/>
 					<span class="login">Password : </span>
-					<input class ="boite" type="password"  name="pwd" value=""/>
+					<input class ="boitepwd" type="password"  name="pwd" value=""/>
 					<input class = "logg" type="submit" value="Log in"/>
 					<span class="sign_in"><a href ="index.php?page=formulairecontrolleur" >Inscription</a></span>
 				</form>
@@ -119,7 +119,9 @@
 				</li>	
 				<li id = "forum"><a href="index.php?page=forumcontrolleur">Forum</a></li>
 				<li id = "search">
+
 					<form class ="recherche" method="post" action="index.php?page=recherchecontrolleur" >
+
 						<input method = "submit" class = "barresearch" type="text" name="recherche" placeholder="Rechercher" size = "30" <?php if(isset($recherche)){ echo 'value="'.$recherche.'"'; } ?>/>
 					</form>
 				</li>

@@ -19,7 +19,7 @@ function finishartiste ($artiste_id, $style){
 	$bdd->query("INSERT INTO style_de_groupe (artiste_id, style_de_musique) VALUES ('$artiste_id', '$style')");
 }
 
-function photoA($id,$photo){
+function photoCA($id,$photo){
 	global $bdd;
 	$bdd->query("UPDATE artiste 
 	SET photocover='$photo'
@@ -57,7 +57,7 @@ function recuperer4($id){
 
 function AuthentificationArtiste($id){
 	global $bdd;
-	$sql = 'SELECT membre_id from artiste where artiste_id ='.$_GET["id"].'';
+	$sql = "SELECT membre_id from artiste where artiste_id ='$id'";
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
  	$chef = $req-> fetch();
   	return $chef;

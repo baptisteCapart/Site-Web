@@ -22,38 +22,50 @@
 		<div id="notifs">
 			<div id="proche_vous"> 
 				<div id="titre1"> PROCHE DE CHEZ VOUS ! </div>
-				<ul>
+				<table class="image">
+					<tr>
 						<?php  
 							if(isset($localnews)){
 								foreach ($localnews as $local) {
-									if($local['cp']==$code){
-										echo ' <li title = "'.$local["description"].'"><a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">
-										<img src="controlleurs/images/'.$local['photocover'].'" alt="" />'.$local['nom'].'</a> 
-										Le '.$local['jour'].' à : '.$local['salle_nom'].' </li>';
-						}}} ?>
-				</ul>
+									if($local['cp']==$code){ ?>
+										<td>
+											<?php  echo ' <a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">';?>
+											<div id = "tableimg" style="background-image:url(<?php echo 'controlleurs/images/'.$local['photocover']; ?>); ">
+													
+												</div></a>
+												<div class="invisible">  
+															<?php echo 'Le '.$local['jour'].' à : '.$local['salle_nom'].''; ?>
+													</div>
+										</td>
+
+						<?php }}} ?>
+						</tr>
+				</table>
 			</div>
 
-			<div id="groupe"> 
-				<div id="titre2"> LES NEWS DE MES GROUPES </div>
-				<ul>
-					<li><a href="#"> Concert Soul bar O'Cean</a></li>
-					<li><a href="#"> Concert DJ Vincent, Paris</a></li>
-					<li><a href="#"> Urban Clash, édition 2014</a></li>
-					<li><a href="#"> U2 first Tour</a></li>
-					<li><a href="#"> Damian Marley au Casino Royal</a></li>
-				</ul>
-			</div>
+			<div id="groupe" >
+					<div id="titre3"> LES NEWS DE MES ARTISTES </div>
+						<ul>
+							<?php  if(isset($newsperso)){
+								foreach ($newsperso as $news) {
+								echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news['photocover'].'" alt="" /></a><p >
+								'.$news['description'].'</p> </li>';
 
-			<div id="salle"> 
-				<div id="titre3"> LES NEWS DE MES SALLES </div>
-				<ul>
-					<li><a href="#"> Concert Soul bar O'Cean</a></li>
-					<li><a href="#"> Concert DJ Vincent, Paris</a></li>
-					<li><a href="#"> Salle Gaveau : Jean-François Zygel joue avec Beethoven</a></li>
-					<li><a href="#"> U2 first tour </a></li>
-					<li><a href="#"> Damian Marley au Casino Royal</a></li>
-				</ul>
+							}} ?>
+						</ul>
+					</div>
+			</div>
+			<div id="groupe" >
+					<div id="titre3"> LES NEWS DE MES SALLES </div>
+						<ul>
+							<?php  if(isset($newsperso2)){
+								foreach ($newsperso2 as $news2) {
+								echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news2['photocover'].'" alt="" /></a><p >
+								'.$news['description'].'</p> </li>';
+
+							}} ?>
+						</ul>
+					</div>
 			</div>
 
 

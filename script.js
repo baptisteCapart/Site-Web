@@ -121,6 +121,10 @@ function upload()
         {
             return true; // valid file extension
         }
+        if(file_extension=="" && file_extension2=="")
+        {
+            return true; // valid file extension
+        }        
     }
 	alert('le format de votre photo de profil et/ou de couverture est incompatible, merci de prendre un fichier jpg png ou gif');
     return false;
@@ -142,6 +146,60 @@ function checkExt()
         {
             return true; // valid file extension
         }
+    }
+	alert('format de la photo de couverture incompatible');
+    return false;
+}
+
+function checkExtS()
+{
+	var photo = document.formS.photosalle;
+	var file = photo.value;
+    var listeExt = new Array("jpg","png","gif");
+    var extension = file.split('.');
+    var file_extension = (extension[(extension.length-1)]);
+
+    for(var i = 0; i <= listeExt.length; i++)
+    {
+        if(listeExt[i]==file_extension)
+        {
+            return true; // valid file extension
+        }
+    }
+	alert('format de la photo de couverture incompatible');
+    return false;
+}
+
+function checkExtE()
+{
+	var ex1 = document.formE.extrait1;
+	var file = ex1.value;
+	var ex2 = document.formE.extrait2;
+	var file2 = ex2.value;	
+    var listeExt = new Array("mp3","wav");
+    var extension = file.split('.');
+    var file_extension = (extension[(extension.length-1)]);
+    var extension2 = file2.split('.');
+    var file_extension2 = (extension2[(extension2.length-1)]);    
+
+    for(var i = 0; i <= listeExt.length; i++)
+    {
+        if(listeExt[i]==file_extension && listeExt[i]==file_extension2)
+        {
+            return true; // valid file extension
+        }
+        if(listeExt[i]==file_extension && file_extension2=="")
+        {
+            return true; // valid file extension
+        }
+        if(file_extension=="" && listeExt[i]==file_extension2)
+        {
+            return true; // valid file extension
+        }
+        if(file_extension=="" && file_extension2=="")
+        {
+            return true; // valid file extension
+        } 
     }
 	alert('format de la photo de couverture incompatible');
     return false;

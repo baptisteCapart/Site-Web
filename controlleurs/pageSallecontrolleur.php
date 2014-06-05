@@ -6,6 +6,8 @@ include ('models/DonnerAvis.php');
 include ('models/concertmodel.php');
 include ('models/artistemodel.php');
 include ('models/membremodel.php');
+include ('models/photomodel.php');
+
 
 
 
@@ -115,6 +117,41 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 var_dump($photosalle);
 		modifierSalle($_SESSION['salleID'], $Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle);
 }
+
+$photo="";
+if(!empty($_POST['photoS']) ){
+				$photo = mysql_real_escape_string(htmlspecialchars($_POST['photoS']));
+
+}
+		if(isset($_SESSION['id'])){
+			
+
+			$current_id = insertPhotoS($salle_id,$photo);
+								
+
+				$nomInit = $_FILES['photoS']['name'];
+				$infosPath = pathinfo($nomInit);
+				$extension = $infosPath['extension'];
+				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+				$nomDestination = $current_id.".".$extension;
+				if (!(in_array($extension, $extensionsAutorisees))) {
+					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo de salle sera générée par défaut";
+					$_SESSION['formatS'] = $messageS;
+				} else { 
+					photoUpdate($current_id, $nomDestination);   
+
+					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."photos"."/"; 
+					//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
+
+					move_uploaded_file($_FILES["photoS"]["tmp_name"], $repertoireDestination.$nomDestination);	
+				}		
+			
+		
+
+}
+$photos=PhotoS();
+
+
 include('controlleurs/bannierecontrolleur.php');
 include ('views/pageSalle.php');
 include('views/footer.php');
