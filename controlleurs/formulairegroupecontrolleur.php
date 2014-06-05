@@ -1,5 +1,20 @@
 <?php 
 
+include ('models/membremodel.php');
+include ('models/artistemodel.php');
+
+if (!empty($_POST['message'])) {
+	$message = mysql_real_escape_string(htmlspecialchars($_POST['message']));
+	addstyle($message);	
+}
+
+
+$AllStyles = getStyle();
+
+
+if(isset($_SESSION['id'])){
+	$admin = recuperer($_SESSION['id']);
+}
 
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description'])  AND !empty($_POST['style'])){
 

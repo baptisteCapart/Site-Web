@@ -5,6 +5,11 @@ function dropArtiste($id){
 	$bdd->query("DELETE FROM artiste WHERE artiste_id= $id") or die(print_r($bdd->errorInfo()));
 }
 
+function addstyle($message){
+	global $bdd;
+	$bdd->query("INSERT INTO  style_de_musique(nom) VALUES ('$message')");
+}
+
 
 function insertArtiste($nomartiste, $style ,$description, $photogroupe,$membreID){
 	global $bdd;
@@ -108,9 +113,10 @@ function classement(){
 
 function note($artiste){
 	global $bdd;
-	$req = $bdd->query("SELECT AVG(note) FROM donner_avis WHERE artiste_id = '$artiste'")
+	$req = $bdd->query("SELECT artiste_id, AVG(note) FROM donner_avis WHERE artiste_id = '$artiste' GROUP BY artiste_id")
 	or die (print_r($bdd->errorInfo()));
-	return $req->fetch();
+	$res = $req->fetch();
+	return $res['AVG(note)'];
 }
 
 function getStyle(){
@@ -131,5 +137,8 @@ function getArtistes($styles){
 	}
 	return $styles;
 }
+
+
+
 
 ?>
