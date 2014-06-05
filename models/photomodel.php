@@ -24,7 +24,7 @@ function insertPhotoS($salle_id,$chemin){
 	$description = mysql_real_escape_string(htmlspecialchars($description));
 	$bdd->query("INSERT INTO news(datenews, salle_id,photocover,description, lien, photo) 
 		VALUES (CURDATE(),$salle_id,'$chemin', '$description', 'index.php?page=pageSallecontrolleur&ongletSalle=5&id=".$salle['salle_id']."', 1)") or die(print_r($bdd->errorInfo()));
-$req2 = $bdd->query("SELECT photo_id FROM photoevent WHERE salle_id = '$salle_id' order by photo_id DESC limit 1") or die(print_r($bdd->errorInfo()));
+	$req2 = $bdd->query("SELECT photo_id FROM photoevent WHERE salle_id = '$salle_id' order by photo_id DESC limit 1") or die(print_r($bdd->errorInfo()));
 	$res = $req2->fetch();
 	return $res['photo_id'] ;
 }
@@ -57,14 +57,27 @@ function PhotoS(){
 
 function newspersoA($membre_id){
 	global $bdd;
-	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT DISTINCT artiste_id from suivre where suivre.membre_id = $membre_id) limit 5");
+	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT artiste_id from suivre where membre_id = '$membre_id' and artiste_id!=0 )limit 5");
 	return $sql;
 }
 
+function newsp($membre_id, $id){
+	global $bdd;
+	$tab = array();
+	$sql=$bdd->query("SELECT $id from suivre where membre_id = '$membre_id'");
+	foreach ($sql as $news) {
+		$req=$bdd->query("SELECT * from news where '$id'=".$news[$id]);
+		$tab[] = $req;
+	}
+	return $tab;
+}
+
+
 function newspersoS($membre_id){
 	global $bdd;
-	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT DISTINCT salle_id from suivre where suivre.membre_id = $membre_id) limit 5");
-	return $sql;
+	$sql=$bdd->query("SELECT * from news where EXISTS (SELECT salle_id from suivre where membre_id = '$membre_id' and salle_id!=0)limit 5");
+;	return $sql;
+
 }
 
 ?>
