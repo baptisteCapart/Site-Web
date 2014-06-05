@@ -45,6 +45,8 @@
 			
 			
 		</form>
+
+
 							<?php if(isset($_SESSION['id'])){
 
             			if($admin['id_admin']==1){ ?>
@@ -55,6 +57,7 @@
 					<textarea name="message" rows="1" cols="10"></textarea><br />
             			<input type="submit" value="Envoyer" /></form>
             		</div>
+            		
 
 					<?php } } ?>
 		</div>

@@ -27,6 +27,12 @@ html
 	padding-bottom: 4%;
 	font-family: 'Open Sans' , sans-serif;
 }
+.addstyle
+{
+	position: absolute;
+	top : 350px;
+
+}
 
 #formulaire
 {
