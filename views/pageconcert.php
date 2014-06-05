@@ -84,13 +84,75 @@
 
 
     <?php  if($ongletConcert==4){ ?> 
-      <div class="rating rating2">
-        <a href="#5" title="Give 5 stars">★</a>
-        <a href="#4" title="Give 4 stars">★</a>
-        <a href="#3" title="Give 3 stars">★</a>
-        <a href="#2" title="Give 2 stars">★</a>
-        <a href="#1" title="Give 1 star">★</a>
-      </div>
+	<?php if(isset($_SESSION['id'])) { ?>
+        <?php if ($artiste!= $donnees['artiste_id'] && $salle!= $donnees['salle_id']) { ?>
+          <div id="AVIS">
+              <span class="intro">Clique sur le nombre d'étoiles que tu désires et laisse un commentaire pour noter cet artiste !</span>
+              <div class="rating rating2">
+                <?php echo '<a href = "index.php?page=pageConcertcontrolleur&id='.$_SESSION['concertID'].'&ongletConcert=4&note=5 #contenuConcert"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageConcertcontrolleur&id='.$_SESSION['concertID'].'&ongletConcert=4&note=4 #contenuConcert"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageConcertcontrolleur&id='.$_SESSION['concertID'].'&ongletConcert=4&note=3 #contenuConcert"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageConcertcontrolleur&id='.$_SESSION['concertID'].'&ongletConcert=4&note=2 #contenuConcert"> ★ </a>'; ?>
+                <?php echo '<a href = "index.php?page=pageConcertcontrolleur&id='.$_SESSION['concertID'].'&ongletConcert=4&note=1 #contenuConcert"> ★ </a>'; ?>
+             </div>
+              <div class="taperText">
+                  <form method="post" action="#">
+                      <label for="contenu"></label><br><textarea name="contenu" id="message" cols="50" rows="3"></textarea> <br>
+                      <input type="submit" value="Envoyer" />
+                 </form>
+              </div>
+         <?php }if($artiste!= $donnees['artiste_id'] || $salle!= $donnees['salle_id']){ ?>  
+                 <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre concert</span>
+        <?php } ?>                                  
+      <?php }else { ?>
+                <span class="autorisation">Pour donner un avis sur un concert, merci de créer un compte sur Tune in Town</span>    
+        <?php } ?>
+            <div class="fil">
+                 <?php while ($liste = $listeAvis->fetch()) { ?>
+                      <div class="post">
+                          <span class="auteurAvis">
+                            <?php 
+                              $name = AuteurAvis($liste['membre_id']);
+                              echo("$name : ");
+                              ?>
+                          </span>
+
+                          <span class="note">
+                            <?php 
+                              if($liste['note'] == 1 ){
+                                  echo('★');
+                              }
+                              
+
+                              if($liste['note'] == 2 ){
+                                  echo('★★');
+                              }
+                              
+                              if($liste['note'] == 3 ){
+                                  echo('★★★');
+                              }
+                              
+                              if($liste['note'] == 4 ){
+                                  echo('★★★★');
+                              }
+                              
+                              if($liste['note'] == 5 ){
+                                  echo('★★★★★');
+                              }
+                            ?>  
+                                <br>                                                                                                     
+                          </span>                          
+                          <span class="contenuAvis">
+                            <?php 
+                            $contenu = $liste['contenu'];
+                            echo("\"$contenu\"");
+                            ?>
+
+                          </span>
+                      </div>
+                <?php } ?>
+            </div>
+
     <?php } ?>   
 
   </div>

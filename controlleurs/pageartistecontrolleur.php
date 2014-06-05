@@ -57,18 +57,46 @@ if(!empty($_POST['extrait1']) or !empty($_POST['extrait2']) ){
 			
 		}
 }
-
+$photo="";
 if(!empty($_POST['photoA']) ){
-		if(isset($_GET['id'])){	
-			$photo = mysql_real_escape_string(htmlspecialchars($_POST['photoA']));
+				$photo = mysql_real_escape_string(htmlspecialchars($_POST['photoA']));
+
+}
+		
+		if(isset($_SESSION['id'])){
 			
-			insertPhoto($_GET['id'], $photo);
-			var_dump($photo);
-		}
+
+			$current_id = insertPhotoA($artiste_id,$photo);
+								
+
+				$nomInit = $_FILES['photoA']['name'];
+				$infosPath = pathinfo($nomInit);
+				$extension = $infosPath['extension'];
+				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+				$nomDestination = $current_id.".".$extension;
+				if (!(in_array($extension, $extensionsAutorisees))) {
+					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo de salle sera générée par défaut";
+					$_SESSION['formatS'] = $messageS;
+				} else { 
+					photoUpdate($current_id, $nomDestination);   
+
+					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."photos"."/"; 
+					//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
+
+					move_uploaded_file($_FILES["photoA"]["tmp_name"], $repertoireDestination.$nomDestination);	
+				}		
+			
+		
+
 }
 
+
+
+
+
+
 $musiques = listeMusiques();
-$photos=Photo();
+$photos=PhotoA();
 $onglet =1;
 
 if(isset($_GET['onglet'])){

@@ -7,7 +7,18 @@ function dropSalle($id){
 
 function insertSalle($Nom_de_salle, $code_postal, $telephone,$ville ,$adresse, $type, $capacité,$photosalle, $membre_id){
 	global $bdd;
-	$bdd->query("INSERT INTO salle(nom, code_postal, telephone ville, adresse, type, capacite, photocover, membre_id )  VALUES ('$Nom_de_salle', '$code_postal', '$telephone', '$ville' ,'$adresse' ,'$type', '$capacité','$photosalle', '$membre_id')");
+	$bdd->query("INSERT INTO salle(nom, code_postal, telephone, ville, adresse, type, capacite, photocover, membre_id )  VALUES ('$Nom_de_salle', '$code_postal', '$telephone', '$ville' ,'$adresse' ,'$type', '$capacité','$photosalle', '$membre_id')") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT salle_id FROM salle WHERE membre_id = '$membre_id'") or die(print_r($bdd->errorInfo()));
+	$res = $req->fetch();
+	var_dump($res['salle_id']);
+	return $res['salle_id'] ;
+}
+
+function photoCS($id,$photo){
+	global $bdd;
+	$bdd->query("UPDATE salle 
+	SET photocover='$photo'
+	WHERE salle_id='$id'");
 }
 
 function affichagesalle($lettre){
@@ -24,7 +35,6 @@ function departement($code_postal){
 
 function recuperer3($id){
 
-
 	global $bdd;
 	$sql = "SELECT * from salle where salle_id ='$id'";
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
@@ -36,7 +46,7 @@ function recuperer3($id){
 
 function AuthentificationSalle($id){
 	global $bdd;
-	$sql = 'SELECT membre_id from salle where salle_id ='.$_GET["id"].'';
+	$sql = "SELECT membre_id from salle where salle_id ='$id'";
  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
  	$chef = $req-> fetch();
   	return $chef;

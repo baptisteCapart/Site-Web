@@ -38,7 +38,7 @@
 	font-size: 40px;
 }
 
-table
+table.forum
 {
     border-collapse: collapse;
     width: 90%;
@@ -47,7 +47,7 @@ table
     padding-bottom: 200px;
     color : white;
 }
-td, th
+table.forum td, table.forum th
 {
     border-bottom: 1px solid #B0B0B0;
     text-align: center;
@@ -55,31 +55,31 @@ td, th
 
 }
 
-table tr:nth-child(2n+1){
+table.forum tr:nth-child(2n+1){
   background-color:#444444;
   color : black;
 }
 
-table tr:nth-child(2n){
+table.forum tr:nth-child(2n){
   background-color:#121212;
 }
 
-table a 
+table.forum a 
 {
 	color: white;
 }
 
-th
+table.forum th
 {
 	color : #ACACAC;
 }
 
-tr:hover
+table.forum tr:hover
 {
 	opacity: 0.5;
 }
 
-tr:hover table
+table.forum tr:hover table.forum
 {
 	color: white;
 }

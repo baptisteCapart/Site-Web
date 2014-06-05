@@ -1,5 +1,5 @@
 
-<div id = "photosalle" style="background-image:url(<?php echo 'controlleurs/images/'.$donnees['photocover']; ?>); ">
+<div id = "photosalle" style="background-image:url(<?php echo 'controlleurs/images/salles/'.$donnees['photocover']; ?>); ">
     <div id="nomsalle">
         <?= $donnees["nom"] ?>
 <!--         <?= $NbAbonnes["Nb"] ?>        
@@ -87,16 +87,21 @@
 
     <?php  if($ongletSalle==2){ ?> 
       <div class = "concerts">
-        Concerts passés : 
+        <div class="past">
+          <span class = "infos">Concerts passés : </span> 
         <?php foreach ($concertsalle as $eventsP) {
-              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a></li>';
+          $date = new DateTime($eventsP['jour']);
+                        echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsP["concert_id"].'">'. $eventsP["nom"].'</a> <span class="jour"> le '. $date->format('d/m/Y') .'</span></li>';
         } ?>
         <br>  
-
-        Concerts à venir : 
+        </div>
+        <div class="futur">
+        <span class = "infos">Concerts à venir : </span>
         <?php foreach ($concertsalle2 as $eventsF) {
-              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].'</a></li>';
+          $date = new DateTime($eventsF['jour']);
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].' le '. $date->format('d/m/Y').'</a></li>';
         } ?>        
+      </div>
       </div>
     <?php } ?>
 
@@ -175,7 +180,36 @@
     <?php } ?>   
 
     <?php  if($ongletSalle==5){ ?> 
-      <div class = "photos"> photos</div>
+    <div class = "photos"> photos
+        <?php if(isset($_SESSION['id'])){ ?>   
+          <table id = "serie">
+          <?php foreach ($photos as $picture){  ?>
+            <tr>
+              <td><img src="controlleurs/images/photos/<?=$picture['chemin']?>"/></td>
+            </tr>
+          <?php 
+          }
+          ?>
+          </table>
+         <?php }else{ ?>
+         <span class="intro">Inscris-toi pour consulter les photos !</span> 
+         <?php } ?>
+         <?php if(isset($_SESSION['id'])){
+             if($createur['membre_id']==$_SESSION['id']) { ?>    
+              <span class="intro">Tu peux ajouter ici des photos de tes concerts ou de tes enregistrements pour te faire connaître auprès des autres membre du site</span>       
+                  <form class ="formulairePhoto" enctype = "multipart/form-data" method="post" action="<?php echo 'index.php?page=pageSallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=5' ;?>">
+                      <ul>
+                          <li>
+                              <div class="photou"><span>Ta photo : </span><input class = "textbox" type="file" name="photoS" /></div>
+                          </li> 
+                          <li>
+                              <input class = "envoyer" type="submit" value="Envoyer !"/>
+                          </li>              
+                      </ul>
+                  </form>
+        <?php }} ?>              
+
+      </div>
     <?php } ?> 
 
     <?php  if($ongletSalle==6){ ?> 

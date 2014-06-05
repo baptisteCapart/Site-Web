@@ -97,7 +97,14 @@ header
 	box-shadow: 0 0 9px #555 inset ;
 	border-radius: 3px;
 	border: solid 1px #555;	
-	width: 70px;
+	width: 120px;
+}
+.boitepwd 
+{
+	box-shadow: 0 0 9px #555 inset ;
+	border-radius: 3px;
+	border: solid 1px #555;	
+	width: 100px;
 
 }
 

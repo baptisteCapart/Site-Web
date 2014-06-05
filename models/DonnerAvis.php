@@ -13,6 +13,12 @@ function AvisArtiste ($membre_id, $artiste_id, $contenu, $note)
 	$bdd->query("INSERT INTO donner_avis (membre_id, artiste_id, contenu, note) VALUES ('$membre_id', '$artiste_id', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
 }
 
+function AvisConcert ($membre_id, $concert_id, $contenu, $note)
+{
+	global $bdd;
+	$bdd->query("INSERT INTO donner_avis (membre_id, concert_id, contenu, note) VALUES ('$membre_id', '$concert_id', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
+}
+
 function listeAvisSalle ($salle_id)
 {
 	global $bdd;
@@ -24,6 +30,13 @@ function listeAvisArtiste ($artiste_id)
 {
 	global $bdd;
 	$req = $bdd->query('SELECT * FROM donner_avis WHERE artiste_id='.$artiste_id.' ORDER BY donner_avis_id DESC') or die (print_r($bdd->errorInfo()));
+	return $req;
+}
+
+function listeAvisConcert ($concert_id)
+{
+	global $bdd;
+	$req = $bdd->query('SELECT * FROM donner_avis WHERE concert_id='.$concert_id.' ORDER BY donner_avis_id DESC') or die (print_r($bdd->errorInfo()));
 	return $req;
 }
 

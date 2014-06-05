@@ -43,7 +43,7 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description'])  AND !empty($
 					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo d'artiste sera générée par défaut";
 					$_SESSION['formatA'] = $messageA;
 				} else { 
-					photoA($current_id, $nomDestination);   
+					photoCA($current_id, $nomDestination);   
 
 					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."artistes"."/"; 
 					//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;

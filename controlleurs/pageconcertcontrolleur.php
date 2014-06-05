@@ -4,6 +4,8 @@
  include('models/sallemodel.php');
  include('models/artistemodel.php'); 
  include('models/membremodel.php');
+ include ('models/DonnerAvis.php');
+
 
 $ongletConcert =1;
 if(isset($_GET['id'])){
@@ -11,6 +13,12 @@ if(isset($_GET['id'])){
 	$donnees = recuperer5($_SESSION['concertID']);
 	if(isset($_SESSION['id'])){
 		$check = checkParticipation($_SESSION['id'],$_SESSION['concertID']);
+		$artiste = MaPageArtiste($_SESSION['id']);
+		$salle = MaPageSalle($_SESSION['id']);
+		// var_dump($artiste);
+		// var_dump($salle);
+		// var_dump($donnees['artiste_id']);
+		// var_dump($donnees['salle_id']);
 	}	
 	$listemembre=Membres($_SESSION['concertID']);
 }
@@ -21,7 +29,20 @@ if (isset($_POST['participer'])){
 $salle=recuperer3($donnees['salle_id']);
 $LISTE=recuperer4($donnees['artiste_id']);
 
-
+if(isset($_GET['id'])){
+	if(isset($_GET['note'])){
+		if(isset($_POST['contenu'])){
+				$contenu = $_POST['contenu'];
+				$contenu = nl2br($contenu);
+				$contenu = mysql_real_escape_string($contenu);
+				AvisConcert($_SESSION['id'], $_SESSION['concertID'], $contenu, $_GET['note']);
+			
+		}
+	}		
+}
+if(isset($_GET['id'])){
+	$listeAvis = listeAvisConcert($_GET['id']);
+}
 
 
 if(isset($_GET['ongletConcert'])){
