@@ -45,26 +45,29 @@
         </div>
 <?php } ?>
       <?php  if($critereSalle==2){ ?> 
-          <div class = "listeCP">
-            <?php
-              for ($i=0; $i < 95; $i++) { 
-                  echo '<a href="index.php?page=listeSallescontrolleur&critereSalle=2&code_postal='.$i.'">'.$i.'</a>';
-                  if ($i != "94") echo "   - ";
-              }
-            ?>
-          </div>
+      <div >
+          <div class="lieu">
 
-          <div> 
-              <ul>
-                <?php
-                    if(isset($LISTE)){
-                      foreach ($LISTE as $salle){
-                        echo ' <li><a href = "index.php?page=pagesallecontrolleur&id='.$salle["salle_id"].'"> <img src="controlleurs/images/'.$salle['photocover'].'" alt="" /> '. $salle["nom"].'<br/>'.' </a></li>';
-                      }              
-                ?>
-              </ul>
-          </div>
-                    <?php }else echo "cliquez sur un département pour afficher les salles commençant par cette lettre";} ?> 
+                  <?php
+                  foreach(range('1','95') as $i) {
+                      echo '<a href="index.php?page=listeSallescontrolleur&critereSalle=1#'.$i.'">'.$i.'  |   </a>';
+                  } ?>
+
+      </div>
+            <ul class="liste_artistes">
+              <?php 
+              $current = '0';
+            foreach ($listeLieu as $salle) {
+                $test_letter= (int)($salle['code_postal']/1000);
+                  if ($test_letter!= $current) {
+                    $current= $test_letter;
+                    echo "<span id=".$current.">".$current."</span>";
+                  }
+                  ?> <li><a href="index.php?page=pageSallecontrolleur&id=<?= $salle['salle_id'] ?>"><img src="controlleurs/images/salles/<?=$salle['photocover']?>"/><?= $salle['nom'] ?></a></li> <?php
+              } ?>
+          </ul>
+        </div> 
+        <?php } ?>
       	
   </div> 
 </div>

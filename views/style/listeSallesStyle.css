@@ -78,6 +78,27 @@
 	border: solid #57F23C 1px;
 }
 
+.lieu
+{
+	position: absolute;
+	right: 50%;
+	right: 5%;
+	position: fixed;
+	display: inline;
+	margin-left: 35%;
+	font-style: 1.7;
+}
+
+.lieu a
+{
+	color: white;
+}
+
+.lieu a:hover
+{
+	color: #72EA3E;
+}
+
 
 /*#contenuliste
 {
