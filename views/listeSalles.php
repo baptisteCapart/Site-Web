@@ -50,7 +50,7 @@
 
                   <?php
                   foreach(range('1','95') as $i) {
-                      echo '<a href="index.php?page=listeSallescontrolleur&critereSalle=1#'.$i.'">'.$i.'  |   </a>';
+                      echo '<a href="index.php?page=listeSallescontrolleur&critereSalle=2#'.$i.'">'.$i.'  |   </a>';
                   } ?>
 
       </div>

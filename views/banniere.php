@@ -111,7 +111,7 @@
 						<?php }} ?>						
 					</ul>
 				</li>	
-				<li id = "concerts"><a href="index.php?page=listeConcertscontrolleur">Concerts</a>
+				<li id = "concerts"><a href="index.php?page=listeConcertscontrolleur&critereConcert=1">Concerts</a>
 					<ul class = "menu4">
 						<li id = "date"><a href="index.php?page=listeConcertscontrolleur&critereConcert=1">Par date</a> </li>
 						<li id = "lieu"><a href="index.php?page=listeConcertscontrolleur&critereConcert=2">Par lieu</a></li>

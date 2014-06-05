@@ -17,12 +17,21 @@
 
   <div id="contenuliste">
        <?php  if($critereConcert==1){ ?> 
-        <div> Liste des concerts classées par date
-          <ul><?php foreach ($liste as $concert){
-                  echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$concert["concert_id"].'"> <img src="controlleurs/images/'.$concert['photocover'].'" alt="" /> '. $concert["nom"].'<br/>'.' </a></li>';
-                }  ?>
-         </ul>
-         </div>
+    <div class = "alpha">
+          
+            <ul class="liste_artistes">
+              <?php 
+              $current = '0';
+            foreach ($listeDate as $concert) {
+                $test_letter= $concert['jour'];
+                  if ($test_letter!= $current) {
+                    $current= $test_letter;
+                    echo "<span id=".$current.">".$current."</span>";
+                  }
+                  ?> <li><a href="index.php?page=pageConcertcontrolleur&id=<?= $concert['concert_id'] ?>"><img src="controlleurs/images/<?=$concert['photocover']?>"/><?= $concert['nom'] ?></a></li> <?php
+              } ?>
+          </ul>
+        </div>
       <?php } ?>
 
        <?php  if($critereConcert==2){ ?> 

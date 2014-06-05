@@ -17,4 +17,9 @@ function triLieu($table){
 	return $sql;
 }
 
+function triDate(){
+	global $bdd;
+	$sql = $bdd-> query("SELECT * from concert where jour>CURDATE() order by jour limit 30") or die(print_r($bdd->errorInfo()));
+	return $sql;
+}
 ?>
