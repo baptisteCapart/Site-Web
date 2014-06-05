@@ -31,17 +31,7 @@ function photoCA($id,$photo){
 	WHERE artiste_id='$id'");
 }
 
-function trialpha(){
-	global $bdd;
-	$sql = $bdd-> query("SELECT * from artiste order by nom") or die(print_r($bdd->errorInfo()));
-	return $sql;
-}
 
-function affichage($lettre){
-	global $bdd;
-	$sql = $bdd-> query("SELECT * from artiste where nom LIKE '$lettre%' order by nom") or die(print_r($bdd->errorInfo()));
-	return $sql;
-}
 
 function recuperer2($id){
 	global $bdd;

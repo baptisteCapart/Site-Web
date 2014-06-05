@@ -98,7 +98,7 @@
 						<?php }} ?>
 					</ul>
 				</li>	
-				<li id = "salles"><a href="index.php?page=listeSallescontrolleur">Salles</a>
+				<li id = "salles"><a href="index.php?page=listeSallescontrolleur&critereSalle=1">Salles</a>
 					<ul class = "menu3">
 						<li id = "alpha"><a href="index.php?page=listeSallescontrolleur&critereSalle=1">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="index.php?page=listeSallescontrolleur&critereSalle=2">Par lieu</a></li>
