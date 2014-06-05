@@ -119,10 +119,9 @@ var_dump($photosalle);
 }
 
 $photo="";
-if(!empty($_POST['photoS']) ){
-				$photo = mysql_real_escape_string(htmlspecialchars($_POST['photoS']));
+if(!empty($_FILES['photoS']) ){
+				$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoS']['name']));
 
-}
 		if(isset($_SESSION['id'])){
 			
 
@@ -135,8 +134,9 @@ if(!empty($_POST['photoS']) ){
 				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
 				$nomDestination = $current_id.".".$extension;
 				if (!(in_array($extension, $extensionsAutorisees))) {
-					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo de salle sera générée par défaut";
+					$messageS = "ATTENTION : le format de votre photo n'est pas bon, votre photo de salle sera générée par défaut";
 					$_SESSION['formatS'] = $messageS;
+					echo $messageS;
 				} else { 
 					photoUpdate($current_id, $nomDestination);   
 
@@ -145,10 +145,9 @@ if(!empty($_POST['photoS']) ){
 
 					move_uploaded_file($_FILES["photoS"]["tmp_name"], $repertoireDestination.$nomDestination);	
 				}		
-			
-		
-
+		}
 }
+
 $photos=PhotoS();
 
 

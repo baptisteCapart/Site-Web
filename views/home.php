@@ -48,10 +48,12 @@
 						<ul>
 							<?php  if(isset($newsperso)){
 								foreach ($newsperso as $news) {
-								echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news['photocover'].'" alt="" /></a><p >
-								'.$news['description'].'</p> </li>';
-
-							}} ?>
+									// $contenu = $news->fetch();
+									//var_dump($news);
+									echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news['photocover'].'" alt="" /></a><p >
+									'.$news['description'].'</p> </li>';
+								}
+							} ?>
 						</ul>
 					</div>
 			</div>
@@ -60,10 +62,12 @@
 						<ul>
 							<?php  if(isset($newsperso2)){
 								foreach ($newsperso2 as $news2) {
-								echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news2['photocover'].'" alt="" /></a><p >
-								'.$news['description'].'</p> </li>';
-
-							}} ?>
+									// $contenu = $news2->fetch();
+									//var_dump($news2);
+									echo ' <li><a href='.$news2["lien"].'><img src="controlleurs/images/'.$news2['photocover'].'" alt="" /></a><p >
+									'.$news2['description'].'</p> </li>';
+								}
+							} ?>
 						</ul>
 					</div>
 			</div>

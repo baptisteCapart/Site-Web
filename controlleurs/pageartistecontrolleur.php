@@ -58,11 +58,9 @@ if(!empty($_POST['extrait1']) or !empty($_POST['extrait2']) ){
 		}
 }
 $photo="";
-if(!empty($_POST['photoA']) ){
-				$photo = mysql_real_escape_string(htmlspecialchars($_POST['photoA']));
+if(!empty($_FILES['photoA']) ){
+				$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoA']['name']));
 
-}
-		
 		if(isset($_SESSION['id'])){
 			
 
@@ -84,10 +82,8 @@ if(!empty($_POST['photoA']) ){
 					//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
 
 					move_uploaded_file($_FILES["photoA"]["tmp_name"], $repertoireDestination.$nomDestination);	
-				}		
-			
-		
-
+				}
+			}
 }
 
 
