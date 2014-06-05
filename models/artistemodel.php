@@ -5,6 +5,11 @@ function dropArtiste($id){
 	$bdd->query("DELETE FROM artiste WHERE artiste_id= $id") or die(print_r($bdd->errorInfo()));
 }
 
+function addstyle($message){
+	global $bdd;
+	$bdd->query("INSERT INTO  style_de_musique(nom) VALUES ('$message')");
+}
+
 
 function insertArtiste($nomartiste, $style ,$description, $photogroupe,$membreID){
 	global $bdd;
@@ -131,5 +136,8 @@ function getArtistes($styles){
 	}
 	return $styles;
 }
+
+
+
 
 ?>

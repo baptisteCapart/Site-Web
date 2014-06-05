@@ -1,5 +1,7 @@
 <?php 
 
+
+
 function dropMembre($id){
 	global $bdd;
 	$bdd->query("DELETE FROM membre WHERE membre_id= $id") or die(print_r($bdd->errorInfo()));
