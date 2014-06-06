@@ -26,9 +26,10 @@ if ( isset ($_GET['categorie']) )
 		$id = $_GET['id'];
 		if(isset($_POST['supprimer4'])){
 			dropTopic($id);
-			}
+
 		header('location: index.php?page=liste_topiccontrolleur.php');
 	}
+}
 }
 
 
