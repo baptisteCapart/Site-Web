@@ -33,7 +33,7 @@
 
 				<?php if(isset($_SESSION['id'])){
             if($admin['id_admin']==1){ ?>
-                <li><form class ="form3" method="post" action="index.php?page=discusscontrolleur<?='&id='.$post['id_post'].''?>"><input class = "bouton2" type="submit" name = "supprimer" value="Supprimer"/></form></li>
+                <li><form class ="form3" method="post" action="index.php?page=discusscontroleur<?='&id='.$post['id_post'].''?><?='&topic='.$_GET['topic'].''?>"><input class = "bouton2" type="submit" name = "supprimer" value="Supprimer"/></form></li>
             <?php } }?>
 
 			</div> 

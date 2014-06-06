@@ -9,17 +9,22 @@ if(isset($_GET['id'])){
 
 	$id=$_GET['id'];
 }
-
-if(isset($_POST['Supprimer'])){
+if(isset($_GET['topic']))
+{
+	$topic = $_GET['topic'];
+}
+if(isset($_POST['supprimer'])){
 
 		dropPost($id);
-		header('location: index.php?page=discusscontrolleur');
+		header('location: index.php?page=discusscontroleur&topic='.$topic.'');
 	}
 
 if(isset($_GET['topic']))
 {
 	$topic_name = topicname($_GET['topic']);
 }
+
+
 else
 {
 	header('Location: index.php?page=wrong_topiccontroleur');
