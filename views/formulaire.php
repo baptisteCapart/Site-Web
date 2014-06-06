@@ -1,7 +1,7 @@
 
 <div id="bloc">
 <div id="bienvenue">Remplis ce formulaire d'inscription pour devenir membre de notre site et ainsi bénéficier de tous les privilèges d'un inscrit ! <br>
-<span class="precision">Tous les champs sont obligatoires sauf pour les photos. Si tu ne télécharges pas de photos, tes photos de profil et couverture seront les photos par défaut.</span> 
+<span class="precision">Tous les champs sont obligatoires sauf pour les photos. Si tu ne télécharges pas de photos, tes photos de profil et couverture seront les photos par défaut. <span class = "imp">Les photos ne doivent pas excéder 1Mo </span>ou elles ne seront pas pris en compte.</span> 
 </div>
 <div class="erreur"><?php echo($error); ?></div>
 <div id="formulaire">
@@ -45,7 +45,8 @@
 			<li>
 				<div class="pays"><span>Pays : </span><input class = "textbox" type="text" name="pays" /></div>
 
-			</li>			
+			</li>	
+
 			<li>
 				<div class="photoprofil"><span>Photo de profil : </span><input  class = "textbox" type="file" name="photodeprofil" /></div>
 			</li>
