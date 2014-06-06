@@ -81,7 +81,7 @@
 						<?php  if(isset($_SESSION['pseudo'])) { ?>
 						<li id = "groupes"><a href="index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION["id"];?>&ongletMembre=1#menuMembre">Mes artistes</a></li>
 						<li id = "rooms"><a href="index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION["id"];?>&ongletMembre=2#menuMembre">Mes salles</a></li>
-						<li id = "shows"><a href="PageMembrecontrolleur3.php">Mes concerts</a></li>
+						<li id = "shows"><a href="index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION["id"];?>&ongletMembre=3#menuMembre">Mes concerts</a></li>
 						<?php } ?>
 					</ul>
 				</li>	
