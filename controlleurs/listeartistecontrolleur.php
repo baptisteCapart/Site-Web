@@ -23,21 +23,27 @@ if(isset($_GET['critere'])){
 		foreach ($resultat as $artiste) {
 			$artiste['note'] = note($artiste['artiste_id']);
 			$listenote[] = $artiste['note'];
-			var_dump($listenote);
 		}
 		arsort($listenote);
 		$definitif = array();
-		$pointer = 0;
 		$resultat2 = classement();
+		$pointer = 0;
+		foreach ($listenote as $key => $value) {
+			$listenote[$pointer] = $key;
+			$pointer = $pointer +1;
+		}
+		ksort($listenote);
+		$pointer = 0;
 		while($artiste = $resultat2->fetch()){
 			$artiste['note'] = note($artiste['artiste_id']);
 			foreach ($listenote as $key => $value) {
-				if($key == $pointer){
+				if($value == $pointer){
 					$entree = $artiste;
+					$definitif[$key] = $entree;
+					ksort($definitif);
 					break;
 				}
 			}
-			$definitif[] = $entree;
 			$pointer = $pointer + 1;
 		}
 	}
