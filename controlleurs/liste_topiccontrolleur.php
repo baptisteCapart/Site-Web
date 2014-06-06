@@ -29,6 +29,7 @@ if ( isset ($_GET['categorie']) )
 		}
 	}
 }
+}
 
 
 include("controlleurs/bannierecontrolleur.php");
