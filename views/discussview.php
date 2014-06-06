@@ -11,7 +11,6 @@
     <div class="fil">
     	<?php while ($post = $listepost->fetch()) { ?>
 
-
 			<div class="post">
 				<span class="auteur">
 					<?php 
@@ -30,6 +29,13 @@
 					<?php 
 					echo($post['datepost'].'<br>');
 					 ?>
+
+
+				<?php if(isset($_SESSION['id'])){
+            if($admin['id_admin']==1){ ?>
+                <li><form class ="form3" method="post" action="index.php?page=discusscontroleur<?='&id='.$post['id_post'].''?><?='&topic='.$_GET['topic'].''?>"><input class = "bouton2" type="submit" name = "supprimer" value="Supprimer"/></form></li>
+            <?php } }?>
+
 			</div> 
     	<?php } ?>
     </div>
