@@ -96,12 +96,16 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 				$message = "ATTENTION : le format de votre photo de profil n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de profil";
 				$_SESSION['format'] = $message;
 			} else { 
+				$poids = filesize($photodeprofil);
+				if ($poids < 1000) {
+					
 				photoProf($donnee['membre_id'], $nomDestinationProf);   
 
 				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; 
 
 				move_uploaded_file($_FILES["photodeprofil"]["tmp_name"], $repertoireDestination.$nomDestinationProf);
-
+				
+				}
 
 			}
 
@@ -110,12 +114,16 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 				$message2 = "le format de votre photo de couverture n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de couverture";
 				$_SESSION['format2'] = $message;
 			} else { 
+				$poids2 = filesize($photodecover);
+				if ($poids2 < 1000) {
+
 				photoCov($donnee['membre_id'], $nomDestinationCov);   
 
 				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; 
 
 				move_uploaded_file($_FILES["photodecover"]["tmp_name"], $repertoireDestination.$nomDestinationCov);
 			}
+		}
 
 			header('location: index.php?page=register_complete_controlleur');
 		}
