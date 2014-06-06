@@ -1,5 +1,11 @@
 <?php
 
+function dropPost($id){
+	global $bdd;
+	$bdd->query("DELETE FROM post WHERE id_post= '$id'") or die(print_r($bdd->errorInfo()));
+
+}
+
 function dropTopic($id){
 	global $bdd;
 	$bdd->query("DELETE FROM topic WHERE id_topic= '$id'") or die(print_r($bdd->errorInfo()));

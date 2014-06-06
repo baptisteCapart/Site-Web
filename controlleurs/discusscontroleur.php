@@ -1,5 +1,20 @@
 <?php
 include('models/forummodel.php');
+include ('models/membremodel.php');
+
+if(isset($_SESSION['id'])){
+	$admin = recuperer($_SESSION['id']);
+}
+if(isset($_GET['id'])){
+
+	$id=$_GET['id'];
+}
+
+if(isset($_POST['Supprimer'])){
+
+		dropPost($id);
+		header('location: index.php?page=discusscontrolleur');
+	}
 
 if(isset($_GET['topic']))
 {
