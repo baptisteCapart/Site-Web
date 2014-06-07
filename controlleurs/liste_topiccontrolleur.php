@@ -28,7 +28,7 @@ if ( isset ($_GET['categorie']) )
 			dropTopic($id);
 		}
 	}
-}
+
 }
 
 
