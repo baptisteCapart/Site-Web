@@ -114,8 +114,36 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		if ($photosalle == ""){
 			$photosalle = $donnees['photocover'];
 		}
-var_dump($photosalle);
 		modifierSalle($_SESSION['salleID'], $Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle);
+
+		if(!empty($_FILES['photosalle']) ){
+			$photosalle = mysql_real_escape_string(htmlspecialchars($_FILES['photosalle']['name']));
+
+			$nomInit = $_FILES['photosalle']['name'];
+			$infosPath = pathinfo($nomInit);
+			$extension = $infosPath['extension'];
+			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+			$nomDestination = $donnees['salle_id'].".".$extension;
+			
+
+			if (!(in_array($extension, $extensionsAutorisees))) {
+				$message = "ATTENTION : le format de votre photo de profil n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de profil";
+				$_SESSION['format'] = $message;
+			} else { 
+				// $poids = filesize($photodeprofil);
+				// if ($poids < 1000) {
+					
+				
+			photoCS($donnees['salle_id'],$nomDestination);
+
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."salles"."/"; 
+
+				move_uploaded_file($_FILES["photosalle"]["tmp_name"], $repertoireDestination.$nomDestination);
+				
+				//}
+
+			}
+		}
 }
 
 	$photo="";

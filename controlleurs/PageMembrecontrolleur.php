@@ -127,6 +127,8 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 
 			}
 		}
+
+
 		if(!empty($_FILES['photodecover']) ){
 			$photodecover = mysql_real_escape_string(htmlspecialchars($_FILES['photodecover']['name']));
 

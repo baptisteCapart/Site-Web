@@ -3,7 +3,7 @@
 
 	<div id="bienvenue">Tu peux modifier ici tes paramètres</div>
 	<div id="formulaire">
-		<form class ="form2" method="post" action=" index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>">
+		<form class ="form2" name = "formA" onsubmit = "return checkExt();" enctype = "multipart/form-data" method="post" action=" index.php?page=pageartistecontrolleur<?='&id='.$_SESSION['artisteID'].''?>">
 			<ul>
 				<li>
 					<div class="nom_de_salle"><span>Nom du groupe : </span><input class = "textbox" type="text" name="nomartiste" value="<?= $donnees['nom'] ?>" /></div>

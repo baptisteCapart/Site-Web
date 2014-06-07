@@ -1,7 +1,7 @@
 <div id="bloc">
 		<div id="bienvenue">Tu peux modifier ici tes paramètres</div>
 		<div id="formulaire">
-		<form class ="form2" method="post" action="index.php?page=pageSallecontrolleur">
+		<form class ="form2" name = "formS" onsubmit = "return checkExtS();" enctype = "multipart/form-data" method="post" action="index.php?page=pageSallecontrolleur<?='&id='.$_SESSION['salleID'].''?>">
 			<ul>
 				<li>
 					<div class="nom_de_salle"><span>Nom de la salle : </span><input class = "textbox" type="text" name="Nom_de_salle" value="<?= $donnees['nom'] ?>"/></div>

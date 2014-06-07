@@ -151,6 +151,35 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) ){
 		}
 
 		modifierArtiste($_SESSION['artisteID'], $nomartiste, $description, $photogroupe);
+
+		if(!empty($_FILES['photogroupe']) ){
+			$photogroupe = mysql_real_escape_string(htmlspecialchars($_FILES['photogroupe']['name']));
+
+			$nomInit = $_FILES['photogroupe']['name'];
+			$infosPath = pathinfo($nomInit);
+			$extension = $infosPath['extension'];
+			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+			$nomDestination = $donnees['artiste_id'].".".$extension;
+			
+
+			if (!(in_array($extension, $extensionsAutorisees))) {
+				$message = "ATTENTION : le format de votre photo de profil n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de profil";
+				$_SESSION['format'] = $message;
+			} else { 
+				// $poids = filesize($photodeprofil);
+				// if ($poids < 1000) {
+					
+				
+			photoCA($donnees['artiste_id'],$nomDestination);
+
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."artistes"."/"; 
+
+				move_uploaded_file($_FILES["photogroupe"]["tmp_name"], $repertoireDestination.$nomDestination);
+				
+				//}
+
+			}
+		}
 }
 
 if (isset($_POST['suivre'])){
