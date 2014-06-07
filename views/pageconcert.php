@@ -66,14 +66,31 @@
 <div id="contenuConcert">
   <div id="textConcert">
     <?php  if($ongletConcert==1){ ?> 
-      	<div class = "descrption"> 
-			<?= $donnees['description'] ?>
+    <div class = "descrption"> 
+			<span class="desc">Decription : </span><br>
+        <?= $donnees['description'] ?><br>
+      <span class="desc">Date : </span><br>
+        <?= $donnees['jour'] ?><br>
+      <span class="desc">Heure : </span><br>   
+      <?= $donnees['heure'] ?><br>
   		</div>
     <?php } ?> 
 
     <?php  if($ongletConcert==3){ ?> 
-      <div class = "salle"> 
-		<?php echo '<a href="index.php?page=pageSallecontrolleur&id='.$salle['salle_id'].'">'.$salle["nom"].'</a>'; ?>
+      <div class = "salleconcert"> 
+		<?php echo '<a href="index.php?page=pageSallecontrolleur&id='.$salle['salle_id'].'">'.$salle["nom"].'</a>'; ?><br>
+    <?= $salle['ville'] ?><br>
+    <?= $salle['adresse'] ?><br>
+            <div class="map">
+            <iframe
+            width="600"
+            height="350"
+            frameborder="0" style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCTQZ5rKhEnDfS2LJiU-hmV-DuCWpql02k
+            &q=<?php echo ($salle['adresse']); ?>+<?php echo ($salle['code_postal']); ?>">
+          </div>
+      </div>
+
       </div>
     <?php } ?>
 

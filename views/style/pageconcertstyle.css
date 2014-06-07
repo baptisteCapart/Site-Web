@@ -316,3 +316,20 @@ a[href*="intent"] {
 	float:none
 }
 
+.salleconcert a
+{
+	color : #87EF69;
+	font-size: 1.5em;
+}
+
+.salleconcert a:hover
+{
+	text-decoration: underline;
+}
+
+.desc
+{
+	color : #87EF69;
+	
+}
+
