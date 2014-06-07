@@ -2,7 +2,7 @@
 	<div id="bienvenue">Tu peux modifier tes paramètres ici</div>
 	<div id="formulaire">
 		<?php if(isset($_SESSION['id'])){ ?>
-		<form class ="form2" method="post" action=" index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION['id']; ?>"><?php } ?>
+		<form class ="form2" name = "formIn" onsubmit = "return upload();" enctype = "multipart/form-data" method="post" action=" index.php?page=PageMembrecontrolleur&id=<?php echo $_SESSION['id']; ?>"><?php } ?>
 			<ul>
 								
 				<li>

@@ -95,10 +95,66 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 		}
 		if ($photodecover == ""){
 			$photodecover = $donnees['photocover'];
-		}		
-
-
+		}
 		modifier($_SESSION['id'], $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
+		
+
+		if(!empty($_FILES['photodeprofil']) ){
+			$photodeprofil = mysql_real_escape_string(htmlspecialchars($_FILES['photodeprofil']['name']));
+
+			$nomInitProf = $_FILES['photodeprofil']['name'];
+			$infosPathProf = pathinfo($nomInitProf);
+			$extensionProf = $infosPathProf['extension'];
+			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+			$nomDestinationProf = $donnees['membre_id']."."."P".".".$extensionProf;
+			
+
+			if (!(in_array($extensionProf, $extensionsAutorisees))) {
+				$message = "ATTENTION : le format de votre photo de profil n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de profil";
+				$_SESSION['format'] = $message;
+			} else { 
+				// $poids = filesize($photodeprofil);
+				// if ($poids < 1000) {
+					
+				
+			photoProf($_SESSION['id'],$nomDestinationProf);
+
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; 
+
+				move_uploaded_file($_FILES["photodeprofil"]["tmp_name"], $repertoireDestination.$nomDestinationProf);
+				
+				//}
+
+			}
+		}
+		if(!empty($_FILES['photodecover']) ){
+			$photodecover = mysql_real_escape_string(htmlspecialchars($_FILES['photodecover']['name']));
+
+			$nomInitCov = $_FILES['photodecover']['name'];
+			$infosPathCov = pathinfo($nomInitCov);
+			$extensionCov = $infosPathCov['extension'];
+			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+			$nomDestinationCov = $donnees['membre_id']."."."C".".".$extensionCov;
+			
+
+			if (!(in_array($extensionCov, $extensionsAutorisees))) {
+				$message = "ATTENTION : le format de votre photo de profil n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de profil";
+				$_SESSION['format'] = $message;
+			} else { 
+				// $poids = filesize($photodeprofil);
+				// if ($poids < 1000) {
+					
+				
+			photoCov($_SESSION['id'],$nomDestinationCov);
+
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."membres"."/"; 
+
+				move_uploaded_file($_FILES["photodecover"]["tmp_name"], $repertoireDestination.$nomDestinationCov);
+				
+				//}
+
+			}
+		}
 }
 
 

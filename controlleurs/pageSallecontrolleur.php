@@ -118,9 +118,9 @@ var_dump($photosalle);
 		modifierSalle($_SESSION['salleID'], $Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle);
 }
 
-$photo="";
-if(!empty($_FILES['photoS']) ){
-				$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoS']['name']));
+	$photo="";
+	if(!empty($_FILES['photoS']) ){
+			$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoS']['name']));
 
 		if(isset($_SESSION['id'])){
 			
