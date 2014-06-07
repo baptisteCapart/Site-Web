@@ -66,7 +66,7 @@
 		    <div class = "note">
 		    	<ul class="liste_artistes">
 				<?php foreach($definitif as $artiste){ ?>
-			    	<li><a href = "index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover'] ?>" alt="" /><?=$artiste["nom"], $artiste['note']?></a></li> <?php
+			    	<li><a href = "index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover'] ?>" alt="" /><?=$artiste["nom"].' '.$artiste['note']?></a></li> <?php
 				} ?>
 		    	</ul>
 		    </div>
