@@ -9,7 +9,9 @@
 					<ul>
 						<?php  if(isset($caroussel)){
 							foreach ($caroussel as $diapo) {
-							echo ' <li><a href='.$diapo["lien"].'><img src="controlleurs/images/'.$diapo['photocover'].'" alt="" /></a><p class="azerty">
+								if($diapo['typenews']==1){$chemin ='controlleurs/images/concerts/'.$diapo['photocover'].'';}
+								else{$chemin ='controlleurs/images/artistes/'.$diapo['photocover'].'';}
+							echo ' <li><a href='.$diapo["lien"].'><img src='.$chemin.' alt="" /></a><p class="azerty">
 							'.$diapo['description'].'</p> </li>';
 
 						}} ?>

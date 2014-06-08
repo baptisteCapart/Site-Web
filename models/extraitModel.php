@@ -15,8 +15,8 @@ function insertExtrait($artisteID, $nom){
 	$artiste=recupererArtiste2($artisteID);
 	$description = "Tout nouveau morceau de ".$artiste['nom']." sorti sur sa page, venez l'écouter !";
 	$description = mysql_real_escape_string(htmlspecialchars($description));
-	$bdd->query("INSERT INTO news(datenews, photocover,description, lien) 
-		VALUES (CURDATE(),'".$artiste['photocover']."', '$description', 'index.php?page=pageartistecontrolleur&onglet=3&id=".$artiste['artiste_id']."')") or die(print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO news(typenews, datenews, photocover,description, lien) 
+		VALUES (2, CURDATE(),'".$artiste['photocover']."', '$description', 'index.php?page=pageartistecontrolleur&onglet=3&id=".$artiste['artiste_id']."')") or die(print_r($bdd->errorInfo()));
 }
 
 function listeMusiques(){

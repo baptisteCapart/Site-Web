@@ -93,8 +93,8 @@ function accord($id, $accord){
 	$artiste = recupererartiste($concert['artiste_id']);
 	$dateconcert = new DateTime($concert['jour']);
 	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour le ".$dateconcert->format('d/m/Y').", tenez-vous prêts !";
-	$bdd->query("INSERT INTO news (datenews, photocover, description, lien) 
-		VALUES ('".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO news (typenews, datenews, photocover, description, lien) 
+		VALUES (1,'".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
 }
 
 function newtopic ()
@@ -185,7 +185,7 @@ function ConcertArtisteF($artiste_id){
 
 function caroussel(){
 	global $bdd;
-	$req=$bdd->query("SELECT * from news where photo = 0 order by datenews limit 5");
+	$req=$bdd->query("SELECT * from news where typenews != 3 and datenews>=CURDATE() order by news_id DESC limit 5");
 	return $req;
 }
 
