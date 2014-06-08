@@ -30,7 +30,7 @@
 									if($local['cp']==$code){ ?>
 										<td>
 											<?php  echo ' <a href="index.php?page=pageconcertcontrolleur&id='.$local["concert_id"].'">';?>
-											<div id = "tableimg" style="background-image:url(<?php echo 'controlleurs/images/'.$local['photocover']; ?>); ">
+											<div id = "tableimg" style="background-image:url(<?php echo 'controlleurs/images/concerts/'.$local['photocover']; ?>); ">
 													
 												</div></a>
 												<div class="invisible">  

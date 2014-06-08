@@ -31,6 +31,7 @@ if(isset($_GET['id'])){
 		dropArtiste($artiste_id);
 		header('location: index.php?page=listeartistecontrolleur');
 	}
+	$listeStyles = listeStyle($artiste_id);
 
 }
 

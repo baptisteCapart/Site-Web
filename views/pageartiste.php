@@ -50,8 +50,18 @@
 
 <div id="contenuArtiste">
   <div id="textArtist">
-    <?php  if($onglet==1){ ?> 
-      <div class = "descrption"> <?= $donnees["description"] ?></div>
+    <?php  if($onglet==1){ ?>
+    <div >
+    <span class="style">Style : </span><ul> 
+      <?php foreach($listeStyles as $style){ ?>
+     
+      <?php 
+      echo '<li>'.$style['style_de_musique'].'</li>';
+       } ?>
+      </ul>
+    </div> 
+      <div><span class = "description">Description :<br>
+      <span class="blanc"><?= $donnees["description"] ?></span></div>  
     <?php } ?> 
 
     <?php  if($onglet==2){ ?> 

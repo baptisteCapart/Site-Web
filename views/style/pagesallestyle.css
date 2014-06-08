@@ -53,7 +53,7 @@ html, body
 
 #nomsalle
 {
-	//position: absolute;
+/*	//position: absolute;
 	bottom : 0; 
 	height :50px;
 	font-size: 4em;
@@ -62,12 +62,25 @@ html, body
 	//width: 100%;
 	vertical-align: middle;
 	//display: inline-block;
-/*	padding-bottom: 15px;
-*/	float: right;
+	padding-bottom: 15px;
+	float: right;
 	position: relative;
 	top : 350px;
 	margin-right: 20px;
-	font-family: 'Quicksand' , sans-serif;
+	font-family: 'Quicksand' , sans-serif;*/
+		font-family: 'Quicksand' , sans-serif;	
+	font-size: 90%;
+	padding : 7px 30px 7px 30px;
+	border-radius: 30px;
+	//border: solid white 1px;
+	color: white;
+	background-color: black;
+	opacity: 0.7;
+	text-align: right;
+	position: absolute;
+	bottom: 150px;
+	right: 3%;
+	font-size: 3em;
 
 }
 

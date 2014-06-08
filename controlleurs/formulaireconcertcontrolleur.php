@@ -19,6 +19,8 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 		}
 		if(!empty($_POST['photocover'])){
 			$photocover = mysql_real_escape_string(htmlspecialchars($_POST['photocover']));
+		}else{
+			$photocover="concertdefaut.jpg";
 		}
 
 		include ('models/concertmodel.php');
@@ -42,9 +44,27 @@ if(isset($_GET['new'])){
 					$non_repondu = 'salle';
 				}
 			}
-			insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur,$non_repondu);
+			$current_id=insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur,$non_repondu);
+	if(!empty($_FILES['photocover']) ){
+			$photocover = mysql_real_escape_string(htmlspecialchars($_FILES['photocover']['name']));
+				$nomInit = $_FILES['photocover']['name'];
+				$infosPath = pathinfo($nomInit);
+				$extension = $infosPath['extension'];
+				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+				$nomDestination = $current_id.".".$extension;
+				if (!(in_array($extension, $extensionsAutorisees))) {
+					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo d'artiste sera générée par défaut";
+					$_SESSION['formatA'] = $messageA;
+				} else { 
+					photoC($current_id, $nomDestination);   
+
+					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."concerts"."/"; 
+					//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;
+
+					move_uploaded_file($_FILES["photocover"]["tmp_name"], $repertoireDestination.$nomDestination);	
+				}				
 		
-	
+	}
 		}else{
 
 			if(isset($_GET['concert_id'])){

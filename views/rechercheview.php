@@ -46,7 +46,7 @@
         echo $erreur;
       } else {
         foreach ($results as $salle){
-          echo ' <li><a href = "index.php?page=pageSallecontrolleur&id='.$salle["salle_id"].'"> <img src="controlleurs/images/'.$salle['photocover'].'" alt="" /> '. $salle["nom"].'<br/>'.' </a></li>';
+          echo ' <li><a href = "index.php?page=pageSallecontrolleur&id='.$salle["salle_id"].'"> <img src="controlleurs/images/salles/'.$salle['photocover'].'" alt="" /> '. $salle["nom"].'<br/>'.' </a></li>';
        }
       }
     }
@@ -64,7 +64,7 @@
       } else {
         foreach ($resultc as $concert)
         {
-          echo ' <li><a href = "index.php?page=pagconcertcontrolleur&id='.$concert["concert_id"].'"> <img src="controlleurs/images/'.$concert['photocover'].'" alt="" /> '. $concert["nom"].'<br/>'.' </a></li>';
+          echo ' <li><a href = "index.php?page=pageConcertcontrolleur&id='.$concert["concert_id"].'"> <img src="controlleurs/images/concerts/'.$concert['photocover'].'" alt="" /> '. $concert["nom"].'<br/>'.' </a></li>';
         }
       }
     }

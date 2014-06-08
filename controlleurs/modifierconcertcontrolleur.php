@@ -49,6 +49,35 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 		}
 
 	updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $concert_id, $inviteur,$non_repondu);
+		if(!empty($_FILES['photocover']) ){
+			$photocover = mysql_real_escape_string(htmlspecialchars($_FILES['photocover']['name']));
+
+			$nomInit = $_FILES['photocover']['name'];
+			$infosPath = pathinfo($nomInit);
+			$extension = $infosPath['extension'];
+			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+			$nomDestination = $donnees['concert_id'].".".$extension;
+			
+
+			if (!(in_array($extension, $extensionsAutorisees))) {
+				$message = "ATTENTION : le format de votre photo de profil n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de profil";
+				$_SESSION['format'] = $message;
+			} else { 
+				// $poids = filesize($photodeprofil);
+				// if ($poids < 1000) {
+					
+				
+			photoC($donnees['concert_id'],$nomDestination);
+
+				$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."concerts"."/"; 
+
+				move_uploaded_file($_FILES["photocover"]["tmp_name"], $repertoireDestination.$nomDestination);
+				
+				//}
+
+			}
+		}
+
 
 		include('controlleurs/bannierecontrolleur.php');
 		include ('views/modifierconcertView.php');

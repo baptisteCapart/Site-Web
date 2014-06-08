@@ -48,6 +48,12 @@ function recuperer4($id){
  	return $req;
 }
 
+function listeStyle($artiste_id){
+	global $bdd;
+	$sql=$bdd->query("SELECT style_de_musique from style_de_groupe where artiste_id='$artiste_id'");
+	return $sql;
+}
+
 
 
 function AuthentificationArtiste($id){

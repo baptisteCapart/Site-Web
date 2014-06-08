@@ -28,7 +28,7 @@
                     $current= $test_letter;
                     echo "<span id=".$current.">".$current."</span>";
                   }
-                  ?> <li><a href="index.php?page=pageConcertcontrolleur&id=<?= $concert['concert_id'] ?>"><img src="controlleurs/images/<?=$concert['photocover']?>"/><?= $concert['nom'] ?></a></li> <?php
+                  ?> <li><a href="index.php?page=pageConcertcontrolleur&id=<?= $concert['concert_id'] ?>"><img src="controlleurs/images/concerts/<?=$concert['photocover']?>"/><?= $concert['nom'] ?></a></li> <?php
               } ?>
           </ul>
         </div>

@@ -18,7 +18,7 @@ if(isset($_SESSION['id'])){
 
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description'])  AND !empty($_POST['style'])){
 
-		$style = mysql_real_escape_string(htmlspecialchars($_POST['style']));	
+		//$style = mysql_real_escape_string(htmlspecialchars($_POST['style']));	
 		$nomartiste = mysql_real_escape_string(htmlspecialchars($_POST['nomartiste']));
 		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
 		$photogroupe ="";
@@ -29,7 +29,6 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description'])  AND !empty($
 			$photogroupe="artistedefaut.jpg";
 		}
 
-		include ('models/artistemodel.php');
 		if(isset($_SESSION['id'])){	
 			if(!empty($_POST['style'])){
 				$current_id = insertArtiste($nomartiste, $style ,$description, $photogroupe, $_SESSION['id']);

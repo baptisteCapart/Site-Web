@@ -2,7 +2,7 @@
 <div id="bloc">
 
 		<div id="formulaire">
-		<form class ="form2" method="post" action="<?php echo'index.php?page=modifierconcertcontrolleur&id='.$donnees['concert_id']; 
+		<form class ="form2" enctype = "multipart/form-data" method="post" action="<?php echo'index.php?page=modifierconcertcontrolleur&id='.$donnees['concert_id']; 
 	 ?>">
 			<div class = "intro">Si vous n'apportez aucune modification, cliquez simplement sur "Valider" pour que le concert soit crée</div>
 			<ul>
@@ -32,7 +32,7 @@
 				<li>
 					<div><span>Photo de couverture :</span>
 					<input type="file" name="photocover"> </div>
-					<img class = "photo" src="controlleurs/images/<?=$donnees['photocover']?>" alt="">
+					<img class = "photo" src="controlleurs/images/concerts/<?=$donnees['photocover']?>" alt="">
 				</li>
 			    <div class="commentaires"> Commentaires : 
 			    	<?php while ($post = $listepost->fetch()) { ?>

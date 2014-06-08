@@ -255,3 +255,20 @@ a[href*="intent"] {
 {
 	padding-bottom: 10px;
 }
+
+.style{
+	color : #86E969;
+}
+
+.description .style li 
+{
+	list-style-type: none;
+}
+.description
+{
+	color : #86E969;
+
+}
+.blanc{
+	color : white;
+}

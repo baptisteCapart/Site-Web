@@ -7,6 +7,16 @@ function insertConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 	$bdd->query("INSERT INTO concert(nom, jour, heure, duree, description, message, salle_id, artiste_id, photocover, topic_id, inviteur, non_repondu) 
 		VALUES ('$nom', '$jour', '$début', '$duree', '$description', '$message', '$salle_id', '$artiste_id', '$photocover', '$topic_id', '$inviteur','$non_repondu')") or die(print_r($bdd->errorInfo()));
 	newpost($message,$topic_id);
+	$req = $bdd->query("SELECT concert_id FROM concert WHERE artiste_id = '$artiste_id' and salle_id = '$salle_id' order by concert_id DESC limit 1") or die(print_r($bdd->errorInfo()));
+	$res = $req->fetch();
+	return $res['concert_id'] ;	
+}
+
+function photoC($id,$photo){
+	global $bdd;
+	$bdd->query("UPDATE concert 
+	SET photocover='$photo'
+	WHERE concert_id='$id'");
 }
 
 function listeConcerts(){

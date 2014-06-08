@@ -2,7 +2,7 @@
 <div id="bloc">
 
 		<div id="formulaire">
-		<form class ="form2" method="post" action="<?php if($invite=='artiste'){ echo'index.php?page=formulaireconcertcontrolleur&new=new&invite=artiste&id='.$_SESSION['artisteID']; 
+		<form class ="form2" enctype = "multipart/form-data"  method="post" action="<?php if($invite=='artiste'){ echo'index.php?page=formulaireconcertcontrolleur&new=new&invite=artiste&id='.$_SESSION['artisteID']; 
 		}else{echo'index.php?page=formulaireconcertcontrolleur&new=new&invite=salle&id='.$_SESSION['salleID'];} ?>">
 			
 			<ul>
