@@ -42,21 +42,29 @@ if(isset($_GET['id'])){
 }
 
 $donnees = recuperer2($_SESSION['artisteID']);
+if(isset($_GET['id'])){
+	if(!empty($_FILES['extrait1'])){
+			if(!empty($_FILES['extrait1'])){
+				$extrait1 = mysql_real_escape_string(htmlspecialchars($_FILES['extrait1']['name']));
+				$idE1 = insertExtrait($_GET['id'], $extrait1);
+				$nomInit = $_FILES['extrait1']['name'];
+				$infosPath = pathinfo($nomInit);
+				$extension = $infosPath['extension'];
+				$extensionsAutorisees = array("mp3", "wav");
+				$nomDestination = $idE1.".".$extension;
+				if (!(in_array($extension, $extensionsAutorisees))) {
+					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo de salle sera générée par défaut";
+					$_SESSION['formatS'] = $messageS;
+				} else { 
+					updateExtrait($idE1, $nomDestination);   
 
-if(!empty($_POST['extrait1']) or !empty($_POST['extrait2']) ){
-		if(isset($_GET['id'])){	
-			if(!empty($_POST['extrait1'])){
-				$extrait1 = mysql_real_escape_string(htmlspecialchars($_POST['extrait1']));
-				insertExtrait($_GET['id'], $extrait1);
+					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."extraits"."/"; 
+
+					move_uploaded_file($_FILES["extrait1"]["tmp_name"], $repertoireDestination.$nomDestination);	
+				}				
 			}
-			if(!empty($_POST['extrait2'])){
-				$extrait2 = mysql_real_escape_string(htmlspecialchars($_POST['extrait2']));
-				insertExtrait($_GET['id'], $extrait2);
-			}		
-
-			
-			
-		}
+				
+	}
 }
 $photo="";
 if(!empty($_FILES['photoA']) ){

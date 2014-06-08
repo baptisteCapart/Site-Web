@@ -92,7 +92,7 @@
         <?php if(isset($_SESSION['id'])){ ?>   
           <ul>
           <?php foreach ($musiques as $music){  ?>
-           <li>  <?php echo $music['nom']; ?> <br><audio  src="<?php echo $music['nom']; ?>"controls></audio></li>
+           <li>  <?php echo ''.$music['nomIni'].''; ?> <br><audio  src="controlleurs/extraits/<?=$music['nom']?>"controls></audio></li>
           <?php 
           }
           ?>
@@ -102,15 +102,12 @@
          <?php } ?>
          <?php if(isset($_SESSION['id'])){
              if($createur['membre_id']==$_SESSION['id']) { ?>    
-              <span class="intro">Tu peux ajouter ici 1 à 2 extaits de ton répertoire pour faire découvrir ta musique aux membre du site</span>       
-                  <form name = "formE" class ="formulaireExtraits" onsubmit = "return checkExtE();" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
+              <span class="intro">Tu peux ajouter ici un extait de ton répertoire pour faire découvrir ta musique aux membre du site</span>       
+                  <form name = "formE" enctype = "multipart/form-data" class ="formulaireExtraits" onsubmit = "return checkExtE();" method="post" action="<?php echo 'index.php?page=pageartistecontrolleur&id='.$_SESSION['artisteID'].'&onglet=3' ;?>">
                       <ul>
                           <li>
                               <div class="extrait"><span>Extrait de musique n°1 : </span><input class = "textbox" type="file" name="extrait1" /></div>
                           </li> 
-                          <li>
-                              <div class="extrait"><span>Extrait de musique n°2 : </span><input class = "textbox" type="file" name="extrait2" /></div>
-                          </li>
                           <li>
                               <input class = "envoyer" type="submit" value="Envoyer !"/>
                           </li>              
