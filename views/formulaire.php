@@ -55,7 +55,7 @@
 			</li>
 
 			<li>
-				<div class="conditions"><input onclick = "return upload();" class = "textbox" type="checkbox" name="conditions" required value=""/><span>J'accepte les <a class = "cgu" href="http://localhost/Site-Web/Site-Web/index.php?page=charteForumcontrolleur">conditions d'utilisation</a> </span></div>
+				<div class="conditions"><input  class = "textbox" type="checkbox" name="conditions" required value=""/><span>J'accepte les <a class = "cgu" href="http://localhost/Site-Web/Site-Web/index.php?page=charteForumcontrolleur">conditions d'utilisation</a> </span></div>
 			</li>				
 			<li>
 				<input class = "envoyer" type="submit" value="Envoyer !"/>

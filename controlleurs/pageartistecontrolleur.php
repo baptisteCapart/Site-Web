@@ -46,16 +46,18 @@ if(isset($_GET['id'])){
 	if(!empty($_FILES['extrait1'])){
 			if(!empty($_FILES['extrait1'])){
 				$extrait1 = mysql_real_escape_string(htmlspecialchars($_FILES['extrait1']['name']));
-				$idE1 = insertExtrait($_GET['id'], $extrait1);
+				
 				$nomInit = $_FILES['extrait1']['name'];
 				$infosPath = pathinfo($nomInit);
 				$extension = $infosPath['extension'];
 				$extensionsAutorisees = array("mp3", "wav");
-				$nomDestination = $idE1.".".$extension;
+				
 				if (!(in_array($extension, $extensionsAutorisees))) {
 					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo de salle sera générée par défaut";
-					$_SESSION['formatS'] = $messageS;
+					$_SESSION['formatS'] = $messageA;
 				} else { 
+					$idE1 = insertExtrait($_GET['id'], $extrait1);
+					$nomDestination = $idE1.".".$extension;
 					updateExtrait($idE1, $nomDestination);   
 
 					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."extraits"."/"; 

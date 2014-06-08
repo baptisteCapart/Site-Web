@@ -88,9 +88,7 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 			$extensionCov = $infosPathCov['extension'];
 			$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
 			$nomDestinationProf = $donnee['membre_id']."."."P".".".$extensionProf;
-			$nomDestinationCov = $donnee['membre_id']."."."C".".".$extensionCov;
-			var_dump($infosPathProf);
-			
+			$nomDestinationCov = $donnee['membre_id']."."."C".".".$extensionCov;			
 
 			if (!(in_array($extensionProf, $extensionsAutorisees))) {
 				$message = "ATTENTION : le format de votre photo de profil n'est pas bon, vous avez bien été insrit mais vous n'aurez pas de photo de profil";
