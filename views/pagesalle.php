@@ -182,7 +182,7 @@
     <?php } ?>   
 
     <?php  if($ongletSalle==5){ ?> 
-    <div class = "photos"> photos
+    <div class = "photos"> 
         <?php if(isset($_SESSION['id'])){ ?>   
           <table id = "serie">
           <?php foreach ($photos as $picture){  ?>

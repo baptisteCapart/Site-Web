@@ -22,10 +22,10 @@ $tableid="artiste_id";
 if(isset($_GET['id'])){
 	$createur=AuthentificationArtiste($_GET["id"]);
 	$artiste_id = $_GET["id"];
-	$notif=nouveauMessageA($artiste_id);
-	$concert=listeConcertsA($artiste_id);
-	$concertartiste = ConcertArtisteP($artiste_id);
-	$concertartiste2 = ConcertArtisteF($artiste_id);
+	$notif=nouveauMessage("artiste_id","artiste",0,$artiste_id);
+	$concert=listeConcertsUser("salle_id", "artiste_id","artiste",0,$artiste_id);
+	$concertartiste = ConcertP("artiste_id",$artiste_id);
+	$concertartiste2 = ConcertF("artiste_id",$artiste_id);
 	if(isset($_POST['supprimer'])){
 
 		dropArtiste($artiste_id);
@@ -81,11 +81,10 @@ if(!empty($_FILES['photoA']) ){
 				$nomInit = $_FILES['photoA']['name'];
 				$infosPath = pathinfo($nomInit);
 				$extension = $infosPath['extension'];
-				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png","JPG");
 				$nomDestination = $current_id.".".$extension;
 				if (!(in_array($extension, $extensionsAutorisees))) {
-					$messageA = "ATTENTION : le format de votre photo n'est pas bon, vous avez bien été insrit mais votre photo de salle sera générée par défaut";
-					$_SESSION['formatS'] = $messageS;
+					echo"non";
 				} else { 
 					photoUpdate($current_id, $nomDestination);   
 
@@ -103,7 +102,7 @@ if(!empty($_FILES['photoA']) ){
 
 
 $musiques = listeMusiques();
-$photos=PhotoA();
+$photos=Photo("artiste_id");
 $onglet =1;
 
 if(isset($_GET['onglet'])){

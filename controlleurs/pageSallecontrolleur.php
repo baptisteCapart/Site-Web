@@ -19,11 +19,11 @@ if(isset($_SESSION['id'])){
 if(isset($_GET['id'])){
 	$createur=AuthentificationSalle($_GET["id"]);
 	$salle_id=$_GET["id"];
-	$notif = nouveauMessageS($salle_id);
-	$concert=listeConcertsS($salle_id);
+	$notif = nouveauMessage("salle_id","salle",1,$salle_id);
+	$concert=listeConcertsUser("artiste_id","salle_id","salle",1,$salle_id);
 	$donnees = recuperer3($salle_id);
-	$concertsalle = ConcertSalleP($salle_id);
-	$concertsalle2 = ConcertSalleF($salle_id);
+	$concertsalle = ConcertP("salle_id",$salle_id);
+	$concertsalle2 = ConcertF("salle_id",$salle_id);
 
 	if(isset($_POST['supprimer2'])){
 
@@ -159,12 +159,11 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 				$nomInit = $_FILES['photoS']['name'];
 				$infosPath = pathinfo($nomInit);
 				$extension = $infosPath['extension'];
-				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png");
+				$extensionsAutorisees = array("jpeg", "jpg", "gif", "png","JPG");
 				$nomDestination = $current_id.".".$extension;
 				if (!(in_array($extension, $extensionsAutorisees))) {
-					$messageS = "ATTENTION : le format de votre photo n'est pas bon, votre photo de salle sera générée par défaut";
-					$_SESSION['formatS'] = $messageS;
-					echo $messageS;
+					// $messageS = "ATTENTION : le format de votre photo n'est pas bon, votre photo de salle sera générée par défaut";
+					// $_SESSION['formatS'] = $messageS;
 				} else { 
 					photoUpdate($current_id, $nomDestination);   
 
@@ -176,7 +175,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		}
 }
 
-$photos=PhotoS();
+$photos=Photo("salle_id");
 
 
 include('controlleurs/bannierecontrolleur.php');

@@ -25,21 +25,21 @@ function listeConcerts(){
 	return $result;	
 }
 
-function listeConcertsA($id){
+function listeConcertsUser($inviteur, $invitéID, $invité, $nbr, $id){
 	global $bdd;
-	$result= $bdd->query ("SELECT concert_id, nom, salle_id from concert where artiste_id = '$id' and non_repondu ='artiste' and inviteur = 0 and accord = 0");
+	$result= $bdd->query ("SELECT concert_id, nom, $inviteur from concert where $invitéID = '$id' and non_repondu ='$invité' and inviteur = $nbr and accord = 0");
 	return $result;
 }
 
-function listeConcertsS($id){
-	global $bdd;
-	$result= $bdd->query ("SELECT concert_id, nom, artiste_id from concert where salle_id = '$id' and non_repondu = 'salle' and inviteur = 1 and accord = 0");
-	return $result;
-}
+// function listeConcertsS($id){
+// 	global $bdd;
+// 	$result= $bdd->query ("SELECT concert_id, nom, artiste_id from concert where salle_id = '$id' and non_repondu = 'salle' and inviteur = 1 and accord = 0");
+// 	return $result;
+// }
 
-function nouveauMessageA($id){
+function nouveauMessage($user,$invité,$nbr,$id){
 	global $bdd;
-	$result= $bdd->query ("SELECT artiste_id from concert where artiste_id = '$id' and non_repondu ='artiste' and inviteur = 0 and accord = 0");
+	$result= $bdd->query ("SELECT concert_id from concert where $user = '$id' and non_repondu ='$invité' and inviteur = $nbr and accord = 0");
 	$result2 = $result->fetch();
 	if (!$result2){
 		return false;
@@ -48,17 +48,17 @@ function nouveauMessageA($id){
 		return true;
 	}
 }
-function nouveauMessageS($id){
-	global $bdd;
-	$result = $bdd->query ("SELECT concert_id from concert where salle_id = '$id' and non_repondu = 'salle' and inviteur = 1 and accord = 0");
-	$result2 = $result->fetch();
-	if (!$result2){
-		return false;
+// function nouveauMessageS($id){
+// 	global $bdd;
+// 	$result = $bdd->query ("SELECT concert_id from concert where salle_id = '$id' and non_repondu = 'salle' and inviteur = 1 and accord = 0");
+// 	$result2 = $result->fetch();
+// 	if (!$result2){
+// 		return false;
 
-	}else{
-		return true;
-	}
-}
+// 	}else{
+// 		return true;
+// 	}
+// }
 
 
 function recuperer5($id){
@@ -159,29 +159,29 @@ function ConcertsParticipes($membre_id){
 	return $req;
 }
 
-function ConcertSalleP($salle_id){
+function ConcertP($user,$id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE salle_id=$salle_id and accord = 1 and jour<CURDATE() order by jour ") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE $user=$id and accord = 1 and jour<CURDATE() order by jour ") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
-function ConcertArtisteP($artiste_id){
+// function ConcertArtisteP($artiste_id){
+// 	global $bdd;
+// 	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour<CURDATE() order by jour ") or die(print_r($bdd->errorInfo()));
+// 	return $req;	
+// }
+
+function ConcertF($user, $id){
 	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour<CURDATE() order by jour ") or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE $user=$id and accord = 1 and jour>CURDATE() order by jour") or die(print_r($bdd->errorInfo()));
 	return $req;	
 }
 
-function ConcertSalleF($salle_id){
-	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE salle_id=$salle_id and accord = 1 and jour>CURDATE() order by jour") or die(print_r($bdd->errorInfo()));
-	return $req;	
-}
-
-function ConcertArtisteF($artiste_id){
-	global $bdd;
-	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour>CURDATE() order by jour") or die(print_r($bdd->errorInfo()));
-	return $req;	
-}
+// function ConcertArtisteF($artiste_id){
+// 	global $bdd;
+// 	$req = $bdd->query("SELECT nom, concert_id,jour FROM concert WHERE artiste_id=$artiste_id and accord = 1 and jour>CURDATE() order by jour") or die(print_r($bdd->errorInfo()));
+// 	return $req;	
+// }
 
 function caroussel(){
 	global $bdd;
