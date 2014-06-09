@@ -49,13 +49,13 @@ function photoCov($membre_id,$photo){
 	WHERE membre_id='$membre_id'");
 }
 
-function recuperer($id){
-	global $bdd;
-	$sql = "SELECT * from membre where membre_id ='$id'";
- 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
-  	$donnee = $req-> fetch();
-  	return $donnee;
-}
+// function recuperer($id){
+// 	global $bdd;
+// 	$sql = "SELECT * from membre where membre_id ='$id'";
+//  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+//   	$donnee = $req-> fetch();
+//   	return $donnee;
+// }
 
 
 function modifier($id, $mail, $age ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){

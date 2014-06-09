@@ -8,6 +8,7 @@ include ('models/concertmodel.php');
 include ('models/sallemodel.php');
 include ('models/membremodel.php');
 include ('models/photomodel.php');
+include ('models/globalmodel.php');
 
 
 if(isset($_GET['erreur'])){
@@ -15,7 +16,7 @@ if(isset($_GET['erreur'])){
 }
 
 if(isset($_SESSION['id'])){
-	$admin = recuperer($_SESSION['id']);
+	$admin = recupererdonnees("membre","membre_id",$_SESSION['id']);
 }
 
 $tableid="artiste_id";
@@ -41,7 +42,7 @@ if(isset($_GET['id'])){
 	$_SESSION['artisteID'] = $_GET['id'];
 }
 
-$donnees = recuperer2($_SESSION['artisteID']);
+$donnees = recupererdonnees("artiste","artiste_id",$_SESSION['artisteID']);
 if(isset($_GET['id'])){
 	if(!empty($_FILES['extrait1'])){
 			if(!empty($_FILES['extrait1'])){
@@ -193,16 +194,16 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) ){
 }
 
 if (isset($_POST['suivre'])){
-	followArtiste($_SESSION['id'], $_SESSION['artisteID']);
+	follow($_SESSION['id'],"artiste_id", $_SESSION['artisteID']);
 }
 if (isset($_SESSION['id'])){
-	$follower=checkArtiste($_SESSION['id'], $_SESSION['artisteID']);
+	$follower=checkSuivi("artiste_id",$_SESSION['id'], $_SESSION['artisteID']);
 }
 
 $NbAbonnes = NbAbonnesArtiste($_SESSION['artisteID']);
 
 if(isset($_POST['stop'])){
-	StopsuiviA($_SESSION['id'], $_SESSION['artisteID']);
+	Stopsuivi($_SESSION['id'],"artiste_id", $_SESSION['artisteID']);
 }
 
 

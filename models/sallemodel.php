@@ -33,15 +33,15 @@ function departement($code_postal){
 	return $sql;	
 }
 
-function recuperer3($id){
+// function recuperer3($id){
 
-	global $bdd;
-	$sql = "SELECT * from salle where salle_id ='$id'";
- 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
- 	$donnee = $req-> fetch();
-  	return $donnee;
+// 	global $bdd;
+// 	$sql = "SELECT * from salle where salle_id ='$id'";
+//  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+//  	$donnee = $req-> fetch();
+//   	return $donnee;
   
-}
+// }
 
 
 function AuthentificationSalle($id){

@@ -3,15 +3,17 @@
 include ('models/membremodel.php');
 include ('models/SuivreModel.php');
 include ('models/concertmodel.php');
+include ('models/globalmodel.php');
 
-$donnees = recuperer($_GET['id']);
+
+$donnees = recupererdonnees("membre","membre_id",$_GET['id']);
 $arr = explode('-', $donnees['date_de_naissance']);
 $birthdate = $arr[2].'-'.$arr[1].'-'.$arr[0];
 $ongletMembre =1;
 
 
 if(isset($_SESSION['id'])){
-	$admin = recuperer($_SESSION['id']);
+	$admin = recupererdonnees("membre","membre_id",$_SESSION['id']);
 }
 
 
@@ -23,13 +25,13 @@ if(isset($_POST['supprimer3'])){
 
 
 if (isset($_POST['suivre'])){
-	followMembre($_SESSION['id'], $_GET['id']);
+	follow($_SESSION['id'],"ami_id", $_GET['id']);
 }
 if (isset($_SESSION['id'])){
-	$follower=checkMembre($_SESSION['id'], $_GET['id']);
+	$follower=checkSuivi("ami_id",$_SESSION['id'], $_GET['id']);
 }
 if(isset($_POST['stop'])){
-	StopsuiviM($_SESSION['id'], $_GET['id']);
+	Stopsuivi($_SESSION['id'],"ami_id",$_GET['id']);
 }
 
 
@@ -160,8 +162,8 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 }
 
 
-$liste=ArtistesSuivis($_GET['id']);
-$liste2 = SallesSuivies($_GET['id']);
+$liste=ProfilsSuivis("artiste","artiste_id",$_GET['id']);
+$liste2 = ProfilsSuivis("salle","salle_id",$_GET['id']);
 $liste3 = ConcertsParticipes($_GET['id']);
 $liste4 = MembresSuivis($_GET['id']);
 

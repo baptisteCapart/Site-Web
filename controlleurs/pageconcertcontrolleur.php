@@ -5,12 +5,14 @@
  include('models/artistemodel.php'); 
  include('models/membremodel.php');
  include ('models/DonnerAvis.php');
+ include ('models/globalmodel.php');
+
 
 
 $ongletConcert =1;
 if(isset($_GET['id'])){
 	$_SESSION['concertID'] = $_GET['id'];
-	$donnees = recuperer5($_SESSION['concertID']);
+	$donnees = recupererdonnees("concert","concert_id",$_SESSION['concertID']);
 	if(isset($_SESSION['id'])){
 		$check = checkParticipation($_SESSION['id'],$_SESSION['concertID']);
 		$artiste = MaPageArtiste($_SESSION['id']);
@@ -26,7 +28,7 @@ if (isset($_POST['participer'])){
 	participate($_SESSION['id'],$_GET['id']);
 }
 
-$salle=recuperer3($donnees['salle_id']);
+$salle=recupererdonnees("salle","salle_id",$donnees['salle_id']);
 $LISTE=recuperer4($donnees['artiste_id']);
 
 if(isset($_GET['id'])){

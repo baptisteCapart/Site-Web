@@ -33,13 +33,13 @@ function photoCA($id,$photo){
 
 
 
-function recuperer2($id){
-	global $bdd;
-	$sql = "SELECT * from artiste where artiste_id ='$id'";
- 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
- 	$donnee = $req-> fetch();
-  	return $donnee;
-}
+// function recuperer2($id){
+// 	global $bdd;
+// 	$sql = "SELECT * from artiste where artiste_id ='$id'";
+//  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+//  	$donnee = $req-> fetch();
+//   	return $donnee;
+// }
 
 function recuperer4($id){
 	global $bdd;

@@ -7,12 +7,12 @@ include ('models/concertmodel.php');
 include ('models/artistemodel.php');
 include ('models/membremodel.php');
 include ('models/photomodel.php');
-
+include ('models/globalmodel.php');
 
 
 
 if(isset($_SESSION['id'])){
-	$admin = recuperer($_SESSION['id']);
+	$admin = recupererdonnees("membre","membre_id",$_SESSION['id']);
 }
 
 
@@ -21,7 +21,7 @@ if(isset($_GET['id'])){
 	$salle_id=$_GET["id"];
 	$notif = nouveauMessage("salle_id","salle",1,$salle_id);
 	$concert=listeConcertsUser("artiste_id","salle_id","salle",1,$salle_id);
-	$donnees = recuperer3($salle_id);
+	$donnees = recupererdonnees("salle","salle_id",$salle_id);
 	$concertsalle = ConcertP("salle_id",$salle_id);
 	$concertsalle2 = ConcertF("salle_id",$salle_id);
 
@@ -83,16 +83,16 @@ if(isset($_GET['id'])){
 }
 
 if (isset($_POST['suivre'])){
-	followSalle($_SESSION['id'], $_SESSION['salleID']);
+	follow($_SESSION['id'],"salle_id", $_SESSION['salleID']);
 }
 if (isset($_SESSION['id'])){
-	$follower=checkSalle($_SESSION['id'], $_SESSION['salleID']);
+	$follower=checkSuivi("salle_id",$_SESSION['id'], $_SESSION['salleID']);
 }
 
 $NbAbonnes = NbAbonnesSalle($_SESSION['salleID']);
 
 if (isset($_POST['stop'])){
-	StopsuiviS($_SESSION['id'], $_SESSION['salleID']);
+	Stopsuivi($_SESSION['id'],"salle_id", $_SESSION['salleID']);
 }
 
 if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty ($_POST['ville']) AND !empty ($_POST['adresse'])

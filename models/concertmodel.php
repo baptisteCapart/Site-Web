@@ -61,13 +61,13 @@ function nouveauMessage($user,$invité,$nbr,$id){
 // }
 
 
-function recuperer5($id){
-	global $bdd;
-	$sql = "SELECT * from concert where concert_id ='$id'";
- 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
-  	$donnee = $req-> fetch();
-  	return $donnee;
-}
+// function recuperer5($id){
+// 	global $bdd;
+// 	$sql = "SELECT * from concert where concert_id ='$id'";
+//  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
+//   	$donnee = $req-> fetch();
+//   	return $donnee;
+// }
 
 function updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $id, $inviteur,$non_repondu)
 {
