@@ -89,6 +89,7 @@
 					<ul class = "menu2">
 						<li id = "alpha"><a href="index.php?page=listeartistecontrolleur&critere=1">Par ordre alphabétique</a> </li>
 						<li id = "style"><a href="index.php?page=listeartistecontrolleur&critere=2">Par style</a></li>
+						<li id = "style"><a href="index.php?page=listeartistecontrolleur&critere=3">Par note</a></li>
 						<?php  if(isset($_SESSION['pseudo'])) { 
 						 if(isset($_SESSION['pseudo'])) {
 							if ($verifArtiste ==false) { ?>

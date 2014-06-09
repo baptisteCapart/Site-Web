@@ -2,6 +2,7 @@
 
 include ('models/membremodel.php');
 include ('models/artistemodel.php');
+include ('models/globalmodel.php');
 
 if (!empty($_POST['message'])) {
 	$message = mysql_real_escape_string(htmlspecialchars($_POST['message']));
@@ -13,7 +14,7 @@ $AllStyles = getStyle();
 
 
 if(isset($_SESSION['id'])){
-	$admin = recuperer($_SESSION['id']);
+	$admin = recupererdonnees('membre', 'membre_id', $_SESSION['id']);
 }
 
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description'])  AND !empty($_POST['style'])){

@@ -126,12 +126,13 @@ function getArtistes($styles){
 	global $bdd;
 	$infos = array();
 	foreach ($styles as $key => $value) {
-		$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT artiste_id FROM style_de_groupe WHERE style_de_musique = '$style')")
+		$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT artiste_id FROM style_de_groupe WHERE style_de_musique = '".$value['nom']."')")
 		or die (print_r($bdd->errorInfo()));
-		$key = $value;
-		$value = $req->fetch();
+		$key = $value['nom'];
+		$value = $req;
+		$infos[$key] = $value;
 	}
-	return $styles;
+	return $infos;
 }
 
 

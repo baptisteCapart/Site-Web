@@ -47,15 +47,17 @@
 
 	    <?php  if($critere==2){ ?> 
 		    <div class = "style">
-				<ul class="liste_artiste">
+				<ul class="liste_artistes">
 					<?php 
 					$current ="";
-					foreach ($listestyle as $style => $artiste) {
+					foreach ($listestyle as $style => $artistes) {
 						if ($style != $current) {
 							$current = $style;
 							echo "<span id=".$current.">".$current."</span>";
 						}
-						?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover']?>"/><?= $artiste['nom'] ?></a></li> <?php
+						foreach ($artistes as $artiste) {
+							?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover']?>"/><?= $artiste['nom'] ?></a></li> <?php
+						}
 					}
 					 ?>
 				</ul>

@@ -153,6 +153,8 @@
 	position: fixed;
 	top: 90%;
 	left: 1%;
+	padding-left: 0px;
+	text-align: center;
 }
 
 #contenuliste .decl_ancre:hover ul.ancres
@@ -161,5 +163,5 @@
 	display: block;
 	margin-left: 10px;
 	position: fixed;
-	top: 12%;
+	top: 14%;
 }
