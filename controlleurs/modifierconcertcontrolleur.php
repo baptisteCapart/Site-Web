@@ -1,10 +1,11 @@
 <?php 
 include('models/concertmodel.php');
+include('models/globalmodel.php');
 
 if(isset($_GET['id'])){
 
 	$concert_id=$_GET['id'];
-	$donnees = recuperer5($concert_id);
+	$donnees = recupererdonnees("concert","concert_id",$concert_id);
 	$listepost = listePost($donnees['topic_id']);
 }
 
