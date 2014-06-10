@@ -18,15 +18,15 @@ if(isset($_GET['critere'])){
 	}
 	if ($_GET["critere"] ==3){
 		$critere=3;
-		$resultat = classement();
+		$resultat = classement("artiste","artiste_id");
 		$listenote = array();
 		foreach ($resultat as $artiste) {
-			$artiste['note'] = note($artiste['artiste_id']);
+			$artiste['note'] = note($artiste['artiste_id'],"artiste_id");
 			$listenote[] = $artiste['note'];
 		}
 		arsort($listenote);
 		$definitif = array();
-		$resultat2 = classement();
+		$resultat2 = classement("artiste","artiste_id");
 		$pointer = 0;
 		foreach ($listenote as $key => $value) {
 			$listenote[$pointer] = $key;
@@ -35,7 +35,7 @@ if(isset($_GET['critere'])){
 		ksort($listenote);
 		$pointer = 0;
 		while($artiste = $resultat2->fetch()){
-			$artiste['note'] = note($artiste['artiste_id']);
+			$artiste['note'] = note($artiste['artiste_id'],"artiste_id");
 			foreach ($listenote as $key => $value) {
 				if($value == $pointer){
 					$entree = $artiste;

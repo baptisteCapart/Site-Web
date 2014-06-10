@@ -10,6 +10,8 @@
 
         <li class = "<?php if($critereSalle==2){ echo "critereSalleactif";}?>"><?php echo '<a href = "index.php?page=listeSallescontrolleur&critereSalle=2"> Par Lieu  </a>'; ?>
         </li>
+        <li class = "<?php if($critereSalle==3){ echo "critereSalleactif";}?>"><?php echo '<a href = "index.php?page=listeSallescontrolleur&critereSalle=3"> Par Note  </a>'; ?>
+        </li>        
     </ul>
   </div> 
 
@@ -68,6 +70,16 @@
           </ul>
         </div> 
         <?php } ?>
+
+      <?php  if($critereSalle==3){ ?> 
+        <div class = "note">
+          <ul class="liste_artistes">
+        <?php foreach($definitif as $salle){ ?>
+            <li><a href = "index.php?page=pageSallecontrolleur&id=<?= $salle['salle_id'] ?>"><img src="controlleurs/images/salles/<?=$salle['photocover'] ?>" alt="" /><?=$salle["nom"].' '.$salle['note']?></a></li> <?php
+        } ?>
+          </ul>
+        </div>
+      <?php } ?>         
       	
   </div> 
 </div>

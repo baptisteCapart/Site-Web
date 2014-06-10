@@ -99,21 +99,9 @@ function modifierArtiste($id, $nom, $description ,$photogroupe){
 
 
 
-function classement(){
-	global $bdd;
-	$infos = array();
-	$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT DISTINCT artiste_id FROM donner_avis WHERE artiste.artiste_id = donner_avis.artiste_id)")
-	or die (print_r($bdd->errorInfo()));
-	return $req;	
-}
 
-function note($artiste){
-	global $bdd;
-	$req = $bdd->query("SELECT artiste_id, AVG(note) FROM donner_avis WHERE artiste_id = '$artiste' GROUP BY artiste_id")
-	or die (print_r($bdd->errorInfo()));
-	$res = $req->fetch();
-	return $res['AVG(note)'];
-}
+
+
 
 function getStyle(){
 	global $bdd;

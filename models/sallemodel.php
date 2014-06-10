@@ -33,6 +33,8 @@ function departement($code_postal){
 	return $sql;	
 }
 
+
+
 // function recuperer3($id){
 
 // 	global $bdd;
