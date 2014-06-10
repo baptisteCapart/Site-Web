@@ -1,7 +1,7 @@
 <div id="listeFAQ">
 	
 	<div id="introduction">
-		<h1>FAQ</h1>
+		<span class = "faq">FAQ</span>
 		
 		<p>Bienvenue sur la FAQ de Tune in Town.<br>
 		    Ici vous trouverez divers renseignements sur les différentes fonctionalitées de notre site.<br>
