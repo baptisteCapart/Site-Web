@@ -31,7 +31,7 @@
 					</div>			
 				</li>
 				<li>
-					<div class="description"><span>Description : <TEXTAREA name="description" rows=10 COLS=40></TEXTAREA></div>			
+					<div><span>Description : <TEXTAREA name="description" rows=10 COLS=40></TEXTAREA></div>			
 				</li>				
 				<li>
 					<div class="photogroupe"><span>Photo du groupe : </span><input class = "textbox" type="file" name="photogroupe" /></div>
