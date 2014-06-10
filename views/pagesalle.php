@@ -217,9 +217,9 @@
     <?php  if($ongletSalle==6){ ?> 
       <div class = "invitations"> <?php if (isset($notif)){
              if($notif==true) {?>
-             <div>tu as une notif
+             <div>
                   <?php foreach ($concert as $listeconcert) {
-                      $artisteNom = recuperer2($listeconcert['artiste_id']); 
+                      $artisteNom = recupererdonnees("artiste","artiste_id",$listeconcert['artiste_id']); 
                     echo ' <li><a href = "index.php?page=modifierconcertcontrolleur&id='.$listeconcert["concert_id"].'">'. $listeconcert["nom"].''.' </a>Proposé par : <a href = "index.php?page=pageartistecontrolleur&id='.$listeconcert["artiste_id"].'">'. $artisteNom["nom"].'<br/>'.' </li></a>';
                   } ?>
              </div>
