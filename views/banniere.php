@@ -103,6 +103,7 @@
 					<ul class = "menu3">
 						<li id = "alpha"><a href="index.php?page=listeSallescontrolleur&critereSalle=1">Par ordre alphabétique</a> </li>
 						<li id = "lieu"><a href="index.php?page=listeSallescontrolleur&critereSalle=2">Par lieu</a></li>
+						<li id = "lieu"><a href="index.php?page=listeSallescontrolleur&critereSalle=3">Par note</a></li>
 						<?php if(isset($_SESSION['pseudo'])) { 
 							if(isset($_SESSION['pseudo'])) { 
 							 if ($verifSalle ==false) { ?>
