@@ -61,13 +61,6 @@ function nouveauMessage($user,$invité,$nbr,$id){
 // }
 
 
-// function recuperer5($id){
-// 	global $bdd;
-// 	$sql = "SELECT * from concert where concert_id ='$id'";
-//  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
-//   	$donnee = $req-> fetch();
-//   	return $donnee;
-// }
 
 function updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $id, $inviteur,$non_repondu)
 {
@@ -89,12 +82,13 @@ function updateConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 function accord($id, $accord){
 	global $bdd;
 	$bdd->query("UPDATE concert SET accord='$accord' WHERE concert_id='$id'");
-	$concert = recuperer5($id);
-	$artiste = recupererartiste($concert['artiste_id']);
+	$concert = recupererdonnees('concert', 'concert_id', $id);
+	$artiste = recupererdonnees('artiste', 'artiste_id', $concert['artiste_id']);
+	$salle = recupererdonnees('salle', 'salle_id', $concert['salle_id']);
 	$dateconcert = new DateTime($concert['jour']);
 	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour le ".$dateconcert->format('d/m/Y').", tenez-vous prêts !";
-	$bdd->query("INSERT INTO news (typenews, datenews, photocover, description, lien) 
-		VALUES (1,'".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO news (artiste_id, salle_id, typenews, datenews, photocover, description, lien) 
+		VALUES (".$artiste['artiste_id'].",".$salle['salle_id'].", 1,'".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
 }
 
 function newtopic ()
@@ -189,18 +183,10 @@ function caroussel(){
 	return $req;
 }
 
-function recupererartiste($id){
-	global $bdd;
-	$sql = "SELECT * from artiste where artiste_id ='$id'";
- 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
- 	$donnee = $req-> fetch();
-  	return $donnee;
-}
-
 function localnews(){
 	global $bdd;
 	$retour= array();
-	$req = $bdd->query('SELECT * from concert where accord=1 and jour>= CURDATE() order by jour') or die(print_r($bdd->errorInfo()));
+	$req = $bdd->query('SELECT * from concert where accord=1 and jour>= CURDATE() order by jour limit 6') or die(print_r($bdd->errorInfo()));
 	foreach($req as $concert){
 		$id=$concert['salle_id'];
 		$sql=$bdd->query("SELECT code_postal, nom from salle where salle_id = '$id'");
@@ -211,5 +197,12 @@ function localnews(){
 	}
 	return $retour;
 
+}
+
+function listeac ($concert_id){
+	global $bdd;
+	$req = $bdd->query("SELECT artiste.nom, artiste.artiste_id FROM artiste INNER JOIN concert WHERE artiste.artiste_id = concert.artiste_id AND concert.accord = 1 AND concert.concert_id = '".$concert_id."'")
+	or die(print_r($bdd->errorInfo()));
+	return $req;
 }
 ?>

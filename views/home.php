@@ -51,9 +51,18 @@
 						<ul>
 							<?php  if(isset($newsperso)){
 								foreach ($newsperso as $news) {
+									if($news['typenews']==0){
+										$chemin ='controlleurs/images/concerts/'.$news['photocover'].'';
+									}
+									if($news['typenews']==1){
+										$chemin ='controlleurs/images/artistes/'.$news['photocover'].'';
+									}
+									if($news['typenews']==2){
+										$chemin ='controlleurs/images/artistes/'.$news['photocover'].'';
+									}																		
 									// $contenu = $news->fetch();
 									//var_dump($news);
-									echo ' <li><a href='.$news["lien"].'><img src="controlleurs/images/'.$news['photocover'].'" alt="" /></a><p >
+									echo ' <li><a href='.$news["lien"].'><img src='.$chemin.' alt="" /></a><p >
 									'.$news['description'].'</p> </li>';
 								}
 							} ?>
@@ -65,6 +74,13 @@
 						<ul>
 							<?php  if(isset($newsperso2)){
 								foreach ($newsperso2 as $news2) {
+									if($news2['typenews']==0){
+										$chemin ='controlleurs/images/concerts/'.$news2['photocover'].'';
+									}
+
+									if($news2['typenews']==2){
+										$chemin ='controlleurs/images/salles/'.$news2['photocover'].'';
+									}	
 									// $contenu = $news2->fetch();
 									//var_dump($news2);
 									echo ' <li><a href='.$news2["lien"].'><img src="controlleurs/images/'.$news2['photocover'].'" alt="" /></a><p >

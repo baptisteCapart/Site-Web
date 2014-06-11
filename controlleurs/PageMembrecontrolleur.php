@@ -101,7 +101,7 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 		modifier($_SESSION['id'], $mail , $age, $codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover);
 		
 
-		if(!empty($_FILES['photodeprofil']) ){
+		if(!empty($_FILES['photodeprofil']) && $_FILES['photodeprofil']['name']!=''){
 			$photodeprofil = mysql_real_escape_string(htmlspecialchars($_FILES['photodeprofil']['name']));
 
 			$nomInitProf = $_FILES['photodeprofil']['name'];
@@ -131,7 +131,7 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 		}
 
 
-		if(!empty($_FILES['photodecover']) ){
+		if(!empty($_FILES['photodecover']) && $_FILES['photodecover']['name']!=''){
 			$photodecover = mysql_real_escape_string(htmlspecialchars($_FILES['photodecover']['name']));
 
 			$nomInitCov = $_FILES['photodecover']['name'];

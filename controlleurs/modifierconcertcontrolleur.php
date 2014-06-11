@@ -1,6 +1,6 @@
 <?php 
 include('models/concertmodel.php');
-include ('models/gloablamodel.php');
+include ('models/globalmodel.php');
 
 if(isset($_GET['id'])){
 
@@ -50,7 +50,7 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 		}
 
 	updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $concert_id, $inviteur,$non_repondu);
-		if(!empty($_FILES['photocover']) ){
+		if(!empty($_FILES['photocover']) && $_FILES['photocover']['name']!=''){
 			$photocover = mysql_real_escape_string(htmlspecialchars($_FILES['photocover']['name']));
 
 			$nomInit = $_FILES['photocover']['name'];
@@ -75,8 +75,15 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 				move_uploaded_file($_FILES["photocover"]["tmp_name"], $repertoireDestination.$nomDestination);
 				
 				//}
-
 			}
+		}
+
+		if ($_SESSION['artiste_id']['artiste_id'] == $donnees['artiste_id']){
+			header('location: index.php?page=pageartistecontrolleur&id='.$_SESSION['artiste_id']['artiste_id'].'&onglet=6#contenuArtiste');
+		}
+
+		if ($_SESSION['salle_id']['salle_id'] == $donnees['salle_id']){
+			header('location: index.php?page=pageSallecontrolleur&id='.$_SESSION['salle_id']['salle_id'].'&ongletSalle=6#contenuSalle');
 		}
 
 

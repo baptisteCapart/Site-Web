@@ -45,7 +45,7 @@ if(isset($_GET['new'])){
 				}
 			}
 			$current_id=insertConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $salle_id, $artiste_id, $inviteur,$non_repondu);
-	if(!empty($_FILES['photocover']) ){
+	if(!empty($_FILES['photocover']) && $_FILES['photocover']['name']!=''){
 			$photocover = mysql_real_escape_string(htmlspecialchars($_FILES['photocover']['name']));
 				$nomInit = $_FILES['photocover']['name'];
 				$infosPath = pathinfo($nomInit);
