@@ -29,7 +29,7 @@ if (isset($_POST['participer'])){
 }
 
 $salle=recupererdonnees("salle","salle_id",$donnees['salle_id']);
-$LISTE=recuperer4($donnees['artiste_id']);
+$LISTE=recupererdonnees('artiste', 'artiste_id', $donnees['artiste_id']);
 
 if(isset($_GET['id'])){
 	if(isset($_GET['note'])){

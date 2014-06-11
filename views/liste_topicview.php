@@ -33,13 +33,15 @@ if (isset ($topicList))
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["description"].'<br/>'.' </a>';?></td>
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $topic["nombre_message"].'<br/>'.' </a>';?></td>
  	       <td><?php echo '<a href = "index.php?page=discusscontroleur&topic='.$topic["id_topic"].'">'. $createur_pseudo.'<br/>'.' </a>';?></td>
-			<?php if($admin['id_admin']==1){ ?>
+			
+			<?php if (isset($_SESSION['id'])) {
+				if($admin['id_admin']==1){ ?>
 
             		<th><form class ="form3" method="post" action="index.php?page=liste_topiccontrolleur<?='&id='.$topic['id_topic'].''?><?='&categorie='.$_GET['categorie'].''?>">
             			<input class = "bouton4" type="submit" name = "supprimer4" value="Supprimer"/>
             		</form>
             	</th>
-            		<?php }  ?> 
+            		<?php } } ?> 
  	   </tr>
  	 
 

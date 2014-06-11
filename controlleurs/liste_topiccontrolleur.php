@@ -2,9 +2,10 @@
 
 include ('models/forummodel.php');
 include ('models/membremodel.php');
+include ('models/globalmodel.php');
 
 if(isset($_SESSION['id'])){
-	$admin = recuperer($_SESSION['id']);
+	$admin = recupererdonnees('membre', 'membre_id', $_SESSION['id']);
 }
 
 if(!empty($_POST['name']) AND !empty($_POST['description']))

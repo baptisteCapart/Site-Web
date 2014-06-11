@@ -1,8 +1,8 @@
 <?php 
-
 include ('models/membremodel.php');
+include ('models/globalmodel.php');
 
-$donnees = recuperer($_SESSION['id']);
+$donnees = recupererdonnees('membre', 'membre_id', $_SESSION['id']);
 
 include("controlleurs/bannierecontrolleur.php");
 include ('views/ParametresMembreView.php');

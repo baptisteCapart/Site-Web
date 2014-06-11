@@ -2,6 +2,14 @@
 
 function dropPost($id){
 	global $bdd;
+	$req1 = $bdd->query("SELECT * FROM post WHERE id_post= '$id'") or die(print_r($bdd->errorInfo()));
+	$res1 = $req1->fetch();
+	$req2 = $bdd->query("SELECT * FROM topic WHERE id_topic = '".$res1['topic_id']."'") or die(print_r($bdd->errorInfo()));
+	$res2 = $req2->fetch();
+	$nb_posts = $res2['nombre_message'];
+	$nb_posts = $nb_posts -1;
+	$bdd->query("UPDATE topic SET nombre_message = '$nb_posts' WHERE id_topic = '".$res1['topic_id']."'") or die(print_r($bdd->errorInfo()));
+	$res2 = $req2->fetch();
 	$bdd->query("DELETE FROM post WHERE id_post= '$id'") or die(print_r($bdd->errorInfo()));
 
 }
