@@ -70,7 +70,7 @@
 			<span class="desc">Decription : </span><br>
         <?= $donnees['description'] ?><br>
       <span class="desc">Date : </span><br>
-        <?= $donnees['jour'] ?><br>
+        <?= $dateconcert->format('d/m/Y') ?><br>
       <span class="desc">Heure : </span><br>   
       <?= $donnees['heure'] ?><br>
   		</div>

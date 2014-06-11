@@ -35,8 +35,9 @@
 											<div id = "tableimg" style="background-image:url(<?php echo 'controlleurs/images/concerts/'.$local['photocover']; ?>); ">
 													
 												</div></a>
-												<div class="invisible">  
-															<?php echo 'Le '.$local['jour'].' à : '.$local['salle_nom'].''; ?>
+												<div class="invisible">
+												<?php $date = new datetime($local['jour']); ?>  
+															<?php echo 'Le '. $date->format('d/m/Y') .' à : '.$local['salle_nom'].''; ?>
 													</div>
 										</td>
 
