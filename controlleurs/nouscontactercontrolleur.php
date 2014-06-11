@@ -6,7 +6,7 @@ if (isset($_POST['pseudo']) AND isset($_POST['message']))
     $message1 = mysql_real_escape_string(htmlspecialchars($_POST['message']));
     
 
-     $to      = 'v.cordier.isep@gmail.com';
+     $to = 'v.cordier.isep@gmail.com';
      $subject = 'site app';
      $message1 = 'message';
      $headers = 'From: pseudo';

@@ -1,5 +1,6 @@
-<div class="discuss">    
-    <span class = "topicName"> <?= $topic_name['nom'] ?> </span>
+<div class="discuss">
+	<div class="retour"><a href="index.php?page=liste_topiccontrolleur&categorie=<?=$categorie?>">Retour aux topics</a></div>
+    <div class = "topicName"> <?= $topic_name['nom'] ?> </div>
 
     <div class="ajout">
     	<form method="post" action="#">

@@ -6,6 +6,7 @@ include ('models/globalmodel.php');
 if(isset($_SESSION['id'])){
 	$admin = recupererdonnees("membre","membre_id",$_SESSION['id']);
 }
+
 if(isset($_GET['id'])){
 
 	$id=$_GET['id'];
@@ -13,6 +14,8 @@ if(isset($_GET['id'])){
 if(isset($_GET['topic']))
 {
 	$topic = $_GET['topic'];
+	$topic_info = recupererdonnees('topic', 'id_topic', $topic);
+	$categorie = $topic_info['categorie'];
 }
 if(isset($_POST['supprimer'])){
 

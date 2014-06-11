@@ -1,6 +1,6 @@
 <?php 
 include('models/concertmodel.php');
-include('models/globalmodel.php');
+include ('models/gloablamodel.php');
 
 if(isset($_GET['id'])){
 
