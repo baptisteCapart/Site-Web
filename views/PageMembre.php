@@ -42,7 +42,6 @@
               <?php }else{ ?> <li><form class ="form3" method="post" action="index.php?page=pageMembrecontrolleur<?='&id='.$_GET['id'].''?>"><input class = "bouton2" type="submit" name = "stop" value="Ne plus suivre"/></form></li>
         <?php }}}} ?>
 
-    	<li><input class = "bouton" type="submit" value="Envoyer un message"/></li>
     </ul>
 </div>
 
