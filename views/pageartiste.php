@@ -229,12 +229,12 @@
       </div>
     <?php } ?>
     <?php if($onglet==6){ ?> 
-      <div class = "invitations"> invitations
+      <div class = "invitations">
         <?php if (isset($notif)){
              if($notif==true) {?>
-             <div>tu as une notif
+             <div>
                   <?php foreach ($concert as $listeconcert) {
-                    $salleNom=recuperer3($listeconcert['salle_id']);
+                    $salleNom=recupererdonnees("salle","salle_id",$listeconcert['salle_id']);
                     echo ' <li><a href = "index.php?page=modifierconcertcontrolleur&id='.$listeconcert["concert_id"].'">'. $listeconcert["nom"].' </a> Proposé par : <a href = "index.php?page=pageSallecontrolleur&id='.$listeconcert["salle_id"].'">'. $salleNom["nom"].'<br/>'.' </li></a>';
                   } ?>
              </div>

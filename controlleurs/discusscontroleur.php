@@ -4,8 +4,9 @@ include ('models/membremodel.php');
 include ('models/globalmodel.php');
 
 if(isset($_SESSION['id'])){
-	$admin = recupererdonnees('membre', 'membre_id', $_SESSION['id']);
+	$admin = recupererdonnees("membre","membre_id",$_SESSION['id']);
 }
+
 if(isset($_GET['id'])){
 
 	$id=$_GET['id'];

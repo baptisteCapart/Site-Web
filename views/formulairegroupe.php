@@ -3,7 +3,7 @@
 
 		<div id="bienvenue">Remplis gratuitement ce formulaire d'inscription pour créer ton groupe et ainsi bénéficier de tous les privilèges d'un groupe !</div>
 		<div id="formulaire">
-		<form enctype = "multipart/form-data" name = "formA"  class ="form2" method="post" action="index.php?page=formulairegroupecontrolleur">
+		<form enctype = "multipart/form-data" onsubmit = "return checkExt();" name = "formA"  class ="form2" method="post" action="index.php?page=formulairegroupecontrolleur">
 			<ul>
 				<li>
 					<div class="nom_de_salle"><span>Nom du groupe : </span><input class = "textbox" type="text" name="nomartiste" value=""/></div>
@@ -31,7 +31,7 @@
 					</div>			
 				</li>
 				<li>
-					<div class="description"><span>Description : <TEXTAREA name="description" rows=10 COLS=40></TEXTAREA></div>			
+					<div><span>Description : <TEXTAREA name="description" rows=10 COLS=40></TEXTAREA></div>			
 				</li>				
 				<li>
 					<div class="photogroupe"><span>Photo du groupe : </span><input class = "textbox" type="file" name="photogroupe" /></div>

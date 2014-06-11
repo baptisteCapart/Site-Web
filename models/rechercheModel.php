@@ -49,7 +49,7 @@ function Recherche($table, $recherche) {
 	$requete = $bdd->query("SELECT nom FROM $table");
 	foreach ($requete as $nom) {
 		$vladimir = levenshtein($recherche, $nom['nom']);
-		if ($vladimir <= 3){
+		if ($vladimir <= 4){
 			$levenshtein[$nom['nom']] = $vladimir;
 		}
 	}

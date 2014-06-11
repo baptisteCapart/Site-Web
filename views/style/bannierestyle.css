@@ -3,7 +3,7 @@ header
 	//background-image: url(../controlleurs/images/darkmetal.jpg);
 	height: 100px;
 	width: 100%;
-	min-width: 1000px;
+	//min-width: 1000px;
 	margin : none;
 	//border-bottom: 3px solid grey;
 }
@@ -50,11 +50,14 @@ header
 
 .container .form
 {
-	float: right;
+	//float: right;
+	position : absolute;
+	right: 0;
 	padding-top: 2px;
 	margin-right: 0.5%;
 	border-bottom: 1px solid #646665;
 	padding-bottom: 0px;
+	width: 100%;
 
 }
 
@@ -115,7 +118,8 @@ header
 .container {
 	position: absolute;
 	top: 0px;
-	width: 100%;
+	
+	min-width: 1300px;
 }
 
 
@@ -141,8 +145,7 @@ nav
 	font-weight: bold;
 	position : absolute;
 	top : 50px;
-	width: 100%;
-	min-width: 1000px;
+	min-width: 1300px;
 }
 #logo
 {
@@ -160,10 +163,11 @@ nav
 	font-family: 'Quicksand' , sans-serif;
 	font-size: 2.4em;
 	top: 55px;
-	left: 13%;
+	left: 170px;
 	padding: 0;
 	margin: 0;
 	color : #D7CBA2;
+	min-width: 100px;
 }
 
 #menu ul
@@ -399,7 +403,7 @@ footer a
 
 
 
-@media screen and (max-width: 1000px)
+/*@media screen and (max-width: 1250px)
 {
 	nav
 	{
@@ -413,14 +417,16 @@ footer a
 
 	.slogan
 	{
-		font-size: 0em;
+		font-size: 1.5em;
+		position : absolute;
+		bottom: 0;
 	}
 
 	#menu ul 
 	{
 		padding: 0;
 	}
-}
+}*/
 
 nav {
 	z-index: 60;

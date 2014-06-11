@@ -68,7 +68,7 @@ html, body
 	top : 350px;
 	margin-right: 20px;
 	font-family: 'Quicksand' , sans-serif;*/
-		font-family: 'Quicksand' , sans-serif;	
+	font-family: 'Quicksand' , sans-serif;	
 	font-size: 90%;
 	padding : 7px 30px 7px 30px;
 	border-radius: 30px;
@@ -231,4 +231,8 @@ a[href*="intent"] {
 }
 .rating2 a {
 	float:none
+}
+.dec
+{
+	color : white;
 }

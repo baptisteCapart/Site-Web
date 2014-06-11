@@ -36,7 +36,7 @@
 						<li><a href="index.php?page=liste_topiccontrolleur&categorie=Concert"><h2>Concert</h2></a></li>
 					</ul>
 			</li>
-			<li class="soussujet"> <h1>FAQ</h1>
+			<li class="soussujet"> <h1><a href="index.php?page=FAQcontrolleur">FAQ</a></h1>
 
 			</li>
 		</ul>
