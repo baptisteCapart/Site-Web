@@ -36,7 +36,31 @@
       <?php } ?>
 
        <?php  if($critereConcert==2){ ?> 
-        <div> Liste des concerts classées par lieu</div>
+      <div >
+          <div class="lieu">
+
+                  <?php
+                  foreach(range('1','95') as $i) {
+                      echo '<a href="index.php?page=listeConcertscontrolleur&critereConcert=2#'.$i.'">'.$i.'  |   </a>';
+                  } ?>
+
+      </div>
+            <ul class="liste_artistes">
+              <?php 
+              $current = '0';
+            foreach ($listedep as $concert) {
+                $test_letter= (int)($concert['code_postal']/1000);
+                  if ($test_letter!= $current) {
+                    $current= $test_letter;
+                    echo "<span id=".$current.">".$current."</span>";
+                  }
+                  ?> <li><a href="index.php?page=pageConcertcontrolleur&id=<?= $concert['concert_id'] ?>"><img src="controlleurs/images/concerts/<?=$concert['photocover']?>"/>
+                  <?= $concert['nom'] ?> 
+                  </a><br><span class="lieuconcert">Lieu : </span></li><br>
+              <?php
+              } ?>
+          </ul>
+        </div> 
       <?php } ?>
       	
   </div> 

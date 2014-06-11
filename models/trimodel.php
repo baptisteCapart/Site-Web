@@ -39,4 +39,11 @@ function note($id,$tableID){
 	return $res['AVG(note)'];
 }
 
+function triconcertlieu (){
+	global $bdd;
+	$sql=$bdd->query("SELECT salle.code_postal, salle.nom, concert.concert_id, concert.nom, concert.photocover from salle, concert 
+		where salle.salle_id = concert.salle_id order by salle.code_postal, salle.nom")or die (print_r($bdd->errorInfo()));
+	return $sql;
+}
+
 ?>

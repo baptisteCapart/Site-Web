@@ -12,6 +12,7 @@ if(isset($_GET['critereConcert'])){
 	}	
 	if ($_GET["critereConcert"] ==2){
 		$critereConcert=2;
+		$listedep = triconcertlieu();
 	}
 
 }
