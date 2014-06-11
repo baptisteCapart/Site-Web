@@ -153,7 +153,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		if(isset($_SESSION['id'])){
 			
 
-			$current_id = insertPhotoS($salle_id,$photo);
+			$current_id = insertPhoto("salle_id",$salle_id,$photo);
 								
 
 				$nomInit = $_FILES['photoS']['name'];
@@ -165,7 +165,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 					// $messageS = "ATTENTION : le format de votre photo n'est pas bon, votre photo de salle sera générée par défaut";
 					// $_SESSION['formatS'] = $messageS;
 				} else { 
-					photoUpdate($current_id, $nomDestination);   
+					photoUpdateS($current_id, $nomDestination);   
 
 					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."photos"."/"; 
 					//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;

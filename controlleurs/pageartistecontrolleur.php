@@ -76,7 +76,7 @@ if(!empty($_FILES['photoA']) && $_FILES['photoA']['name']!=''){
 		if(isset($_SESSION['id'])){
 			
 
-			$current_id = insertPhotoA($artiste_id,$photo);
+			$current_id = insertPhoto("artiste_id",$artiste_id,$photo);
 								
 
 				$nomInit = $_FILES['photoA']['name'];
@@ -87,7 +87,7 @@ if(!empty($_FILES['photoA']) && $_FILES['photoA']['name']!=''){
 				if (!(in_array($extension, $extensionsAutorisees))) {
 					echo"non";
 				} else { 
-					photoUpdate($current_id, $nomDestination);   
+					photoUpdateA($artiste_id,$current_id, $nomDestination);   
 
 					$repertoireDestination = dirname(dirname(__FILE__))."/"."controlleurs"."/"."images"."/"."photos"."/"; 
 					//   $nomDestination = "fichier_du_".date("YmdHis").".".$extensionFichier;

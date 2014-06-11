@@ -1,6 +1,6 @@
 <?php 
 include('models/concertmodel.php');
-include ('models/globalmodel.php');
+include('models/globalmodel.php');
 
 if(isset($_GET['id'])){
 
@@ -45,8 +45,8 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 		}
 		if($donnees['nom']==$nom and $donnees['jour']==$jour and $donnees['heure']==$début and $donnees['duree']==$duree 
 			and $donnees['description']==$description and $photocover==$donnees['photocover'] ){
-			$accord = 1;
-			accord($concert_id, $accord);
+			var_dump($donnees);
+			accord($concert_id);
 		}
 
 	updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $concert_id, $inviteur,$non_repondu);
@@ -78,13 +78,13 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 			}
 		}
 
-		if ($_SESSION['artiste_id']['artiste_id'] == $donnees['artiste_id']){
-			header('location: index.php?page=pageartistecontrolleur&id='.$_SESSION['artiste_id']['artiste_id'].'&onglet=6#contenuArtiste');
-		}
+		// if ($_SESSION['artiste_id']['artiste_id'] == $donnees['artiste_id']){
+		// 	header('location: index.php?page=pageartistecontrolleur&id='.$_SESSION['artiste_id']['artiste_id'].'&onglet=6#contenuArtiste');
+		// }
 
-		if ($_SESSION['salle_id']['salle_id'] == $donnees['salle_id']){
-			header('location: index.php?page=pageSallecontrolleur&id='.$_SESSION['salle_id']['salle_id'].'&ongletSalle=6#contenuSalle');
-		}
+		// if ($_SESSION['salle_id']['salle_id'] == $donnees['salle_id']){
+		// 	header('location: index.php?page=pageSallecontrolleur&id='.$_SESSION['salle_id']['salle_id'].'&ongletSalle=6#contenuSalle');
+		// }
 
 
 		include('controlleurs/bannierecontrolleur.php');

@@ -1,42 +1,44 @@
 <?php 
 
-function insertPhotoA($artiste_id,$chemin){
+function insertPhoto($tableID,$id,$chemin){
 	global $bdd;
-	$req=$bdd->query("INSERT INTO photoevent(chemin,datephoto,artiste_id) VALUES ('$chemin',CURDATE(),'$artiste_id')")or die(print_r($bdd->errorInfo()));
-
-	$artiste=recupererdonnees('artiste', 'artiste_id', $artiste_id);
-	$description = "".$artiste['nom']." a ajouté une photo sur sa page, vous pouvez aller la consulter";
-	$description = mysql_real_escape_string(htmlspecialchars($description));
-	$bdd->query("INSERT INTO news(typenews,datenews, artiste_id,photocover,description, lien) 
-		VALUES (3,CURDATE(),$artiste_id,'$chemin', '$description', 'index.php?page=pageartistecontrolleur&onglet=5&id=".$artiste['artiste_id']."')") or die(print_r($bdd->errorInfo()));
-$req2 = $bdd->query("SELECT photo_id FROM photoevent WHERE artiste_id = '$artiste_id' order by photo_id DESC limit 1") or die(print_r($bdd->errorInfo()));
-	$res = $req2->fetch();
-	return $res['photo_id'] ;
-}
+	$req=$bdd->query("INSERT INTO photoevent(chemin,datephoto,$tableID) VALUES ('$chemin',CURDATE(),'$id')")or die(print_r($bdd->errorInfo()));
 
 
-function insertPhotoS($salle_id,$chemin){
-	global $bdd;
-	$req=$bdd->query("INSERT INTO photoevent(chemin,datephoto,salle_id) VALUES ('$chemin',CURDATE(),'$salle_id')")or die(print_r($bdd->errorInfo()));
-
-	$salle=recupererdonnees('salle', 'salle_id', $salle_id);
-	$description = "".$salle['nom']." a ajouté une photo sur sa page, vous pouvez aller la consulter";
-	$description = mysql_real_escape_string(htmlspecialchars($description));
-	$bdd->query("INSERT INTO news(typenews, datenews, salle_id,photocover,description, lien) 
-		VALUES (3,CURDATE(),$salle_id,'$chemin', '$description', 'index.php?page=pageSallecontrolleur&ongletSalle=5&id=".$salle['salle_id']."')") or die(print_r($bdd->errorInfo()));
-	$req2 = $bdd->query("SELECT photo_id FROM photoevent WHERE salle_id = '$salle_id' order by photo_id DESC limit 1") or die(print_r($bdd->errorInfo()));
+$req2 = $bdd->query("SELECT photo_id FROM photoevent WHERE $tableID = '$id' order by photo_id DESC limit 1") or die(print_r($bdd->errorInfo()));
 	$res = $req2->fetch();
 	return $res['photo_id'] ;
 }
 
 
 
-function photoUpdate($id,$photo){
+
+
+
+function photoUpdateA($artiste_id,$id,$photo){
 	global $bdd;
 	$bdd->query("UPDATE photoevent 
 	SET chemin='$photo'
 	WHERE photo_id='$id'");
+	$artiste=recupererdonnees('artiste', 'artiste_id', $artiste_id);
+	$description = "".$artiste['nom']." a ajouté une photo sur sa page, vous pouvez aller la consulter";
+	$description = mysql_real_escape_string(htmlspecialchars($description));
+	$bdd->query("INSERT INTO news(typenews,datenews, artiste_id,photocover,description, lien) 
+		VALUES (3,CURDATE(),$artiste_id,'$photo', '$description', 'index.php?page=pageartistecontrolleur&onglet=5&id=".$artiste['artiste_id']."')") or die(print_r($bdd->errorInfo()));	
 }
+
+function photoUpdateS($salle_id,$id,$photo){
+	global $bdd;
+	$bdd->query("UPDATE photoevent 
+	SET chemin='$photo'
+	WHERE photo_id='$id'");
+	$artiste=recupererdonnees('salle', 'salle_id', $salle_id);
+	$description = "".$salle['nom']." a ajouté une photo sur sa page, vous pouvez aller la consulter";
+	$description = mysql_real_escape_string(htmlspecialchars($description));
+	$bdd->query("INSERT INTO news(typenews,datenews, salle_id,photocover,description, lien) 
+		VALUES (3,CURDATE(),$salle_id,'$photo', '$description', 'index.php?page=pageSallecontrolleur&ongletSalle=5&id=".$salle['salle_id']."')") or die(print_r($bdd->errorInfo()));	
+}
+
 
 
 function Photo($user){

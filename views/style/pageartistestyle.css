@@ -272,3 +272,11 @@ a[href*="intent"] {
 .blanc{
 	color : white;
 }
+
+.photos #serie img
+{
+	width: 50%;
+	height: 250px;
+	margin-left: 25%;
+	margin-right: 25%;
+}

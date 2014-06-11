@@ -79,12 +79,12 @@ function updateConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 		WHERE concert_id='$id'");
 }
 
-function accord($id, $accord){
+function accord($id){
 	global $bdd;
-	$bdd->query("UPDATE concert SET accord='$accord' WHERE concert_id='$id'");
-	$concert = recupererdonnees('concert', 'concert_id', $id);
-	$artiste = recupererdonnees('artiste', 'artiste_id', $concert['artiste_id']);
-	$salle = recupererdonnees('salle', 'salle_id', $concert['salle_id']);
+	$bdd->query("UPDATE concert SET accord=1 WHERE concert_id='$id'");
+	$concert = recupererdonnees("concert", "concert_id", $id);
+	$artiste = recupererdonnees("artiste", "artiste_id", $concert['artiste_id']);
+	$salle = recupererdonnees("salle", "salle_id", $concert['salle_id']);
 	$dateconcert = new DateTime($concert['jour']);
 	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour le ".$dateconcert->format('d/m/Y').", tenez-vous prêts !";
 	$bdd->query("INSERT INTO news (artiste_id, salle_id, typenews, datenews, photocover, description, lien) 

@@ -19,7 +19,7 @@ function triLieu($table){
 
 function triDate(){
 	global $bdd;
-	$sql = $bdd-> query("SELECT * from concert where jour>CURDATE() order by jour limit 30") or die(print_r($bdd->errorInfo()));
+	$sql = $bdd-> query("SELECT * from concert where jour>CURDATE() AND accord = 1 order by jour limit 30") or die(print_r($bdd->errorInfo()));
 	return $sql;
 }
 
@@ -42,7 +42,7 @@ function note($id,$tableID){
 function triconcertlieu (){
 	global $bdd;
 	$sql=$bdd->query("SELECT salle.code_postal, salle.nom, concert.concert_id, concert.nom, concert.photocover from salle, concert 
-		where salle.salle_id = concert.salle_id order by salle.code_postal, salle.nom")or die (print_r($bdd->errorInfo()));
+		where salle.salle_id = concert.salle_id and concert.accord = 1 order by salle.code_postal, salle.nom")or die (print_r($bdd->errorInfo()));
 	return $sql;
 }
 

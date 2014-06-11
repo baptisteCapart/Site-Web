@@ -23,7 +23,7 @@
 		?>
 		<div id="notifs">
 			<div id="proche_vous"> 
-				<div id="titre1"> PROCHE DE CHEZ VOUS ! </div>
+				<div id="titre1"> Proche de chez vous ! </div>
 				<table class="image">
 					<tr>
 						<?php  
@@ -46,19 +46,19 @@
 				</table>
 			</div>
 
-			<div id="groupe" >
-					<div id="titre3"> LES NEWS DE MES ARTISTES </div>
+			<div id="newsgroupe" >
+					<div id="titre3"> Les news de mes artistes </div>
 						<ul>
 							<?php  if(isset($newsperso)){
 								foreach ($newsperso as $news) {
-									if($news['typenews']==0){
-										$chemin ='controlleurs/images/concerts/'.$news['photocover'].'';
-									}
 									if($news['typenews']==1){
-										$chemin ='controlleurs/images/artistes/'.$news['photocover'].'';
+										$chemin ='controlleurs/images/concerts/'.$news['photocover'].'';
 									}
 									if($news['typenews']==2){
 										$chemin ='controlleurs/images/artistes/'.$news['photocover'].'';
+									}
+									if($news['typenews']==3){
+										$chemin ='controlleurs/images/photos/'.$news['photocover'].'';
 									}																		
 									// $contenu = $news->fetch();
 									//var_dump($news);
@@ -69,17 +69,17 @@
 						</ul>
 					</div>
 			</div>
-			<div id="groupe" >
-					<div id="titre3"> LES NEWS DE MES SALLES </div>
+			<div id="newssalle" >
+					<div id="titre3"> Les news de mes salles </div>
 						<ul>
 							<?php  if(isset($newsperso2)){
 								foreach ($newsperso2 as $news2) {
-									if($news2['typenews']==0){
+									if($news2['typenews']==1){
 										$chemin ='controlleurs/images/concerts/'.$news2['photocover'].'';
 									}
 
-									if($news2['typenews']==2){
-										$chemin ='controlleurs/images/salles/'.$news2['photocover'].'';
+									if($news2['typenews']==3){
+										$chemin ='controlleurs/images/photos/'.$news2['photocover'].'';
 									}	
 									// $contenu = $news2->fetch();
 									//var_dump($news2);

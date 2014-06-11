@@ -1,4 +1,5 @@
 <?php 
+include ('models/concertmodel.php');
 
 if(isset($_GET['invite'])){
 
@@ -23,7 +24,7 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 			$photocover="concertdefaut.jpg";
 		}
 
-		include ('models/concertmodel.php');
+		
 
 if(isset($_GET['new'])){
 
@@ -65,13 +66,14 @@ if(isset($_GET['new'])){
 				}				
 		
 	}
-		}else{
+}
+		// }else{
 
-			if(isset($_GET['concert_id'])){
-				$id = $_GET['concert_id'];
-				updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $id);
-			}
-		}
+		// 	if(isset($_GET['concert_id'])){
+		// 		$id = $_GET['concert_id'];
+		// 		updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $id);
+		// 	}
+		// }
 }
 		include('controlleurs/bannierecontrolleur.php');
 		include ('views/formulaireconcertview.php');
