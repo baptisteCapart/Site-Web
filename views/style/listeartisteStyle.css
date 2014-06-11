@@ -165,3 +165,10 @@
 	position: fixed;
 	top: 14%;
 }
+.liste_artistes span,  #contenuliste .liste_artistes .stylegondole
+{
+	color : black;
+	font-size: 1.3em;
+	font-weight: bold;
+
+}
