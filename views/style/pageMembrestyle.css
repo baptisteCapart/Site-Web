@@ -143,11 +143,6 @@ html, body
 
 #menuMembre li 
 {
-/*	display: inline;
-	padding-left: 0.5%;
-	padding-right: 0.5%;
-	border-right: 1px solid #616161;
-	float: left;*/
 	display: inline;
 	padding-right: 50px;	
 }
@@ -185,8 +180,7 @@ html, body
 	color : white;
 	overflow: hidden;
 	width: 100%;
-	font-family: 'Quicksand' , sans-serif;
-	
+	font-family: 'Quicksand' , sans-serif;	
 }
 
 #contenuMembre div

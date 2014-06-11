@@ -57,7 +57,7 @@ header
 	margin-right: 0.5%;
 	border-bottom: 1px solid #646665;
 	padding-bottom: 0px;
-	width: 100%;
+	//width: 100%;
 
 }
 
@@ -108,7 +108,6 @@ header
 	border-radius: 3px;
 	border: solid 1px #555;	
 	width: 100px;
-
 }
 
 .container .form .login
@@ -118,10 +117,13 @@ header
 .container {
 	position: absolute;
 	top: 0px;
-	
-	min-width: 1300px;
+	min-width: 1330px;
 }
-
+.form
+{
+	position: absolute;
+	text-align: right;
+}
 
 .sign_in a
 {
@@ -145,7 +147,7 @@ nav
 	font-weight: bold;
 	position : absolute;
 	top : 50px;
-	min-width: 1300px;
+	min-width: 1350px;
 }
 #logo
 {
@@ -167,7 +169,7 @@ nav
 	padding: 0;
 	margin: 0;
 	color : #D7CBA2;
-	min-width: 100px;
+	min-width: 1000px;
 }
 
 #menu ul

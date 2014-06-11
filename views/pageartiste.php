@@ -81,7 +81,7 @@
         <span class = "infos">Concerts à venir : </span>
         <?php foreach ($concertartiste2 as $eventsF) {
           $date = new DateTime($eventsF['jour']);
-              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].' le '. $date->format('d/m/Y').'</a></li>';
+              echo ' <li><a href = "index.php?page=pageconcertcontrolleur&id='.$eventsF["concert_id"].'">'. $eventsF["nom"].'</a><span class="jour"> le '. $date->format('d/m/Y').'</span></li>';
         } ?>        
       </div>
       </div>           

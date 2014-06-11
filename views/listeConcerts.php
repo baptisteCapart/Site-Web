@@ -23,7 +23,8 @@
               <?php 
               $current = '0';
             foreach ($listeDate as $concert) {
-                $test_letter= $concert['jour'];
+              $date = new datetime($concert['jour']);
+                $test_letter= $date->format('d/m/Y');
                   if ($test_letter!= $current) {
                     $current= $test_letter;
                     echo "<span id=".$current.">".$current."</span>";

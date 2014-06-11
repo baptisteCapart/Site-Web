@@ -13,6 +13,7 @@ $ongletConcert =1;
 if(isset($_GET['id'])){
 	$_SESSION['concertID'] = $_GET['id'];
 	$donnees = recupererdonnees("concert","concert_id",$_SESSION['concertID']);
+	$dateconcert = new datetime($donnees['jour']);
 	if(isset($_SESSION['id'])){
 		$check = checkParticipation($_SESSION['id'],$_SESSION['concertID']);
 		$artiste = MaPageArtiste($_SESSION['id']);
