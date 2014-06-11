@@ -116,7 +116,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		}
 		modifierSalle($_SESSION['salleID'], $Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle);
 
-		if(!empty($_FILES['photosalle']) ){
+		if(!empty($_FILES['photosalle']) && $_FILES['photosalle']['name']!=''){
 			$photosalle = mysql_real_escape_string(htmlspecialchars($_FILES['photosalle']['name']));
 
 			$nomInit = $_FILES['photosalle']['name'];
@@ -147,7 +147,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 }
 
 	$photo="";
-	if(!empty($_FILES['photoS']) ){
+	if(!empty($_FILES['photoS']) && $_FILES['photoS']['name']!=''){
 			$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoS']['name']));
 
 		if(isset($_SESSION['id'])){

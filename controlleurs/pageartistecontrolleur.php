@@ -45,7 +45,7 @@ if(isset($_GET['id'])){
 $donnees = recupererdonnees("artiste","artiste_id",$_SESSION['artisteID']);
 if(isset($_GET['id'])){
 	if(!empty($_FILES['extrait1'])){
-			if(!empty($_FILES['extrait1'])){
+			if(!empty($_FILES['extrait1']) && $_FILES['extrait1']['name']!=''){
 				$extrait1 = mysql_real_escape_string(htmlspecialchars($_FILES['extrait1']['name']));
 				
 				$nomInit = $_FILES['extrait1']['name'];
@@ -70,7 +70,7 @@ if(isset($_GET['id'])){
 	}
 }
 $photo="";
-if(!empty($_FILES['photoA']) ){
+if(!empty($_FILES['photoA']) && $_FILES['photoA']['name']!=''){
 				$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoA']['name']));
 
 		if(isset($_SESSION['id'])){
@@ -163,7 +163,7 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) ){
 
 		modifierArtiste($_SESSION['artisteID'], $nomartiste, $description, $photogroupe);
 
-		if(!empty($_FILES['photogroupe']) ){
+		if(!empty($_FILES['photogroupe'])&& $_FILES['photogroupe']['name']!='' ){
 			$photogroupe = mysql_real_escape_string(htmlspecialchars($_FILES['photogroupe']['name']));
 
 			$nomInit = $_FILES['photogroupe']['name'];

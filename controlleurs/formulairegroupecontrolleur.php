@@ -54,7 +54,7 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description'])  AND !empty($
 					$choix = $_POST['style'][$i];
 					finishartiste($current_id, $choix);
 				}
-				header ('location: index.php?page=pageartistecontrolleur&erreur="le format de votre fichier est non valide, votre photo sera générée par defaut"&id='.$current_id);
+				header ('location: index.php?page=pageartistecontrolleur&id='.$current_id);
 			}	
 			
 		}

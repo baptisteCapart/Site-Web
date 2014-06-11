@@ -1,22 +1,14 @@
 <?php 
 
-function recupererArtiste2($id){
-	global $bdd;
-	$sql = "SELECT * from artiste where artiste_id ='$id'";
- 	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
- 	$donnee = $req-> fetch();
-  	return $donnee;
-}
-
 
 function insertExtrait($artisteID, $nomIni){
 	global $bdd;
 	$bdd-> query("INSERT INTO extrait(nomIni, artiste_id)  VALUES ('$nomIni', '$artisteID')");
-	$artiste=recupererArtiste2($artisteID);
+	$artiste=recupererdonnees("artiste","artiste_id",$artisteID);
 	$description = "Tout nouveau morceau de ".$artiste['nom']." sorti sur sa page, venez l'écouter !";
 	$description = mysql_real_escape_string(htmlspecialchars($description));
-	$bdd->query("INSERT INTO news(typenews, datenews, photocover,description, lien) 
-		VALUES (2, CURDATE(),'".$artiste['photocover']."', '$description', 'index.php?page=pageartistecontrolleur&onglet=3&id=".$artiste['artiste_id']."')") or die(print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO news(artiste_id,typenews, datenews, photocover,description, lien) 
+		VALUES (".$artiste['artiste_id'].",2, CURDATE(),'".$artiste['photocover']."', '$description', 'index.php?page=pageartistecontrolleur&onglet=3&id=".$artiste['artiste_id']."')") or die(print_r($bdd->errorInfo()));
 	$req = $bdd->query("SELECT extrait_id FROM extrait WHERE artiste_id = '$artisteID' order by extrait_id DESC limit 1") or die(print_r($bdd->errorInfo()));
 	$res = $req->fetch();
 	return $res['extrait_id'] ;

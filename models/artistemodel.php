@@ -32,15 +32,6 @@ function photoCA($id,$photo){
 }
 
 
-
-// function recuperer2($id){
-// 	global $bdd;
-// 	$sql = "SELECT * from artiste where artiste_id ='$id'";
-//  	$req = $bdd-> query($sql) or die(print_r($bdd->errorInfo()));
-//  	$donnee = $req-> fetch();
-//   	return $donnee;
-// }
-
 function recuperer4($id){
 	global $bdd;
 	$sql = "SELECT * from artiste where artiste_id ='$id'";
@@ -114,7 +105,7 @@ function getArtistes($styles){
 	global $bdd;
 	$infos = array();
 	foreach ($styles as $key => $value) {
-		$req = $bdd->query("SELECT * FROM artiste WHERE EXISTS (SELECT artiste_id FROM style_de_groupe WHERE style_de_musique = '".$value['nom']."')")
+		$req = $bdd->query("SELECT * FROM artiste INNER JOIN style_de_groupe WHERE artiste.artiste_id = style_de_groupe.artiste_id AND style_de_groupe.style_de_musique = '".$value['nom']."'")
 		or die (print_r($bdd->errorInfo()));
 		$key = $value['nom'];
 		$value = $req;
