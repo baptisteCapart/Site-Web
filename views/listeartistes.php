@@ -53,7 +53,7 @@
 					foreach ($listestyle as $style => $artistes) {
 						if ($style != $current) {
 							$current = $style;
-							echo "<span class = 'stylegondole'>".$current."</span>";
+							echo "<span class = 'stylegondole'>".$current."</span></br>";
 						}
 						foreach ($artistes as $artiste) {
 							?> <li><a href="index.php?page=pageartistecontrolleur&id=<?= $artiste['artiste_id'] ?>"><img src="controlleurs/images/artistes/<?=$artiste['photocover']?>"/><?= $artiste['nom'] ?></a></li> <?php
