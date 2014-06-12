@@ -56,7 +56,7 @@
                   }
                   ?> <li><a href="index.php?page=pageConcertcontrolleur&id=<?= $concert['concert_id'] ?>"><img src="controlleurs/images/concerts/<?=$concert['photocover']?>"/>
                   <?= $concert['nom'] ?> 
-                  </a><br><span class="lieuconcert">Lieu : </span></li><br>
+                  </a><br><span class="lieuconcert" style = "color : #737373;">Lieu : </span><?= $concert[1] ?></li><br>
               <?php
               } ?>
           </ul>

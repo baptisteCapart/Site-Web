@@ -23,7 +23,7 @@
 		?>
 		<div id="notifs">
 			<div id="proche_vous"> 
-				<div id="titre1"> Proche de chez vous ! </div>
+				<div id="titre1"> PROCHE DE CHEZ MOI </div>
 				<table class="image">
 					<tr>
 						<?php  
@@ -47,7 +47,7 @@
 			</div>
 
 			<div id="newsgroupe" >
-					<div id="titre3"> Les news de mes artistes </div>
+					<div id="titre3"> LES NEWS DE MES ARTISTES </div>
 						<ul>
 							<?php  if(isset($newsperso)){
 								foreach ($newsperso as $news) {
@@ -62,7 +62,7 @@
 									}																		
 									// $contenu = $news->fetch();
 									//var_dump($news);
-									echo ' <li><a href='.$news["lien"].'><img src='.$chemin.' alt="" /></a><p >
+									echo ' <li><a href='.$news["lien"].'><img src='.$chemin.' alt="" /></a><br/><p>
 									'.$news['description'].'</p> </li>';
 								}
 							} ?>
@@ -70,7 +70,7 @@
 					</div>
 			</div>
 			<div id="newssalle" >
-					<div id="titre3"> Les news de mes salles </div>
+					<div id="titre3"> LES NEWS DE MES SALLES </div>
 						<ul>
 							<?php  if(isset($newsperso2)){
 								foreach ($newsperso2 as $news2) {

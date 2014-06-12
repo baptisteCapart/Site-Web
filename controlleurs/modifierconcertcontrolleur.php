@@ -45,7 +45,6 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 		}
 		if($donnees['nom']==$nom and $donnees['jour']==$jour and $donnees['heure']==$début and $donnees['duree']==$duree 
 			and $donnees['description']==$description and $photocover==$donnees['photocover'] ){
-			var_dump($donnees);
 			accord($concert_id);
 		}
 
