@@ -5,6 +5,8 @@
 function dropMembre($id){
 	global $bdd;
 	$bdd->query("DELETE FROM membre WHERE membre_id= $id") or die(print_r($bdd->errorInfo()));
+	$bdd->query("DELETE FROM artiste WHERE membre_id= $id") or die(print_r($bdd->errorInfo()));
+	$bdd->query("DELETE FROM salle WHERE membre_id= $id") or die(print_r($bdd->errorInfo()));
 }
 
 function verification($login){
