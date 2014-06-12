@@ -397,7 +397,7 @@ table.image tr
 {
 	height: 250px;
 	width: 250px;
-	border-radius: 10000000px;
+	border-radius: 10000px;
 }
 
 #newsgroupe
@@ -415,7 +415,7 @@ table.image tr
 }
 #newsgroupe ul, #newssalle ul
 {
-	padding-top: 5%;
+	padding-top: 10px;
 }
 #newsgroupe ul , #newssalle li
 {
@@ -424,11 +424,15 @@ table.image tr
 #newsgroupe li 
 {
 	display: inline-block;
+	width: 30%;
+	padding-right: 90px;
+	padding-left: 90px;
+
 }
 
 #newsgroupe p, #newssalle p 
 {
-	width : 500px;
+	//width : 500px;
 }
 
 
