@@ -97,7 +97,7 @@
 		}else{
 		?>
 
-		<div id="inscristoi"> Inscris-toi !</div>
+		<div id="inscristoi">Tu souhaites t'inscrire ?</div>
 		<div id="pub">
 			<ul>
 				<li>
