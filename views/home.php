@@ -83,7 +83,7 @@
 									}	
 									// $contenu = $news2->fetch();
 									//var_dump($news2);
-									echo ' <li><a href='.$news2["lien"].'><img src="controlleurs/images/'.$news2['photocover'].'" alt="" /></a><p >
+									echo ' <li><a href='.$news2["lien"].'><img src='.$chemin.' alt="" /></a><p >
 									'.$news2['description'].'</p> </li>';
 								}
 							} ?>

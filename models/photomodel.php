@@ -32,7 +32,7 @@ function photoUpdateS($salle_id,$id,$photo){
 	$bdd->query("UPDATE photoevent 
 	SET chemin='$photo'
 	WHERE photo_id='$id'");
-	$artiste=recupererdonnees('salle', 'salle_id', $salle_id);
+	$salle=recupererdonnees('salle', 'salle_id', $salle_id);
 	$description = "".$salle['nom']." a ajouté une photo sur sa page, vous pouvez aller la consulter";
 	$description = mysql_real_escape_string(htmlspecialchars($description));
 	$bdd->query("INSERT INTO news(typenews,datenews, salle_id,photocover,description, lien) 
