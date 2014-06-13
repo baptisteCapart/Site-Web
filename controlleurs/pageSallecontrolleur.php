@@ -78,9 +78,22 @@ if(isset($_GET['id'])){
 		}
 	}		
 }
+
+if(isset($_GET['donneravisid'])){
+$donneravisid = $_GET['donneravisid'];
+
+	if(isset($_POST['supprimerAvis'])){
+
+		dropAvis($donneravisid);
+		header('location: index.php?page=pageSallecontrolleur&id='.$_GET['id'].'&ongletSalle=3');
+	}	
+}
+
 if(isset($_GET['id'])){
 	$listeAvis = listeAvis("salle_id",$_GET['id']);
-}
+	if (isset($_SESSION['id'])){
+	$existant = PossedeAvis($_SESSION['id'] ,"salle_id", $_GET['id']);	
+}}
 
 if (isset($_POST['suivre'])){
 	follow($_SESSION['id'],"salle_id", $_SESSION['salleID']);

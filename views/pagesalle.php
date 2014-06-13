@@ -111,6 +111,7 @@
     <?php  if($ongletSalle==4){ ?> 
       <?php if(isset($_SESSION['id'])) { ?>
         <?php if ($createur['membre_id']!= $_SESSION['id']) { ?>
+          <?php if($existant == false){ ?>
           <div id="AVIS">
               <span class="intro">Clique sur le nombre d'étoiles que tu désires et laisse un commentaire pour noter cette salle !</span>
               <div class="rating rating2">
@@ -126,7 +127,12 @@
                       <input type="submit" value="Envoyer" />
                  </form>
               </div>
-         <?php }elseif($createur['membre_id']== $_SESSION['id']){ ?>  
+              <?php }
+                  elseif($existant==true){ ?>  
+                 <span class="autorisation">Vous ne pouvez pas donner deux avis sur la même page</span>
+        <?php }
+        }
+        elseif($createur['membre_id']== $_SESSION['id']){ ?>  
                  <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre page</span>
         <?php } ?>                                  
       <?php }else { ?>
@@ -164,7 +170,11 @@
                               if($liste['note'] == 5 ){
                                   echo('★★★★★');
                               }
-                            ?>  
+                            ?> 
+                            <?php if(isset($_SESSION['id'])){
+                                if($admin['id_admin']==1){ ?>
+                                    <li ><form class ="form3" method="post" action="index.php?page=pageSallecontrolleur<?='&donneravisid='.$liste['donner_avis_id'].''?><?='&id='.$_GET['id'].''?>"><input class = "bouton2" type="submit" name = "supprimerAvis" value="Supprimer"/></form></li>
+                            <?php } }?>                              
                                 <br>                                                                                                     
                           </span>                          
                           <span class="contenuAvis">

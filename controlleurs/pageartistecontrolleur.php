@@ -11,6 +11,7 @@ include ('models/photomodel.php');
 include ('models/globalmodel.php');
 
 
+
 if(isset($_GET['erreur'])){
 	$erreur = $_GET['erreur'];
 }
@@ -32,10 +33,20 @@ if(isset($_GET['id'])){
 		dropArtiste($artiste_id);
 		header('location: index.php?page=listeartistecontrolleur');
 	}
+
 	$listeStyles = listeStyle($artiste_id);
 
 }
 
+if(isset($_GET['donneravisid'])){
+$donneravisid = $_GET['donneravisid'];
+
+	if(isset($_POST['supprimerAvis'])){
+
+		dropAvis($donneravisid);
+		header('location: index.php?page=pageartistecontrolleur&id='.$_GET['id'].'&onglet=4');
+	}	
+}
 
 
 if(isset($_GET['id'])){

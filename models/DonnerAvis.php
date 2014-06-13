@@ -5,7 +5,10 @@ function Avis ($membre_id, $attribut ,$value, $contenu, $note)
 	global $bdd;
 	$bdd->query("INSERT INTO donner_avis (membre_id, $attribut, contenu, note) VALUES ('$membre_id', '$value', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
 }
-
+function dropAvis($id){
+	global $bdd;
+	$bdd->query("DELETE FROM donner_avis WHERE donner_avis_id= $id") or die(print_r($bdd->errorInfo()));
+}
 
 
 

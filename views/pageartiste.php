@@ -123,6 +123,9 @@
     <?php  if($onglet==4){ ?>
       <?php if(isset($_SESSION['id'])) { ?>
         <?php if ($createur['membre_id']!= $_SESSION['id']) { ?>
+                <?php if($existant == false){ ?>  
+         
+     
           <div id="AVIS">
               <span class="intro">Clique sur le nombre d'étoiles que tu désires et laisse un commentaire pour noter cet artiste !</span>
               <div class="rating rating2">
@@ -138,13 +141,17 @@
                       <input type="submit" value="Envoyer" />
                  </form>
               </div>
-         <?php }elseif($createur['membre_id']== $_SESSION['id']){ ?>  
+         <?php }
+                  elseif($existant==true){ ?>  
+                 <span class="autorisation">Vous ne pouvez pas donner deux avis sur la même page</span>
+        <?php }
+        }
+         elseif($createur['membre_id']== $_SESSION['id']){ ?>  
                  <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre page</span>
-        <?php 
-          }elseif($existant){ ?>  
-                 <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre page</span>
-                                                   
-      <?php }else { ?>
+        <?php }
+
+        }                                           
+      else { ?>
                 <span class="autorisation">Pour donner un avis sur un artiste, merci de créer un compte sur Tune in Town</span>    
         <?php } ?>
             <div class="fil">
@@ -180,7 +187,10 @@
                                   echo('★★★★★');
                               }
                             ?>  
-                            <?php if isset() ?>
+                            <?php if(isset($_SESSION['id'])){
+                                if($admin['id_admin']==1){ ?>
+                                    <li ><form class ="form3" method="post" action="index.php?page=pageartistecontrolleur<?='&donneravisid='.$liste['donner_avis_id'].''?><?='&id='.$_GET['id'].''?>"><input class = "bouton2" type="submit" name = "supprimerAvis" value="Supprimer"/></form></li>
+                            <?php } }?>                            
                                 <br>                                                                                                     
                           </span>                          
                           <span class="contenuAvis">
