@@ -140,7 +140,10 @@
               </div>
          <?php }elseif($createur['membre_id']== $_SESSION['id']){ ?>  
                  <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre page</span>
-        <?php } ?>                                  
+        <?php 
+          }elseif($existant){ ?>  
+                 <span class="autorisation">Vous ne pouvez pas donner d'avis sur votre propre page</span>
+                                                   
       <?php }else { ?>
                 <span class="autorisation">Pour donner un avis sur un artiste, merci de créer un compte sur Tune in Town</span>    
         <?php } ?>
@@ -177,6 +180,7 @@
                                   echo('★★★★★');
                               }
                             ?>  
+                            <?php if isset() ?>
                                 <br>                                                                                                     
                           </span>                          
                           <span class="contenuAvis">

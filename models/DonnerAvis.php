@@ -1,44 +1,37 @@
 
 <?php
-function AvisSalle ($membre_id, $salle_id, $contenu, $note)
+function Avis ($membre_id, $attribut ,$value, $contenu, $note)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO donner_avis (membre_id, salle_id, contenu, note) VALUES ('$membre_id', '$salle_id', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO donner_avis (membre_id, $attribut, contenu, note) VALUES ('$membre_id', '$value', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
 }
 
 
-function AvisArtiste ($membre_id, $artiste_id, $contenu, $note)
-{
+
+
+function PossedeAvis($membre_id, $attribut, $value){
 	global $bdd;
-	$bdd->query("INSERT INTO donner_avis (membre_id, artiste_id, contenu, note) VALUES ('$membre_id', '$artiste_id', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
+	$result = $bdd->query ("SELECT membre_id from donner_avis where membre_id = '$membre_id' and $attribut = '$value'");
+	$result2 = $result->fetch();
+	if (!$result2){
+		return false;
+
+	}else{
+		return true;
+	}
+
 }
 
-function AvisConcert ($membre_id, $concert_id, $contenu, $note)
-{
-	global $bdd;
-	$bdd->query("INSERT INTO donner_avis (membre_id, concert_id, contenu, note) VALUES ('$membre_id', '$concert_id', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
-}
 
-function listeAvisSalle ($salle_id)
+
+function listeAvis ($attribut, $value)
 {
 	global $bdd;
-	$req = $bdd->query('SELECT * FROM donner_avis WHERE salle_id='.$salle_id.' ORDER BY donner_avis_id DESC') or die (print_r($bdd->errorInfo()));
+	$req = $bdd->query("SELECT * FROM donner_avis WHERE $attribut='$value' ORDER BY donner_avis_id DESC") or die (print_r($bdd->errorInfo()));
 	return $req;
 }
 
-function listeAvisArtiste ($artiste_id)
-{
-	global $bdd;
-	$req = $bdd->query('SELECT * FROM donner_avis WHERE artiste_id='.$artiste_id.' ORDER BY donner_avis_id DESC') or die (print_r($bdd->errorInfo()));
-	return $req;
-}
 
-function listeAvisConcert ($concert_id)
-{
-	global $bdd;
-	$req = $bdd->query('SELECT * FROM donner_avis WHERE concert_id='.$concert_id.' ORDER BY donner_avis_id DESC') or die (print_r($bdd->errorInfo()));
-	return $req;
-}
 
 function AuteurAvis ($membre_id)
 {

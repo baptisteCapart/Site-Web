@@ -38,13 +38,13 @@ if(isset($_GET['id'])){
 				$contenu = $_POST['contenu'];
 				$contenu = nl2br($contenu);
 				$contenu = mysql_real_escape_string($contenu);
-				AvisConcert($_SESSION['id'], $_SESSION['concertID'], $contenu, $_GET['note']);
+				Avis($_SESSION['id'],"concert_id", $_SESSION['concertID'], $contenu, $_GET['note']);
 			
 		}
 	}		
 }
 if(isset($_GET['id'])){
-	$listeAvis = listeAvisConcert($_GET['id']);
+	$listeAvis = listeAvis("concert_id",$_GET['id']);
 }
 
 

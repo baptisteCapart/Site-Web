@@ -137,14 +137,16 @@ if(isset($_GET['id'])){
 				$contenu = $_POST['contenu'];
 				$contenu = nl2br($contenu);
 				$contenu = mysql_real_escape_string($contenu);
-				AvisArtiste($_SESSION['id'], $_SESSION['artisteID'], $contenu, $_GET['note']);
+				Avis($_SESSION['id'],"artiste_id", $_SESSION['artisteID'], $contenu, $_GET['note']);
 			
 		}
 	}		
 }
 if(isset($_GET['id'])){
-	$listeAvis = listeAvisArtiste($_GET['id']);
-}
+	$listeAvis = listeAvis("artiste_id",$_GET['id']);
+	if (isset($_SESSION['id'])){
+	$existant = PossedeAvis($_SESSION['id'] ,"artiste_id", $_GET['id']);
+}}
 
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) ){
 

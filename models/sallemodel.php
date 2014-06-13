@@ -55,13 +55,14 @@ function AuthentificationSalle($id){
 }
 
 
-function modifierSalle($id, $nom, $code_postal ,$ville, $adresse, $type, $capacité, $photosalle){
+function modifierSalle($id, $nom, $code_postal, $ville, $adresse, $telephone, $type, $capacité, $photosalle){
 	global $bdd;
 	$bdd->query("UPDATE salle 
 		SET nom='$nom',
 			code_postal='$code_postal',
 			ville='$ville',
 			adresse='$adresse',
+			telephone='$telephone',
 			type='$type',
 			capacite='$capacité',
 			photocover='$photosalle'

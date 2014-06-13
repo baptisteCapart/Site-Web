@@ -65,6 +65,8 @@ if(isset($_SESSION['id'])){
 if(isset($_POST['contenu'])){
 	$contenu = $_POST['contenu'];
 	if(isset($_GET['id'])){
+		$contenu = nl2br($contenu);
+		$contenu = mysql_real_escape_string($contenu);
 		newpostM($contenu,$membre,$_GET['id'] );
 	}
 	

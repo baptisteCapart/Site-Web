@@ -13,9 +13,13 @@
 				<li>
 					<div class="ville"><span>Ville : </span><input class = "textbox" type="text" name="ville" value="<?= $donnees['ville'] ?>"/></div>		
 				</li>
+
 				<li>
 					<div class="adresse"><span>Adresse : </span><input class = "textbox" type="text" name="adresse" value="<?= $donnees['adresse'] ?>"/></div>			
 				</li>
+				<li>
+					<div class="telephone"><span>Telephone : </span><input class = "textbox" type="text" name="telephone" value="<?= $donnees['telephone'] ?>"/></div>			
+				</li>				
 				<li>
 				<div class="type"><span>Type : </span><select class ="textbox" name="type" id="type" value = "<?= $donnees['type'] ?>">
 					<option value="salle de spectacle">salle de spectacle</option>

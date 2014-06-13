@@ -73,13 +73,13 @@ if(isset($_GET['id'])){
 				$contenu = $_POST['contenu'];
 				$contenu = nl2br($contenu);
 				$contenu = mysql_real_escape_string($contenu);
-				AvisSalle($_SESSION['id'], $_SESSION['salleID'], $contenu, $_GET['note']);
+				Avis($_SESSION['id'],"salle_id", $_SESSION['salleID'], $contenu, $_GET['note']);
 			
 		}
 	}		
 }
 if(isset($_GET['id'])){
-	$listeAvis = listeAvisSalle($_GET['id']);
+	$listeAvis = listeAvis("salle_id",$_GET['id']);
 }
 
 if (isset($_POST['suivre'])){
@@ -95,7 +95,7 @@ if (isset($_POST['stop'])){
 	Stopsuivi($_SESSION['id'],"salle_id", $_SESSION['salleID']);
 }
 
-if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty ($_POST['ville']) AND !empty ($_POST['adresse'])
+if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty ($_POST['ville'])  AND !empty ($_POST['adresse']) AND !empty ($_POST['telephone'])
  AND !empty ($_POST['type']) AND !empty ($_POST['capacité'])  ){
 
 
@@ -103,6 +103,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		$code_postal = mysql_real_escape_string(htmlspecialchars($_POST['code_postal']));
 		$ville = mysql_real_escape_string(htmlspecialchars($_POST['ville']));
 		$adresse = mysql_real_escape_string(htmlspecialchars($_POST['adresse']));
+		$telephone = mysql_real_escape_string(htmlspecialchars($_POST['telephone']));
 		$type = mysql_real_escape_string(htmlspecialchars($_POST['type']));		
 		$capacité = mysql_real_escape_string(htmlspecialchars($_POST['capacité']));		
 		$photosalle ="";
@@ -114,7 +115,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		if ($photosalle == ""){
 			$photosalle = $donnees['photocover'];
 		}
-		modifierSalle($_SESSION['salleID'], $Nom_de_salle, $code_postal ,$ville, $adresse, $type,$capacité,$photosalle);
+		modifierSalle($_SESSION['salleID'], $Nom_de_salle, $code_postal ,$ville, $adresse, $telephone, $type,$capacité,$photosalle);
 
 		if(!empty($_FILES['photosalle']) && $_FILES['photosalle']['name']!=''){
 			$photosalle = mysql_real_escape_string(htmlspecialchars($_FILES['photosalle']['name']));

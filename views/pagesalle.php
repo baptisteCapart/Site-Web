@@ -224,7 +224,7 @@
                   } ?>
              </div>
              <?php }else{ ?>
-             <div>aucune notif</div>
+             <div>Aucune notification.</div>
         <?php }} ?> 
         
       </div>
