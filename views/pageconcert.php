@@ -66,7 +66,7 @@
   <div id="textConcert">
     <?php  if($ongletConcert==1){ ?> 
     <div class = "descrption"> 
-			<span class="desc">Decription : </span><br>
+			<span class="desc">Description : </span><br>
         <?= $donnees['description'] ?><br>
       <span class="desc">Date : </span><br>
         <?= $dateconcert->format('d/m/Y') ?><br>
