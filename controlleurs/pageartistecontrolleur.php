@@ -57,7 +57,7 @@ $donnees = recupererdonnees("artiste","artiste_id",$_SESSION['artisteID']);
 if(isset($_GET['id'])){
 	if(!empty($_FILES['extrait1'])){
 			if(!empty($_FILES['extrait1']) && $_FILES['extrait1']['name']!=''){
-				$extrait1 = mysql_real_escape_string(htmlspecialchars($_FILES['extrait1']['name']));
+				$extrait1 = htmlspecialchars($_FILES['extrait1']['name']);
 				
 				$nomInit = $_FILES['extrait1']['name'];
 				$infosPath = pathinfo($nomInit);
@@ -82,7 +82,7 @@ if(isset($_GET['id'])){
 }
 $photo="";
 if(!empty($_FILES['photoA']) && $_FILES['photoA']['name']!=''){
-				$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoA']['name']));
+				$photo = htmlspecialchars($_FILES['photoA']['name']);
 
 		if(isset($_SESSION['id'])){
 			
@@ -147,7 +147,7 @@ if(isset($_GET['id'])){
 		if(isset($_POST['contenu'])){
 				$contenu = $_POST['contenu'];
 				$contenu = nl2br($contenu);
-				$contenu = mysql_real_escape_string($contenu);
+				$contenu = htmlspecialchars($contenu);
 				Avis($_SESSION['id'],"artiste_id", $_SESSION['artisteID'], $contenu, $_GET['note']);
 			
 		}
@@ -162,12 +162,12 @@ if(isset($_GET['id'])){
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) ){
 
 
-		$nomartiste = mysql_real_escape_string(htmlspecialchars($_POST['nomartiste']));
-		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
+		$nomartiste = htmlspecialchars($_POST['nomartiste']);
+		$description = htmlspecialchars($_POST['description']);
 		$photogroupe ="";
 
 		if(!empty($_POST['photogroupe'])){
-			$photogroupe = mysql_real_escape_string(htmlspecialchars($_POST['photogroupe']));
+			$photogroupe = htmlspecialchars($_POST['photogroupe']);
 		}
 
 		if ($photogroupe == ""){
@@ -177,7 +177,7 @@ if(!empty($_POST['nomartiste']) AND !empty ($_POST['description']) ){
 		modifierArtiste($_SESSION['artisteID'], $nomartiste, $description, $photogroupe);
 
 		if(!empty($_FILES['photogroupe'])&& $_FILES['photogroupe']['name']!='' ){
-			$photogroupe = mysql_real_escape_string(htmlspecialchars($_FILES['photogroupe']['name']));
+			$photogroupe = htmlspecialchars($_FILES['photogroupe']['name']);
 
 			$nomInit = $_FILES['photogroupe']['name'];
 			$infosPath = pathinfo($nomInit);

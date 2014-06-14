@@ -24,21 +24,21 @@ if($donnees['non_repondu']=='artiste'){
 
 if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])){
 		$photocover = "";
-		$nom = mysql_real_escape_string(htmlspecialchars($_POST['nom']));
+		$nom = htmlspecialchars($_POST['nom']);
 		$jour = $_POST['jour'];
-		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
+		$description = htmlspecialchars($_POST['description']);
 		$début = $_POST['début'];
 		$duree = $_POST['duree'];
 		if(isset($_POST['message'])){
 			$message = $_POST['message'];
 			$message = nl2br($message);
-			$message = mysql_real_escape_string($message);
+			$message = htmlspecialchars($message);
 			newpost($message,$donnees['topic_id']);
 			$photocover="";
 	
 		}
 		if(!empty($_POST['photocover'])){
-			$photocover = mysql_real_escape_string(htmlspecialchars($_POST['photocover']));
+			$photocover = htmlspecialchars($_POST['photocover']);
 		}
 		if($photocover==""){
 			$photocover=$donnees['photocover'];
@@ -50,7 +50,7 @@ if(!empty($_POST['nom']) and !empty($_POST['jour']) and !empty($_POST['début'])
 
 	updateConcert($nom, $jour ,$description, $début, $duree, $message, $photocover, $concert_id, $inviteur,$non_repondu);
 		if(!empty($_FILES['photocover']) && $_FILES['photocover']['name']!=''){
-			$photocover = mysql_real_escape_string(htmlspecialchars($_FILES['photocover']['name']));
+			$photocover = htmlspecialchars($_FILES['photocover']['name']);
 
 			$nomInit = $_FILES['photocover']['name'];
 			$infosPath = pathinfo($nomInit);

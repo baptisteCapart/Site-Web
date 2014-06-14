@@ -5,18 +5,18 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
  AND !empty ($_POST['type']) AND !empty ($_POST['capacité'])){
 
 
-		$Nom_de_salle = mysql_real_escape_string(htmlspecialchars($_POST['Nom_de_salle']));
-		$code_postal = mysql_real_escape_string(htmlspecialchars($_POST['code_postal']));
-		$telephone = mysql_real_escape_string(htmlspecialchars($_POST['telephone']));
-		$ville = mysql_real_escape_string(htmlspecialchars($_POST['ville']));
-		$adresse = mysql_real_escape_string(htmlspecialchars($_POST['adresse']));
-		$type = mysql_real_escape_string(htmlspecialchars($_POST['type']));		
-		$capacité = mysql_real_escape_string(htmlspecialchars($_POST['capacité']));		
+		$Nom_de_salle = htmlspecialchars($_POST['Nom_de_salle']);
+		$code_postal = htmlspecialchars($_POST['code_postal']);
+		$telephone = htmlspecialchars($_POST['telephone']);
+		$ville = htmlspecialchars($_POST['ville']);
+		$adresse = htmlspecialchars($_POST['adresse']);
+		$type = htmlspecialchars($_POST['type']);		
+		$capacité = htmlspecialchars($_POST['capacité']);		
 
 		$photosalle ="";
 		
 		if(!empty($_POST['photosalle'])){
-			$photosalle = mysql_real_escape_string(htmlspecialchars($_POST['photosalle']));
+			$photosalle = htmlspecialchars($_POST['photosalle']);
 		}else{
 			$photosalle="salledefaut.jpg";
 		}

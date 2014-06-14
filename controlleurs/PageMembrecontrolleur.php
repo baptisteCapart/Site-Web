@@ -66,7 +66,7 @@ if(isset($_POST['contenu'])){
 	$contenu = $_POST['contenu'];
 	if(isset($_GET['id'])){
 		$contenu = nl2br($contenu);
-		$contenu = mysql_real_escape_string($contenu);
+		$contenu = htmlspecialchars($contenu);
 		newpostM($contenu,$membre,$_GET['id'] );
 	}
 	
@@ -76,22 +76,22 @@ if(isset($_POST['contenu'])){
 if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
 {
 	
-		$mail = mysql_real_escape_string(htmlspecialchars($_POST['mail']));
-		$sexe = mysql_real_escape_string(htmlspecialchars($_POST['sexe']));
-		$codepostal = mysql_real_escape_string(htmlspecialchars($_POST['codepostal']));
-		$pays = mysql_real_escape_string(htmlspecialchars($_POST['pays']));
-		$ville = mysql_real_escape_string(htmlspecialchars($_POST['ville']));
-		$age = mysql_real_escape_string(htmlspecialchars($_POST['age']));
+		$mail = htmlspecialchars($_POST['mail']);
+		$sexe = htmlspecialchars($_POST['sexe']);
+		$codepostal = htmlspecialchars($_POST['codepostal']);
+		$pays = htmlspecialchars($_POST['pays']);
+		$ville = htmlspecialchars($_POST['ville']);
+		$age = htmlspecialchars($_POST['age']);
 
 		$photodeprofil = "";
 		$photodecover = "";
 
 
 		if(!empty($_POST['photodeprofil'])){
-			$photodeprofil = mysql_real_escape_string(htmlspecialchars($_POST['photodeprofil']));
+			$photodeprofil = htmlspecialchars($_POST['photodeprofil']);
 		}
 		if(!empty($_POST['photodecover'])){
-			$photodecover = mysql_real_escape_string(htmlspecialchars($_POST['photodecover']));
+			$photodecover = htmlspecialchars($_POST['photodecover']);
 		} 	
 
 		if ($photodeprofil == ""){
@@ -104,7 +104,7 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 		
 
 		if(!empty($_FILES['photodeprofil']) && $_FILES['photodeprofil']['name']!=''){
-			$photodeprofil = mysql_real_escape_string(htmlspecialchars($_FILES['photodeprofil']['name']));
+			$photodeprofil = htmlspecialchars($_FILES['photodeprofil']['name']);
 
 			$nomInitProf = $_FILES['photodeprofil']['name'];
 			$infosPathProf = pathinfo($nomInitProf);
@@ -134,7 +134,7 @@ if( !empty ($_POST['mail']) AND !empty ($_POST['ville']) AND !empty ($_POST['cod
 
 
 		if(!empty($_FILES['photodecover']) && $_FILES['photodecover']['name']!=''){
-			$photodecover = mysql_real_escape_string(htmlspecialchars($_FILES['photodecover']['name']));
+			$photodecover = htmlspecialchars($_FILES['photodecover']['name']);
 
 			$nomInitCov = $_FILES['photodecover']['name'];
 			$infosPathCov = pathinfo($nomInitCov);

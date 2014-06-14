@@ -3,7 +3,7 @@ include ('models/rechercheModel.php');
 
 
 if(isset($_POST['recherche'])){
-	$recherche = $_POST['recherche'];
+	$recherche = htmlspecialchars($_POST['recherche']);
 	$concert = 'concert';
 	$artiste = 'artiste';
 	$salle = 'salle';

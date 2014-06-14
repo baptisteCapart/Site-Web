@@ -37,7 +37,7 @@ if(isset($_GET['id'])){
 		if(isset($_POST['contenu'])){
 				$contenu = $_POST['contenu'];
 				$contenu = nl2br($contenu);
-				$contenu = mysql_real_escape_string($contenu);
+				$contenu = htmlspecialchars($contenu);
 				Avis($_SESSION['id'],"concert_id", $_SESSION['concertID'], $contenu, $_GET['note']);
 			
 		}

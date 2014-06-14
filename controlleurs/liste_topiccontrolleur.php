@@ -10,8 +10,8 @@ if(isset($_SESSION['id'])){
 
 if(!empty($_POST['name']) AND !empty($_POST['description']))
 {
-	$name = mysql_real_escape_string(htmlspecialchars($_POST['name']));
-	$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
+	$name = htmlspecialchars($_POST['name']);
+	$description = htmlspecialchars($_POST['description']);
 	if ( isset ($_GET['categorie']) )
 	{
 		$categorie = $_GET['categorie'];

@@ -26,6 +26,7 @@
 					echo($post['contenu']);
 					 ?>
 				</div>
+				<br>
 				<span class = "date">
 					<?php 
 					echo($post['datepost'].'<br>');

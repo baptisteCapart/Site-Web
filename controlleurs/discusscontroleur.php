@@ -40,7 +40,7 @@ if(isset($_POST['message'])){
 	
 	$message = $_POST['message'];
 	$message = nl2br($message);
-	$message = mysql_real_escape_string($message);
+	$message = htmlspecialchars($message);
 	
 
 		if($_SESSION['pseudo'] != ""){

@@ -5,7 +5,8 @@ function insertConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 	global $bdd;
 	$topic_id = newtopic();
 	$bdd->query("INSERT INTO concert(nom, jour, heure, duree, description, message, salle_id, artiste_id, photocover, topic_id, inviteur, non_repondu) 
-		VALUES ('$nom', '$jour', '$début', '$duree', '$description', '$message', '$salle_id', '$artiste_id', '$photocover', '$topic_id', '$inviteur','$non_repondu')") or die(print_r($bdd->errorInfo()));
+		VALUES (".$bdd->quote($nom).", ".$bdd->quote($jour).",".$bdd->quote($début).",".$bdd->quote($duree).",".$bdd->quote($description).",".$bdd->quote($message).", 
+			'$salle_id', '$artiste_id', ".$bdd->quote($photocover).", '$topic_id', '$inviteur','$non_repondu')") or die(print_r($bdd->errorInfo()));
 	newpost($message,$topic_id);
 	$req = $bdd->query("SELECT concert_id FROM concert WHERE artiste_id = '$artiste_id' and salle_id = '$salle_id' order by concert_id DESC limit 1") or die(print_r($bdd->errorInfo()));
 	$res = $req->fetch();
@@ -15,9 +16,10 @@ function insertConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 function photoC($id,$photo){
 	global $bdd;
 	$bdd->query("UPDATE concert 
-	SET photocover='$photo'
+	SET photocover=".$bdd->quote($photo)."
 	WHERE concert_id='$id'");
 }
+
 
 function listeConcerts(){
 	global $bdd;
@@ -66,17 +68,17 @@ function updateConcert($nom, $jour ,$description, $début, $duree, $message, $ph
 {
 	global $bdd;
 	$bdd->query("UPDATE concert 
-		SET nom='$nom',
-			jour='$jour',
-			heure='$début',
-			duree='$duree',
-			description='$description',
-			message= '$message',
-			photocover='$photocover',
+		SET nom=".$bdd->quote($nom).",
+			jour=".$bdd->quote($jour).",
+			heure=".$bdd->quote($début).",
+			duree=".$bdd->quote($duree).",
+			description=".$bdd->quote($description).",
+			message= ".$bdd->quote($message).",
+			photocover=".$bdd->quote($photocover).",
 			inviteur = '$inviteur',
-			non_repondu = '$non_repondu'
+			non_repondu ='$non_repondu'
 
-		WHERE concert_id='$id'");
+		WHERE concert_id=".$id."");
 }
 
 function accord($id){
@@ -88,7 +90,8 @@ function accord($id){
 	$dateconcert = new DateTime($concert['jour']);
 	$description = "Tout nouveau concert de ".$artiste['nom']." prévu pour le ".$dateconcert->format('d/m/Y').", tenez-vous prêts !";
 	$bdd->query("INSERT INTO news (artiste_id, salle_id, typenews, datenews, photocover, description, lien) 
-		VALUES (".$artiste['artiste_id'].",".$salle['salle_id'].", 1,'".$concert['jour']."', '".$concert['photocover']."', '$description', 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
+		VALUES (".$artiste['artiste_id'].",".$salle['salle_id'].", 1,'".$concert['jour']."',
+		 '".$concert['photocover']."', ".$bdd->quote($description).", 'index.php?page=pageconcertcontrolleur&id=".$concert['concert_id']."')") or die (print_r($bdd->errorInfo()));
 }
 
 function newtopic ()
@@ -104,7 +107,7 @@ function newtopic ()
 function newpost ($message, $topic_id)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO post (contenu, topic_id) VALUES ( '$message', '$topic_id')") or die (print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO post (contenu, topic_id) VALUES ( ".$bdd->quote($message).", '$topic_id')") or die (print_r($bdd->errorInfo()));
 }
 
 function listePost ($topic_id)

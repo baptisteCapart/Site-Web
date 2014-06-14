@@ -72,7 +72,7 @@ if(isset($_GET['id'])){
 		if(isset($_POST['contenu'])){
 				$contenu = $_POST['contenu'];
 				$contenu = nl2br($contenu);
-				$contenu = mysql_real_escape_string($contenu);
+				$contenu = htmlspecialchars($contenu);
 				Avis($_SESSION['id'],"salle_id", $_SESSION['salleID'], $contenu, $_GET['note']);
 			
 		}
@@ -112,17 +112,17 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
  AND !empty ($_POST['type']) AND !empty ($_POST['capacité'])  ){
 
 
-		$Nom_de_salle = mysql_real_escape_string(htmlspecialchars($_POST['Nom_de_salle']));
-		$code_postal = mysql_real_escape_string(htmlspecialchars($_POST['code_postal']));
-		$ville = mysql_real_escape_string(htmlspecialchars($_POST['ville']));
-		$adresse = mysql_real_escape_string(htmlspecialchars($_POST['adresse']));
-		$telephone = mysql_real_escape_string(htmlspecialchars($_POST['telephone']));
-		$type = mysql_real_escape_string(htmlspecialchars($_POST['type']));		
-		$capacité = mysql_real_escape_string(htmlspecialchars($_POST['capacité']));		
+		$Nom_de_salle = htmlspecialchars($_POST['Nom_de_salle']);
+		$code_postal = htmlspecialchars($_POST['code_postal']);
+		$ville = htmlspecialchars($_POST['ville']);
+		$adresse = htmlspecialchars($_POST['adresse']);
+		$telephone = htmlspecialchars($_POST['telephone']);
+		$type = htmlspecialchars($_POST['type']);
+		$capacité = htmlspecialchars($_POST['capacité']);		
 		$photosalle ="";
 
 		if(!empty($_POST['photosalle'])){
-			$photosalle = mysql_real_escape_string(htmlspecialchars($_POST['photosalle']));
+			$photosalle = htmlspecialchars($_POST['photosalle']);
 		}
 
 		if ($photosalle == ""){
@@ -131,7 +131,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 		modifierSalle($_SESSION['salleID'], $Nom_de_salle, $code_postal ,$ville, $adresse, $telephone, $type,$capacité,$photosalle);
 
 		if(!empty($_FILES['photosalle']) && $_FILES['photosalle']['name']!=''){
-			$photosalle = mysql_real_escape_string(htmlspecialchars($_FILES['photosalle']['name']));
+			$photosalle = htmlspecialchars($_FILES['photosalle']['name']);
 
 			$nomInit = $_FILES['photosalle']['name'];
 			$infosPath = pathinfo($nomInit);
@@ -162,7 +162,7 @@ if(!empty($_POST['Nom_de_salle']) AND !empty ($_POST['code_postal']) AND !empty 
 
 	$photo="";
 	if(!empty($_FILES['photoS']) && $_FILES['photoS']['name']!=''){
-			$photo = mysql_real_escape_string(htmlspecialchars($_FILES['photoS']['name']));
+			$photo = htmlspecialchars($_FILES['photoS']['name']);
 
 		if(isset($_SESSION['id'])){
 			

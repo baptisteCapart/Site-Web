@@ -45,13 +45,13 @@ function newtopic ($name, $description, $membre_id, $categorie)
 	global $bdd;
 	$nb = 0;
 	$bdd->query("INSERT INTO topic (nom, description, nombre_message, membre_id,categorie)
-		VALUES ('$name','$description', '$nb', '$membre_id','$categorie')");
+		VALUES (".$bdd->quote($name).",".$bdd->quote($description).", '$nb', '$membre_id','$categorie')");
 }
 
 function newpost ($membre_id, $message, $topic_id)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO post (contenu, topic_id, membre_id, datepost) VALUES ( '$message', '$topic_id', '$membre_id', NOW())") or die (print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO post (contenu, topic_id, membre_id, datepost) VALUES ( ".$bdd->quote($message).", '$topic_id', '$membre_id', NOW())") or die (print_r($bdd->errorInfo()));
 	$res = $bdd->query("SELECT nombre_message FROM topic WHERE id_topic=".$topic_id);
 	$res2 = $res->fetch();
 	$nb_posts = $res2['nombre_message'] + 1;

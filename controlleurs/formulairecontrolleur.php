@@ -47,13 +47,13 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 
 	if($mdp == $mdp2)
 	{
-		$pseudo = mysql_real_escape_string(htmlspecialchars($_POST['pseudo']));
-		$mail = mysql_real_escape_string(htmlspecialchars($_POST['mail']));
-		$sexe = mysql_real_escape_string(htmlspecialchars($_POST['sexe']));
-		$codepostal = mysql_real_escape_string(htmlspecialchars($_POST['codepostal']));
-		$pays = mysql_real_escape_string(htmlspecialchars($_POST['pays']));
-		$ville = mysql_real_escape_string(htmlspecialchars($_POST['ville']));
-		$age = mysql_real_escape_string(htmlspecialchars($_POST['age']));
+		$pseudo = htmlspecialchars($_POST['pseudo']);
+		$mail = htmlspecialchars($_POST['mail']);
+		$sexe = htmlspecialchars($_POST['sexe']);
+		$codepostal = htmlspecialchars($_POST['codepostal']);
+		$pays = htmlspecialchars($_POST['pays']);
+		$ville = htmlspecialchars($_POST['ville']);
+		$age = htmlspecialchars($_POST['age']);
 
 		$photodeprofil = "";
 		$photodecover = "";
@@ -61,13 +61,13 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 
 		if(!empty($_POST['photodeprofil']))
 		{
-			$photodeprofil = mysql_real_escape_string(htmlspecialchars($_POST['photodeprofil']));
+			$photodeprofil = htmlspecialchars($_POST['photodeprofil']));
 		}else{
 			$photodeprofil = "profildefaut.jpg";
 		}
 		if(!empty($_POST['photodecover']))
 		{
-			$photodecover = mysql_real_escape_string(htmlspecialchars($_POST['photodecover']));
+			$photodecover = htmlspecialchars($_POST['photodecover']);
 		} else{
 			$photodecover = "coverdefaut.jpg";
 		}	

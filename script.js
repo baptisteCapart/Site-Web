@@ -146,6 +146,10 @@ function checkExt()
         {
             return true; // valid file extension
         }
+        if(file_extension=="")
+        {
+            return true; // valid file extension
+        }          
     }
 	alert('format de la photo de couverture incompatible');
     return false;

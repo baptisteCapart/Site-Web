@@ -5,7 +5,7 @@ include ('models/artistemodel.php');
 include ('models/globalmodel.php');
 
 if (!empty($_POST['message'])) {
-	$message = mysql_real_escape_string(htmlspecialchars($_POST['message']));
+	$message = htmlspecialchars($_POST['message']);
 	addstyle($message);	
 }
 
@@ -20,19 +20,19 @@ if(isset($_SESSION['id'])){
 if(!empty($_POST['nomartiste']) AND !empty ($_POST['description'])  AND !empty($_POST['style'])){
 
 		//$style = mysql_real_escape_string(htmlspecialchars($_POST['style']));	
-		$nomartiste = mysql_real_escape_string(htmlspecialchars($_POST['nomartiste']));
-		$description = mysql_real_escape_string(htmlspecialchars($_POST['description']));
+		$nomartiste = htmlspecialchars($_POST['nomartiste']);
+		$description = htmlspecialchars($_POST['description']);
 		$photogroupe ="";
 		
 		if(!empty($_POST['photogroupe'])){
-			$photogroupe = mysql_real_escape_string(htmlspecialchars($_POST['photogroupe']));
+			$photogroupe = htmlspecialchars($_POST['photogroupe']);
 		}else{
 			$photogroupe="artistedefaut.jpg";
 		}
 
 		if(isset($_SESSION['id'])){	
 			if(!empty($_POST['style'])){
-				$current_id = insertArtiste($nomartiste, $style ,$description, $photogroupe, $_SESSION['id']);
+				$current_id = insertArtiste($nomartiste ,$description, $photogroupe, $_SESSION['id']);
 				$nomInit = $_FILES['photogroupe']['name'];
 				$infosPath = pathinfo($nomInit);
 				$extension = $infosPath['extension'];

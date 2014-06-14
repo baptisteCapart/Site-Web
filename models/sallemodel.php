@@ -7,7 +7,9 @@ function dropSalle($id){
 
 function insertSalle($Nom_de_salle, $code_postal, $telephone,$ville ,$adresse, $type, $capacité,$photosalle, $membre_id){
 	global $bdd;
-	$bdd->query("INSERT INTO salle(nom, code_postal, telephone, ville, adresse, type, capacite, photocover, membre_id )  VALUES ('$Nom_de_salle', '$code_postal', '$telephone', '$ville' ,'$adresse' ,'$type', '$capacité','$photosalle', '$membre_id')") or die(print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO salle(nom, code_postal, telephone, ville, adresse, type, capacite, photocover, membre_id )
+		VALUES (".$bdd->quote($Nom_de_salle).", ".$bdd->quote($code_postal).", ".$bdd->quote($telephone).",".$bdd->quote($ville).",".$bdd->quote($adresse)." ,
+			'$type', ".$bdd->quote($capacite).",".$bdd->quote($photosalle).", '$membre_id')") or die(print_r($bdd->errorInfo()));
 	$req = $bdd->query("SELECT salle_id FROM salle WHERE membre_id = '$membre_id'") or die(print_r($bdd->errorInfo()));
 	$res = $req->fetch();
 	var_dump($res['salle_id']);
@@ -17,7 +19,7 @@ function insertSalle($Nom_de_salle, $code_postal, $telephone,$ville ,$adresse, $
 function photoCS($id,$photo){
 	global $bdd;
 	$bdd->query("UPDATE salle 
-	SET photocover='$photo'
+	SET photocover=$bdd->quote($photo)
 	WHERE salle_id='$id'");
 }
 
@@ -58,16 +60,16 @@ function AuthentificationSalle($id){
 function modifierSalle($id, $nom, $code_postal, $ville, $adresse, $telephone, $type, $capacité, $photosalle){
 	global $bdd;
 	$bdd->query("UPDATE salle 
-		SET nom='$nom',
-			code_postal='$code_postal',
-			ville='$ville',
-			adresse='$adresse',
-			telephone='$telephone',
+		SET nom=".$bdd->quote($nom).",
+			code_postal=".$bdd->quote($code_postal).",
+			ville=".$bdd->quote($ville).",
+			adresse=".$bdd->quote($adresse).",
+			telephone=".$bdd->quote($telephone).",
 			type='$type',
-			capacite='$capacité',
-			photocover='$photosalle'
+			capacite=".$bdd->quote($capacité).",
+			photocover=".$bdd->quote($photosalle)."
 
-		WHERE salle_id='$id'");
+		WHERE salle_id=".$id."");
 }
 
 

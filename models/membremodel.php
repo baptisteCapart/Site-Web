@@ -13,7 +13,7 @@ function dropMembre($id){
 
 function verification($login){
 	global $bdd;
-	$sql = "SELECT membre_id, mot_de_passe from membre where pseudo ='$login'";
+	$sql = "SELECT membre_id, mot_de_passe from membre where pseudo =".$bdd->quote($login)."";
  	$req = $bdd->query($sql) or die(print_r($bdd->errorInfo()));
   	$donnee = $req->fetch();
   	return $donnee;
@@ -21,7 +21,7 @@ function verification($login){
 function verifpseudo($pseudo){
 	global $bdd;
 
-	$result = $bdd->query ("SELECT  pseudo from membre where pseudo = '$pseudo'");
+	$result = $bdd->query ("SELECT  pseudo from membre where pseudo = ".$bdd->quote($pseudo)."");
 	$result2 = $result->fetch();
 	if (!$result2){
 		return true;
@@ -36,21 +36,23 @@ function verifpseudo($pseudo){
 function insert($pseudo, $mdp, $mail, $age ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO membre(pseudo, mot_de_passe, mail, date_de_naissance, code_postal, ville, sexe, pays, photoprofil, photocover )  VALUES ('$pseudo', '$mdp', '$mail' , '$age','$codepostal', '$ville' ,'$sexe', '$pays','$photodeprofil', '$photodecover')");
+	$bdd->query("INSERT INTO membre(pseudo, mot_de_passe, mail, date_de_naissance, code_postal, ville, sexe, pays, photoprofil, photocover )
+		VALUES (".$bdd->quote($pseudo).", ".$bdd->quote($mdp).", ".$bdd->quote($mail)." , ".$bdd->quote($age).",".$bdd->quote($code_postal).",
+		 ".$bdd->quote($ville)." ,'$sexe', ".$bdd->quote($pays).",".$bdd->quote($photodeprofil).", ".$bdd->quote($photodecover).")");
 }
 
 function photoProf($membre_id,$photo){
 	global $bdd;
 	$bdd->query("UPDATE membre 
-	SET photoprofil='$photo'
-	WHERE membre_id='$membre_id'");
+	SET photoprofil=".$bdd->quote($photo)."
+	WHERE membre_id=".$membre_id."");
 }
 
 function photoCov($membre_id,$photo){
 	global $bdd;
 	$bdd->query("UPDATE membre 
-	SET photocover='$photo'
-	WHERE membre_id='$membre_id'");
+	SET photocover=".$bdd->quote($photo)."
+	WHERE membre_id=".$membre_id."");
 }
 
 // function recuperer($id){
@@ -65,22 +67,23 @@ function photoCov($membre_id,$photo){
 function modifier($id, $mail, $age ,$codepostal, $ville ,$sexe, $pays,$photodeprofil, $photodecover){
 	global $bdd;
 	$bdd->query("UPDATE membre 
-		SET mail='$mail',
+		SET mail=".$bdd->quote($mail).",
 			sexe='$sexe',
-			date_de_naissance='$age',
-			code_postal='$codepostal',
-			ville='$ville',
-			pays= '$pays',
-			photocover='$photodecover',
-			photoprofil='$photodeprofil'
+			date_de_naissance=".$bdd->quote($age).",
+			code_postal=".$bdd->quote($codepostal).",
+			ville=".$bdd->quote($ville).",
+			pays=".$bdd->quote($pays).",
+			photocover=".$bdd->quote($photodecover).",
+			photoprofil=".$bdd->quote($photodeprofil)."
 
-		WHERE membre_id='$id'");
+		WHERE membre_id=".$id." ");
 }
 
 function newpostM ($message, $membre_id, $destinataire)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO post (contenu, membre_id, destinataire, messagePrive) VALUES ( '$message', '$membre_id', $destinataire, 1)") or die (print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO post (contenu, membre_id, destinataire, messagePrive)
+	 VALUES ( ".$bdd->quote($message).", '$membre_id', $destinataire, 1)") or die (print_r($bdd->errorInfo()));
 }
 
 function membernameM ($membre_id)

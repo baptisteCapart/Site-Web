@@ -3,7 +3,7 @@
 function Avis ($membre_id, $attribut ,$value, $contenu, $note)
 {
 	global $bdd;
-	$bdd->query("INSERT INTO donner_avis (membre_id, $attribut, contenu, note) VALUES ('$membre_id', '$value', '$contenu', '$note')") or die (print_r($bdd->errorInfo()));
+	$bdd->query("INSERT INTO donner_avis (membre_id, $attribut, contenu, note) VALUES ('$membre_id', '$value', ".$bdd->quote($contenu).", '$note')") or die (print_r($bdd->errorInfo()));
 }
 function dropAvis($id){
 	global $bdd;
