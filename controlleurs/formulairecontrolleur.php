@@ -42,8 +42,8 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 	AND !empty ($_POST['ville']) AND !empty ($_POST['codepostal']) AND !empty ($_POST['pays']) AND !empty ($_POST['sexe']) )
 {
 
-	$mdp = mysql_real_escape_string(htmlspecialchars($_POST['mdp']));
-	$mdp2 = mysql_real_escape_string(htmlspecialchars($_POST['mdp2']));
+	$mdp = htmlspecialchars($_POST['mdp']);
+	$mdp2 = htmlspecialchars($_POST['mdp2']);
 
 	if($mdp == $mdp2)
 	{
@@ -61,7 +61,7 @@ if(!empty($_POST['pseudo']) AND !empty ($_POST['mdp']) AND !empty ($_POST['mdp2'
 
 		if(!empty($_POST['photodeprofil']))
 		{
-			$photodeprofil = htmlspecialchars($_POST['photodeprofil']));
+			$photodeprofil = htmlspecialchars($_POST['photodeprofil']);
 		}else{
 			$photodeprofil = "profildefaut.jpg";
 		}

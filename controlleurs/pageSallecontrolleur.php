@@ -193,7 +193,7 @@ $photos=Photo("salle_id");
 
 
 include('controlleurs/bannierecontrolleur.php');
-include ('views/pageSalle.php');
+include ('views/pagesalle.php');
 include('views/footer.php');
 
  ?>
