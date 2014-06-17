@@ -113,7 +113,7 @@
                             <?php 
                             $memberdatas = memberPara($post['membre_id']);
                             $nomID = $memberdatas['pseudo'];
-                            echo('<a href = "index.php?page=pageMembrecontrolleur&id='.$memberdatas["membre_id"].'">'. $memberdatas["pseudo"].'<br/>'.' </a>');
+                            echo('<a href = "index.php?page=PageMembrecontrolleur&id='.$memberdatas["membre_id"].'">'. $memberdatas["pseudo"].'<br/>'.' </a>');
                              ?>
                         </span>
                              
