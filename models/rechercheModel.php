@@ -9,7 +9,6 @@ function verifRecherche($table, $recherche) {
 
 function verifRecherche2($recherche) {
 	global $bdd;
-
 	$requete=$bdd->query("SELECT count(pseudo) FROM membre WHERE pseudo LIKE '$recherche%'");
 	$result = $requete->fetch();
 	return $result;

@@ -111,8 +111,9 @@
                     <div class="post">
                         <span class="auteur">
                             <?php 
-                            $name = membernameM($post['membre_id']);
-                            echo($name.' :<br>');
+                            $memberdatas = memberPara($post['membre_id']);
+                            $nomID = $memberdatas['pseudo'];
+                            echo('<a href = "index.php?page=pageMembrecontrolleur&id='.$memberdatas["membre_id"].'">'. $memberdatas["pseudo"].'<br/>'.' </a>');
                              ?>
                         </span>
                              

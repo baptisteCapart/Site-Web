@@ -86,13 +86,13 @@ function newpostM ($message, $membre_id, $destinataire)
 	 VALUES ( ".$bdd->quote($message).", '$membre_id', $destinataire, 1)") or die (print_r($bdd->errorInfo()));
 }
 
-function membernameM ($membre_id)
+function memberPara ($membre_id)
 {
 	global $bdd;
-	$req = ("SELECT pseudo FROM membre WHERE membre_id=".$membre_id);
+	$req = ("SELECT * FROM membre WHERE membre_id=".$membre_id);
 	$rep = $bdd->query($req);
 	$but = $rep->fetch();
-	return $but['pseudo'];
+	return $but;
 }
 
 function listePostM ($membre_id)

@@ -209,3 +209,9 @@ html, body
 
 }
 
+.auteur a 
+{
+	color : white;
+	text-decoration: underline;
+}
+
