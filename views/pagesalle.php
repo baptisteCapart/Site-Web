@@ -4,7 +4,7 @@
         <?= $donnees["nom"] ?>
 <!--         <?= $NbAbonnes["Nb"] ?>        
  -->    </div>
-    <div id="menuSalle">
+  <div id="menuSalle">
 
   <ul class = "page">
     <li class = "<?php if($ongletSalle==1){ echo "activeSalle";}?>"><?php echo '<a href = "index.php?page=pagesallecontrolleur&id='.$_SESSION['salleID'].'&ongletSalle=1#contenuSalle"> Présentation </a>'; ?></li>

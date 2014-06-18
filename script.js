@@ -90,7 +90,7 @@ function caroussel(){
                     $("#caroussel ul li:last").after($("#caroussel ul li:first"));
                     $(this).css({marginLeft:0});
                 })
-            },5000);
+            },7000);
         });
    });
 }
